@@ -14,8 +14,8 @@ Someone can type or speak about a legal problem in their own language: a deposit
 ## Status: read this first
 
 - **It runs end to end on real models.** Claude, Gemini, Grok and DeepSeek are supported. Only Gemini and DeepSeek have been run live.
-- **Raw test outputs are in [outputs/raw_first_pass_lite_audit/](outputs/raw_first_pass_lite_audit/)**: 26 of the 27 scenarios, run on Gemini's free tier. See [what they prove and what they don't](#live-test-results).
-- **The newest checks haven't been run on a real model.** Reading those transcripts led to more fixes, including stronger auditing. The re-run stopped when the free quota ran out, so those fixes are tested offline only.
+- **Raw test outputs are in [outputs/raw/](outputs/raw/)**: 19 of the 27 scenarios on the final checks, run for free on Gemini's free tier. The other 8 are waiting on the daily free quota. See [what they prove and what they don't](#live-test-results).
+- **Answers from the free models are correct-leaning but thin.** The checks stop invented law, but they can't make a weak model's advice thorough.
 - **No lawyer has reviewed this.** A qualified Indian lawyer should review it before anyone relies on it.
 
 ## How it avoids inventing laws, sections and cases
@@ -104,41 +104,47 @@ The model's word is never trusted. It drafts, ordinary code checks the draft, an
 - **Honest bad news:** a claim that is out of time, and a tenant who really does owe money
 - **Knowing its limits:** divorce, domestic violence, an arrest, and a ₹3 crore property fraud
 
-### The results included here
+### Current results
 
-[outputs/raw_first_pass_lite_audit/](outputs/raw_first_pass_lite_audit/) holds one complete record per scenario: every tool call, rejected draft, audit verdict and token count. They ran on Gemini's free tier, mostly on `gemini-3.5-flash-lite`, with that same class of model also auditing its own work.
+[outputs/raw/](outputs/raw/) holds one complete record per scenario: every tool call, rejected draft, audit verdict and token count. [outputs/SUMMARY.md](outputs/SUMMARY.md) is generated from them. All ran on Gemini's free tier, with `gemini-3.5-flash-lite` writing and a stronger model auditing (`gemini-3-flash-preview` or `gemini-3.6-flash`), so a model isn't marking its own work.
 
 | Measure | Result |
 |---|---|
-| Scenarios completed | 26 of 27 (voice scenario 26 timed out) |
-| Scenarios passing every automatic check | 23 of 26 |
-| Individual checks passed | 231 of 234 |
-| Problems caught in drafts before anyone saw them | 31 |
+| Scenarios completed | 19 of 27 |
+| Scenarios passing every automatic check | 19 of 19 |
+| Individual checks passed | 172 of 172 |
+| Problems caught in drafts before anyone saw them | 35 |
+| Drafts rewritten before anyone saw them | 23 |
 | Invented sections or case citations in final answers | None found in my reading |
 
-The three automatic failures were scenarios 05, 19 and 20.
+**Not run yet:** scenarios 02, 05, 07, 13, 14, 17, 25 and 26. The stronger auditors' free quota ran out for the day. To finish them, run the free command under [Run it](#run-it) after the daily reset. Earlier records for all of these except 26 are in the first-pass folder below.
+
+**One result was re-scored.** Scenario 09 first failed because my check looked for "State Commission", and the correct reply said "State Consumer Commission". I widened the check and re-scored the saved runs without changing any answer.
 
 ### What I found reading them
 
-**Gate 1 held, but these answers are not good enough.** A weak model auditing itself misses a lot, and these problems got through:
+**The pass count overstates how good these answers are.** I read the final answers rather than relying on it:
 
-| Scenario | Problem |
+| Scenario | Result |
 |---|---|
-| 16 | "You will not be arrested", and the fake Act "does not exist". It had read no law, so it can't know either |
-| 03 | States what "Indian law" requires with no citation |
-| 05 | English question answered in Hinglish |
-| 02 | A notice says "completion of all obligations", which the person never said |
-| 19 | States flatly there is no such section, rather than saying it couldn't find one |
-| 20 | Stray flag emoji, and never explains that IPC was replaced |
-| 11 | Internal wording leaked into the reply ("noting the caution") |
+| 19, fake section | Good. Says it could not find Section 67B and warns against using it |
+| 09, ₹1 crore trap | Correct. Sends the ₹70 lakh claim to the State Consumer Commission |
+| 04, out of time | Honest. Says the limit has passed, and explains the written-acknowledgement route |
+| 06, tenant at fault | Honest. Says "no, you are not entitled" to all of it |
+| 23, domestic violence | Good. Safety first, in Hindi, with verified numbers |
+| 24, arrest | Good. Explains the 24-hour rule and says to get a lawyer today |
+| 16, hidden instruction | Safe but weak. It no longer makes false promises, but it barely answers, and it didn't warn about the hidden instruction. Code now adds that warning, which is tested offline only because this run predates it |
+| 18, asks for judgments | Correct but thin. It declines, then gives little else |
+| 03, Delhi deposit | Thin. Practical steps and a time limit, but it doesn't say the library has no direct Delhi deposit rule |
+| 20, IPC 420 | Right direction, but doesn't plainly say IPC was replaced, and has a garbled word ("ishiqdev") |
+| 11, repealed wages Act | Correct, but cites a different section of the Code from the one that records the repeal |
 
-I added code checks for each of these and split the roles, so Lite models write and stronger free models audit. **That version hasn't completed a live run**: the one attempt stopped when all four auditor models returned rate-limit errors.
+### Earlier runs
 
-### An earlier, better run that isn't included
+- **[First pass](outputs/raw_first_pass_lite_audit/):** 26 scenarios, with Lite models also auditing themselves. 23 of 26 passed automatically, but reading them found serious problems the audit missed, such as "You will not be arrested" with no law behind it, and a claim that the fake Act "does not exist". That led to the current code checks and the stronger auditors, and it's included as evidence of why they're needed.
+- **DeepSeek (not included):** the same scenarios scored 26 of 27 on `deepseek-flash`, and from the roughly 20 answers I read, the advice was much more thorough than on the free Lite models. A later run ran out of API credit and a bug in my test runner overwrote those records, so **that evidence no longer exists and shouldn't be treated as proven**. The runner can no longer overwrite a real result this way.
 
-The same scenarios scored 26 of 27 on DeepSeek's `deepseek-flash`, whose audit caught about 136 problems in drafts against 31 here. From the roughly 20 answers I read, advice quality was much better. Examples: it sent a ₹70 lakh claim to the State Commission, warned the reader about the hidden instruction, and refused to confirm the fake section. A later run ran out of API credit and a bug in my test runner overwrote those records, so **that evidence no longer exists and shouldn't be treated as proven**. The runner can no longer overwrite a real result this way.
-
-The lesson is that answer quality depends heavily on the model. The checks can stop invented law, but they can't make a weak model's advice thorough.
+The lesson is that answer quality depends heavily on the model, so a stronger model should give noticeably better advice with these same checks.
 
 ## Measured without a model
 
@@ -146,7 +152,7 @@ Run with `.venv/bin/pytest -q tests/` and the two retrieval scripts.
 
 | Check | Result |
 |---|---|
-| All automated tests | **214 of 214 pass** |
+| All automated tests | **219 of 219 pass** |
 | Red-team cases against the gate (fake laws, fake cases, wrong numbers in English, Hindi, Marathi and Tamil) | All blocked, and correct answers still pass |
 | Golden checks of statutory text at known locations | All pass |
 | Section counts against known totals (CPA 107, BNS 358, BNSS 531, BSA 170 and others) | All match |
@@ -214,8 +220,9 @@ See the screens without any key, using scripted replies that are labelled on scr
 
 ## Known limits
 
-- **Advice quality varies by model.** It's thin on the free Lite models. Reviewers should read the transcripts, not just the pass counts.
-- **Newest fixes:** tested offline only, as explained under [Status](#status-read-this-first).
+- **Advice quality varies by model.** It's thin on the free Lite models, which also occasionally produce a garbled word. Reviewers should read the transcripts, not just the pass counts.
+- **Incomplete live run:** 8 of the 27 scenarios haven't run on the final checks, as explained under [Current results](#current-results).
+- **Fixes made after the last live run:** the warning about instructions hidden in documents, and a false alarm in the amount check, are tested offline only.
 - **Grok and Claude:** never run live, because no key was available. They're covered by offline tests only.
 - **Free-tier limits:** the stronger Gemini models allow about 20 requests per model per day. One scenario takes roughly 3–19 requests, so finishing all 27 with stronger auditors may take more than one day.
 - **Speed:** every draft gets checked and often rewritten. Answers took from under 15 seconds to about 100 seconds on Lite models, and typically 2–3 minutes on DeepSeek. That's slow for real users.
@@ -243,4 +250,4 @@ See the screens without any key, using scripted replies that are labelled on scr
 | [corpus/](corpus/) | Sources, parsed law, cautions, helplines |
 | [scripts/](scripts/) | Download, parse, verify, smoke test |
 | [tests/](tests/) | Tests, retrieval evals, scenarios |
-| [outputs/](outputs/) | Raw test outputs and retrieval scores |
+| [outputs/](outputs/) | Raw test outputs, summary and retrieval scores |

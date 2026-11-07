@@ -1,0 +1,429 @@
+{
+ "id": "27_practice_bluffing_landlord",
+ "group": "practice",
+ "why": "The AI plays the other side, then coaches. The debrief must catch the bluffs.",
+ "started": "2026-11-08T02:21:19.427968",
+ "provider": "gemini",
+ "model": "gemini-3.5-flash-lite",
+ "audit_model": "gemini-3.6-flash",
+ "effort": "medium",
+ "audit_effort": "medium",
+ "turns": [
+  {
+   "user": "I moved out of my flat in Chennai on 31 August 2026. Rs 50,000 deposit, paid by bank transfer. The landlord says it's non-refundable. I have to call him tomorrow and I'm nervous.",
+   "file": null,
+   "reply": "It is completely normal to feel nervous before a call like this, but you are on firm legal ground. \n\nUnder the Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017, a security deposit must be refunded to the tenant within one month after vacating the premises, after deducting any legitimate liabilities or unpaid rent [[TNRRA2017:s11]]. Since you moved out on 31 August 2026, that one-month deadline was 30 September 2026. A security deposit is meant to cover damages or arrears—it cannot simply be declared \"non-refundable\" as a fee.\n\n### Tips for your call tomorrow:\n1. **Stay calm and factual:** Keep the conversation polite and professional. You do not need to argue or raise your voice.\n2. **Mention your proof:** Remind him that you paid the Rs 50,000 via bank transfer on [DATE OF TRANSFER] and that you vacated the flat cleanly on 31 August 2026.\n3. **Ask for specifics:** If he claims deductions, ask him to specify what damage or unpaid bills he is talking about, rather than accepting a blanket \"non-refundable\" excuse. \n\nBefore we draft a formal written demand or notice if the call doesn't go well, I just want to check:\n1. Was there a written rental agreement signed when you moved in?\n2. If so, does the agreement say anything about the deposit being non-refundable?",
+   "verification": {
+    "status": "verified",
+    "repairs": 0,
+    "removed": 0,
+    "issues": []
+   },
+   "citations": [
+    "TNRRA2017:s11"
+   ],
+   "errors": []
+  },
+  {
+   "user": "[practice debrief]",
+   "reply": "Here is a quick review of your practice call:\n\n1. **What you did well:** You started strong and stuck to the facts right away: *\"Hello sir, I'm calling about my Rs 50,000 deposit. I moved out on 31 August and it hasn't come back.\"* This is clear and professional.\n\n2. **Where you got pulled off track:** When you offered to take half (*\"Maybe you can give me half?\"*), you gave ground and sounded unsure. Next time, stand firm. A better line to use is: \n   > *\"Under Tamil Nadu law, the security deposit must be refunded within one month after vacating. I expect the full Rs 50,000 returned.\"*\n\n3. **The landlord's bluff:** The landlord claimed the deposit was \"non-refundable\". Under Tamil Nadu law, security deposits must be refunded within one month after vacating, subject to due deductions for any tenant liabilities [[TNRRA2017:s11]]. Furthermore, the law notes that parties are bound to keep premises in good condition except for normal wear and tear [[TNRRA2017:s15]]. Threatening extra bills at the last minute without prior notice or proof is a common pressure tactic.\n\n4. **One thing to do differently tomorrow:** Do not negotiate against yourself or offer a compromise. Stick to the full amount and your bank transfer record.",
+   "verification": {
+    "status": "verified",
+    "repairs": 1,
+    "removed": 0,
+    "issues": []
+   },
+   "citations": [
+    "TNRRA2017:s11",
+    "TNRRA2017:s15"
+   ],
+   "errors": []
+  }
+ ],
+ "practice": [
+  {
+   "you": "Hello sir, I'm calling about my Rs 50,000 deposit. I moved out on 31 August and it hasn't come back.",
+   "them": "Look, Mr./Ms. Tenant, let's be clear—that 50,000 rupees security deposit was non-refundable from day one, it's just standard policy for maintenance and wear-and-tear of the flat. Besides, with the way things were left, I practically had to spend that amount just to get the place ready for the next person."
+  },
+  {
+   "you": "But I paid it by bank transfer and I have the proof. And the flat was clean when I left.",
+   "them": "So what if you have a bank transfer record? Everyone knows security deposits are meant to cover property upkeep and wear-and-tear once you move out. Honestly, you should just drop it, because with the state the place was in, I'm practically doing you a favor by not asking for extra money."
+  },
+  {
+   "you": "Sir please, I really need the money. Maybe you can give me half?",
+   "them": "Half? Absolutely not, I'm not running a charity here. Like I said, that money went straight towards fixing up the place after you left, so you're lucky I'm not sending you a bill for the extra damages."
+  }
+ ],
+ "seconds": 59.7,
+ "usage": {
+  "input": 37333,
+  "output": 2641,
+  "cache_read": 50458,
+  "cache_write": 0,
+  "api_calls": 16
+ },
+ "case_file": {
+  "amounts": [
+   {
+    "label": "Security Deposit",
+    "amount_inr": "50000"
+   }
+  ],
+  "parties": [
+   {
+    "role": "landlord",
+    "name": "Landlord"
+   },
+   {
+    "role": "tenant",
+    "name": "Tenant"
+   }
+  ],
+  "deadlines": [
+   {
+    "date": "2026-09-30",
+    "basis": "TNRRA2017:s11",
+    "what": "Deadline for landlord to refund security deposit (1 month after vacating)"
+   }
+  ],
+  "evidence": [
+   {
+    "why_it_matters": "Proves payment of the security deposit",
+    "item": "Bank transfer record",
+    "status": "have"
+   }
+  ],
+  "open_questions": [
+   "Was there a written rental agreement? If so, what does it say about the deposit?"
+  ],
+  "timeline": [
+   {
+    "date": "2026-08-31",
+    "event": "Moved out of the flat in Chennai",
+    "source": "user"
+   }
+  ],
+  "summary": "Tenant moved out of a flat in Chennai on 31 August 2026 after paying Rs 50,000 security deposit via bank transfer. Landlord claims the deposit is non-refundable.",
+  "document_references": [],
+  "problem_type": "tenancy_deposit",
+  "state": "Tamil Nadu"
+ },
+ "assessment": {
+  "what_i_could_not_verify": [
+   "What the written rental agreement states about the deposit, if any."
+  ],
+  "reason": "Under Tamil Nadu law, security deposits must be refunded within one month of vacating, subject to due deductions for tenant liabilities.",
+  "lawyer_needed": "none",
+  "confidence": "high"
+ },
+ "triage": {
+  "level": "none",
+  "codes": [],
+  "reasons": [],
+  "reasons_hi": [],
+  "help": []
+ },
+ "documents": [],
+ "doc_rejections": 0,
+ "trail": [
+  {
+   "user": "I moved out of my flat in Chennai on 31 August 2026. Rs 50,000 deposit, paid by bank transfer. The landlord says it's non-refundable. I have to call him tomorrow and I'm nervous.",
+   "tool_calls": [
+    {
+     "name": "search_law",
+     "input": {
+      "query": "security deposit refund Tamil Nadu rent act",
+      "state": "Tamil Nadu"
+     },
+     "is_error": false,
+     "result": "[{\"id\": \"TNRRA2017:s11\", \"citation\": \"Section 11, Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017\", \"heading\": \"Security deposit\", \"excerpt\": \"(1) Save an agreement to the contrary, it shall be unlawful to charge a\\nsecurity deposit in excess of three times the monthly rent.\\n(2) The security deposit shall be refunded to the tenant within one month\\nafter vacation of the premises, after making due deduction of any liability of the\\ntenant.\", \"applies_in\": \"Tamil Nadu\", \"caution\": \"\"}, {\"id\": \"MTA2021:s11\", \"citation\": \"Section 11, Model Tenancy Act, 2021\", \"heading\": \"Security deposit\", \"excerpt\": \"(1) The security deposit to b e paid by the tenant in advance shall\\nbe such as may be agreed upon between the landlord and the tenant\\nin the tenancy agreement, which shall ––\\nRestriction on\\nsub-letting.\\nRent payable.\\nRevision of rent.\\nRent Authority to\\ndetermine the\\nrevised rent in\\ncase of dispute.\\nSecurity deposit.\\n(a) not exceed two months rent, in case of residential premises;\\nand\\n(b) not exceed six months rent , in case of non -residential\\npremises.\\n(2) The security deposit shall be refunded to the tenant on the date of\\ntaking over vacant possession of the premises from the tenant, after\\nmaking due deduction of any liability of the tenant.\", \"applies_in\": \"Model law (applies only where a State has adopted it)\", \"caution\": \"This is a MODEL law issued by the Central Government for States to adopt. It does not bind anyone unless the user's State has enacted it. Never present it as law that applies to the user; say it is a model only.\"}, {\"id\": \"TNRRA2017:s41\", \"citation\": \"Section 41, Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017\", \"heading\": \"Court-fees. Tamil Nadu Act XIV of 1955\", \"excerpt\": \"(1) The provisions of the Tamil Nadu Court-fees and Suits Valuation Act,\\n1955 shall apply in respect of applications or appeals to be presented before the\\nRent Court or Rent Tribunal or Rent Authority, as the case may be.\\n(2) The applications for recovery of possession made to the Rent Court and\\nthe memorandum of appeals presented before the Rent Tribunal shall be treated\\nas suits between the landlord and the tenant for the purposes of computation of\\ncourt-fees.\\n(3) The court-fees on the application filed before the Rent Authority shall\\nbe same as of an interlocutory application presented in a civil court.\", \"applies_in\": \"Tamil Nadu\", \"caution\": \"\"}, {\"id\": \"TNRRA2017:s47\", \"citation\": \"Section 47, Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017\", \"heading\": \"Repeal and Tamil Nadu savings. Act 18 of 1960\", \"excerpt\": \" of this\\nAct be deemed to have been filed on the date of filing of the suit which was\\nwithdrawn and in case of withdrawal of appeal or other proceedings on the date\\non which the suit was filed out of which such appeal or proceeding originated.\", \"applies_in\": \"Tamil Nadu\", \"caution\": \"\"}, {\"id\": \"TNRRA2017:s24\", \"citation\": \"Section 24, Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017\", \"heading\": \"Refund of advance rent by the landlord\", \"excerpt\": \"(1) Where a landlord exercises the right of recovery of possession under\\nsub-section (2) of section 21, and he had received any rent or any other payment\\nin advance from the tenant, he shall, before recovery of possession, refund to the\\ntenant such an amount after deducting the rent and other charges due to him.\\n(2) If any default is made in making any refund, the landlord shall be liable\\nto pay simple interest at such rate as may be prescribed from time to time on the\\namount which he has omitted or failed to refund.\", \"applies_in\": \"Tamil Nadu\", \"caution\": \"\"}, {\"id\": \"CPECOM2020:r7\", \"citation\": \"Rule 7, Consumer Protection (E-Commerce) Rules, 2020\", \"heading\": \"Duties and liabilities of inventory e-commerce entities\", \"excerpt\": \"(1) Every inventory e -commerce entity shall provide th"
+    },
+    {
+     "name": "get_provision",
+     "input": {
+      "id": "TNRRA2017:s11"
+     },
+     "is_error": false,
+     "result": "{\"id\": \"TNRRA2017:s11\", \"citation\": \"Section 11, Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017\", \"applies_in\": \"Tamil Nadu\", \"caution\": \"\", \"heading\": \"Security deposit\", \"text\": \"(1) Save an agreement to the contrary, it shall be unlawful to charge a\\nsecurity deposit in excess of three times the monthly rent.\\n(2) The security deposit shall be refunded to the tenant within one month\\nafter vacation of the premises, after making due deduction of any liability of the\\ntenant.\"}"
+    },
+    {
+     "name": "update_case_file",
+     "input": {
+      "amounts": [
+       {
+        "label": "Security Deposit",
+        "amount_inr": "50000"
+       }
+      ],
+      "parties": [
+       {
+        "role": "landlord",
+        "name": "Landlord"
+       },
+       {
+        "role": "tenant",
+        "name": "Tenant"
+       }
+      ],
+      "deadlines": [
+       {
+        "date": "2026-09-30",
+        "basis": "TNRRA2017:s11",
+        "what": "Deadline for landlord to refund security deposit (1 month after vacating)"
+       }
+      ],
+      "evidence": [
+       {
+        "why_it_matters": "Proves payment of the security deposit",
+        "item": "Bank transfer record",
+        "status": "have"
+       }
+      ],
+      "open_questions": [
+       "Was there a written rental agreement? If so, what does it say about the deposit?"
+      ],
+      "timeline": [
+       {
+        "date": "2026-08-31",
+        "event": "Moved out of the flat in Chennai",
+        "source": "user"
+       }
+      ],
+      "summary": "Tenant moved out of a flat in Chennai on 31 August 2026 after paying Rs 50,000 security deposit via bank transfer. Landlord claims the deposit is non-refundable.",
+      "document_references": [],
+      "problem_type": "tenancy_deposit",
+      "state": "Tamil Nadu"
+     },
+     "is_error": false,
+     "result": "Saved."
+    },
+    {
+     "name": "set_assessment",
+     "input": {
+      "confidence": "high",
+      "lawyer_needed": "none",
+      "reason": "Under Tamil Nadu law, security deposits must be refunded within one month of vacating, minus lawful deductions.",
+      "what_i_could_not_verify": [
+       "What the written rental agreement states about the deposit, if any."
+      ]
+     },
+     "is_error": false,
+     "result": "Saved."
+    }
+   ],
+   "drafts": [
+    {
+     "text": "It is completely normal to feel nervous before a call like this, but you are on firm legal ground. \n\nUnder the Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017, a security deposit must be refunded to the tenant within one month after vacating the premises, after deducting any legitimate liabilities or unpaid rent [[TNRRA2017:s11]]. Since you moved out on 31 August 2026, that one-month deadline was 30 September 2026. A security deposit is meant to cover damages or arrears—it cannot simply be declared \"non-refundable\" as a fee.\n\n### Tips for your call tomorrow:\n1. **Stay calm and factual:** Keep the conversation polite and professional. You do not need to argue or raise your voice.\n2. **Mention your proof:** Remind him that you paid the Rs 50,000 via bank transfer on [DATE OF TRANSFER] and that you vacated the flat cleanly on 31 August 2026.\n3. **Ask for specifics:** If he claims deductions, ask him to specify what damage or unpaid bills he is talking about, rather than accepting a blanket \"non-refundable\" excuse. \n\nBefore we draft a formal written demand or notice if the call doesn't go well, I just want to check:\n1. Was there a written rental agreement signed when you moved in?\n2. If so, does the agreement say anything about the deposit being non-refundable?",
+     "issues": []
+    }
+   ],
+   "audits": [
+    {
+     "claims": [
+      {
+       "paragraph": 2,
+       "claim": "Under the Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017, the security deposit must be refunded to the tenant within one month after vacating the premises, after making due deductions for legitimate liabilities.",
+       "citations": [
+        "TNRRA2017:s11"
+       ],
+       "verdict": "supported",
+       "reason": "Section 11(2) of the cited Act states that the security deposit shall be refunded to the tenant within one month after vacation of the premises, after making due deduction of any liability of the tenant.",
+       "exact_quote": "Under the Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017, a security deposit must be refunded to the tenant within one month after vacating the premises, after deducting any legitimate liabilities or unpaid rent [[TNRRA2017:s11]]."
+      }
+     ],
+     "uncited_legal_claims": [],
+     "invented_facts": [],
+     "ignored_cautions": [],
+     "_usage": {
+      "input": 1133,
+      "output": 262
+     }
+    }
+   ],
+   "final_status": "verified",
+   "final": "It is completely normal to feel nervous before a call like this, but you are on firm legal ground. \n\nUnder the Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017, a security deposit must be refunded to the tenant within one month after vacating the premises, after deducting any legitimate liabilities or unpaid rent [[TNRRA2017:s11]]. Since you moved out on 31 August 2026, that one-month deadline was 30 September 2026. A security deposit is meant to cover damages or arrears—it cannot simply be declared \"non-refundable\" as a fee.\n\n### Tips for your call tomorrow:\n1. **Stay calm and factual:** Keep the conversation polite and professional. You do not need to argue or raise your voice.\n2. **Mention your proof:** Remind him that you paid the Rs 50,000 via bank transfer on [DATE OF TRANSFER] and that you vacated the flat cleanly on 31 August 2026.\n3. **Ask for specifics:** If he claims deductions, ask him to specify what damage or unpaid bills he is talking about, rather than accepting a blanket \"non-refundable\" excuse. \n\nBefore we draft a formal written demand or notice if the call doesn't go well, I just want to check:\n1. Was there a written rental agreement signed when you moved in?\n2. If so, does the agreement say anything about the deposit being non-refundable?",
+   "repairs": 0,
+   "seconds": 20.3,
+   "usage_after": {
+    "input": 16511,
+    "output": 1004,
+    "cache_read": 16067,
+    "cache_write": 0,
+    "api_calls": 6
+   }
+  },
+  {
+   "user": "[debrief request]",
+   "tool_calls": [
+    {
+     "name": "search_law",
+     "input": {
+      "state": "Tamil Nadu",
+      "query": "wear and tear maintenance Tamil Nadu rent act"
+     },
+     "is_error": false,
+     "result": "[{\"id\": \"TNRRA2017:s47\", \"citation\": \"Section 47, Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017\", \"heading\": \"Repeal and Tamil Nadu savings. Act 18 of 1960\", \"excerpt\": \"(1) The Tamil Nadu Buildings (Lease and Rent Control) Act, 1960 is hereby\\nrepealed.\\n(2) Notwithstanding such repeal and subject to the provisions of this Act,\\nall cases and other proceedings under the said Act pending, at the commencement\\nof this Act, shall be continued and disposed of in accordance with the provisions\\nof the said Act, as if the said Act had continued in force and this Act had not been\\npassed:\\nProvided that the plaintiff within a period of 180 days of coming into force of\\nthis Act shall be entitled to withdraw any suit or appeal or any other proceeding\\npending under the repealed Act with liberty to file fresh application in respect of\\nthe subject matter of such suit or appeal or any other proceeding under and in\\naccordance with the provisions of this Act, and for the purposes of limitation, such\\napplication if it is filed within a period of 270 days from the commencement\", \"applies_in\": \"Tamil Nadu\", \"caution\": \"\"}, {\"id\": \"TNRRA2017:s1\", \"citation\": \"Section 1, Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017\", \"heading\": \"Short title, extent and commencement\", \"excerpt\": \"(1) This Act may be called the Tamil Nadu Regulation of Rights and\\nResponsibilities of Landlords and Tenants Act, 2017.\\n(2) It shall extend to all urban areas of the State of Tamil Nadu.\\n(3) It shall come into force on such date as the Government may, by notification,\\nappoint and different dates may be appointed for different provisions of this Act:\\nProvided that the Government may, by notification, exclude any area or units\\nor class of buildings from the operation of this Act or any provision thereof.\", \"applies_in\": \"Tamil Nadu\", \"caution\": \"\"}, {\"id\": \"TNRRA2017:s41\", \"citation\": \"Section 41, Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017\", \"heading\": \"Court-fees. Tamil Nadu Act XIV of 1955\", \"excerpt\": \"(1) The provisions of the Tamil Nadu Court-fees and Suits Valuation Act,\\n1955 shall apply in respect of applications or appeals to be presented before the\\nRent Court or Rent Tribunal or Rent Authority, as the case may be.\\n(2) The applications for recovery of possession made to the Rent Court and\\nthe memorandum of appeals presented before the Rent Tribunal shall be treated\\nas suits between the landlord and the tenant for the purposes of computation of\\ncourt-fees.\\n(3) The court-fees on the application filed before the Rent Authority shall\\nbe same as of an interlocutory application presented in a civil court.\", \"applies_in\": \"Tamil Nadu\", \"caution\": \"\"}, {\"id\": \"TNRRA2017:s15\", \"citation\": \"Section 15, Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017\", \"heading\": \"Repair and maintenance of property\", \"excerpt\": \"(1) Notwithstanding any contract in writing to the contrary, the landlord and\\nthe tenant shall be bound to keep the premises in as good a condition as at the\\ncommencement of the tenancy, except for normal wear and tear, and shall be\\nresponsible for the respective repairs and maintenance as specified in the Second\\nSchedule.\\n(2) In case of common facilities shared among the tenants or with the\\nlandlord, the respective responsibilities of each tenant and landlord shall be specified\\nin the tenancy agreement.\\n(3) In the event of tenant’s refusal to carry out the scheduled or agreed\\nrepairs, the landlord shall get the repairs done and deduct the amount from the\\nsecurity deposit.\\n(4) In case the landlord refuses to carry out the scheduled or agreed repairs,\\nthe tenant can get the work done and deduct the same from monthly rent:\\nProvided that in no case will the deduction from rent in any one mo\", \"applies_in\": \"Tamil Nadu\", \"caution\": \"\"}, {\"id\": \"TNRRA2017:sch\", \"citation\": \""
+    },
+    {
+     "name": "get_provision",
+     "input": {
+      "id": "TNRRA2017:s15"
+     },
+     "is_error": false,
+     "result": "{\"id\": \"TNRRA2017:s15\", \"citation\": \"Section 15, Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017\", \"applies_in\": \"Tamil Nadu\", \"caution\": \"\", \"heading\": \"Repair and maintenance of property\", \"text\": \"(1) Notwithstanding any contract in writing to the contrary, the landlord and\\nthe tenant shall be bound to keep the premises in as good a condition as at the\\ncommencement of the tenancy, except for normal wear and tear, and shall be\\nresponsible for the respective repairs and maintenance as specified in the Second\\nSchedule.\\n(2) In case of common facilities shared among the tenants or with the\\nlandlord, the respective responsibilities of each tenant and landlord shall be specified\\nin the tenancy agreement.\\n(3) In the event of tenant’s refusal to carry out the scheduled or agreed\\nrepairs, the landlord shall get the repairs done and deduct the amount from the\\nsecurity deposit.\\n(4) In case the landlord refuses to carry out the scheduled or agreed repairs,\\nthe tenant can get the work done and deduct the same from monthly rent:\\nProvided that in no case will the deduction from rent in any one month exceed\\nfifty per cent of the agreed rent for one month.\\n(5) In case the premises is uninhabitable without the repairs and the\\nlandlord has refused to carry out the required repairs, after being called upon to\\nget the repairs done in writing by the tenant, the tenant shall have the right to\\nabandon the premises after giving landlord fifteen days notice in writing or by\\napproaching the Rent Authority.\"}"
+    },
+    {
+     "name": "set_assessment",
+     "input": {
+      "what_i_could_not_verify": [
+       "What the written rental agreement states about the deposit, if any."
+      ],
+      "reason": "Under Tamil Nadu law, security deposits must be refunded within one month of vacating, subject to due deductions for tenant liabilities.",
+      "lawyer_needed": "none",
+      "confidence": "high"
+     },
+     "is_error": false,
+     "result": "Saved."
+    }
+   ],
+   "drafts": [
+    {
+     "text": "Here is a quick review of your practice call:\n\n1. **What you did well:** You started strong and stuck to the facts right away: *\"Hello sir, I'm calling about my Rs 50,000 deposit. I moved out on 31 August and it hasn't come back.\"* This is clear and professional.\n\n2. **Where you got pulled off track:** When you offered to take half (*\"Maybe you can give me half?\"*), you gave ground and sounded unsure. Next time, stand firm. A better line to use is: \n   > *\"Under Tamil Nadu law, the security deposit must be refunded within one month after vacating. I expect the full Rs 50,000 returned.\"*\n\n3. **The landlord's bluff:** The landlord claimed the deposit was \"non-refundable\" for wear-and-tear. That is incorrect. Under Tamil Nadu law, security deposits are meant to cover specific liabilities or unpaid dues, and the full deposit must be refunded within one month of vacating [[TNRRA2017:s11]]. Normal wear and tear is the landlord's responsibility to maintain, not yours to pay for. Furthermore, threatening extra bills at the last minute without prior notice or proof is a common pressure tactic.\n\n4. **One thing to do differently tomorrow:** Do not negotiate against yourself or offer a compromise. Stick to the full amount and your bank transfer record.",
+     "issues": [
+      {
+       "code": "claim_overstated",
+       "detail": "Paragraph 4: \"Under Tamil Nadu law, security deposits are meant to cover specific liabilities, and the full deposit must be refunded within one month of vacating.\" goes beyond ['TNRRA2017:s11']. Section 11(2) provides that the deposit shall be refunded within one month after vacating after making due deduction of any liability of the tenant. Claiming that the full deposit must be refunded ignores the statutory allowance for due deductions.",
+       "paragraph": 3,
+       "blocking": true,
+       "quote": "Under Tamil Nadu law, security deposits are meant to cover specific liabilities or unpaid dues, and the full deposit must be refunded within one month of vacating [[TNRRA2017:s11]]."
+      },
+      {
+       "code": "uncited_legal_claim",
+       "detail": "Paragraph 4: \"Stating that normal wear and tear is legally the landlord's responsibility to maintain and not the tenant's to pay for sets a legal duty without citing a legal \" states law with no citation. Find and cite the provision, say you could not verify it, or remove it.",
+       "paragraph": 3,
+       "blocking": true,
+       "quote": "Normal wear and tear is the landlord's responsibility to maintain, not yours to pay for."
+      }
+     ]
+    },
+    {
+     "text": "Here is a quick review of your practice call:\n\n1. **What you did well:** You started strong and stuck to the facts right away: *\"Hello sir, I'm calling about my Rs 50,000 deposit. I moved out on 31 August and it hasn't come back.\"* This is clear and professional.\n\n2. **Where you got pulled off track:** When you offered to take half (*\"Maybe you can give me half?\"*), you gave ground and sounded unsure. Next time, stand firm. A better line to use is: \n   > *\"Under Tamil Nadu law, the security deposit must be refunded within one month after vacating. I expect the full Rs 50,000 returned.\"*\n\n3. **The landlord's bluff:** The landlord claimed the deposit was \"non-refundable\". Under Tamil Nadu law, security deposits must be refunded within one month after vacating, subject to due deductions for any tenant liabilities [[TNRRA2017:s11]]. Furthermore, the law notes that parties are bound to keep premises in good condition except for normal wear and tear [[TNRRA2017:s15]]. Threatening extra bills at the last minute without prior notice or proof is a common pressure tactic.\n\n4. **One thing to do differently tomorrow:** Do not negotiate against yourself or offer a compromise. Stick to the full amount and your bank transfer record.",
+     "issues": []
+    }
+   ],
+   "audits": [
+    {
+     "claims": [
+      {
+       "paragraph": 4,
+       "claim": "Under Tamil Nadu law, security deposits are meant to cover specific liabilities, and the full deposit must be refunded within one month of vacating.",
+       "citations": [
+        "TNRRA2017:s11"
+       ],
+       "verdict": "partly_supported",
+       "reason": "Section 11(2) provides that the deposit shall be refunded within one month after vacating after making due deduction of any liability of the tenant. Claiming that the full deposit must be refunded ignores the statutory allowance for due deductions.",
+       "exact_quote": "Under Tamil Nadu law, security deposits are meant to cover specific liabilities or unpaid dues, and the full deposit must be refunded within one month of vacating [[TNRRA2017:s11]]."
+      }
+     ],
+     "uncited_legal_claims": [
+      {
+       "paragraph": 4,
+       "claim": "Stating that normal wear and tear is legally the landlord's responsibility to maintain and not the tenant's to pay for sets a legal duty without citing a legal provision.",
+       "exact_quote": "Normal wear and tear is the landlord's responsibility to maintain, not yours to pay for."
+      }
+     ],
+     "invented_facts": [],
+     "ignored_cautions": [],
+     "_usage": {
+      "input": 1405,
+      "output": 316
+     }
+    },
+    {
+     "claims": [
+      {
+       "paragraph": 4,
+       "claim": "Under Tamil Nadu law, security deposits must be refunded within one month after vacating the premises, after deducting any tenant liabilities.",
+       "citations": [
+        "TNRRA2017:s11"
+       ],
+       "verdict": "supported",
+       "reason": "Section 11(2) explicitly states that the security deposit shall be refunded to the tenant within one month after vacation of the premises, after making due deduction of any liability of the tenant.",
+       "exact_quote": "Under Tamil Nadu law, security deposits must be refunded within one month after vacating, subject to due deductions for any tenant liabilities [[TNRRA2017:s11]]."
+      },
+      {
+       "paragraph": 4,
+       "claim": "The law states that the landlord and tenant are bound to keep the premises in as good a condition as at the commencement of tenancy, except for normal wear and tear.",
+       "citations": [
+        "TNRRA2017:s15"
+       ],
+       "verdict": "supported",
+       "reason": "Section 15(1) specifies that the landlord and tenant shall be bound to keep the premises in as good a condition as at the commencement of the tenancy, except for normal wear and tear.",
+       "exact_quote": "Furthermore, the law notes that parties are bound to keep premises in good condition except for normal wear and tear [[TNRRA2017:s15]]."
+      }
+     ],
+     "uncited_legal_claims": [],
+     "invented_facts": [],
+     "ignored_cautions": [],
+     "_usage": {
+      "input": 1737,
+      "output": 386
+     }
+    }
+   ],
+   "final_status": "verified",
+   "final": "Here is a quick review of your practice call:\n\n1. **What you did well:** You started strong and stuck to the facts right away: *\"Hello sir, I'm calling about my Rs 50,000 deposit. I moved out on 31 August and it hasn't come back.\"* This is clear and professional.\n\n2. **Where you got pulled off track:** When you offered to take half (*\"Maybe you can give me half?\"*), you gave ground and sounded unsure. Next time, stand firm. A better line to use is: \n   > *\"Under Tamil Nadu law, the security deposit must be refunded within one month after vacating. I expect the full Rs 50,000 returned.\"*\n\n3. **The landlord's bluff:** The landlord claimed the deposit was \"non-refundable\". Under Tamil Nadu law, security deposits must be refunded within one month after vacating, subject to due deductions for any tenant liabilities [[TNRRA2017:s11]]. Furthermore, the law notes that parties are bound to keep premises in good condition except for normal wear and tear [[TNRRA2017:s15]]. Threatening extra bills at the last minute without prior notice or proof is a common pressure tactic.\n\n4. **One thing to do differently tomorrow:** Do not negotiate against yourself or offer a compromise. Stick to the full amount and your bank transfer record.",
+   "repairs": 1,
+   "seconds": 35.0,
+   "usage_after": {
+    "input": 37333,
+    "output": 2641,
+    "cache_read": 50458,
+    "cache_write": 0,
+    "api_calls": 16
+   }
+  }
+ ],
+ "checks": [
+  {
+   "check": "got_an_answer",
+   "pass": true,
+   "detail": "0 turn(s) with errors"
+  },
+  {
+   "check": "all_citations_exist",
+   "pass": true,
+   "detail": "2 citation(s) all resolve"
+  },
+  {
+   "check": "same_language_as_user",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "no_unrequested_document",
+   "pass": true,
+   "detail": "saved [] without being asked"
+  },
+  {
+   "check": "substantive_answer",
+   "pass": true,
+   "detail": "shortest reply is 1237 characters"
+  },
+  {
+   "check": "no_case_law_cited",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "cite_any",
+   "pass": true,
+   "detail": "wanted any of ['TNRRA2017:s11']; cited ['TNRRA2017:s11', 'TNRRA2017:s15']"
+  },
+  {
+   "check": "say_none /67B|Section 999|Housing Recovery Act|AIR/",
+   "pass": true,
+   "detail": ""
+  }
+ ]
+}

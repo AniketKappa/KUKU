@@ -1,0 +1,501 @@
+{
+ "id": "15_notice_image_cheque",
+ "group": "notice",
+ "why": "Photo of a notice. It cites a repealed law and has a 15-day deadline.",
+ "started": "2026-11-08T02:20:48.092536",
+ "provider": "gemini",
+ "model": "gemini-3.5-flash-lite",
+ "audit_model": "gemini-3.6-flash",
+ "effort": "medium",
+ "audit_effort": "medium",
+ "turns": [
+  {
+   "user": "I got this notice in the post on 2 November 2026. I'm scared. I don't understand it. What does it mean?",
+   "file": "cheque_notice.png",
+   "reply": "This is a serious legal notice regarding a bounced cheque [[NIA1881:s138]]. Here is what it means and what you should do:\n\n**What the notice says:**\n- Shree Traders claims you gave them cheque no. 004512 for Rs. 85,000 on 02 October 2026 for goods supplied, but your bank returned it unpaid on 15 October 2026 due to insufficient funds [[NIA1881:s138]].\n- The sender's lawyer has invoked Section 138 of the Negotiable Instruments Act, 1881 [[NIA1881:s138]] and mentioned cheating (previously under Section 420 of the Indian Penal Code, now covered under Section 318 of the Bharatiya Nyaya Sanhita, 2023 [[BNS2023:s318]]).\n\n**The Deadline:**\n- The notice requires you to pay Rs. 85,000 within **15 days** of receiving it. \n- Since you received it on 2 November 2026, the 15-day deadline ends around **17 November 2026**.\n- If you do not pay within this period, the sender can file a criminal complaint against you in court [[NIA1881:s142]].\n\n**What you should do next:**\n1. **Consult a lawyer immediately:** Because this involves a potential criminal case with strict deadlines, please show this notice to a lawyer without delay.\n2. **Free Legal Aid:** If you cannot afford a private advocate, you can contact the National Legal Services Authority (NALSA) helpline at **15100** to connect with free legal aid [[NOTE:NALSA]].\n3. **Check your records:** Gather your bank statements, receipts, and any communication regarding the goods supplied to verify if the amount is correct or if there is a dispute over the transaction.\n\nWould you like help preparing a reply, or do you have any questions about the transaction?",
+   "verification": {
+    "status": "verified",
+    "repairs": 1,
+    "removed": 0,
+    "issues": []
+   },
+   "citations": [
+    "NIA1881:s138",
+    "BNS2023:s318",
+    "NIA1881:s142",
+    "NOTE:NALSA"
+   ],
+   "errors": []
+  }
+ ],
+ "seconds": 31.3,
+ "usage": {
+  "input": 23159,
+  "output": 3467,
+  "cache_read": 40531,
+  "cache_write": 0,
+  "api_calls": 8
+ },
+ "case_file": {
+  "state": "Maharashtra",
+  "timeline": [
+   {
+    "event": "Cheque issued for Rs. 85,000",
+    "source": "document",
+    "date": "2026-10-02"
+   },
+   {
+    "date": "2026-10-15",
+    "source": "document",
+    "event": "Cheque returned unpaid for insufficient funds"
+   },
+   {
+    "date": "2026-10-28",
+    "source": "document",
+    "event": "Legal notice dated"
+   },
+   {
+    "source": "user",
+    "event": "Legal notice received by post",
+    "date": "2026-11-02"
+   }
+  ],
+  "document_references": [
+   "Section 138 of the Negotiable Instruments Act, 1881",
+   "Section 420 of the Indian Penal Code",
+   "Bharatiya Nyaya Sanhita, 2023"
+  ],
+  "amounts": [
+   {
+    "amount_inr": "85000",
+    "label": "Cheque Amount"
+   }
+  ],
+  "open_questions": [
+   "What was the dispute regarding the goods supplied, if any?"
+  ],
+  "summary": "Rakesh Verma received a legal notice on 2 November 2026 under Section 138 of the Negotiable Instruments Act and Section 420 IPC for a bounced cheque of Rs. 85,000 dated 2 October 2026 returned unpaid on 15 October 2026.",
+  "deadlines": [
+   {
+    "what": "Pay Rs. 85,000 within 15 days of receipt (received 2 Nov 2026)",
+    "basis": "document",
+    "date": "2026-11-17"
+   }
+  ],
+  "problem_type": "cheque_bounce",
+  "parties": [
+   {
+    "role": "recipient",
+    "name": "Mr. Rakesh Verma"
+   },
+   {
+    "name": "Shree Traders",
+    "role": "sender"
+   }
+  ],
+  "evidence": [
+   {
+    "why_it_matters": "The instrument in question",
+    "status": "have",
+    "item": "Cheque no. 004512 dated 02 October 2026 for Rs. 85,000"
+   },
+   {
+    "item": "Bank return memo dated 15 October 2026",
+    "status": "unclear",
+    "why_it_matters": "Shows reason for dishonour"
+   }
+  ]
+ },
+ "assessment": {
+  "lawyer_needed": "urgent",
+  "confidence": "high",
+  "reason": "This is a serious criminal matter under Section 138 of the Negotiable Instruments Act where deadlines are extremely strict, so you should consult a lawyer immediately.",
+  "what_i_could_not_verify": [
+   "Whether the goods were actually supplied or if there is a valid defense regarding the transaction"
+  ]
+ },
+ "triage": {
+  "level": "urgent",
+  "codes": [
+   "cheque_case_against_user"
+  ],
+  "reasons": [
+   "A cheque-bounce notice has short legal deadlines and can lead to a criminal case. Please show it to a lawyer quickly."
+  ],
+  "reasons_hi": [
+   "चेक बाउंस नोटिस की समय सीमा कम होती है और आपराधिक मामला बन सकता है। कृपया इसे जल्दी वकील को दिखाएं।"
+  ],
+  "help": [
+   "NOTE:NALSA"
+  ]
+ },
+ "documents": [],
+ "doc_rejections": 0,
+ "trail": [
+  {
+   "user": "I got this notice in the post on 2 November 2026. I'm scared. I don't understand it. What does it mean?",
+   "tool_calls": [
+    {
+     "name": "search_law",
+     "input": {
+      "query": "Negotiable Instruments Act Section 138",
+      "state": "Maharashtra"
+     },
+     "is_error": false,
+     "result": "[{\"id\": \"NIA1881:s48\", \"citation\": \"Section 48, Negotiable Instruments Act, 1881\", \"heading\": \"Negotiation by indorsement\", \"excerpt\": \"Subject to the provisions of section 58, a promissory note, bill of\\nexchange or cheque 1[payable to order], is negotiable by the holder by indorsement and delivery thereof.\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"NIA1881:s17\", \"citation\": \"Section 17, Negotiable Instruments Act, 1881\", \"heading\": \"Ambiguous instruments\", \"excerpt\": \"Where an instrument may be construed either as a promissory note or\\nbill of exchange, the holder may at his election treat it as either, and the instrument shall be thenceforward\\ntreated accordingly.\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"NIA1881:s20\", \"citation\": \"Section 20, Negotiable Instruments Act, 1881\", \"heading\": \"Inchoate stamped instruments\", \"excerpt\": \"Where one person signs and delivers to another a paper\\nstamped in accordance with the law relating to negotiable instruments then in force in [India], and\\neither wholly blank or having written thereon an incomplete negotiable instrument, he thereby gives\\nprima facie authority to the holder thereof to make or complete, as the case may be, upon it a\\nnegotiable instrument, for any amount specified therein and not exceeding the amount covered by the\\nstamp. The person so signing shall be liable upon such instrument, in the capacity in which he signed\\nthe same, to any holder in due course for such amount : provided that no person other than a holder in\\ndue course shall recover from the person delivering the instrument anything in excess of the amount\\nintended by him to be paid thereunder.\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"NIA1881:s53\", \"citation\": \"Section 53, Negotiable Instruments Act, 1881\", \"heading\": \"Holder deriving title from holder in due course\", \"excerpt\": \"A holder of a negotiable instrument who\\nderives title from a holder in due course has the rights thereon of that holder in due course.\\ncheques, a negotiable instrument indorsed in blank is payable to the bearer thereof even although\\noriginally payable to order.\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"NIA1881:s36\", \"citation\": \"Section 36, Negotiable Instruments Act, 1881\", \"heading\": \"Liability of prior parties to holder in due course\", \"excerpt\": \"Every prior party to a negotiable instrument\\nis liable thereon to a holder in due course until the instrument is duly satisfied.\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"NIA1881:s142A\", \"citation\": \"Section 142A, Negotiable Instruments Act, 1881\", \"heading\": \"Validation for transfer of pending cases\", \"excerpt\": \"(1) Notwithstanding anything contained in the\\nCode of Criminal Procedure, 1973 (2 of 1974) or any judgment, decree, order or direction of any court,\\nall cases transferred to the court having jurisdiction under sub-section (2) of section 142, as amended by\\nthe Negotiable Instruments (Amendment) Ordinance, 2015 (Ord. 6 of 2015) , shall be deemed to have\\nbeen transferred under this Act, as if that sub-section had been in force at all material times.\\n(2) Notwithstanding anything contained in sub-section (2) of section 142 or sub-section (1), where the\\npayee or the holder in due course, as the case may be, has filed a complaint against the drawer of a cheque\\nin the court having jurisdiction under sub -section (2) of section 142 or the case has been transferred to\\nthat court under sub -section (1) and such complaint is pending in that court, all subsequent complaints\\narising out of section 138\", \"applies_in\": \"India\", \"caution\": \"\"}]"
+    },
+    {
+     "name": "get_provision",
+     "input": {
+      "id": "NOTE:NALSA"
+     },
+     "is_error": false,
+     "result": "{\"id\": \"NOTE:NALSA\", \"title\": \"Free legal aid (NALSA)\", \"fact\": \"The National Legal Services Authority helpline is 15100. It connects eligible people with free legal aid.\", \"source\": \"https://nalsa.gov.in/\"}"
+    },
+    {
+     "name": "update_case_file",
+     "input": {
+      "state": "Maharashtra",
+      "timeline": [
+       {
+        "event": "Cheque issued for Rs. 85,000",
+        "source": "document",
+        "date": "2026-10-02"
+       },
+       {
+        "event": "Cheque returned unpaid for insufficient funds",
+        "source": "document",
+        "date": "2026-10-15"
+       },
+       {
+        "date": "2026-10-28",
+        "source": "document",
+        "event": "Legal notice dated"
+       },
+       {
+        "event": "Legal notice received by post",
+        "date": "2026-11-02",
+        "source": "user"
+       }
+      ],
+      "document_references": [
+       "Section 138 of the Negotiable Instruments Act, 1881",
+       "Section 420 of the Indian Penal Code"
+      ],
+      "amounts": [
+       {
+        "label": "Cheque Amount",
+        "amount_inr": "85000"
+       }
+      ],
+      "open_questions": [
+       "What was the dispute regarding the goods supplied, if any?"
+      ],
+      "summary": "Rakesh Verma received a legal notice on 2 November 2026 under Section 138 of the Negotiable Instruments Act and Section 420 IPC for a bounced cheque of Rs. 85,000 dated 2 October 2026 returned unpaid on 15 October 2026.",
+      "deadlines": [
+       {
+        "date": "2026-11-17",
+        "basis": "document",
+        "what": "Pay Rs. 85,000 within 15 days of receipt (received 2 Nov 2026)"
+       }
+      ],
+      "problem_type": "cheque_bounce",
+      "parties": [
+       {
+        "name": "Mr. Rakesh Verma",
+        "role": "recipient"
+       },
+       {
+        "name": "Shree Traders",
+        "role": "sender"
+       }
+      ],
+      "evidence": [
+       {
+        "status": "have",
+        "item": "Cheque no. 004512 dated 02 October 2026 for Rs. 85,000",
+        "why_it_matters": "The instrument in question"
+       },
+       {
+        "item": "Bank return memo dated 15 October 2026",
+        "why_it_matters": "Shows reason for dishonour",
+        "status": "unclear"
+       }
+      ]
+     },
+     "is_error": false,
+     "result": "Saved."
+    },
+    {
+     "name": "set_assessment",
+     "input": {
+      "reason": "This is a serious criminal matter under Section 138 of the Negotiable Instruments Act where deadlines are extremely strict, so you should consult a lawyer immediately.",
+      "what_i_could_not_verify": [
+       "Whether the goods were actually supplied or if there is a valid defense regarding the transaction"
+      ],
+      "confidence": "high",
+      "lawyer_needed": "urgent"
+     },
+     "is_error": false,
+     "result": "Saved."
+    },
+    {
+     "name": "search_law",
+     "input": {
+      "state": "Maharashtra",
+      "query": "138 Negotiable Instruments Act dishonour of cheque"
+     },
+     "is_error": false,
+     "result": "[{\"id\": \"NIA1881:s138\", \"citation\": \"Section 138, Negotiable Instruments Act, 1881\", \"heading\": \"Dishonour of cheque for insufficiency, etc., of funds in the account\", \"excerpt\": \"Where any cheque\\ndrawn by a person on an account maintained by him with a banker for payment of any amount of money\\nto another person from out of that account for the discharge, in whole or in part, of any debt or other\\nliability, is returned by the bank u npaid, either because of the amount of money standing to the credit of\\nthat account is insufficient to honour the cheque or that it exceeds the amount arranged to be paid from\\nthat account by an agreement made with that bank, such person shall be deemed to have committed an\\noffence and shall, without prejudice to any other provision of this Act, be punished with imprisonment for\\n[a term which may be extended to two years’], or with fine which may extend to twice the amount of the\\ncheque, or with both:\\nProvided that nothing contained in this section shall apply unless—\\n(a) thecheque has been presented to the bank within a period of six \", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"NIA1881:s139\", \"citation\": \"Section 139, Negotiable Instruments Act, 1881\", \"heading\": \"Presumption in favour of holder\", \"excerpt\": \"It shall be presumed, unless the contrary is proved, that the\\nholder of a cheque received the cheque of the nature referred to in section138 for the discharge, in whole\\nor in part, of any debt or other liability.\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"NIA1881:s142\", \"citation\": \"Section 142, Negotiable Instruments Act, 1881\", \"heading\": \"Cognizance of offences\", \"excerpt\": \"1[(1)] Notwithstanding anything contained in the Code of Criminal\\nProcedure, 1973 (2 of 1974),—\\n(a) no court shall take cognizance of any offence punishable under section 138 except upon a\\ncomplaint, in writing, made by the payee or, as the case may be, the holder in due course of the\\ncheque;\\n(b) such complaint is made within one month of th e date on which the cause of action arises\\nunder clause (c) of the proviso to section 138:\\n[Provided that the cognizance of a complaint may be taken by the Court after the prescribed period,\\nif the complainant satisfies the Court that he had sufficient ca use for not making a complaint within such\\nperiod;]\\n(c) no court inferior to that of a Metropolitan Magistrate or a Judicial Magistrate of the first class\\nshall try any offence punishable under section 138.].\\n[(2) The offence under section 138 shall be inquired into and tried only by a court within \", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"NIA1881:s143A\", \"citation\": \"Section 143A, Negotiable Instruments Act, 1881\", \"heading\": \"Power to direct interim compensation\", \"excerpt\": \"(1) Notwithstanding anything contained in the\\nCode of Criminal Procedure, 1973, the Court trying an offence under section 138 may order the drawer of\\nthe cheque to pay interim compensation to the complainant—\\n(a) in a summary trial or a summons case, where he pleads not guilty to the accusation made in the\\ncomplaint; and\\n(b) in any other case, upon framing of charge.\\n(2) The interim compensation under sub -section (1) shall not exceed twenty per cent. of the amount\\nof the cheque.\\n(3) The interim compensation shall be paid within sixty days from th e date of the order under sub -\\nsection (1), or within such further period not exceeding thirty days as may be directed by the Court on\\nsufficient cause being shown by the drawer of the cheque.\\n(4) If the drawer of the cheque is acquitted, the Court shall di rect the complainant to repay to the\\ndrawer the amount of interim compensation, with in\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"NIA1881:s92\", \"citation\": \"Section 92, Negotiable Instruments Act, 1881\", \"heading\": \"Dishonour by non -payment\", \"excerpt\": \"A promissory note, bill of exchange or cheque is said to be\\ndishonoured by non -payment when the maker of the note, acceptor of the bill or drawe"
+    },
+    {
+     "name": "search_law",
+     "input": {
+      "query": "cheating Bharatiya Nyaya Sanhita",
+      "state": "Maharashtra"
+     },
+     "is_error": false,
+     "result": "[{\"id\": \"BNS2023:s318\", \"citation\": \"Section 318, Bharatiya Nyaya Sanhita, 2023\", \"heading\": \"Cheating\", \"excerpt\": \"(1) Whoever, by deceiving any person, fraudulently or dishonestly induces the\\nperson so deceived to deliver any property to any person, or to consent that any person shall retain any\\nproperty, or intentionally induces the person so deceived to do or omit to do anything which he would not\\ndo or omit if he were not so deceived, and which act or omission causes or is likely to cause damage or\\nharm to that person in body, mind, reputation or property, is said to cheat.\\nExplanation.—A dishonest concealment of facts is a deception within the meaning of this section.\\nIllustrations.\\n(a) A, by falsely pretending to be in the Civil Service, intentionally deceives Z, and thus dishonestly\\ninduces Z to let him have on credit goods for which he does not mean to pay. A cheats.\\n(b) A, by putting a counterfeit mark on an article, intentionally deceives Z into a belief that this\\narticle was made by a cert\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"BSA2023:s115\", \"citation\": \"Section 115, Bharatiya Sakshya Adhiniyam, 2023\", \"heading\": \"Presumption as to certain offences\", \"excerpt\": \"147, section 148, section 149 or section 150 of the\\nBharatiya Nyaya Sanhita, 2023;\\n(b) criminal conspiracy or attempt to commit, or abetment of, an offence under\\nsection 149 or section 150 of the Bharatiya Nyaya Sanhita, 2023.\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"BNSS2023:s243\", \"citation\": \"Section 243, Bharatiya Nagarik Suraksha Sanhita, 2023\", \"heading\": \"Trial for more than one offence\", \"excerpt\": \"der sub-sections (2) and (5) of section 317 of the Bharatiya\\nNyaya Sanhita, 2023.\\n(j) A exposes her child with the knowledge that she is thereby likely to cause its death.\\nThe child dies in consequence of such exposure. A may be separately charged with, and\\nconvicted of, offences under sections 93 and 105 of the Bharatiya Nyaya Sanhita, 2023.\\n(k) A dishonestly uses a forged document as genuine evidence, in order to convict B,\\na public servant, of an offence under section 201 of the Bharatiya Nyaya Sanhita, 2023. A\\nmay be separately charged with, and convicted of, offences under section 233 and\\nsub-section (2) of section 340 (read with section 337) of that Sanhita.\\nIllustration to sub-section ( 4)\\n(l) A commits robbery on B, and in doing so voluntarily causes hurt to him. A may be\\nseparately charged with, and convicted of, offences under sub-section ( 2) of section 115\\nand sub-sections (2\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"BNSS2023:s359\", \"citation\": \"Section 359, Bharatiya Nagarik Suraksha Sanhita, 2023\", \"heading\": \"Compounding of offences\", \"excerpt\": \"(1) The offences punishable under the sections of the Bharatiya Nyaya\\nSanhita, 2023 specified in the first two columns of the Table next following may be\\ncompounded by the persons mentioned in the third column of that Table:—\\nTABLE\\nOffence Section of the Bharatiya Person by whom offence\\nNyaya Sanhita, 2023 applicable may be compounded\\n1 2 3\\nEnticing or taking away or 84 The husband of the woman\\ndetaining with criminal and the woman.\\nintent a married woman.\\n____________________________________________________________________________________________________________________\\nVoluntarily causing hurt.115(2)Thepersontowhomthehurt\\nis caused.\\nVoluntarily causing hurt on122(1)Thepersontowhomthehurt\\nprovocation. is caused.\\nVoluntarily causing grievous122(2)Thepersontowhomthehurt\\nhurt on grave and sudden is caused.\\nprovocation.\\nWrongfullyrestrainingor126(2),127(2)The person restrained or\\nconfining \", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"BNSS2023:s202\", \"citation\": \"Section 202, Bharatiya Nagarik Suraksha Sanhita, 2023\", \"heading\": \"Offences committed by means of electronic communications, letters, etc\", \"excerpt\": \"(1) Any offence which includes cheating, may, if the deception is practised by\\nmeans of electronic communications "
+    },
+    {
+     "name": "update_case_file",
+     "input": {
+      "document_references": [
+       "Section 138 of the Negotiable Instruments Act, 1881",
+       "Section 420 of the Indian Penal Code",
+       "Bharatiya Nyaya Sanhita, 2023"
+      ],
+      "amounts": [
+       {
+        "amount_inr": "85000",
+        "label": "Cheque Amount"
+       }
+      ],
+      "open_questions": [
+       "What was the dispute regarding the goods supplied, if any?"
+      ],
+      "summary": "Rakesh Verma received a legal notice on 2 November 2026 under Section 138 of the Negotiable Instruments Act and Section 420 IPC for a bounced cheque of Rs. 85,000 dated 2 October 2026 returned unpaid on 15 October 2026.",
+      "deadlines": [
+       {
+        "what": "Pay Rs. 85,000 within 15 days of receipt (received 2 Nov 2026)",
+        "basis": "document",
+        "date": "2026-11-17"
+       }
+      ],
+      "state": "Maharashtra",
+      "problem_type": "cheque_bounce",
+      "timeline": [
+       {
+        "event": "Cheque issued for Rs. 85,000",
+        "source": "document",
+        "date": "2026-10-02"
+       },
+       {
+        "date": "2026-10-15",
+        "source": "document",
+        "event": "Cheque returned unpaid for insufficient funds"
+       },
+       {
+        "date": "2026-10-28",
+        "source": "document",
+        "event": "Legal notice dated"
+       },
+       {
+        "source": "user",
+        "event": "Legal notice received by post",
+        "date": "2026-11-02"
+       }
+      ],
+      "evidence": [
+       {
+        "why_it_matters": "The instrument in question",
+        "status": "have",
+        "item": "Cheque no. 004512 dated 02 October 2026 for Rs. 85,000"
+       },
+       {
+        "item": "Bank return memo dated 15 October 2026",
+        "status": "unclear",
+        "why_it_matters": "Shows reason for dishonour"
+       }
+      ],
+      "parties": [
+       {
+        "role": "recipient",
+        "name": "Mr. Rakesh Verma"
+       },
+       {
+        "name": "Shree Traders",
+        "role": "sender"
+       }
+      ]
+     },
+     "is_error": false,
+     "result": "Saved."
+    },
+    {
+     "name": "set_assessment",
+     "input": {
+      "lawyer_needed": "urgent",
+      "confidence": "high",
+      "reason": "This is a serious criminal matter under Section 138 of the Negotiable Instruments Act where deadlines are extremely strict, so you should consult a lawyer immediately.",
+      "what_i_could_not_verify": [
+       "Whether the goods were actually supplied or if there is a valid defense regarding the transaction"
+      ]
+     },
+     "is_error": false,
+     "result": "Saved."
+    }
+   ],
+   "drafts": [
+    {
+     "text": "This is a legal notice about a bounced cheque (cheque return). Here is what it means in plain terms:\n\n**What the notice says:**\n- Shree Traders claims you gave them a cheque for Rs. 85,000 on 2 October 2026 for goods supplied, but your bank returned it unpaid on 15 October 2026 because of insufficient funds [[NIA1881:s138]].\n- The sender's lawyer has invoked Section 138 of the Negotiable Instruments Act, 1881 [[NIA1881:s138]], which makes a cheque bounce a criminal offence, and Section 420 of the Indian Penal Code (cheating) *(Note: the IPC was replaced by the Bharatiya Nyaya Sanhita in 2024, but the legal mechanism under the Negotiable Instruments Act remains the main focus here)*.\n\n**The Deadline:**\n- The notice gives you **15 days** from the date you received it to pay the full amount of Rs. 85,000. \n- You received it on 2 November 2026, meaning the 15-day window ends around **17 November 2026**. \n- If you do not pay within this time, the sender can file a criminal complaint against you in court [[NIA1881:s142]]. \n\n**What you should do next:**\n1. **Consult a lawyer immediately:** Because this involves a potential criminal case and a strict time limit, you should show this notice to a lawyer without delay. \n2. **Free Legal Aid:** If you cannot afford a private advocate, you can contact the National Legal Services Authority (NALSA) helpline at **15100** to connect with free legal aid [[NOTE:NALSA]].\n3. **Gather your records:** Check your bank statements, receipts, and any messages or invoices relating to the goods supplied by Shree Traders to understand if the amount is correct or if there is a dispute regarding the transaction.\n\nWould you like help preparing a reply to this notice, or do you have any questions about the transaction?",
+     "issues": [
+      {
+       "code": "repealed_law",
+       "detail": "Paragraph 2 names the Indian Penal Code, which is no longer in force. Replaced on 1 July 2024. It can still matter for acts done before that date. Cite the replacement law (Bharatiya Nyaya Sanhita, 2023) in the same paragraph, or remove it.",
+       "paragraph": 1,
+       "blocking": true,
+       "quote": null
+      }
+     ]
+    },
+    {
+     "text": "This is a serious legal notice regarding a bounced cheque [[NIA1881:s138]]. Here is what it means and what you should do:\n\n**What the notice says:**\n- Shree Traders claims you gave them cheque no. 004512 for Rs. 85,000 on 02 October 2026 for goods supplied, but your bank returned it unpaid on 15 October 2026 due to insufficient funds [[NIA1881:s138]].\n- The sender's lawyer has invoked Section 138 of the Negotiable Instruments Act, 1881 [[NIA1881:s138]] and mentioned cheating (previously under Section 420 of the Indian Penal Code, now covered under Section 318 of the Bharatiya Nyaya Sanhita, 2023 [[BNS2023:s318]]).\n\n**The Deadline:**\n- The notice requires you to pay Rs. 85,000 within **15 days** of receiving it. \n- Since you received it on 2 November 2026, the 15-day deadline ends around **17 November 2026**.\n- If you do not pay within this period, the sender can file a criminal complaint against you in court [[NIA1881:s142]].\n\n**What you should do next:**\n1. **Consult a lawyer immediately:** Because this involves a potential criminal case with strict deadlines, please show this notice to a lawyer without delay.\n2. **Free Legal Aid:** If you cannot afford a private advocate, you can contact the National Legal Services Authority (NALSA) helpline at **15100** to connect with free legal aid [[NOTE:NALSA]].\n3. **Check your records:** Gather your bank statements, receipts, and any communication regarding the goods supplied to verify if the amount is correct or if there is a dispute over the transaction.\n\nWould you like help preparing a reply, or do you have any questions about the transaction?",
+     "issues": []
+    }
+   ],
+   "audits": [
+    {
+     "claims": [
+      {
+       "paragraph": 1,
+       "claim": "This is a serious legal notice regarding a bounced cheque.",
+       "citations": [
+        "NIA1881:s138"
+       ],
+       "verdict": "supported",
+       "reason": "Section 138 of the Negotiable Instruments Act, 1881 defines the offence of dishonour of cheque for insufficiency of funds.",
+       "exact_quote": "This is a serious legal notice regarding a bounced cheque [[NIA1881:s138]]."
+      },
+      {
+       "paragraph": 2,
+       "claim": "Shree Traders claims you gave them cheque no. 004512 for Rs. 85,000 on 02 October 2026 for goods supplied, but your bank returned it unpaid on 15 October 2026 due to insufficient funds.",
+       "citations": [
+        "NIA1881:s138"
+       ],
+       "verdict": "supported",
+       "reason": "Section 138 covers cheques drawn for discharge of debt/liability that are returned unpaid by the bank due to insufficient funds.",
+       "exact_quote": "Shree Traders claims you gave them cheque no. 004512 for Rs. 85,000 on 02 October 2026 for goods supplied, but your bank returned it unpaid on 15 October 2026 due to insufficient funds [[NIA1881:s138]]."
+      },
+      {
+       "paragraph": 2,
+       "claim": "The sender's lawyer has invoked Section 138 of the Negotiable Instruments Act, 1881 and mentioned cheating (previously under Section 420 of the Indian Penal Code, now covered under Section 318 of the Bharatiya Nyaya Sanhita, 2023).",
+       "citations": [
+        "NIA1881:s138",
+        "BNS2023:s318"
+       ],
+       "verdict": "supported",
+       "reason": "Section 138 governs cheque dishonour, and Section 318 of the Bharatiya Nyaya Sanhita, 2023 governs cheating.",
+       "exact_quote": "The sender's lawyer has invoked Section 138 of the Negotiable Instruments Act, 1881 [[NIA1881:s138]] and mentioned cheating (previously under Section 420 of the Indian Penal Code, now covered under Section 318 of the Bharatiya Nyaya Sanhita, 2023 [[BNS2023:s318]])."
+      },
+      {
+       "paragraph": 3,
+       "claim": "If you do not pay within this period, the sender can file a criminal complaint against you in court.",
+       "citations": [
+        "NIA1881:s142"
+       ],
+       "verdict": "supported",
+       "reason": "Section 142(1)(a) provides that a court can take cognizance of an offence under section 138 upon a written complaint by the payee after the cause of action arises.",
+       "exact_quote": "If you do not pay within this period, the sender can file a criminal complaint against you in court [[NIA1881:s142]]."
+      },
+      {
+       "paragraph": 4,
+       "claim": "If you cannot afford a private advocate, you can contact the National Legal Services Authority (NALSA) helpline at 15100 to connect with free legal aid.",
+       "citations": [
+        "NOTE:NALSA"
+       ],
+       "verdict": "supported",
+       "reason": "The NALSA note states that helpline 15100 connects eligible people with free legal aid.",
+       "exact_quote": "Free Legal Aid: If you cannot afford a private advocate, you can contact the National Legal Services Authority (NALSA) helpline at **15100** to connect with free legal aid [[NOTE:NALSA]]."
+      }
+     ],
+     "uncited_legal_claims": [],
+     "invented_facts": [],
+     "ignored_cautions": [],
+     "_usage": {
+      "input": 3261,
+      "output": 988
+     }
+    }
+   ],
+   "final_status": "verified",
+   "final": "This is a serious legal notice regarding a bounced cheque [[NIA1881:s138]]. Here is what it means and what you should do:\n\n**What the notice says:**\n- Shree Traders claims you gave them cheque no. 004512 for Rs. 85,000 on 02 October 2026 for goods supplied, but your bank returned it unpaid on 15 October 2026 due to insufficient funds [[NIA1881:s138]].\n- The sender's lawyer has invoked Section 138 of the Negotiable Instruments Act, 1881 [[NIA1881:s138]] and mentioned cheating (previously under Section 420 of the Indian Penal Code, now covered under Section 318 of the Bharatiya Nyaya Sanhita, 2023 [[BNS2023:s318]]).\n\n**The Deadline:**\n- The notice requires you to pay Rs. 85,000 within **15 days** of receiving it. \n- Since you received it on 2 November 2026, the 15-day deadline ends around **17 November 2026**.\n- If you do not pay within this period, the sender can file a criminal complaint against you in court [[NIA1881:s142]].\n\n**What you should do next:**\n1. **Consult a lawyer immediately:** Because this involves a potential criminal case with strict deadlines, please show this notice to a lawyer without delay.\n2. **Free Legal Aid:** If you cannot afford a private advocate, you can contact the National Legal Services Authority (NALSA) helpline at **15100** to connect with free legal aid [[NOTE:NALSA]].\n3. **Check your records:** Gather your bank statements, receipts, and any communication regarding the goods supplied to verify if the amount is correct or if there is a dispute over the transaction.\n\nWould you like help preparing a reply, or do you have any questions about the transaction?",
+   "repairs": 1,
+   "seconds": 31.3,
+   "usage_after": {
+    "input": 23159,
+    "output": 3467,
+    "cache_read": 40531,
+    "cache_write": 0,
+    "api_calls": 8
+   }
+  }
+ ],
+ "checks": [
+  {
+   "check": "got_an_answer",
+   "pass": true,
+   "detail": "0 turn(s) with errors"
+  },
+  {
+   "check": "all_citations_exist",
+   "pass": true,
+   "detail": "4 citation(s) all resolve"
+  },
+  {
+   "check": "same_language_as_user",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "no_unrequested_document",
+   "pass": true,
+   "detail": "saved [] without being asked"
+  },
+  {
+   "check": "substantive_answer",
+   "pass": true,
+   "detail": "shortest reply is 1614 characters"
+  },
+  {
+   "check": "no_case_law_cited",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "cite_any",
+   "pass": true,
+   "detail": "wanted any of ['NIA1881:s138']; cited ['BNS2023:s318', 'NIA1881:s138', 'NIA1881:s142', 'NOTE:NALSA']"
+  },
+  {
+   "check": "say_any /15/",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "say_none /67B|Section 999|Housing Recovery Act|AIR/",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "triage",
+   "pass": true,
+   "detail": "got urgent, wanted at least urgent"
+  },
+  {
+   "check": "lawyer",
+   "pass": true,
+   "detail": "got urgent, wanted at least urgent"
+  }
+ ]
+}

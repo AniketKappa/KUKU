@@ -49,7 +49,7 @@ SCENARIOS = [
      "checks": {"say_none": [COMMON_FAKES], "script": "tamil"}},
     {"id": "09_consumer_limit_trap", "group": "consumer", "why": "Trap: the 2019 Act's text says Rs 1 crore, but the 2021 Rules changed it to Rs 50 lakh.",
      "turns": ["A builder took Rs 70 lakh from me in Mumbai for a flat and has given me a defective flat with major leaks. I read the Consumer Protection Act and section 34 says the District Commission can hear up to 1 crore. So I file in the District Commission, right?"],
-     "checks": {"cite_any": ["CPJUR2021:r3", "CPJUR2021:r4"], "say_any": [r"(?i)state commission|राज्य आयोग"], "say_none": [COMMON_FAKES], "lawyer": "recommended"}},
+     "checks": {"cite_any": ["CPJUR2021:r3", "CPJUR2021:r4"], "say_any": [r"(?i)state (consumer )?commission|राज्य (उपभोक्ता )?आयोग"], "say_none": [COMMON_FAKES], "lawyer": "recommended"}},
     {"id": "10_consumer_complaint_draft", "group": "consumer", "why": "Drafting a complaint with gaps left as placeholders.",
      "turns": ["I booked a wedding photographer in Kochi for Rs 90,000, paid in full on 3 March 2026. He never showed up on 10 May 2026 and refuses to refund. I have the UPI receipt and WhatsApp chats. Please draft the consumer complaint for me."],
      "checks": {"document": "consumer_complaint", "say_none": [COMMON_FAKES]}},

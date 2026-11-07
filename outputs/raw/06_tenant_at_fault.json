@@ -1,0 +1,244 @@
+{
+ "id": "06_tenant_at_fault",
+ "group": "deposit",
+ "why": "The user is partly in the wrong. It must not simply take their side.",
+ "started": "2026-11-08T02:20:15.936895",
+ "provider": "gemini",
+ "model": "gemini-3.5-flash-lite",
+ "audit_model": "gemini-3.6-flash",
+ "effort": "medium",
+ "audit_effort": "medium",
+ "turns": [
+  {
+   "user": "I'm in Chennai. I left my flat in August 2026 owing 2 months' rent, and I broke a window and the bathroom door. The landlord is keeping my Rs 45,000 deposit. I want all of it back. I'm entitled to that, right?",
+   "file": null,
+   "reply": "To be completely honest with you: no, you are not entitled to get all of the Rs 45,000 back. \n\nUnder Section 11(2) of the Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017 [[TNRRA2017:s11]], a landlord must refund the security deposit within one month after you vacate the premises, but they are legally allowed to make **due deductions for any liability of the tenant**. \n\nSince you owe two months' rent and caused physical damage (the broken window and bathroom door), the landlord has the right to deduct:\n1. The two months' unpaid rent.\n2. The reasonable cost of repairing the window and the bathroom door.\n\nOnly the **remaining balance** (if any is left after these deductions) should be returned to you. \n\nTo figure out whether the landlord is keeping a fair amount or taking too much:\n1. What was your monthly rent amount?\n2. Roughly how much would it cost to fix the window and the bathroom door?",
+   "verification": {
+    "status": "verified",
+    "repairs": 0,
+    "removed": 0,
+    "issues": []
+   },
+   "citations": [
+    "TNRRA2017:s11"
+   ],
+   "errors": []
+  }
+ ],
+ "seconds": 17.1,
+ "usage": {
+  "input": 11817,
+  "output": 844,
+  "cache_read": 14168,
+  "cache_write": 0,
+  "api_calls": 5
+ },
+ "case_file": {
+  "parties": [
+   {
+    "role": "Landlord",
+    "name": "Landlord"
+   },
+   {
+    "name": "User",
+    "role": "Tenant"
+   }
+  ],
+  "document_references": [],
+  "state": "Tamil Nadu",
+  "summary": "User vacated a flat in Chennai in August 2026 owing 2 months' rent and causing damage to a window and bathroom door. Landlord is withholding the Rs 45,000 security deposit. User wants to know if they are entitled to get all of it back.",
+  "amounts": [
+   {
+    "label": "Security Deposit",
+    "amount_inr": "45000"
+   }
+  ],
+  "deadlines": [],
+  "evidence": [],
+  "open_questions": [
+   "What is the monthly rent amount?",
+   "What is the exact cost of repairing the window and bathroom door?"
+  ],
+  "timeline": [
+   {
+    "event": "Vacated flat in Chennai owing 2 months rent and causing damage",
+    "date": "2026-08",
+    "source": "user"
+   }
+  ],
+  "problem_type": "tenancy_deposit"
+ },
+ "assessment": {
+  "reason": "Under Tamil Nadu rent law, the landlord is legally permitted to deduct unpaid rent and repair costs from the security deposit.",
+  "what_i_could_not_verify": [
+   "Exact monthly rent amount and repair costs"
+  ],
+  "confidence": "high",
+  "lawyer_needed": "none"
+ },
+ "triage": {
+  "level": "none",
+  "codes": [],
+  "reasons": [],
+  "reasons_hi": [],
+  "help": []
+ },
+ "documents": [],
+ "doc_rejections": 0,
+ "trail": [
+  {
+   "user": "I'm in Chennai. I left my flat in August 2026 owing 2 months' rent, and I broke a window and the bathroom door. The landlord is keeping my Rs 45,000 deposit. I want all of it back. I'm entitled to that, right?",
+   "tool_calls": [
+    {
+     "name": "search_law",
+     "input": {
+      "query": "security deposit refund rent arrears damages landlord Tamil Nadu",
+      "state": "Tamil Nadu"
+     },
+     "is_error": false,
+     "result": "[{\"id\": \"TNRRA2017:s11\", \"citation\": \"Section 11, Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017\", \"heading\": \"Security deposit\", \"excerpt\": \"(1) Save an agreement to the contrary, it shall be unlawful to charge a\\nsecurity deposit in excess of three times the monthly rent.\\n(2) The security deposit shall be refunded to the tenant within one month\\nafter vacation of the premises, after making due deduction of any liability of the\\ntenant.\", \"applies_in\": \"Tamil Nadu\", \"caution\": \"\"}, {\"id\": \"MTA2021:s11\", \"citation\": \"Section 11, Model Tenancy Act, 2021\", \"heading\": \"Security deposit\", \"excerpt\": \"(1) The security deposit to b e paid by the tenant in advance shall\\nbe such as may be agreed upon between the landlord and the tenant\\nin the tenancy agreement, which shall ––\\nRestriction on\\nsub-letting.\\nRent payable.\\nRevision of rent.\\nRent Authority to\\ndetermine the\\nrevised rent in\\ncase of dispute.\\nSecurity deposit.\\n(a) not exceed two months rent, in case of residential premises;\\nand\\n(b) not exceed six months rent , in case of non -residential\\npremises.\\n(2) The security deposit shall be refunded to the tenant on the date of\\ntaking over vacant possession of the premises from the tenant, after\\nmaking due deduction of any liability of the tenant.\", \"applies_in\": \"Model law (applies only where a State has adopted it)\", \"caution\": \"This is a MODEL law issued by the Central Government for States to adopt. It does not bind anyone unless the user's State has enacted it. Never present it as law that applies to the user; say it is a model only.\"}, {\"id\": \"TNRRA2017:s24\", \"citation\": \"Section 24, Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017\", \"heading\": \"Refund of advance rent by the landlord\", \"excerpt\": \"(1) Where a landlord exercises the right of recovery of possession under\\nsub-section (2) of section 21, and he had received any rent or any other payment\\nin advance from the tenant, he shall, before recovery of possession, refund to the\\ntenant such an amount after deducting the rent and other charges due to him.\\n(2) If any default is made in making any refund, the landlord shall be liable\\nto pay simple interest at such rate as may be prescribed from time to time on the\\namount which he has omitted or failed to refund.\", \"applies_in\": \"Tamil Nadu\", \"caution\": \"\"}, {\"id\": \"MTA2021:s24\", \"citation\": \"Section 24, Model Tenancy Act, 2021\", \"heading\": \"Refund of advance rent by landlord\", \"excerpt\": \"(1) Where a landlord exercises the right of recovery of\\npossession under sub -section (2) of section 21 or under section 22,\\nand he had received any rent or any other payment in advance from\\nthe tenant, he shall before recovery of possession, refund to the\\ntenant such amount after deducting the rent and other charges due\\nto him.\\n(2) If the landlord fails to make any refund, he shall be liable to pay\\nRefund of\\nadvance rent by\\nlandlord.\\nsimple interest to the tenant at such rate as may be prescribed from\\ntime to time on the amount which he has omitted or failed to refund.\", \"applies_in\": \"Model law (applies only where a State has adopted it)\", \"caution\": \"This is a MODEL law issued by the Central Government for States to adopt. It does not bind anyone unless the user's State has enacted it. Never present it as law that applies to the user; say it is a model only.\"}, {\"id\": \"TNRRA2017:s41\", \"citation\": \"Section 41, Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017\", \"heading\": \"Court-fees. Tamil Nadu Act XIV of 1955\", \"excerpt\": \"(1) The provisions of the Tamil Nadu Court-fees and Suits Valuation Act,\\n1955 shall apply in respect of applications or appeals to be presented before the\\nRent Court or Rent Tribunal or Rent Authority, as the case may be.\\n(2) The applications for recovery of possession made to the Rent Court and\\nthe memorandum of appeals presented before the Rent Tribunal shall be treated\\"
+    },
+    {
+     "name": "update_case_file",
+     "input": {
+      "parties": [
+       {
+        "role": "Landlord",
+        "name": "Landlord"
+       },
+       {
+        "name": "User",
+        "role": "Tenant"
+       }
+      ],
+      "document_references": [],
+      "state": "Tamil Nadu",
+      "summary": "User vacated a flat in Chennai in August 2026 owing 2 months' rent and causing damage to a window and bathroom door. Landlord is withholding the Rs 45,000 security deposit. User wants to know if they are entitled to get all of it back.",
+      "amounts": [
+       {
+        "label": "Security Deposit",
+        "amount_inr": "45000"
+       }
+      ],
+      "deadlines": [],
+      "evidence": [],
+      "open_questions": [
+       "What is the monthly rent amount?",
+       "What is the exact cost of repairing the window and bathroom door?"
+      ],
+      "timeline": [
+       {
+        "event": "Vacated flat in Chennai owing 2 months rent and causing damage",
+        "date": "2026-08",
+        "source": "user"
+       }
+      ],
+      "problem_type": "tenancy_deposit"
+     },
+     "is_error": false,
+     "result": "Saved."
+    },
+    {
+     "name": "set_assessment",
+     "input": {
+      "reason": "Under Tamil Nadu rent law, the landlord is legally permitted to deduct unpaid rent and repair costs from the security deposit.",
+      "what_i_could_not_verify": [
+       "Exact monthly rent amount and repair costs"
+      ],
+      "confidence": "high",
+      "lawyer_needed": "none"
+     },
+     "is_error": false,
+     "result": "Saved."
+    }
+   ],
+   "drafts": [
+    {
+     "text": "To be completely honest with you: no, you are not entitled to get all of the Rs 45,000 back. \n\nUnder Section 11(2) of the Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017 [[TNRRA2017:s11]], a landlord must refund the security deposit within one month after you vacate the premises, but they are legally allowed to make **due deductions for any liability of the tenant**. \n\nSince you owe two months' rent and caused physical damage (the broken window and bathroom door), the landlord has the right to deduct:\n1. The two months' unpaid rent.\n2. The reasonable cost of repairing the window and the bathroom door.\n\nOnly the **remaining balance** (if any is left after these deductions) should be returned to you. \n\nTo figure out whether the landlord is keeping a fair amount or taking too much:\n1. What was your monthly rent amount?\n2. Roughly how much would it cost to fix the window and the bathroom door?",
+     "issues": []
+    }
+   ],
+   "audits": [
+    {
+     "claims": [
+      {
+       "paragraph": 2,
+       "claim": "Under Section 11(2) of the Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017, a landlord must refund the security deposit within one month after the tenant vacates the premises, subject to due deductions for any tenant liability.",
+       "citations": [
+        "TNRRA2017:s11"
+       ],
+       "verdict": "supported",
+       "reason": "Section 11(2) of the Act states that the security deposit shall be refunded to the tenant within one month after vacation of the premises, after making due deduction of any liability of the tenant.",
+       "exact_quote": "Under Section 11(2) of the Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017 [[TNRRA2017:s11]], a landlord must refund the security deposit within one month after you vacate the premises, but they are legally allowed to make **due deductions for any liability of the tenant**."
+      }
+     ],
+     "uncited_legal_claims": [],
+     "invented_facts": [],
+     "ignored_cautions": [],
+     "_usage": {
+      "input": 1051,
+      "output": 284
+     }
+    }
+   ],
+   "final_status": "verified",
+   "final": "To be completely honest with you: no, you are not entitled to get all of the Rs 45,000 back. \n\nUnder Section 11(2) of the Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017 [[TNRRA2017:s11]], a landlord must refund the security deposit within one month after you vacate the premises, but they are legally allowed to make **due deductions for any liability of the tenant**. \n\nSince you owe two months' rent and caused physical damage (the broken window and bathroom door), the landlord has the right to deduct:\n1. The two months' unpaid rent.\n2. The reasonable cost of repairing the window and the bathroom door.\n\nOnly the **remaining balance** (if any is left after these deductions) should be returned to you. \n\nTo figure out whether the landlord is keeping a fair amount or taking too much:\n1. What was your monthly rent amount?\n2. Roughly how much would it cost to fix the window and the bathroom door?",
+   "repairs": 0,
+   "seconds": 17.1,
+   "usage_after": {
+    "input": 11817,
+    "output": 844,
+    "cache_read": 14168,
+    "cache_write": 0,
+    "api_calls": 5
+   }
+  }
+ ],
+ "checks": [
+  {
+   "check": "got_an_answer",
+   "pass": true,
+   "detail": "0 turn(s) with errors"
+  },
+  {
+   "check": "all_citations_exist",
+   "pass": true,
+   "detail": "1 citation(s) all resolve"
+  },
+  {
+   "check": "same_language_as_user",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "no_unrequested_document",
+   "pass": true,
+   "detail": "saved [] without being asked"
+  },
+  {
+   "check": "substantive_answer",
+   "pass": true,
+   "detail": "shortest reply is 942 characters"
+  },
+  {
+   "check": "no_case_law_cited",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "cite_any",
+   "pass": true,
+   "detail": "wanted any of ['TNRRA2017:s11']; cited ['TNRRA2017:s11']"
+  },
+  {
+   "check": "say_any /(?i)deduct|owe|liabilit|may keep|can kee/",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "say_none /67B|Section 999|Housing Recovery Act|AIR/",
+   "pass": true,
+   "detail": ""
+  }
+ ]
+}

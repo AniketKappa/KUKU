@@ -1,0 +1,406 @@
+{
+ "id": "11_salary_repealed_act_trap",
+ "group": "salary",
+ "why": "Trap: the user cites the repealed Payment of Wages Act.",
+ "started": "2026-11-08T02:12:16.807654",
+ "provider": "gemini",
+ "model": "gemini-3.5-flash-lite",
+ "audit_model": "gemini-3-flash-preview",
+ "effort": "medium",
+ "audit_effort": "medium",
+ "turns": [
+  {
+   "user": "My startup in Bengaluru hasn't paid my salary of Rs 75,000 a month for August, September and October 2026. I want to file under the Payment of Wages Act 1936. How do I do that and what are the deadlines?",
+   "file": null,
+   "reply": "The old Payment of Wages Act 1936 was replaced on 21 November 2025, and your claim for unpaid salary now falls under the Code on Wages, 2019 [[COW2019:s17]]. \n\nHere is how you can proceed regarding your salary of ₹75,000 per month for August, September, and October 2026:\n\n- When wages are due: For monthly wages, the employer must pay before the expiry of the 7th day of the succeeding month [[COW2019:s17]]. \n- Time limit to file a claim: Under Section 45(6) of the Code on Wages, 2019, you can file an application before the appointed authority within 3 years from the date the claim arises [[COW2019:s45]]. \n- Compensation: The authority can order the employer to pay your unpaid wages plus compensation that may extend up to ten times the claim determined [[COW2019:s45]].\n\nWhat you should gather:\n- Your employment agreement or appointment letter showing your agreed monthly salary of ₹75,000.\n- Bank statements or salary slips showing that August, September, and October 2026 salaries were not credited.\n- Any written communication (emails, WhatsApp messages) where you asked for your salary or the company promised payment.\n\nWould you like me to help you draft a formal demand letter to send to your employer before filing a claim? Also, please let me know:\n1. Are you still working at the startup, or have you resigned or been terminated?\n2. Have you already sent any written reminder or notice to the company?",
+   "verification": {
+    "status": "verified",
+    "repairs": 2,
+    "removed": 0,
+    "issues": []
+   },
+   "citations": [
+    "COW2019:s17",
+    "COW2019:s45"
+   ],
+   "errors": []
+  }
+ ],
+ "seconds": 24.0,
+ "usage": {
+  "input": 30113,
+  "output": 2593,
+  "cache_read": 48598,
+  "cache_write": 0,
+  "api_calls": 10
+ },
+ "case_file": {
+  "open_questions": [
+   "Are you still working at the startup or have you resigned/been terminated?"
+  ],
+  "amounts": [
+   {
+    "amount_inr": "75000",
+    "label": "Monthly Salary"
+   },
+   {
+    "amount_inr": "225000",
+    "label": "Total Unpaid Salary (August, September, October 2026)"
+   }
+  ],
+  "evidence": [
+   {
+    "item": "Employment agreement / appointment letter",
+    "why_it_matters": "Proves agreed salary and terms",
+    "status": "unclear"
+   },
+   {
+    "why_it_matters": "Proves non-payment for August, September, and October 2026",
+    "item": "Bank statements / salary slips",
+    "status": "unclear"
+   }
+  ],
+  "problem_type": "unpaid_salary",
+  "timeline": [
+   {
+    "source": "user",
+    "event": "August salary unpaid",
+    "date": "2026-08-31"
+   },
+   {
+    "source": "user",
+    "event": "September salary unpaid",
+    "date": "2026-09-30"
+   },
+   {
+    "source": "user",
+    "date": "2026-10-31",
+    "event": "October salary unpaid"
+   }
+  ],
+  "state": "Karnataka",
+  "document_references": [
+   "Payment of Wages Act 1936",
+   "Code on Wages, 2019"
+  ],
+  "summary": "Startup in Bengaluru has not paid salary of Rs 75,000 per month for August, September, and October 2026, totaling Rs 2,25,000.",
+  "deadlines": [
+   {
+    "date": "3 years from the date the claim arises",
+    "basis": "COW2019:s45",
+    "what": "Filing a claim for unpaid wages before the appointed authority"
+   }
+  ],
+  "parties": [
+   {
+    "name": "Startup in Bengaluru",
+    "role": "Employer"
+   },
+   {
+    "role": "Applicant",
+    "name": "Employee"
+   }
+  ]
+ },
+ "assessment": {
+  "confidence": "high",
+  "lawyer_needed": "recommended",
+  "reason": "You can file a claim for unpaid wages under the Code on Wages, 2019, within three years, but legal guidance helps if the employer disputes the claim.",
+  "what_i_could_not_verify": [
+   "State-specific rules and designated authority details under the Code on Wages in Karnataka"
+  ]
+ },
+ "triage": {
+  "level": "none",
+  "codes": [],
+  "reasons": [],
+  "reasons_hi": [],
+  "help": []
+ },
+ "documents": [],
+ "doc_rejections": 0,
+ "trail": [
+  {
+   "user": "My startup in Bengaluru hasn't paid my salary of Rs 75,000 a month for August, September and October 2026. I want to file under the Payment of Wages Act 1936. How do I do that and what are the deadlines?",
+   "tool_calls": [
+    {
+     "name": "search_law",
+     "input": {
+      "state": "Karnataka",
+      "query": "Code on Wages claims time limit penalty"
+     },
+     "is_error": false,
+     "result": "[{\"id\": \"COW2019:s17\", \"citation\": \"Section 17, Code on Wages, 2019\", \"heading\": \"Time limit for payment of wages\", \"excerpt\": \"(1) The employer shall pay or cause to be paid wages to the employees, engaged\\non—\\n(i) daily basis, at the end of the shift;\\n(ii) weekly basis, on the last working day of the week, that is to say, before the\\nweekly holiday;\\n(iii) fortnightly basis, before the end of the second day after the end of the\\nfortnight;\\n(iv) monthly basis, before the expiry of the seventh day of the succeeding\\nmonth.\\n(2) Where an employee has been—\\n(i) removed or dismissed from service; or\\n(ii) retrenched or has resigned from service, or became unemployed due to\\nclosure of the establishment,\\nthe wages payable to him shall be paid within two working days of his removal, dismissal,\\nretrenchment or, as the case may be, his resignation.\\n(3) Notwithstanding anything contained in sub-section ( 1) or sub-section ( 2), the\\nappropriate Government may, provide any other time limit for payment of wages where it\\nconsiders r\", \"applies_in\": \"India\", \"caution\": \"In force since 21 November 2025. It replaced the Payment of Wages Act 1936. State wage rules, which set local claim procedure, are not in this library.\"}, {\"id\": \"COW2019:s45\", \"citation\": \"Section 45, Code on Wages, 2019\", \"heading\": \"Claims under Code and procedure thereof\", \"excerpt\": \"( 1) The appropriate Government may, by notification, appoint one or more\\nauthorities, not below the rank of a Gazetted Officer, to hear and determine the claims which\\narises under the provisions of this Code.\\n(2) The authority appointed under sub-section ( 1), while deciding the claim under\\nthat sub-section, may order, having regard to the circumstances under which the claim\\narises, the payment of compensation in addition to the claim determined, which may extend\\nto ten times of the claim determined and endeavour shall be made by the authority to decide\\nthe claim within a period of three months.\\n(3) If an employer fails to pay the claim determined and compensation ordered to be\\npaid under sub-section (2), the authority shall issue a certificate of recovery to the Collector\\nor District Magistrate of the district where the establishment is located who shall recover\\nthe same as arrears of \", \"applies_in\": \"India\", \"caution\": \"In force since 21 November 2025. It replaced the Payment of Wages Act 1936. State wage rules, which set local claim procedure, are not in this library.\"}, {\"id\": \"COWR2026:r49\", \"citation\": \"Rule 49, Code on Wages (Central) Rules, 2026\", \"heading\": \"Form and procedure for filing claims\", \"excerpt\": \"(1) A single application on behalf of or in respect\\nof any number of or group of employees employed in the same establishment wherein their claims relate\\nto the same wage period or any incident of discrimination, may be filed under sub-section (5) of section\\n45 in Form-II, manually or electronically along with documents specified in the said Form, before the\\nauthority notified by Central Government under sub-section (1) of section 45 to hear and determine\\nclaims which arise under the provisions of the Code.\\n(2) Where an application under sub-rule (1) is filed, the authority shall serve upon the employer\\nelectronically or by speed post, a notice in Form VIII to appear before them on the date specified in the\\nnotice with all relevant documents and witnesses, if any, and shall inform the applicant of the date so\\nspecified.\\n(3) In case where the employer or their representative fails to appe\", \"applies_in\": \"India (central-sector establishments only; State rules apply to most private employers)\", \"caution\": \"These Central Rules apply to central-sector establishments. Most private employers fall under the State Government's rules, which are NOT in this library. Say so when relevant.\"}, {\"id\": \"COW2019:s39\", \"citation\": \"Section 39, Code on Wages, 2019\", \"heading\": \"Time limit for payment of bonus\", \"excerpt\": \" respect of such dispute:\\nProvided that"
+    },
+    {
+     "name": "get_provision",
+     "input": {
+      "id": "COW2019:s45"
+     },
+     "is_error": false,
+     "result": "{\"id\": \"COW2019:s45\", \"citation\": \"Section 45, Code on Wages, 2019\", \"applies_in\": \"India\", \"caution\": \"In force since 21 November 2025. It replaced the Payment of Wages Act 1936. State wage rules, which set local claim procedure, are not in this library.\", \"heading\": \"Claims under Code and procedure thereof\", \"text\": \"( 1) The appropriate Government may, by notification, appoint one or more\\nauthorities, not below the rank of a Gazetted Officer, to hear and determine the claims which\\narises under the provisions of this Code.\\n(2) The authority appointed under sub-section ( 1), while deciding the claim under\\nthat sub-section, may order, having regard to the circumstances under which the claim\\narises, the payment of compensation in addition to the claim determined, which may extend\\nto ten times of the claim determined and endeavour shall be made by the authority to decide\\nthe claim within a period of three months.\\n(3) If an employer fails to pay the claim determined and compensation ordered to be\\npaid under sub-section (2), the authority shall issue a certificate of recovery to the Collector\\nor District Magistrate of the district where the establishment is located who shall recover\\nthe same as arrears of land revenue and remit the same to the authority for payment to the\\nconcerned employee.\\n(4) Any application before the authority for claim referred to in sub-section (1) may\\nbe filed by,––\\n(a) the employee concerned; or\\n(b) any Trade Union registered under the Trade Unions Act, 1926 of which the\\nemployee is a member; or\\n(c) the Inspector-cum-Facilitator.\\n(5) Subject to such rules as may be made, a single application may be filed under this\\nsection on behalf or in respect of any number of employees employed in an establishment.\\n(6) The application under sub-section (4) may be filed within a period of three years\\nfrom the date on which claims referred to in sub-section (1) arises:\\nProvided that the authority referred to in sub-section (1) may, entertain the application\\nafter three years on sufficient cause being shown by the applicant for such delay.\\n(7) The authority appointed under sub-section ( 1) and the appellate authority\\nappointed under sub-section ( 1) of section 49, shall have all the powers of a civil court\\nunder the Code of Civil Procedure, 1908, for the purpose of taking evidence and of enforcing\\nthe attendance of witnesses and compelling the production of documents, and every such\\nauthority or appellate authority shall be deemed to be a civil court for all the purposes of\\nsection 195 and Chapter XXVI of the Code of Criminal Procedure, 1973.\"}"
+    },
+    {
+     "name": "update_case_file",
+     "input": {
+      "open_questions": [
+       "Are you still working at the startup or have you resigned/been terminated?"
+      ],
+      "amounts": [
+       {
+        "amount_inr": "75000",
+        "label": "Monthly Salary"
+       },
+       {
+        "amount_inr": "225000",
+        "label": "Total Unpaid Salary (August, September, October 2026)"
+       }
+      ],
+      "evidence": [
+       {
+        "item": "Employment agreement / appointment letter",
+        "why_it_matters": "Proves agreed salary and terms",
+        "status": "unclear"
+       },
+       {
+        "why_it_matters": "Proves non-payment for August, September, and October 2026",
+        "item": "Bank statements / salary slips",
+        "status": "unclear"
+       }
+      ],
+      "problem_type": "unpaid_salary",
+      "timeline": [
+       {
+        "source": "user",
+        "event": "August salary unpaid",
+        "date": "2026-08-31"
+       },
+       {
+        "source": "user",
+        "event": "September salary unpaid",
+        "date": "2026-09-30"
+       },
+       {
+        "source": "user",
+        "date": "2026-10-31",
+        "event": "October salary unpaid"
+       }
+      ],
+      "state": "Karnataka",
+      "document_references": [
+       "Payment of Wages Act 1936",
+       "Code on Wages, 2019"
+      ],
+      "summary": "Startup in Bengaluru has not paid salary of Rs 75,000 per month for August, September, and October 2026, totaling Rs 2,25,000.",
+      "deadlines": [
+       {
+        "date": "3 years from the date the claim arises",
+        "basis": "COW2019:s45",
+        "what": "Filing a claim for unpaid wages before the appointed authority"
+       }
+      ],
+      "parties": [
+       {
+        "name": "Startup in Bengaluru",
+        "role": "Employer"
+       },
+       {
+        "role": "Applicant",
+        "name": "Employee"
+       }
+      ]
+     },
+     "is_error": false,
+     "result": "Saved."
+    },
+    {
+     "name": "set_assessment",
+     "input": {
+      "lawyer_needed": "recommended",
+      "what_i_could_not_verify": [
+       "State-specific rules and designated authority details under the Code on Wages in Karnataka"
+      ],
+      "reason": "You can file a claim for unpaid wages under the Code on Wages, 2019, within three years, but legal guidance helps if the employer disputes the claim.",
+      "confidence": "high"
+     },
+     "is_error": false,
+     "result": "Saved."
+    },
+    {
+     "name": "set_assessment",
+     "input": {
+      "lawyer_needed": "recommended",
+      "confidence": "high",
+      "reason": "You can file a claim for unpaid wages under the Code on Wages, 2019, within three years, but legal guidance helps if the employer disputes the claim.",
+      "what_i_could_not_verify": [
+       "State-specific rules and designated authority details under the Code on Wages in Karnataka"
+      ]
+     },
+     "is_error": false,
+     "result": "Saved."
+    },
+    {
+     "name": "set_assessment",
+     "input": {
+      "confidence": "high",
+      "lawyer_needed": "recommended",
+      "reason": "You can file a claim for unpaid wages under the Code on Wages, 2019, within three years, but legal guidance helps if the employer disputes the claim.",
+      "what_i_could_not_verify": [
+       "State-specific rules and designated authority details under the Code on Wages in Karnataka"
+      ]
+     },
+     "is_error": false,
+     "result": "Saved."
+    }
+   ],
+   "drafts": [
+    {
+     "text": "The old Payment of Wages Act 1936 was replaced on 21 November 2025. Your claim for unpaid salary now falls under the **Code on Wages, 2019** [[COW2019:s17, COW2019:s45]]. \n\nHere is where you stand regarding your salary of ₹75,000 per month for August, September, and October 2026 (totaling ₹2,25,000):\n\n### Deadlines and Rules\n- **When wages are due:** For monthly wages, the employer must pay before the expiry of the 7th day of the succeeding month [[COW2019:s17]]. \n- **Time limit to file a claim:** Under Section 45(6) of the Code on Wages, 2019, you can file an application before the appointed authority **within 3 years** from the date the claim arises [[COW2019:s45]]. \n- **Compensation:** The authority can order the employer to pay your unpaid wages plus compensation that may extend up to ten times the claim determined [[COW2019:s45]].\n\n### What you should gather:\n- Your employment agreement or appointment letter showing your agreed monthly salary of ₹75,000.\n- Bank statements or salary slips showing that August, September, and October 2026 salaries were not credited.\n- Any written communication (emails, WhatsApp messages) where you asked for your salary or the company promised payment.\n\nTo help me guide you further and draft a formal demand letter or application:\n1. Are you still working at the startup, or have you resigned or been terminated?\n2. Have you already sent any written reminder or notice to the company?",
+     "issues": [
+      {
+       "code": "repealed_law",
+       "detail": "Paragraph 1 names the Payment of Wages Act, 1936, which is no longer in force. Replaced on 21 November 2025. Cite the replacement law (Code on Wages, 2019) in the same paragraph, or remove it.",
+       "paragraph": 0,
+       "blocking": true,
+       "quote": null
+      },
+      {
+       "code": "unsupported_number",
+       "detail": "Paragraph 2 states the amount 225,000 rupees, which is not in any cited provision or in the user's facts. Check it or remove it.",
+       "paragraph": 1,
+       "blocking": true,
+       "quote": null
+      }
+     ]
+    },
+    {
+     "text": "The Payment of Wages Act 1936 was replaced on 21 November 2025. Your claim for unpaid salary now falls under the **Code on Wages, 2019** [[COW2019:s17, COW2019:s45]]. \n\nHere is how you can proceed regarding your salary of ₹75,000 per month for August, September, and October 2026:\n\n### Deadlines and Rules\n- **When wages are due:** For monthly wages, the employer must pay before the expiry of the 7th day of the succeeding month [[COW2019:s17]]. \n- **Time limit to file a claim:** Under Section 45(6) of the Code on Wages, 2019, you can file an application before the appointed authority **within 3 years** from the date the claim arises [[COW2019:s45]]. \n- **Compensation:** The authority can order the employer to pay your unpaid wages plus compensation that may extend up to ten times the claim determined [[COW2019:s45]].\n\n### What you should gather:\n- Your employment agreement or appointment letter showing your agreed monthly salary of ₹75,000.\n- Bank statements or salary slips showing that August, September, and October 2026 salaries were not credited.\n- Any written communication (emails, WhatsApp messages) where you asked for your salary or the company promised payment.\n\nWould you like me to help you draft a formal demand letter to send to your employer before filing a claim? Also, please let me know:\n1. Are you still working at the startup, or have you resigned or been terminated?\n2. Have you already sent any written reminder or notice to the company?",
+     "issues": [
+      {
+       "code": "repealed_law",
+       "detail": "Paragraph 1 names the Payment of Wages Act, 1936, which is no longer in force. Replaced on 21 November 2025. Cite the replacement law (Code on Wages, 2019) in the same paragraph, or remove it.",
+       "paragraph": 0,
+       "blocking": true,
+       "quote": null
+      }
+     ]
+    },
+    {
+     "text": "The old Payment of Wages Act 1936 was replaced on 21 November 2025, and your claim for unpaid salary now falls under the Code on Wages, 2019 [[COW2019:s17]]. \n\nHere is how you can proceed regarding your salary of ₹75,000 per month for August, September, and October 2026:\n\n- When wages are due: For monthly wages, the employer must pay before the expiry of the 7th day of the succeeding month [[COW2019:s17]]. \n- Time limit to file a claim: Under Section 45(6) of the Code on Wages, 2019, you can file an application before the appointed authority within 3 years from the date the claim arises [[COW2019:s45]]. \n- Compensation: The authority can order the employer to pay your unpaid wages plus compensation that may extend up to ten times the claim determined [[COW2019:s45]].\n\nWhat you should gather:\n- Your employment agreement or appointment letter showing your agreed monthly salary of ₹75,000.\n- Bank statements or salary slips showing that August, September, and October 2026 salaries were not credited.\n- Any written communication (emails, WhatsApp messages) where you asked for your salary or the company promised payment.\n\nWould you like me to help you draft a formal demand letter to send to your employer before filing a claim? Also, please let me know:\n1. Are you still working at the startup, or have you resigned or been terminated?\n2. Have you already sent any written reminder or notice to the company?",
+     "issues": []
+    }
+   ],
+   "audits": [
+    {
+     "claims": [
+      {
+       "paragraph": 1,
+       "claim": "The Payment of Wages Act 1936 was replaced on 21 November 2025 by the Code on Wages, 2019.",
+       "citations": [
+        "COW2019:s17"
+       ],
+       "verdict": "supported",
+       "reason": "The caution note in the source confirms the Code on Wages replaced the 1936 Act on 21 November 2025.",
+       "exact_quote": "The old Payment of Wages Act 1936 was replaced on 21 November 2025, and your claim for unpaid salary now falls under the Code on Wages, 2019 [[COW2019:s17]]."
+      },
+      {
+       "paragraph": 3,
+       "claim": "Monthly wages must be paid before the expiry of the 7th day of the following month.",
+       "citations": [
+        "COW2019:s17"
+       ],
+       "verdict": "supported",
+       "reason": "Section 17(1)(iv) explicitly states monthly wages are due before the expiry of the seventh day of the succeeding month.",
+       "exact_quote": "For monthly wages, the employer must pay before the expiry of the 7th day of the succeeding month [[COW2019:s17]]."
+      },
+      {
+       "paragraph": 3,
+       "claim": "A claim application can be filed within 3 years from the date the claim arises.",
+       "citations": [
+        "COW2019:s45"
+       ],
+       "verdict": "supported",
+       "reason": "Section 45(6) provides a three-year period for filing an application from the date the claim arises.",
+       "exact_quote": "Under Section 45(6) of the Code on Wages, 2019, you can file an application before the appointed authority within 3 years from the date the claim arises [[COW2019:s45]]."
+      },
+      {
+       "paragraph": 3,
+       "claim": "The authority can order unpaid wages plus compensation up to ten times the claim amount.",
+       "citations": [
+        "COW2019:s45"
+       ],
+       "verdict": "supported",
+       "reason": "Section 45(2) states that the authority may order compensation which may extend to ten times the claim determined.",
+       "exact_quote": "The authority can order the employer to pay your unpaid wages plus compensation that may extend up to ten times the claim determined [[COW2019:s45]]."
+      }
+     ],
+     "uncited_legal_claims": [],
+     "invented_facts": [],
+     "ignored_cautions": [],
+     "_usage": {
+      "input": 2060,
+      "output": 674
+     }
+    }
+   ],
+   "final_status": "verified",
+   "final": "The old Payment of Wages Act 1936 was replaced on 21 November 2025, and your claim for unpaid salary now falls under the Code on Wages, 2019 [[COW2019:s17]]. \n\nHere is how you can proceed regarding your salary of ₹75,000 per month for August, September, and October 2026:\n\n- When wages are due: For monthly wages, the employer must pay before the expiry of the 7th day of the succeeding month [[COW2019:s17]]. \n- Time limit to file a claim: Under Section 45(6) of the Code on Wages, 2019, you can file an application before the appointed authority within 3 years from the date the claim arises [[COW2019:s45]]. \n- Compensation: The authority can order the employer to pay your unpaid wages plus compensation that may extend up to ten times the claim determined [[COW2019:s45]].\n\nWhat you should gather:\n- Your employment agreement or appointment letter showing your agreed monthly salary of ₹75,000.\n- Bank statements or salary slips showing that August, September, and October 2026 salaries were not credited.\n- Any written communication (emails, WhatsApp messages) where you asked for your salary or the company promised payment.\n\nWould you like me to help you draft a formal demand letter to send to your employer before filing a claim? Also, please let me know:\n1. Are you still working at the startup, or have you resigned or been terminated?\n2. Have you already sent any written reminder or notice to the company?",
+   "repairs": 2,
+   "seconds": 24.0,
+   "usage_after": {
+    "input": 30113,
+    "output": 2593,
+    "cache_read": 48598,
+    "cache_write": 0,
+    "api_calls": 10
+   }
+  }
+ ],
+ "checks": [
+  {
+   "check": "got_an_answer",
+   "pass": true,
+   "detail": "0 turn(s) with errors"
+  },
+  {
+   "check": "all_citations_exist",
+   "pass": true,
+   "detail": "2 citation(s) all resolve"
+  },
+  {
+   "check": "same_language_as_user",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "no_unrequested_document",
+   "pass": true,
+   "detail": "saved [] without being asked"
+  },
+  {
+   "check": "substantive_answer",
+   "pass": true,
+   "detail": "shortest reply is 1419 characters"
+  },
+  {
+   "check": "no_case_law_cited",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "cite_any",
+   "pass": true,
+   "detail": "wanted any of ['COW2019:s69', 'COW2019:s17', 'COW2019:s45']; cited ['COW2019:s17', 'COW2019:s45']"
+  },
+  {
+   "check": "say_any /(?i)code on wages/",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "say_none /67B|Section 999|Housing Recovery Act|AIR/",
+   "pass": true,
+   "detail": ""
+  }
+ ]
+}

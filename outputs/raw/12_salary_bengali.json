@@ -1,0 +1,360 @@
+{
+ "id": "12_salary_bengali",
+ "group": "salary",
+ "why": "Bengali user. Replying in the right script.",
+ "started": "2026-11-08T02:17:42.748517",
+ "provider": "gemini",
+ "model": "gemini-3.5-flash-lite",
+ "audit_model": "gemini-3.6-flash",
+ "effort": "medium",
+ "audit_effort": "medium",
+ "turns": [
+  {
+   "user": "আমি কলকাতায় একটি দোকানে কাজ করি। মালিক গত তিন মাস ধরে আমার বেতন দিচ্ছে না। মাসে ১৮,০০০ টাকা বেতন। আমি কী করতে পারি?",
+   "file": null,
+   "reply": "কলকাতায় দোকানে গত তিন মাস ধরে আপনার বেতন না পাওয়া একটি গুরুতর সমস্যা। আপনার মাসিক বেতন ১৮,০০০ টাকা।\n\nআইন অনুযায়ী কী বলা আছে:\n- কোড অন ওয়েজেস, ২০১৯ ([[COW2019:s17]]) অনুযায়ী, মাসিক বেতন প্রতি মাসের ৭ তারিখের মধ্যে মিটিয়ে দেওয়া বাধ্যতামূলক। মাসের পর মাস বেতন আটকে রাখা আইনসম্মত নয়।\n- আপনি নির্দিষ্ট কর্তৃপক্ষের কাছে বকেয়া বেতনের জন্য দাবি জানাতে পারেন [[COW2019:s45]]. (উল্লেখ্য, বেশিরভাগ বেসরকারি দোকানের ক্ষেত্রে রাজ্য সরকারের শ্রম নিয়ম প্রযোজ্য)।\n\nআপনার এখন কী করা উচিত:\n১. **প্রমাণ গুছিয়ে রাখুন:** আপনার কাছে যদি কোনো নিয়োগপত্র (appointment letter), পরিচয়পত্র, হাজিরা খাতা, বা মালিকের সাথে কাজের বিষয়ে কোনো চ্যাট (যেমন WhatsApp বা মেসেজ) থাকে, সেগুলি নিরাপদ রাখুন।\n২. **লিখিতভাবে দাবি জানান:** মালিককে পরিষ্কার ও নম্র ভাষায় একটি লিখিত বার্তা বা WhatsApp মেসেজ পাঠান যে আপনার তিন মাসের বেতন দ্রুত মেটানোর জন্য। এতে আপনার কাছে প্রমাণের একটি লিখিত রেকর্ড থাকবে।\n৩. **শ্রম দপ্তরে যোগাযোগ:** মালিক কথা না শুনলে আপনি কলকাতার স্থানীয় শ্রম দপ্তরে (Labour Office) অভিযোগ জানাতে পারেন অথবা আইনি সহায়তা নিতে পারেন।\n\nদয়া করে এই দুটি বিষয় জানান:\n১. আপনার কি কোনো নিয়োগপত্র, বেতনের স্লিপ বা মালিকের সাথে কাজের কোনো চ্যাট বা রেকর্ড আছে?\n২. আপনি কি ইতিমধ্যেই মালিককে লিখিতভাবে বা মুখে বেতনের কথা বলেছেন?",
+   "verification": {
+    "status": "verified",
+    "repairs": 2,
+    "removed": 0,
+    "issues": []
+   },
+   "citations": [
+    "COW2019:s17",
+    "COW2019:s45"
+   ],
+   "errors": []
+  }
+ ],
+ "seconds": 35.9,
+ "usage": {
+  "input": 24147,
+  "output": 2315,
+  "cache_read": 30353,
+  "cache_write": 0,
+  "api_calls": 9
+ },
+ "case_file": {
+  "document_references": [],
+  "problem_type": "unpaid_salary",
+  "timeline": [
+   {
+    "event": "Salary not paid by employer",
+    "source": "user",
+    "date": "Past 3 months"
+   }
+  ],
+  "evidence": [
+   {
+    "why_it_matters": "Helps prove employment and wage amount before the labour authority.",
+    "status": "unclear",
+    "item": "Employment records, pay slips, or appointment letter"
+   }
+  ],
+  "amounts": [
+   {
+    "label": "Monthly salary",
+    "amount_inr": "18000"
+   },
+   {
+    "label": "Total unpaid salary for 3 months",
+    "amount_inr": "54000"
+   }
+  ],
+  "open_questions": [
+   "Do you have any appointment letter, pay slips, identity card, or text messages confirming your employment and salary?",
+   "Have you asked the owner for your salary in writing (like WhatsApp or a letter)?"
+  ],
+  "deadlines": [],
+  "summary": "The user works at a shop in Kolkata with a monthly salary of Rs. 18,000 and has not been paid for the past three months (total Rs. 54,000).",
+  "parties": [
+   {
+    "role": "Employer",
+    "name": "Shop Owner"
+   },
+   {
+    "role": "Employee",
+    "name": "User"
+   }
+  ],
+  "state": "West Bengal"
+ },
+ "assessment": {
+  "reason": "মালিকের তিন মাসের বেতন না দেওয়া কোড অন ওয়েজেস অনুযায়ী বেআইনি, তবে সঠিক পদক্ষেপ নিতে প্রমাণের প্রয়োজন।",
+  "what_i_could_not_verify": [
+   "West Bengal State rules and specific designated authority under the Code on Wages"
+  ],
+  "lawyer_needed": "recommended",
+  "confidence": "medium"
+ },
+ "triage": {
+  "level": "none",
+  "codes": [],
+  "reasons": [],
+  "reasons_hi": [],
+  "help": []
+ },
+ "documents": [],
+ "doc_rejections": 0,
+ "trail": [
+  {
+   "user": "আমি কলকাতায় একটি দোকানে কাজ করি। মালিক গত তিন মাস ধরে আমার বেতন দিচ্ছে না। মাসে ১৮,০০০ টাকা বেতন। আমি কী করতে পারি?",
+   "tool_calls": [
+    {
+     "name": "search_law",
+     "input": {
+      "state": "West Bengal",
+      "query": "recovery of wages claim code on wages time limit"
+     },
+     "is_error": false,
+     "result": "[{\"id\": \"COW2019:s17\", \"citation\": \"Section 17, Code on Wages, 2019\", \"heading\": \"Time limit for payment of wages\", \"excerpt\": \"(1) The employer shall pay or cause to be paid wages to the employees, engaged\\non—\\n(i) daily basis, at the end of the shift;\\n(ii) weekly basis, on the last working day of the week, that is to say, before the\\nweekly holiday;\\n(iii) fortnightly basis, before the end of the second day after the end of the\\nfortnight;\\n(iv) monthly basis, before the expiry of the seventh day of the succeeding\\nmonth.\\n(2) Where an employee has been—\\n(i) removed or dismissed from service; or\\n(ii) retrenched or has resigned from service, or became unemployed due to\\nclosure of the establishment,\\nthe wages payable to him shall be paid within two working days of his removal, dismissal,\\nretrenchment or, as the case may be, his resignation.\\n(3) Notwithstanding anything contained in sub-section ( 1) or sub-section ( 2), the\\nappropriate Government may, provide any other time limit for payment of wages where it\\nconsiders r\", \"applies_in\": \"India\", \"caution\": \"In force since 21 November 2025. It replaced the Payment of Wages Act 1936. State wage rules, which set local claim procedure, are not in this library.\"}, {\"id\": \"COW2019:s45\", \"citation\": \"Section 45, Code on Wages, 2019\", \"heading\": \"Claims under Code and procedure thereof\", \"excerpt\": \"( 1) The appropriate Government may, by notification, appoint one or more\\nauthorities, not below the rank of a Gazetted Officer, to hear and determine the claims which\\narises under the provisions of this Code.\\n(2) The authority appointed under sub-section ( 1), while deciding the claim under\\nthat sub-section, may order, having regard to the circumstances under which the claim\\narises, the payment of compensation in addition to the claim determined, which may extend\\nto ten times of the claim determined and endeavour shall be made by the authority to decide\\nthe claim within a period of three months.\\n(3) If an employer fails to pay the claim determined and compensation ordered to be\\npaid under sub-section (2), the authority shall issue a certificate of recovery to the Collector\\nor District Magistrate of the district where the establishment is located who shall recover\\nthe same as arrears of \", \"applies_in\": \"India\", \"caution\": \"In force since 21 November 2025. It replaced the Payment of Wages Act 1936. State wage rules, which set local claim procedure, are not in this library.\"}, {\"id\": \"COW2019:s18\", \"citation\": \"Section 18, Code on Wages, 2019\", \"heading\": \"Deductions which may be made from wages\", \"excerpt\": \"(1) Notwithstanding anything contained in any other law for the time being in\\nforce, there shall be no deductions from the wages of the employee, except those as are\\nauthorised under this Code.\\nExplanation.––For the purposes of this sub-section,—\\n(a) any payment made by an employee to the employer or his agent shall be\\ndeemed to be a deduction from his wages;\\n(b) any loss of wages to an employee, for a good and sufficient cause, resulting\\nfrom—\\n(i) the withholding of increment or promotion, including the stoppage of\\nan increment; or\\n(ii) the reduction to a lower post or time-scale; or\\n(iii) the suspension,\\nshall not be deemed to be a deduction from wages in a case where the provisions made\\nby the employer for such purposes are satisfying the requirements specified in the\\nnotification issued by the appropriate Government in this behalf.\\n(2) Deductions from the wages of an employee shall b\", \"applies_in\": \"India\", \"caution\": \"In force since 21 November 2025. It replaced the Payment of Wages Act 1936. State wage rules, which set local claim procedure, are not in this library.\"}, {\"id\": \"COW2019:s39\", \"citation\": \"Section 39, Code on Wages, 2019\", \"heading\": \"Time limit for payment of bonus\", \"excerpt\": \" respect of such dispute:\\nProvided that if, there is a dispute for payment at the higher rate, the employer shall\\npay eight and one-third per cent. of "
+    },
+    {
+     "name": "update_case_file",
+     "input": {
+      "document_references": [],
+      "problem_type": "unpaid_salary",
+      "timeline": [
+       {
+        "event": "Salary not paid by employer",
+        "source": "user",
+        "date": "Past 3 months"
+       }
+      ],
+      "evidence": [
+       {
+        "why_it_matters": "Helps prove employment and wage amount before the labour authority.",
+        "status": "unclear",
+        "item": "Employment records, pay slips, or appointment letter"
+       }
+      ],
+      "amounts": [
+       {
+        "label": "Monthly salary",
+        "amount_inr": "18000"
+       },
+       {
+        "label": "Total unpaid salary for 3 months",
+        "amount_inr": "54000"
+       }
+      ],
+      "open_questions": [
+       "Do you have any appointment letter, pay slips, identity card, or text messages confirming your employment and salary?",
+       "Have you asked the owner for your salary in writing (like WhatsApp or a letter)?"
+      ],
+      "deadlines": [],
+      "summary": "The user works at a shop in Kolkata with a monthly salary of Rs. 18,000 and has not been paid for the past three months (total Rs. 54,000).",
+      "parties": [
+       {
+        "role": "Employer",
+        "name": "Shop Owner"
+       },
+       {
+        "role": "Employee",
+        "name": "User"
+       }
+      ],
+      "state": "West Bengal"
+     },
+     "is_error": false,
+     "result": "Saved."
+    },
+    {
+     "name": "set_assessment",
+     "input": {
+      "what_i_could_not_verify": [
+       "West Bengal State rules and specific designated authority under the Code on Wages"
+      ],
+      "lawyer_needed": "recommended",
+      "reason": "মালিকের তিন মাসের বেতন না দেওয়া কোড অন ওয়েজেস অনুযায়ী বেআইনি, তবে সঠিক পদক্ষেপ নিতে প্রমাণের প্রয়োজন।",
+      "confidence": "medium"
+     },
+     "is_error": false,
+     "result": "Saved."
+    },
+    {
+     "name": "set_assessment",
+     "input": {
+      "reason": "মালিকের তিন মাসের বেতন না দেওয়া কোড অন ওয়েজেস অনুযায়ী বেআইনি, তবে সঠিক পদক্ষেপ নিতে প্রমাণের প্রয়োজন।",
+      "what_i_could_not_verify": [
+       "West Bengal State rules and specific designated authority under the Code on Wages"
+      ],
+      "lawyer_needed": "recommended",
+      "confidence": "medium"
+     },
+     "is_error": false,
+     "result": "Saved."
+    }
+   ],
+   "drafts": [
+    {
+     "text": "কলকাতায় দোকানে গত তিন মাস ধরে বেতন না পাওয়া একটি গুরুতর সমস্যা। আপনার মাসিক বেতন ১৮,০০০ টাকা হিসেবে তিন মাসের বকেয়া মোট ৫৪,০০০ টাকা [[COW2019:s17]].\n\nআইন অনুযায়ী কী বলা আছে:\n- কোড অন ওয়েজেস, ২০১৯ ([[COW2019:s17]]) অনুযায়ী, মাসিক বেতন প্রতি মাসের ৭ তারিখের মধ্যে মিটিয়ে দেওয়া বাধ্যতামূলক। মাসের পর মাস বেতন আটকে রাখা আইনসম্মত নয়।\n- আপনি নির্দিষ্ট কর্তৃপক্ষের কাছে বকেয়া বেতনের জন্য দাবি জানাতে পারেন, যেখানে জরিমানারও সংস্থান রয়েছে [[COW2019:s45]]. (উল্লেখ্য, বেশিরভাগ বেসরকারি দোকানের ক্ষেত্রে রাজ্য সরকারের শ্রম নিয়ম প্রযোজ্য)।\n\nআপনার এখন কী করা উচিত:\n১. **প্রমাণ গুছিয়ে রাখুন:** আপনার কাছে যদি কোনো নিয়োগপত্র (appointment letter), পরিচয়পত্র, হাজিরা খাতা, বা মালিকের সাথে কাজের বিষয়ে কোনো চ্যাট (যেমন WhatsApp বা মেসেজ) থাকে, সেগুলি নিরাপদ রাখুন।\n২. **লিখিতভাবে দাবি জানান:** মালিককে পরিষ্কার ও নম্র ভাষায় একটি লিখিত বার্তা বা WhatsApp মেসেজ পাঠান যে আপনার তিন মাসের ৫৪,০০০ টাকা বকেয়া দ্রুত মেটানোর জন্য। এতে আপনার কাছে প্রমাণের একটি লিখিত রেকর্ড থাকবে।\n৩. **শ্রম দপ্তরে যোগাযোগ:** মালিক কথা না শুনলে আপনি কলকাতার স্থানীয় শ্রম দপ্তরে (Labour Office) অভিযোগ জানাতে পারেন অথবা আইনি সহায়তা নিতে পারেন।\n\nদয়া করে এই দুটি বিষয় জানান:\n১. আপনার কি কোনো নিয়োগপত্র, বেতনের স্লিপ বা মালিকের সাথে কাজের কোনো চ্যাট বা রেকর্ড আছে?\n২. আপনি কি ইতিমধ্যেই মালিককে লিখিতভাবে বা মুখে বেতনের কথা বলেছেন?",
+     "issues": [
+      {
+       "code": "unsupported_number",
+       "detail": "Paragraph 1 states the amount 54,000 rupees, which is not in any cited provision or in the user's facts. Check it or remove it.",
+       "paragraph": 0,
+       "blocking": true,
+       "quote": null
+      },
+      {
+       "code": "unsupported_number",
+       "detail": "Paragraph 3 states the amount 54,000 rupees, which is not in any cited provision or in the user's facts. Check it or remove it.",
+       "paragraph": 2,
+       "blocking": true,
+       "quote": null
+      }
+     ]
+    },
+    {
+     "text": "কলকাতায় দোকানে গত তিন মাস ধরে বেতন না পাওয়া একটি গুরুতর সমস্যা। আপনার মাসিক বেতন ১৮,০০০ টাকা [[COW2019:s17]].\n\nআইন অনুযায়ী কী বলা আছে:\n- কোড অন ওয়েজেস, ২০১৯ ([[COW2019:s17]]) অনুযায়ী, মাসিক বেতন প্রতি মাসের ৭ তারিখের মধ্যে মিটিয়ে দেওয়া বাধ্যতামূলক। মাসের পর মাস বেতন আটকে রাখা আইনসম্মত নয়।\n- আপনি নির্দিষ্ট কর্তৃপক্ষের কাছে বকেয়া বেতনের জন্য দাবি জানাতে পারেন [[COW2019:s45]]. (উল্লেখ্য, বেশিরভাগ বেসরকারি দোকানের ক্ষেত্রে রাজ্য সরকারের শ্রম নিয়ম প্রযোজ্য)।\n\nআপনার এখন কী করা উচিত:\n১. **প্রমাণ গুছিয়ে রাখুন:** আপনার কাছে যদি কোনো নিয়োগপত্র (appointment letter), পরিচয়পত্র, হাজিরা খাতা, বা মালিকের সাথে কাজের বিষয়ে কোনো চ্যাট (যেমন WhatsApp বা মেসেজ) থাকে, সেগুলি নিরাপদ রাখুন।\n২. **লিখিতভাবে দাবি জানান:** মালিককে পরিষ্কার ও নম্র ভাষায় একটি লিখিত বার্তা বা WhatsApp মেসেজ পাঠান যে আপনার তিন মাসের বেতন দ্রুত মেটানোর জন্য। এতে আপনার কাছে প্রমাণের একটি লিখিত রেকর্ড থাকবে।\n৩. **শ্রম দপ্তরে যোগাযোগ:** মালিক কথা না শুনলে আপনি কলকাতার স্থানীয় শ্রম দপ্তরে (Labour Office) অভিযোগ জানাতে পারেন অথবা আইনি সহায়তা নিতে পারেন।\n\nদয়া করে এই দুটি বিষয় জানান:\n১. আপনার কি কোনো নিয়োগপত্র, বেতনের স্লিপ বা মালিকের সাথে কাজের কোনো চ্যাট বা রেকর্ড আছে?\n২. আপনি কি ইতিমধ্যেই মালিককে লিখিতভাবে বা মুখে বেতনের কথা বলেছেন?",
+     "issues": [
+      {
+       "code": "claim_not_supported",
+       "detail": "Paragraph 1: \"The user's monthly salary is 18,000 rupees.\" is not supported by ['COW2019:s17']. Section 17 of the Code on Wages, 2019 lays down time limits for paying wages; it does not mention or establish the user's specific monthly salary of Rs 18,000.",
+       "paragraph": 0,
+       "blocking": true,
+       "quote": "আপনার মাসিক বেতন ১৮,০০০ টাকা [[COW2019:s17]]."
+      }
+     ]
+    },
+    {
+     "text": "কলকাতায় দোকানে গত তিন মাস ধরে আপনার বেতন না পাওয়া একটি গুরুতর সমস্যা। আপনার মাসিক বেতন ১৮,০০০ টাকা।\n\nআইন অনুযায়ী কী বলা আছে:\n- কোড অন ওয়েজেস, ২০১৯ ([[COW2019:s17]]) অনুযায়ী, মাসিক বেতন প্রতি মাসের ৭ তারিখের মধ্যে মিটিয়ে দেওয়া বাধ্যতামূলক। মাসের পর মাস বেতন আটকে রাখা আইনসম্মত নয়।\n- আপনি নির্দিষ্ট কর্তৃপক্ষের কাছে বকেয়া বেতনের জন্য দাবি জানাতে পারেন [[COW2019:s45]]. (উল্লেখ্য, বেশিরভাগ বেসরকারি দোকানের ক্ষেত্রে রাজ্য সরকারের শ্রম নিয়ম প্রযোজ্য)।\n\nআপনার এখন কী করা উচিত:\n১. **প্রমাণ গুছিয়ে রাখুন:** আপনার কাছে যদি কোনো নিয়োগপত্র (appointment letter), পরিচয়পত্র, হাজিরা খাতা, বা মালিকের সাথে কাজের বিষয়ে কোনো চ্যাট (যেমন WhatsApp বা মেসেজ) থাকে, সেগুলি নিরাপদ রাখুন।\n২. **লিখিতভাবে দাবি জানান:** মালিককে পরিষ্কার ও নম্র ভাষায় একটি লিখিত বার্তা বা WhatsApp মেসেজ পাঠান যে আপনার তিন মাসের বেতন দ্রুত মেটানোর জন্য। এতে আপনার কাছে প্রমাণের একটি লিখিত রেকর্ড থাকবে।\n৩. **শ্রম দপ্তরে যোগাযোগ:** মালিক কথা না শুনলে আপনি কলকাতার স্থানীয় শ্রম দপ্তরে (Labour Office) অভিযোগ জানাতে পারেন অথবা আইনি সহায়তা নিতে পারেন।\n\nদয়া করে এই দুটি বিষয় জানান:\n১. আপনার কি কোনো নিয়োগপত্র, বেতনের স্লিপ বা মালিকের সাথে কাজের কোনো চ্যাট বা রেকর্ড আছে?\n২. আপনি কি ইতিমধ্যেই মালিককে লিখিতভাবে বা মুখে বেতনের কথা বলেছেন?",
+     "issues": []
+    }
+   ],
+   "audits": [
+    {
+     "claims": [
+      {
+       "paragraph": 1,
+       "claim": "The user's monthly salary is 18,000 rupees.",
+       "citations": [
+        "COW2019:s17"
+       ],
+       "verdict": "not_supported",
+       "reason": "Section 17 of the Code on Wages, 2019 lays down time limits for paying wages; it does not mention or establish the user's specific monthly salary of Rs 18,000.",
+       "exact_quote": "আপনার মাসিক বেতন ১৮,০০০ টাকা [[COW2019:s17]]."
+      },
+      {
+       "paragraph": 2,
+       "claim": "Under the Code on Wages, 2019, monthly wages must be paid before the expiry of the 7th day of the succeeding month.",
+       "citations": [
+        "COW2019:s17"
+       ],
+       "verdict": "supported",
+       "reason": "Section 17(1)(iv) explicitly states that wages engaged on a monthly basis must be paid before the expiry of the seventh day of the succeeding month.",
+       "exact_quote": "কোড অন ওয়েজেস, ২০১৯ ([[COW2019:s17]]) অনুযায়ী, মাসিক বেতন প্রতি মাসের ৭ তারিখের মধ্যে মিটিয়ে দেওয়া বাধ্যতামূলক।"
+      },
+      {
+       "paragraph": 2,
+       "claim": "An employee can file a claim for unpaid wages before the specified authority.",
+       "citations": [
+        "COW2019:s45"
+       ],
+       "verdict": "supported",
+       "reason": "Section 45(1) and Section 45(4)(a) allow the concerned employee to file an application before the appointed authority to hear and determine wage claims.",
+       "exact_quote": "আপনি নির্দিষ্ট কর্তৃপক্ষের কাছে বকেয়া বেতনের জন্য দাবি জানাতে পারেন [[COW2019:s45]]."
+      }
+     ],
+     "uncited_legal_claims": [],
+     "invented_facts": [],
+     "ignored_cautions": [],
+     "_usage": {
+      "input": 1973,
+      "output": 498
+     }
+    },
+    {
+     "claims": [
+      {
+       "paragraph": 2,
+       "claim": "Under the Code on Wages, 2019, monthly wages must be paid before the 7th day of the following month.",
+       "citations": [
+        "COW2019:s17"
+       ],
+       "verdict": "supported",
+       "reason": "Section 17(1)(iv) of the Code on Wages, 2019 specifies that wages on a monthly basis shall be paid before the expiry of the seventh day of the succeeding month.",
+       "exact_quote": "কোড অন ওয়েজেস, ২০১৯ ([[COW2019:s17]]) অনুযায়ী, মাসিক বেতন প্রতি মাসের ৭ তারিখের মধ্যে মিটিয়ে দেওয়া বাধ্যতামূলক।"
+      },
+      {
+       "paragraph": 2,
+       "claim": "You can file a claim for unpaid wages before the specified authority.",
+       "citations": [
+        "COW2019:s45"
+       ],
+       "verdict": "supported",
+       "reason": "Section 45(1) and 45(4)(a) allow an employee to file an application for claims arising under the Code before the appointed authority.",
+       "exact_quote": "আপনি নির্দিষ্ট কর্তৃপক্ষের কাছে বকেয়া বেতনের জন্য দাবি জানাতে পারেন [[COW2019:s45]]."
+      }
+     ],
+     "uncited_legal_claims": [],
+     "invented_facts": [],
+     "ignored_cautions": [],
+     "_usage": {
+      "input": 1963,
+      "output": 351
+     }
+    }
+   ],
+   "final_status": "verified",
+   "final": "কলকাতায় দোকানে গত তিন মাস ধরে আপনার বেতন না পাওয়া একটি গুরুতর সমস্যা। আপনার মাসিক বেতন ১৮,০০০ টাকা।\n\nআইন অনুযায়ী কী বলা আছে:\n- কোড অন ওয়েজেস, ২০১৯ ([[COW2019:s17]]) অনুযায়ী, মাসিক বেতন প্রতি মাসের ৭ তারিখের মধ্যে মিটিয়ে দেওয়া বাধ্যতামূলক। মাসের পর মাস বেতন আটকে রাখা আইনসম্মত নয়।\n- আপনি নির্দিষ্ট কর্তৃপক্ষের কাছে বকেয়া বেতনের জন্য দাবি জানাতে পারেন [[COW2019:s45]]. (উল্লেখ্য, বেশিরভাগ বেসরকারি দোকানের ক্ষেত্রে রাজ্য সরকারের শ্রম নিয়ম প্রযোজ্য)।\n\nআপনার এখন কী করা উচিত:\n১. **প্রমাণ গুছিয়ে রাখুন:** আপনার কাছে যদি কোনো নিয়োগপত্র (appointment letter), পরিচয়পত্র, হাজিরা খাতা, বা মালিকের সাথে কাজের বিষয়ে কোনো চ্যাট (যেমন WhatsApp বা মেসেজ) থাকে, সেগুলি নিরাপদ রাখুন।\n২. **লিখিতভাবে দাবি জানান:** মালিককে পরিষ্কার ও নম্র ভাষায় একটি লিখিত বার্তা বা WhatsApp মেসেজ পাঠান যে আপনার তিন মাসের বেতন দ্রুত মেটানোর জন্য। এতে আপনার কাছে প্রমাণের একটি লিখিত রেকর্ড থাকবে।\n৩. **শ্রম দপ্তরে যোগাযোগ:** মালিক কথা না শুনলে আপনি কলকাতার স্থানীয় শ্রম দপ্তরে (Labour Office) অভিযোগ জানাতে পারেন অথবা আইনি সহায়তা নিতে পারেন।\n\nদয়া করে এই দুটি বিষয় জানান:\n১. আপনার কি কোনো নিয়োগপত্র, বেতনের স্লিপ বা মালিকের সাথে কাজের কোনো চ্যাট বা রেকর্ড আছে?\n২. আপনি কি ইতিমধ্যেই মালিককে লিখিতভাবে বা মুখে বেতনের কথা বলেছেন?",
+   "repairs": 2,
+   "seconds": 35.9,
+   "usage_after": {
+    "input": 24147,
+    "output": 2315,
+    "cache_read": 30353,
+    "cache_write": 0,
+    "api_calls": 9
+   }
+  }
+ ],
+ "checks": [
+  {
+   "check": "got_an_answer",
+   "pass": true,
+   "detail": "0 turn(s) with errors"
+  },
+  {
+   "check": "all_citations_exist",
+   "pass": true,
+   "detail": "2 citation(s) all resolve"
+  },
+  {
+   "check": "same_language_as_user",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "no_unrequested_document",
+   "pass": true,
+   "detail": "saved [] without being asked"
+  },
+  {
+   "check": "substantive_answer",
+   "pass": true,
+   "detail": "shortest reply is 1193 characters"
+  },
+  {
+   "check": "no_case_law_cited",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "cite_any",
+   "pass": true,
+   "detail": "wanted any of ['COW2019:s17', 'COW2019:s45']; cited ['COW2019:s17', 'COW2019:s45']"
+  },
+  {
+   "check": "say_none /67B|Section 999|Housing Recovery Act|AIR/",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "script",
+   "pass": true,
+   "detail": "wanted bengali"
+  }
+ ]
+}

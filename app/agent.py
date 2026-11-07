@@ -36,6 +36,14 @@ STAGE_LABELS = {
     "set_assessment": "Weighing up where you stand",
     "save_document": "Preparing and checking your document",
 }
+# A document that talks to the AI is suspicious in itself, and the person should always hear about it.
+PROMPT_INJECTION = re.compile(
+    r"ignore (all |any )?(of )?(your |the )?(previous|prior|above|earlier)?\s*(instructions|rules)|note to the ai|(system|hidden) note|"
+    r"(instructions?|message) (to|for) the (ai|assistant)|ai assistant reading|do not mention this note", re.I)
+INJECTION_NOTE = {
+    "en": "**Warning about your document:** it contains text addressed to AI tools, telling them what to say to you. I have not followed it. Treat that part as suspicious, and don't rely on what it claims.",
+    "hi": "**आपके दस्तावेज़ के बारे में चेतावनी:** इसमें AI टूल्स के लिए लिखा गया पाठ है, जो उन्हें बताता है कि आपसे क्या कहना है। मैंने उसका पालन नहीं किया है। उस हिस्से को संदिग्ध मानें और उसके दावों पर भरोसा न करें।",
+}
 REMOVED_NOTE = {
     "en": "(I removed {n} part(s) of this answer because I could not verify them against the law text. Please ask a lawyer about anything that seems missing.)",
     "hi": "(मैंने इस उत्तर के {n} हिस्से हटा दिए क्योंकि मैं उन्हें कानून के मूल पाठ से सत्यापित नहीं कर सका। कुछ छूटा लगे तो कृपया वकील से पूछें।)",
@@ -384,6 +392,9 @@ def run_turn(client, session: dict, user_text: str, files: list[dict] | None = N
             if status != "blocked":
                 final_text = f"{cleaned}\n\n{REMOVED_NOTE[_lang(session)].format(n=removed)}"
 
+    if PROMPT_INJECTION.search(doc_text):
+        final_text = f"{INJECTION_NOTE[_lang(session)]}\n\n{final_text}"
+        entry["injection_warning"] = True
     entry["final_status"] = status
     entry["final"] = final_text
     entry["repairs"] = repairs

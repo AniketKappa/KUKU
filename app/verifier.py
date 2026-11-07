@@ -91,7 +91,7 @@ DURATION_RE = re.compile(rf"(?<![\wऀ-ॿ])(\d{{1,4}}|{_WORD_ALT})[\s-]*(?:\(\d
 MONEY_RE = re.compile(r"(?:₹|rs\.?|inr|rupees?|रुपये|रु\.?)\s*([\d,]+(?:\.\d+)?)\s*(lakhs?|crores?|लाख|करोड़|thousand|हज़ार|हजार)?"
                       r"|([\d,]+(?:\.\d+)?)\s*(lakhs?|crores?|लाख|करोड़)"
                       r"|([\d,]+(?:\.\d+)?)\s*(?:/-|rs\.?|rupees?|rupaye|rupiya|रुपये|रुपए|रु\.?|টাকা)", re.I)
-MONEY_WORDS_RE = re.compile(rf"(?<![\w])({_WORD_ALT})\s*(lakhs?|crores?|thousand)(?:\s+rupees)?|rupees\s+({_WORD_ALT})\s*(lakhs?|crores?|thousand)?", re.I)
+MONEY_WORDS_RE = re.compile(rf"(?<![\w])({_WORD_ALT})\s*(lakhs?|crores?|thousand)(?:\s+rupees)?|rupees\s+({_WORD_ALT})(?![\w\u0900-\u097F])\s*(lakhs?|crores?|thousand)?", re.I)
 MULTIPLIER = {"lakh": 100_000, "lakhs": 100_000, "लाख": 100_000, "crore": 10_000_000, "crores": 10_000_000, "करोड़": 10_000_000,
               "thousand": 1000, "हज़ार": 1000, "हजार": 1000}
 

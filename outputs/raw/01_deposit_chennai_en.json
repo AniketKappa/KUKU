@@ -1,0 +1,354 @@
+{
+ "id": "01_deposit_chennai_en",
+ "group": "deposit",
+ "why": "Core case. A State law gives a clear one-month rule.",
+ "started": "2026-11-08T02:13:23.154878",
+ "provider": "gemini",
+ "model": "gemini-3.5-flash-lite",
+ "audit_model": "gemini-3-flash-preview",
+ "effort": "medium",
+ "audit_effort": "medium",
+ "turns": [
+  {
+   "user": "I vacated my rented flat in Chennai on 31 July 2026. I paid a Rs 60,000 security deposit by bank transfer. The landlord keeps saying he'll return it next week but it's been three months. Nothing was damaged. What can I do?",
+   "file": null,
+   "reply": "Under Tamil Nadu law, your landlord is required to refund your security deposit within one month after you vacate the premises, after making any lawful deductions [[TNRRA2017:s11]]. Since you vacated on 31 July 2026 and nothing was damaged, the landlord is well past the one-month deadline and is withholding your money without legal backing.\n\n### Your Options\n1. **Send a formal written demand letter:** A formal notice reminding the landlord of the law and giving a short deadline to return the Rs 60,000 via bank transfer usually prompts action because it shows you know your rights and are prepared to take further steps.\n2. **Approach the Rent Court:** If the landlord ignores the notice, disputes relating to tenancies in covered areas are handled by the Rent Court [[TNRRA2017:s33]].\n\n### What I need to know\nTo help you draft a strong demand letter or take the next step:\n1. Do you have a written tenancy agreement?\n2. What was the monthly rent of the flat?\n\nIf you would like, I can prepare a formal demand letter for you to send to your landlord.",
+   "verification": {
+    "status": "verified",
+    "repairs": 1,
+    "removed": 0,
+    "issues": []
+   },
+   "citations": [
+    "TNRRA2017:s11",
+    "TNRRA2017:s33"
+   ],
+   "errors": []
+  }
+ ],
+ "seconds": 45.8,
+ "usage": {
+  "input": 32466,
+  "output": 1651,
+  "cache_read": 38417,
+  "cache_write": 0,
+  "api_calls": 11
+ },
+ "case_file": {
+  "problem_type": "tenancy_deposit",
+  "evidence": [
+   {
+    "item": "Bank transfer record of Rs 60,000 security deposit",
+    "why_it_matters": "Proves payment of the deposit",
+    "status": "have"
+   },
+   {
+    "status": "unclear",
+    "why_it_matters": "Shows terms of tenancy and monthly rent",
+    "item": "Written tenancy agreement or rent receipts"
+   }
+  ],
+  "summary": "The user vacated a rented flat in Chennai on 31 July 2026 after paying a Rs 60,000 security deposit by bank transfer. No damage was caused, but the landlord has delayed returning the deposit for three months despite promises.",
+  "parties": [
+   {
+    "name": "Landlord",
+    "role": "Landlord"
+   },
+   {
+    "name": "Tenant",
+    "role": "Tenant"
+   }
+  ],
+  "amounts": [
+   {
+    "label": "Security Deposit",
+    "amount_inr": "60000"
+   }
+  ],
+  "deadlines": [],
+  "document_references": [],
+  "state": "Tamil Nadu",
+  "open_questions": [
+   "Do you have a written tenancy agreement?",
+   "What was the monthly rent?"
+  ],
+  "timeline": [
+   {
+    "event": "Vacated rented flat in Chennai",
+    "date": "2026-07-31",
+    "source": "user"
+   }
+  ]
+ },
+ "assessment": {
+  "what_i_could_not_verify": [
+   "Whether there was a written tenancy agreement or specific clauses about deposit deductions."
+  ],
+  "confidence": "high",
+  "lawyer_needed": "none",
+  "reason": "Under Tamil Nadu law, security deposits must be refunded within one month of vacating, and disputes can be taken to the Rent Court."
+ },
+ "triage": {
+  "level": "none",
+  "codes": [],
+  "reasons": [],
+  "reasons_hi": [],
+  "help": []
+ },
+ "documents": [],
+ "doc_rejections": 0,
+ "trail": [
+  {
+   "user": "I vacated my rented flat in Chennai on 31 July 2026. I paid a Rs 60,000 security deposit by bank transfer. The landlord keeps saying he'll return it next week but it's been three months. Nothing was damaged. What can I do?",
+   "tool_calls": [
+    {
+     "name": "search_law",
+     "input": {
+      "query": "security deposit refund landlord tenant contract",
+      "state": "Tamil Nadu"
+     },
+     "is_error": false,
+     "result": "[{\"id\": \"TNRRA2017:s11\", \"citation\": \"Section 11, Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017\", \"heading\": \"Security deposit\", \"excerpt\": \"(1) Save an agreement to the contrary, it shall be unlawful to charge a\\nsecurity deposit in excess of three times the monthly rent.\\n(2) The security deposit shall be refunded to the tenant within one month\\nafter vacation of the premises, after making due deduction of any liability of the\\ntenant.\", \"applies_in\": \"Tamil Nadu\", \"caution\": \"\"}, {\"id\": \"MTA2021:s11\", \"citation\": \"Section 11, Model Tenancy Act, 2021\", \"heading\": \"Security deposit\", \"excerpt\": \"(1) The security deposit to b e paid by the tenant in advance shall\\nbe such as may be agreed upon between the landlord and the tenant\\nin the tenancy agreement, which shall ––\\nRestriction on\\nsub-letting.\\nRent payable.\\nRevision of rent.\\nRent Authority to\\ndetermine the\\nrevised rent in\\ncase of dispute.\\nSecurity deposit.\\n(a) not exceed two months rent, in case of residential premises;\\nand\\n(b) not exceed six months rent , in case of non -residential\\npremises.\\n(2) The security deposit shall be refunded to the tenant on the date of\\ntaking over vacant possession of the premises from the tenant, after\\nmaking due deduction of any liability of the tenant.\", \"applies_in\": \"Model law (applies only where a State has adopted it)\", \"caution\": \"This is a MODEL law issued by the Central Government for States to adopt. It does not bind anyone unless the user's State has enacted it. Never present it as law that applies to the user; say it is a model only.\"}, {\"id\": \"MTA2021:s24\", \"citation\": \"Section 24, Model Tenancy Act, 2021\", \"heading\": \"Refund of advance rent by landlord\", \"excerpt\": \"(1) Where a landlord exercises the right of recovery of\\npossession under sub -section (2) of section 21 or under section 22,\\nand he had received any rent or any other payment in advance from\\nthe tenant, he shall before recovery of possession, refund to the\\ntenant such amount after deducting the rent and other charges due\\nto him.\\n(2) If the landlord fails to make any refund, he shall be liable to pay\\nRefund of\\nadvance rent by\\nlandlord.\\nsimple interest to the tenant at such rate as may be prescribed from\\ntime to time on the amount which he has omitted or failed to refund.\", \"applies_in\": \"Model law (applies only where a State has adopted it)\", \"caution\": \"This is a MODEL law issued by the Central Government for States to adopt. It does not bind anyone unless the user's State has enacted it. Never present it as law that applies to the user; say it is a model only.\"}, {\"id\": \"TNRRA2017:s24\", \"citation\": \"Section 24, Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017\", \"heading\": \"Refund of advance rent by the landlord\", \"excerpt\": \"(1) Where a landlord exercises the right of recovery of possession under\\nsub-section (2) of section 21, and he had received any rent or any other payment\\nin advance from the tenant, he shall, before recovery of possession, refund to the\\ntenant such an amount after deducting the rent and other charges due to him.\\n(2) If any default is made in making any refund, the landlord shall be liable\\nto pay simple interest at such rate as may be prescribed from time to time on the\\namount which he has omitted or failed to refund.\", \"applies_in\": \"Tamil Nadu\", \"caution\": \"\"}, {\"id\": \"MTA2021:s14\", \"citation\": \"Section 14, Model Tenancy Act, 2021\", \"heading\": \"Deposit of rent with Rent Authority\", \"excerpt\": \"(1) Where the landlord refuses to accept any rent and other\\ncharges payable or refuses to give a receipt, the rent and other\\ncharges shall be paid to the lan dlord by postal money order or any\\nother method, in such manner as may be prescribed, consecutively\\nfor two months, and if the landlord refuses to accept the rent and\\nother charges within such period, then the tenant may deposit the\\nsame with the Rent Authority in such manner as may "
+    },
+    {
+     "name": "get_provision",
+     "input": {
+      "id": "TNRRA2017:s11"
+     },
+     "is_error": false,
+     "result": "{\"id\": \"TNRRA2017:s11\", \"citation\": \"Section 11, Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017\", \"applies_in\": \"Tamil Nadu\", \"caution\": \"\", \"heading\": \"Security deposit\", \"text\": \"(1) Save an agreement to the contrary, it shall be unlawful to charge a\\nsecurity deposit in excess of three times the monthly rent.\\n(2) The security deposit shall be refunded to the tenant within one month\\nafter vacation of the premises, after making due deduction of any liability of the\\ntenant.\"}"
+    },
+    {
+     "name": "update_case_file",
+     "input": {
+      "problem_type": "tenancy_deposit",
+      "evidence": [
+       {
+        "item": "Bank transfer record of Rs 60,000 security deposit",
+        "why_it_matters": "Proves payment of the deposit",
+        "status": "have"
+       },
+       {
+        "status": "unclear",
+        "why_it_matters": "Shows terms of tenancy and monthly rent",
+        "item": "Written tenancy agreement or rent receipts"
+       }
+      ],
+      "summary": "The user vacated a rented flat in Chennai on 31 July 2026 after paying a Rs 60,000 security deposit by bank transfer. No damage was caused, but the landlord has delayed returning the deposit for three months despite promises.",
+      "parties": [
+       {
+        "name": "Landlord",
+        "role": "Landlord"
+       },
+       {
+        "name": "Tenant",
+        "role": "Tenant"
+       }
+      ],
+      "amounts": [
+       {
+        "label": "Security Deposit",
+        "amount_inr": "60000"
+       }
+      ],
+      "deadlines": [],
+      "document_references": [],
+      "state": "Tamil Nadu",
+      "open_questions": [
+       "Do you have a written tenancy agreement?",
+       "What was the monthly rent?"
+      ],
+      "timeline": [
+       {
+        "event": "Vacated rented flat in Chennai",
+        "date": "2026-07-31",
+        "source": "user"
+       }
+      ]
+     },
+     "is_error": false,
+     "result": "Saved."
+    },
+    {
+     "name": "set_assessment",
+     "input": {
+      "lawyer_needed": "none",
+      "what_i_could_not_verify": [
+       "Whether there was a written tenancy agreement or specific clauses about deposit deductions."
+      ],
+      "confidence": "high",
+      "reason": "Under Tamil Nadu law, security deposits must be refunded within one month of vacating, and you have clear proof of payment via bank transfer."
+     },
+     "is_error": false,
+     "result": "Saved."
+    },
+    {
+     "name": "search_law",
+     "input": {
+      "state": "Tamil Nadu",
+      "query": "dispute rent authority Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act"
+     },
+     "is_error": false,
+     "result": "[{\"id\": \"TNRRA2017:s4\", \"citation\": \"Section 4, Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017\", \"heading\": \"Tenancy Agreement\", \"excerpt\": \"(1) Notwithstanding anything contained in this Act or any other law for the\\ntime being in force, no person shall, after the commencement of this Act, let or\\ntake on rent any premises except by an agreement in writing, which shall be\\ninformed to the Rent Authority by the landlord and tenant jointly, in the form specified\\nin the First Schedule.\\n(2) Where, in relation to a tenancy created before the commencement of this\\nAct,—\\n(a) an agreement in writing was already entered into, it shall be informed\\nto the Rent Authority;\\n(b) no agreement in writing was entered into, the landlord and the tenant\\nshall enter into an agreement in writing with regard to that tenancy, and inform the\\nRent Authority, in the form specified in the First Schedule:\\nProvided that where the landlord and the tenant fail to present jointly a copy of\\ntenancy agreement under clause (a) or fail to reach an agreement under cl\", \"applies_in\": \"Tamil Nadu\", \"caution\": \"\"}, {\"id\": \"TNRRA2017:s41\", \"citation\": \"Section 41, Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017\", \"heading\": \"Court-fees. Tamil Nadu Act XIV of 1955\", \"excerpt\": \"(1) The provisions of the Tamil Nadu Court-fees and Suits Valuation Act,\\n1955 shall apply in respect of applications or appeals to be presented before the\\nRent Court or Rent Tribunal or Rent Authority, as the case may be.\\n(2) The applications for recovery of possession made to the Rent Court and\\nthe memorandum of appeals presented before the Rent Tribunal shall be treated\\nas suits between the landlord and the tenant for the purposes of computation of\\ncourt-fees.\\n(3) The court-fees on the application filed before the Rent Authority shall\\nbe same as of an interlocutory application presented in a civil court.\", \"applies_in\": \"Tamil Nadu\", \"caution\": \"\"}, {\"id\": \"TNRRA2017:s1\", \"citation\": \"Section 1, Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017\", \"heading\": \"Short title, extent and commencement\", \"excerpt\": \"(1) This Act may be called the Tamil Nadu Regulation of Rights and\\nResponsibilities of Landlords and Tenants Act, 2017.\\n(2) It shall extend to all urban areas of the State of Tamil Nadu.\\n(3) It shall come into force on such date as the Government may, by notification,\\nappoint and different dates may be appointed for different provisions of this Act:\\nProvided that the Government may, by notification, exclude any area or units\\nor class of buildings from the operation of this Act or any provision thereof.\", \"applies_in\": \"Tamil Nadu\", \"caution\": \"\"}, {\"id\": \"TNRRA2017:s11\", \"citation\": \"Section 11, Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017\", \"heading\": \"Security deposit\", \"excerpt\": \"(1) Save an agreement to the contrary, it shall be unlawful to charge a\\nsecurity deposit in excess of three times the monthly rent.\\n(2) The security deposit shall be refunded to the tenant within one month\\nafter vacation of the premises, after making due deduction of any liability of the\\ntenant.\", \"applies_in\": \"Tamil Nadu\", \"caution\": \"\"}, {\"id\": \"TNRRA2017:s47\", \"citation\": \"Section 47, Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017\", \"heading\": \"Repeal and Tamil Nadu savings. Act 18 of 1960\", \"excerpt\": \"(1) The Tamil Nadu Buildings (Lease and Rent Control) Act, 1960 is hereby\\nrepealed.\\n(2) Notwithstanding such repeal and subject to the provisions of this Act,\\nall cases and other proceedings under the said Act pending, at the commencement\\nof this Act, shall be continued and disposed of in accordance with the provisions\\nof the said Act, as if the said Act had continued in force and this Act had not been\\npassed:\\nProvided that the plaintiff within a period of 180 days of coming"
+    },
+    {
+     "name": "get_provision",
+     "input": {
+      "id": "TNRRA2017:s33"
+     },
+     "is_error": false,
+     "result": "{\"id\": \"TNRRA2017:s33\", \"citation\": \"Section 33, Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017\", \"applies_in\": \"Tamil Nadu\", \"caution\": \"\", \"heading\": \"Jurisdiction of Rent Court\", \"text\": \"Notwithstanding anything contained in any other law for the time being in\\nforce, in the areas to which this Act extends, only the Rent Court and no Civil Court\\nshall have jurisdiction, except the jurisdiction of Rent Authority under section 39,\\nto hear and decide the applications relating to disputes between landlord and tenant\\nand matters connected with and ancillary thereto covered under this Act:\\nProvided that the Rent Court shall, in deciding such applications relating to\\ntenancies and premises, give due regard to the provisions of the Transfer of Property\\nAct, 1882, the Indian Contract Act, 1872 or any other substantive law applicable to\\nsuch matter in the same manner, in which such law would have been applied had\\nthe dispute been brought before a Civil Court by way of suit.\"}"
+    },
+    {
+     "name": "set_assessment",
+     "input": {
+      "what_i_could_not_verify": [
+       "Whether there was a written tenancy agreement or specific clauses about deposit deductions."
+      ],
+      "confidence": "high",
+      "lawyer_needed": "none",
+      "reason": "Under Tamil Nadu law, security deposits must be refunded within one month of vacating, and disputes can be taken to the Rent Court."
+     },
+     "is_error": false,
+     "result": "Saved."
+    }
+   ],
+   "drafts": [
+    {
+     "text": "Under Tamil Nadu law, your landlord is required to refund your security deposit within one month after you vacate the premises, after making any lawful deductions [[TNRRA2017:s11]]. Since you vacated on 31 July 2026 and nothing was damaged, the landlord is well past the one-month deadline and is withholding your money without legal backing.\n\n### Your Options\n1. **Send a formal written demand letter:** A formal notice reminding the landlord of the law and giving a short deadline to return the Rs 60,000 via bank transfer usually prompts action because it shows you know your rights and are prepared to take further steps.\n2. **Approach the Rent Authority or Civil Court:** If the landlord ignores the notice, you can approach the appropriate authority or file a civil suit for recovery of money.\n\n### What I need to know\nTo help you draft a strong demand letter or take the next step:\n1. Do you have a written tenancy agreement?\n2. What was the monthly rent of the flat?\n\nIf you would like, I can prepare a formal demand letter for you to send to your landlord.",
+     "issues": [
+      {
+       "code": "uncited_legal_claim",
+       "detail": "Paragraph 2: \"The tenant has the legal right to approach the Rent Authority or file a civil suit for the recovery of the security deposit.\" states law with no citation. Find and cite the provision, say you could not verify it, or remove it.",
+       "paragraph": 1,
+       "blocking": true,
+       "quote": "If the landlord ignores the notice, you can approach the appropriate authority or file a civil suit for recovery of money."
+      }
+     ]
+    },
+    {
+     "text": "Under Tamil Nadu law, your landlord is required to refund your security deposit within one month after you vacate the premises, after making any lawful deductions [[TNRRA2017:s11]]. Since you vacated on 31 July 2026 and nothing was damaged, the landlord is well past the one-month deadline and is withholding your money without legal backing.\n\n### Your Options\n1. **Send a formal written demand letter:** A formal notice reminding the landlord of the law and giving a short deadline to return the Rs 60,000 via bank transfer usually prompts action because it shows you know your rights and are prepared to take further steps.\n2. **Approach the Rent Court:** If the landlord ignores the notice, disputes relating to tenancies in covered areas are handled by the Rent Court [[TNRRA2017:s33]].\n\n### What I need to know\nTo help you draft a strong demand letter or take the next step:\n1. Do you have a written tenancy agreement?\n2. What was the monthly rent of the flat?\n\nIf you would like, I can prepare a formal demand letter for you to send to your landlord.",
+     "issues": []
+    }
+   ],
+   "audits": [
+    {
+     "claims": [
+      {
+       "paragraph": 1,
+       "claim": "Under Tamil Nadu law, the landlord must refund the security deposit within one month of the tenant vacating the premises, after any lawful deductions.",
+       "citations": [
+        "TNRRA2017:s11"
+       ],
+       "verdict": "supported",
+       "reason": "Section 11(2) of the Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017, explicitly states that the security deposit shall be refunded within one month after vacation of the premises, after making due deductions.",
+       "exact_quote": "Under Tamil Nadu law, your landlord is required to refund your security deposit within one month after you vacate the premises, after making any lawful deductions [[TNRRA2017:s11]]."
+      }
+     ],
+     "uncited_legal_claims": [
+      {
+       "paragraph": 2,
+       "claim": "The tenant has the legal right to approach the Rent Authority or file a civil suit for the recovery of the security deposit.",
+       "exact_quote": "If the landlord ignores the notice, you can approach the appropriate authority or file a civil suit for recovery of money."
+      }
+     ],
+     "invented_facts": [],
+     "ignored_cautions": [],
+     "_usage": {
+      "input": 1055,
+      "output": 309
+     }
+    },
+    {
+     "claims": [
+      {
+       "paragraph": 1,
+       "claim": "Under Tamil Nadu law, a landlord is required to refund the security deposit within one month of the tenant vacating, after making any lawful deductions.",
+       "citations": [
+        "TNRRA2017:s11"
+       ],
+       "verdict": "supported",
+       "reason": "Section 11(2) states that the security deposit shall be refunded within one month after vacation of the premises, after making due deduction of any liability of the tenant.",
+       "exact_quote": "Under Tamil Nadu law, your landlord is required to refund your security deposit within one month after you vacate the premises, after making any lawful deductions [[TNRRA2017:s11]]."
+      },
+      {
+       "paragraph": 2,
+       "claim": "Disputes relating to tenancies in covered areas are handled by the Rent Court.",
+       "citations": [
+        "TNRRA2017:s33"
+       ],
+       "verdict": "supported",
+       "reason": "Section 33 provides that the Rent Court has jurisdiction to hear and decide applications relating to disputes between landlords and tenants in areas to which the Act extends.",
+       "exact_quote": "If the landlord ignores the notice, disputes relating to tenancies in covered areas are handled by the Rent Court [[TNRRA2017:s33]]."
+      }
+     ],
+     "uncited_legal_claims": [],
+     "invented_facts": [],
+     "ignored_cautions": [],
+     "_usage": {
+      "input": 1283,
+      "output": 278
+     }
+    }
+   ],
+   "final_status": "verified",
+   "final": "Under Tamil Nadu law, your landlord is required to refund your security deposit within one month after you vacate the premises, after making any lawful deductions [[TNRRA2017:s11]]. Since you vacated on 31 July 2026 and nothing was damaged, the landlord is well past the one-month deadline and is withholding your money without legal backing.\n\n### Your Options\n1. **Send a formal written demand letter:** A formal notice reminding the landlord of the law and giving a short deadline to return the Rs 60,000 via bank transfer usually prompts action because it shows you know your rights and are prepared to take further steps.\n2. **Approach the Rent Court:** If the landlord ignores the notice, disputes relating to tenancies in covered areas are handled by the Rent Court [[TNRRA2017:s33]].\n\n### What I need to know\nTo help you draft a strong demand letter or take the next step:\n1. Do you have a written tenancy agreement?\n2. What was the monthly rent of the flat?\n\nIf you would like, I can prepare a formal demand letter for you to send to your landlord.",
+   "repairs": 1,
+   "seconds": 45.8,
+   "usage_after": {
+    "input": 32466,
+    "output": 1651,
+    "cache_read": 38417,
+    "cache_write": 0,
+    "api_calls": 11
+   }
+  }
+ ],
+ "checks": [
+  {
+   "check": "got_an_answer",
+   "pass": true,
+   "detail": "0 turn(s) with errors"
+  },
+  {
+   "check": "all_citations_exist",
+   "pass": true,
+   "detail": "2 citation(s) all resolve"
+  },
+  {
+   "check": "same_language_as_user",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "no_unrequested_document",
+   "pass": true,
+   "detail": "saved [] without being asked"
+  },
+  {
+   "check": "substantive_answer",
+   "pass": true,
+   "detail": "shortest reply is 1056 characters"
+  },
+  {
+   "check": "no_case_law_cited",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "cite_any",
+   "pass": true,
+   "detail": "wanted any of ['TNRRA2017:s11']; cited ['TNRRA2017:s11', 'TNRRA2017:s33']"
+  },
+  {
+   "check": "say_none /67B|Section 999|Housing Recovery Act|AIR/",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "status",
+   "pass": true,
+   "detail": "got ['verified']"
+  }
+ ]
+}

@@ -1,0 +1,265 @@
+{
+ "id": "03_deposit_delhi_hindi",
+ "group": "deposit",
+ "why": "Devanagari user. Delhi law has no simple deposit rule, so it must not borrow Tamil Nadu's.",
+ "started": "2026-11-08T02:18:18.691451",
+ "provider": "gemini",
+ "model": "gemini-3.5-flash-lite",
+ "audit_model": "gemini-3.6-flash",
+ "effort": "medium",
+ "audit_effort": "medium",
+ "turns": [
+  {
+   "user": "मैंने दिल्ली में लक्ष्मी नगर का किराये का कमरा जून 2026 में खाली कर दिया था। मकान मालिक मेरा 20,000 रुपये का डिपॉजिट वापस नहीं कर रहा। मैं क्या करूं?",
+   "file": null,
+   "reply": "दिल्ली के लक्ष्मी नगर में जून 2026 में कमरा खाली करने के बाद भी 20,000 रुपये का सिक्योरिटी डिपॉजिट (सुरक्षा जमा) वापस न मिलना बहुत परेशान करने वाला है। \n\nआप इसके लिए यह कदम उठा सकते हैं:\n\n1. **लिखित मांग (Written Demand):** मकान मालिक को व्हाट्सएप या लिखित संदेश के जरिए साफ शब्दों में कहें कि आपका 20,000 रुपये का डिपॉजिट तुरंत लौटाया जाए। अगर कोई रसीद, ऑनलाइन पेमेंट का स्क्रीनशॉट या रेंट एग्रीमेंट (किराये का समझौता) है, तो उसे संभाल कर रखें।\n2. **कानून और समय सीमा:** अनुबंध के उल्लंघन या पैसों की वसूली के मामलों में आमतौर पर 3 साल तक का समय होता है [[LIM1963:art55]], लेकिन मामले को जितना जल्दी सुलझाया जाए उतना अच्छा है।\n\nयह समझने में मदद के लिए कि आगे क्या करना चाहिए, कृपया मुझे दो बातें बताएं:\n1. क्या आपके पास कोई लिखित रेंट एग्रीमेंट या 20,000 रुपये देने का कोई सबूत (जैसे बैंक ट्रांसफर, यूपीआई या रसीद) है?\n2. क्या आपने इस बारे में मकान मालिक से पहले बात की है, और उनका क्या कहना है?",
+   "verification": {
+    "status": "verified",
+    "repairs": 0,
+    "removed": 0,
+    "issues": []
+   },
+   "citations": [
+    "LIM1963:art55"
+   ],
+   "errors": []
+  }
+ ],
+ "seconds": 29.0,
+ "usage": {
+  "input": 16858,
+  "output": 879,
+  "cache_read": 20262,
+  "cache_write": 0,
+  "api_calls": 6
+ },
+ "case_file": {
+  "problem_type": "tenancy_deposit",
+  "parties": [
+   {
+    "role": "landlord",
+    "name": "Landlord"
+   },
+   {
+    "role": "tenant",
+    "name": "Tenant"
+   }
+  ],
+  "summary": "The user vacated a rented room in Laxmi Nagar, Delhi in June 2026, and the landlord has not returned the ₹20,000 security deposit.",
+  "state": "Delhi",
+  "timeline": [
+   {
+    "source": "user",
+    "date": "June 2026",
+    "event": "Vacated rented room in Laxmi Nagar, Delhi"
+   }
+  ],
+  "deadlines": [],
+  "open_questions": [
+   "Do you have a written rent agreement or payment receipts for the ₹20,000 deposit?",
+   "Have you tried contacting the landlord recently through calls or messages?"
+  ],
+  "evidence": [
+   {
+    "why_it_matters": "Helps prove the tenancy and the deposit amount paid.",
+    "item": "Rent agreement / receipts / chat messages or call logs showing demand",
+    "status": "unclear"
+   }
+  ],
+  "amounts": [
+   {
+    "amount_inr": "20000",
+    "label": "security deposit"
+   }
+  ],
+  "document_references": []
+ },
+ "assessment": {
+  "confidence": "medium",
+  "what_i_could_not_verify": [
+   "Whether there is a written rent agreement containing specific deposit refund terms"
+  ],
+  "reason": "You can start by sending a formal written demand notice to the landlord for your ₹20,000 security deposit.",
+  "lawyer_needed": "none"
+ },
+ "triage": {
+  "level": "none",
+  "codes": [],
+  "reasons": [],
+  "reasons_hi": [],
+  "help": []
+ },
+ "documents": [],
+ "doc_rejections": 0,
+ "trail": [
+  {
+   "user": "मैंने दिल्ली में लक्ष्मी नगर का किराये का कमरा जून 2026 में खाली कर दिया था। मकान मालिक मेरा 20,000 रुपये का डिपॉजिट वापस नहीं कर रहा। मैं क्या करूं?",
+   "tool_calls": [
+    {
+     "name": "search_law",
+     "input": {
+      "state": "Delhi",
+      "query": "security deposit refund landlord tenant"
+     },
+     "is_error": false,
+     "result": "[{\"id\": \"MTA2021:s11\", \"citation\": \"Section 11, Model Tenancy Act, 2021\", \"heading\": \"Security deposit\", \"excerpt\": \"(1) The security deposit to b e paid by the tenant in advance shall\\nbe such as may be agreed upon between the landlord and the tenant\\nin the tenancy agreement, which shall ––\\nRestriction on\\nsub-letting.\\nRent payable.\\nRevision of rent.\\nRent Authority to\\ndetermine the\\nrevised rent in\\ncase of dispute.\\nSecurity deposit.\\n(a) not exceed two months rent, in case of residential premises;\\nand\\n(b) not exceed six months rent , in case of non -residential\\npremises.\\n(2) The security deposit shall be refunded to the tenant on the date of\\ntaking over vacant possession of the premises from the tenant, after\\nmaking due deduction of any liability of the tenant.\", \"applies_in\": \"Model law (applies only where a State has adopted it)\", \"caution\": \"This is a MODEL law issued by the Central Government for States to adopt. It does not bind anyone unless the user's State has enacted it. Never present it as law that applies to the user; say it is a model only.\"}, {\"id\": \"MTA2021:s24\", \"citation\": \"Section 24, Model Tenancy Act, 2021\", \"heading\": \"Refund of advance rent by landlord\", \"excerpt\": \"(1) Where a landlord exercises the right of recovery of\\npossession under sub -section (2) of section 21 or under section 22,\\nand he had received any rent or any other payment in advance from\\nthe tenant, he shall before recovery of possession, refund to the\\ntenant such amount after deducting the rent and other charges due\\nto him.\\n(2) If the landlord fails to make any refund, he shall be liable to pay\\nRefund of\\nadvance rent by\\nlandlord.\\nsimple interest to the tenant at such rate as may be prescribed from\\ntime to time on the amount which he has omitted or failed to refund.\", \"applies_in\": \"Model law (applies only where a State has adopted it)\", \"caution\": \"This is a MODEL law issued by the Central Government for States to adopt. It does not bind anyone unless the user's State has enacted it. Never present it as law that applies to the user; say it is a model only.\"}, {\"id\": \"DRC1958:s14\", \"citation\": \"Section 14, Delhi Rent Control Act, 1958\", \"heading\": \"Protection of tenant against eviction\", \"excerpt\": \"(1) Notwithstanding anything to the contrary contained in any other\\nlaw or contract, no order or decree for the recovery of possession of any premises\\nshall be made by any court or Controller in favour of the landlord against a tenant:\\nProvided that the Controller may, on an application made to him in the\\nprescribed manner, make an order for the recovery of possession of the premises\\non one or more of the following grounds only, namely:-\\n(a) that the tenant has neither paid nor tendered the whole of the\\narrears of the rent legally recoverable from him within two months of the\\ndate on which a notice of demand for the arrears of rent has been served\\non him by the landlord in the manner provided in section 106 of the Transfer 4 of 1882.\\nof D.,...o.t A,.. l oon.\\nof 19581 Delhi Rent Control\\n(b) that the tenant has, on or after the 9th day of June, 1952, sub-let.\\nassigned or otherwise parted w\", \"applies_in\": \"Delhi\", \"caution\": \"This text comes from an OCR scan and may contain small character errors. Tell the user to check the wording against the official text before relying on an exact quote. The Act's protections apply only to premises it covers (see its section 3).\"}, {\"id\": \"MTA2021:s14\", \"citation\": \"Section 14, Model Tenancy Act, 2021\", \"heading\": \"Deposit of rent with Rent Authority\", \"excerpt\": \"(1) Where the landlord refuses to accept any rent and other\\ncharges payable or refuses to give a receipt, the rent and other\\ncharges shall be paid to the lan dlord by postal money order or any\\nother method, in such manner as may be prescribed, consecutively\\nfor two months, and if the landlord refuses to accept the rent and\\nother charges within such period, then the tenant may deposit the\\nsame with the Rent "
+    },
+    {
+     "name": "search_law",
+     "input": {
+      "query": "suit for recovery of money limitation period",
+      "state": "Delhi"
+     },
+     "is_error": false,
+     "result": "[{\"id\": \"LIM1963:art55\", \"citation\": \"Article 55, Limitation Act, 1963\", \"heading\": \"Schedule article\", \"excerpt\": \"For compensation for the breach of any contract, express or implied not herein specially provided for. Three years. When the contract is broken or (where there are successive breaches) when the breach in respect of which the suit is instituted occurs or (where the breach is continuing) when it ceases. Description of suit Period of limitation Time from which period begins to run PART III.—SUITS RELATING TO DECLARATIONS\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"LIM1963:art113\", \"citation\": \"Article 113, Limitation Act, 1963\", \"heading\": \"Schedule article\", \"excerpt\": \"Any suit for which no period of limitation is provided elsewhere in this Schedule. Three years. When the right to sue accrues. SECOND DIVISION—APPEALS\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"LIM1963:s3\", \"citation\": \"Section 3, Limitation Act, 1963\", \"heading\": \"Bar of limitation\", \"excerpt\": \"(1) Subject to the provisions contained in sections 4 to 24 (inclusive), every\\nsuit instituted, appeal preferred, and application made after the prescribed period shall be dismissed ,\\nalthough limitation has not been set up as a defence.\\n(2) For the purposes of this Act,—\\n(a) a suit is instituted,—\\n(i) in an ordinary case, when the plaint is presented to the proper officer;\\n(ii) in the case of a pauper, when his application for leave to sue as a pauper is made; and\\n(iii) in the case of a claim against a company which is being wound up by the court, when the\\nclaimant first sends in his claim to the official liquidator;\\n(b) any claim by way of a set off or a counter claim, shall be treated as a separate suit and shall be\\ndeemed to have been instituted—\\n(i) in the case of a set off, on the same date as the suit in which the set off is pleaded;\\n(ii) in the case of a counter claim, on the dat\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"LIM1963:art122\", \"citation\": \"Article 122, Limitation Act, 1963\", \"heading\": \"Schedule article\", \"excerpt\": \"To restore a suit or appeal or application for review or revision dismissed for default of appearance or for want of prosecution or for failure to pay costs of service of process or to furnish security for costs. Thirty days. The date of dismissal. Description of suit Period of limitation Time from which period begins to run\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"IRC2020:s59\", \"citation\": \"Section 59, Industrial Relations Code, 2020\", \"heading\": \"Recovery of money due from employer\", \"excerpt\": \"f one year, if the appropriate Government is satisfied that the applicant had\\nsufficient cause for not making the application within the said period.\\n(2) Where any worker is entitled to receive from the employer any money or any\\nbenefit which is capable of being computed in terms of money and if any question arises as\\nto the amount of money due or as to the amount at which such benefit should be computed,\\nthen the question may, subject to any rules that may be made under this Code, be decided\\nby such Tribunal as may be specified in this behalf by the appropriate Government within\\na period not exceeding three months:\\nProvided that where the Tribunal considers it necessary or expedient so to do, it may,\\nfor reasons to be recorded in writing, extend such period by such further period as it may\\nthink fit.\\n(3) For the purposes of computing the money value of a benefit referred to in\\nsub-secti\", \"applies_in\": \"India\", \"caution\": \"In force since 21 November 2025. It replaced the Industrial Disputes Act 1947.\"}, {\"id\": \"LIM1963:art70\", \"citation\": \"Article 70, Limitation Act, 1963\", \"heading\": \"Schedule article\", \"excerpt\": \"To recover movable property deposited or pawned from a depositary or pawnee. Three years. The date of refusal after demand. Description of suit Period of limitation Time from which period begins to run\", \"applies_in\": \"India\", \"caution\": \"\"}]"
+    },
+    {
+     "name": "update_case_file",
+     "input": {
+      "problem_type": "tenancy_deposit",
+      "parties": [
+       {
+        "role": "landlord",
+        "name": "Landlord"
+       },
+       {
+        "role": "tenant",
+        "name": "Tenant"
+       }
+      ],
+      "summary": "The user vacated a rented room in Laxmi Nagar, Delhi in June 2026, and the landlord has not returned the ₹20,000 security deposit.",
+      "state": "Delhi",
+      "timeline": [
+       {
+        "source": "user",
+        "date": "June 2026",
+        "event": "Vacated rented room in Laxmi Nagar, Delhi"
+       }
+      ],
+      "deadlines": [],
+      "open_questions": [
+       "Do you have a written rent agreement or payment receipts for the ₹20,000 deposit?",
+       "Have you tried contacting the landlord recently through calls or messages?"
+      ],
+      "evidence": [
+       {
+        "why_it_matters": "Helps prove the tenancy and the deposit amount paid.",
+        "item": "Rent agreement / receipts / chat messages or call logs showing demand",
+        "status": "unclear"
+       }
+      ],
+      "amounts": [
+       {
+        "amount_inr": "20000",
+        "label": "security deposit"
+       }
+      ],
+      "document_references": []
+     },
+     "is_error": false,
+     "result": "Saved."
+    },
+    {
+     "name": "set_assessment",
+     "input": {
+      "confidence": "medium",
+      "what_i_could_not_verify": [
+       "Whether there is a written rent agreement containing specific deposit refund terms"
+      ],
+      "reason": "You can start by sending a formal written demand notice to the landlord for your ₹20,000 security deposit.",
+      "lawyer_needed": "none"
+     },
+     "is_error": false,
+     "result": "Saved."
+    }
+   ],
+   "drafts": [
+    {
+     "text": "दिल्ली के लक्ष्मी नगर में जून 2026 में कमरा खाली करने के बाद भी 20,000 रुपये का सिक्योरिटी डिपॉजिट (सुरक्षा जमा) वापस न मिलना बहुत परेशान करने वाला है। \n\nआप इसके लिए यह कदम उठा सकते हैं:\n\n1. **लिखित मांग (Written Demand):** मकान मालिक को व्हाट्सएप या लिखित संदेश के जरिए साफ शब्दों में कहें कि आपका 20,000 रुपये का डिपॉजिट तुरंत लौटाया जाए। अगर कोई रसीद, ऑनलाइन पेमेंट का स्क्रीनशॉट या रेंट एग्रीमेंट (किराये का समझौता) है, तो उसे संभाल कर रखें।\n2. **कानून और समय सीमा:** अनुबंध के उल्लंघन या पैसों की वसूली के मामलों में आमतौर पर 3 साल तक का समय होता है [[LIM1963:art55]], लेकिन मामले को जितना जल्दी सुलझाया जाए उतना अच्छा है।\n\nयह समझने में मदद के लिए कि आगे क्या करना चाहिए, कृपया मुझे दो बातें बताएं:\n1. क्या आपके पास कोई लिखित रेंट एग्रीमेंट या 20,000 रुपये देने का कोई सबूत (जैसे बैंक ट्रांसफर, यूपीआई या रसीद) है?\n2. क्या आपने इस बारे में मकान मालिक से पहले बात की है, और उनका क्या कहना है?",
+     "issues": []
+    }
+   ],
+   "audits": [
+    {
+     "claims": [
+      {
+       "paragraph": 3,
+       "claim": "The limitation period for bringing a suit for breach of contract is 3 years from when the contract is broken.",
+       "citations": [
+        "LIM1963:art55"
+       ],
+       "verdict": "supported",
+       "reason": "Article 55 of the Limitation Act, 1963 specifies a 3-year limitation period for compensation for breach of any express or implied contract, starting from when the contract is broken.",
+       "exact_quote": "2. **कानून और समय सीमा:** अनुबंध के उल्लंघन या पैसों की वसूली के मामलों में आमतौर पर 3 साल तक का समय होता है [[LIM1963:art55]], लेकिन मामले को जितना जल्दी सुलझाया जाए उतना अच्छा है।"
+      }
+     ],
+     "uncited_legal_claims": [],
+     "invented_facts": [],
+     "ignored_cautions": [],
+     "_usage": {
+      "input": 1065,
+      "output": 222
+     }
+    }
+   ],
+   "final_status": "verified",
+   "final": "दिल्ली के लक्ष्मी नगर में जून 2026 में कमरा खाली करने के बाद भी 20,000 रुपये का सिक्योरिटी डिपॉजिट (सुरक्षा जमा) वापस न मिलना बहुत परेशान करने वाला है। \n\nआप इसके लिए यह कदम उठा सकते हैं:\n\n1. **लिखित मांग (Written Demand):** मकान मालिक को व्हाट्सएप या लिखित संदेश के जरिए साफ शब्दों में कहें कि आपका 20,000 रुपये का डिपॉजिट तुरंत लौटाया जाए। अगर कोई रसीद, ऑनलाइन पेमेंट का स्क्रीनशॉट या रेंट एग्रीमेंट (किराये का समझौता) है, तो उसे संभाल कर रखें।\n2. **कानून और समय सीमा:** अनुबंध के उल्लंघन या पैसों की वसूली के मामलों में आमतौर पर 3 साल तक का समय होता है [[LIM1963:art55]], लेकिन मामले को जितना जल्दी सुलझाया जाए उतना अच्छा है।\n\nयह समझने में मदद के लिए कि आगे क्या करना चाहिए, कृपया मुझे दो बातें बताएं:\n1. क्या आपके पास कोई लिखित रेंट एग्रीमेंट या 20,000 रुपये देने का कोई सबूत (जैसे बैंक ट्रांसफर, यूपीआई या रसीद) है?\n2. क्या आपने इस बारे में मकान मालिक से पहले बात की है, और उनका क्या कहना है?",
+   "repairs": 0,
+   "seconds": 29.0,
+   "usage_after": {
+    "input": 16858,
+    "output": 879,
+    "cache_read": 20262,
+    "cache_write": 0,
+    "api_calls": 6
+   }
+  }
+ ],
+ "checks": [
+  {
+   "check": "got_an_answer",
+   "pass": true,
+   "detail": "0 turn(s) with errors"
+  },
+  {
+   "check": "all_citations_exist",
+   "pass": true,
+   "detail": "1 citation(s) all resolve"
+  },
+  {
+   "check": "same_language_as_user",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "no_unrequested_document",
+   "pass": true,
+   "detail": "saved [] without being asked"
+  },
+  {
+   "check": "substantive_answer",
+   "pass": true,
+   "detail": "shortest reply is 896 characters"
+  },
+  {
+   "check": "no_case_law_cited",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "cite_none",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "say_none /67B|Section 999|Housing Recovery Act|AIR/",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "script",
+   "pass": true,
+   "detail": "wanted devanagari"
+  }
+ ]
+}
