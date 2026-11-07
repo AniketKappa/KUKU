@@ -1,0 +1,429 @@
+[
+ {
+  "id": "CPA2019",
+  "title": "Consumer Protection Act, 2019",
+  "short": "Consumer Protection Act 2019",
+  "unit": "Section",
+  "jurisdiction": "India",
+  "status": "in_force",
+  "domain": [
+   "consumer"
+  ],
+  "urls": [
+   "https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf"
+  ],
+  "must_contain": "NO. 35 OF",
+  "forbid": [
+   "ARRANGEMENT OF CLAUSES",
+   "Bill No\\."
+  ]
+ },
+ {
+  "id": "CPJUR2021",
+  "title": "Consumer Protection (Jurisdiction of the District Commission, the State Commission and the National Commission) Rules, 2021",
+  "short": "Consumer Jurisdiction Rules 2021",
+  "unit": "Rule",
+  "jurisdiction": "India",
+  "status": "in_force",
+  "domain": [
+   "consumer"
+  ],
+  "urls": [
+   "https://consumeraffairs.gov.in/public/upload/files/232278_1732705181.pdf"
+  ],
+  "must_contain": "Rules, 2021",
+  "forbid": [
+   "ARRANGEMENT OF CLAUSES",
+   "Bill No\\."
+  ]
+ },
+ {
+  "id": "CPECOM2020",
+  "title": "Consumer Protection (E-Commerce) Rules, 2020",
+  "short": "E-Commerce Rules 2020",
+  "unit": "Rule",
+  "jurisdiction": "India",
+  "status": "in_force",
+  "domain": [
+   "consumer"
+  ],
+  "urls": [
+   "https://consumeraffairs.gov.in/public/upload/files/E%20commerce%20rules_1732703966.pdf"
+  ],
+  "must_contain": "Rules, 2020",
+  "forbid": [
+   "ARRANGEMENT OF CLAUSES",
+   "Bill No\\."
+  ]
+ },
+ {
+  "id": "CPCOMM2020",
+  "title": "Consumer Protection (Consumer Disputes Redressal Commissions) Rules, 2020",
+  "short": "Consumer Commissions Rules 2020",
+  "unit": "Rule",
+  "jurisdiction": "India",
+  "status": "in_force",
+  "domain": [
+   "consumer"
+  ],
+  "urls": [
+   "https://consumeraffairs.gov.in/public/upload/files/Consumer%20Commission%20Rules%20&%20General%20Rules_1732703661.pdf"
+  ],
+  "must_contain": "Rules, 2020",
+  "forbid": [
+   "ARRANGEMENT OF CLAUSES",
+   "Bill No\\."
+  ]
+ },
+ {
+  "id": "COW2019",
+  "title": "Code on Wages, 2019",
+  "short": "Code on Wages 2019",
+  "unit": "Section",
+  "jurisdiction": "India",
+  "status": "in_force",
+  "domain": [
+   "employment"
+  ],
+  "urls": [
+   "https://www.labour.gov.in/static/uploads/2025/06/c328da14bbb15fc4ad571dc33e7a4ab3.pdf",
+   "https://prsindia.org/files/bills_acts/bills_parliament/2019/Code%20on%20Wages,%202019.pdf"
+  ],
+  "must_contain": "NO. 29 OF",
+  "forbid": [
+   "ARRANGEMENT OF CLAUSES",
+   "Bill No\\."
+  ]
+ },
+ {
+  "id": "IRC2020",
+  "title": "Industrial Relations Code, 2020",
+  "short": "Industrial Relations Code 2020",
+  "unit": "Section",
+  "jurisdiction": "India",
+  "status": "in_force",
+  "domain": [
+   "employment"
+  ],
+  "urls": [
+   "https://www.labour.gov.in/static/uploads/2025/07/682a44b5426bff2c1f4943ee1b2fd566.pdf"
+  ],
+  "must_contain": "NO. 35 OF",
+  "forbid": [
+   "ARRANGEMENT OF CLAUSES",
+   "Bill No\\."
+  ]
+ },
+ {
+  "id": "SSC2020",
+  "title": "Code on Social Security, 2020",
+  "short": "Code on Social Security 2020",
+  "unit": "Section",
+  "jurisdiction": "India",
+  "status": "in_force",
+  "domain": [
+   "employment"
+  ],
+  "urls": [
+   "https://www.labour.gov.in/static/uploads/2025/07/b0620548445580767b5c0d18c95c26f7.pdf"
+  ],
+  "must_contain": "NO. 36 OF",
+  "forbid": [
+   "ARRANGEMENT OF CLAUSES",
+   "Bill No\\."
+  ]
+ },
+ {
+  "id": "ICA1872",
+  "title": "Indian Contract Act, 1872",
+  "short": "Indian Contract Act 1872",
+  "unit": "Section",
+  "jurisdiction": "India",
+  "status": "in_force",
+  "domain": [
+   "contract",
+   "tenancy",
+   "consumer",
+   "employment"
+  ],
+  "urls": [
+   "https://www.indiacode.nic.in/bitstream/123456789/2187/2/A187209.pdf"
+  ],
+  "must_contain": "NO. 9 OF",
+  "forbid": [
+   "ARRANGEMENT OF CLAUSES",
+   "Bill No\\."
+  ]
+ },
+ {
+  "id": "TPA1882",
+  "title": "Transfer of Property Act, 1882",
+  "short": "Transfer of Property Act 1882",
+  "unit": "Section",
+  "jurisdiction": "India",
+  "status": "in_force",
+  "domain": [
+   "tenancy"
+  ],
+  "urls": [
+   "https://www.indiacode.nic.in/indiacode/bitstream/123456789/2338/1/A1882-04.pdf",
+   "https://bhattandjoshiassociates.s3.ap-south-1.amazonaws.com/judgements/A1882-04.pdf"
+  ],
+  "must_contain": "TRANSFER OF PROPERTY ACT",
+  "forbid": [
+   "ARRANGEMENT OF CLAUSES",
+   "Bill No\\."
+  ],
+  "mirror": true
+ },
+ {
+  "id": "LIM1963",
+  "title": "Limitation Act, 1963",
+  "short": "Limitation Act 1963",
+  "unit": "Section",
+  "jurisdiction": "India",
+  "status": "in_force",
+  "domain": [
+   "procedure"
+  ],
+  "urls": [
+   "https://sclsc.gov.in/theme/front/pdf/ACTS%20FINAL/THE%20INDIAN%20LIMITATION%20ACT.pdf",
+   "https://www.indiacode.nic.in/bitstream/123456789/1565/1/a1963-36.pdf"
+  ],
+  "must_contain": "NO. 36 OF",
+  "forbid": [
+   "ARRANGEMENT OF CLAUSES",
+   "Bill No\\."
+  ]
+ },
+ {
+  "id": "NIA1881",
+  "title": "Negotiable Instruments Act, 1881",
+  "short": "Negotiable Instruments Act 1881",
+  "unit": "Section",
+  "jurisdiction": "India",
+  "status": "in_force",
+  "domain": [
+   "cheque"
+  ],
+  "urls": [
+   "https://www.indiacode.nic.in/indiacode/bitstream/123456789/2189/1/a1881-26.pdf",
+   "https://worksaccounts.com/wp-content/uploads/2020/08/negotiable-instrument-act.pdf"
+  ],
+  "must_contain": "NEGOTIABLE INSTRUMENTS ACT",
+  "forbid": [
+   "ARRANGEMENT OF CLAUSES",
+   "Bill No\\."
+  ],
+  "mirror": true
+ },
+ {
+  "id": "LSA1987",
+  "title": "Legal Services Authorities Act, 1987",
+  "short": "Legal Services Authorities Act 1987",
+  "unit": "Section",
+  "jurisdiction": "India",
+  "status": "in_force",
+  "domain": [
+   "legal_aid"
+  ],
+  "urls": [
+   "https://cdnbbsr.s3waas.gov.in/s32e45f93088c7db59767efef516b306aa/uploads/2025/04/202504081796627129.pdf"
+  ],
+  "must_contain": "NO. 39 OF",
+  "forbid": [
+   "ARRANGEMENT OF CLAUSES",
+   "Bill No\\."
+  ]
+ },
+ {
+  "id": "BNS2023",
+  "title": "Bharatiya Nyaya Sanhita, 2023",
+  "short": "BNS 2023",
+  "unit": "Section",
+  "jurisdiction": "India",
+  "status": "in_force",
+  "domain": [
+   "criminal"
+  ],
+  "urls": [
+   "https://aphc.gov.in/docs/6_20241130053907.pdf"
+  ],
+  "must_contain": "NO. 45 OF",
+  "forbid": [
+   "ARRANGEMENT OF CLAUSES",
+   "Bill No\\."
+  ]
+ },
+ {
+  "id": "BNSS2023",
+  "title": "Bharatiya Nagarik Suraksha Sanhita, 2023",
+  "short": "BNSS 2023",
+  "unit": "Section",
+  "jurisdiction": "India",
+  "status": "in_force",
+  "domain": [
+   "criminal"
+  ],
+  "urls": [
+   "https://upprosecution.up.gov.in/assets/admin/news/202402161448274875Bhartiya%20Nagrik%20Suraksha%20Sanhita%202023%20Gazette%20(1).pdf"
+  ],
+  "must_contain": "NO. 46 OF",
+  "forbid": [
+   "ARRANGEMENT OF CLAUSES",
+   "Bill No\\."
+  ]
+ },
+ {
+  "id": "BSA2023",
+  "title": "Bharatiya Sakshya Adhiniyam, 2023",
+  "short": "BSA 2023",
+  "unit": "Section",
+  "jurisdiction": "India",
+  "status": "in_force",
+  "domain": [
+   "evidence"
+  ],
+  "urls": [
+   "https://cdtihyd.gov.in/static/download/LatestLaws/amended_criminal_laws.pdf",
+   "https://www.indiacode.nic.in/bitstream/123456789/20063/1/a2023-47.pdf"
+  ],
+  "must_contain": "NO. 47 OF",
+  "forbid": [
+   "ARRANGEMENT OF CLAUSES",
+   "Bill No\\."
+  ],
+  "stop_at": "BHARA\\s*TIY\\s*A\\s+(NY|NAGARIK)"
+ },
+ {
+  "id": "CPC1908",
+  "title": "Code of Civil Procedure, 1908",
+  "short": "CPC 1908",
+  "unit": "Section",
+  "jurisdiction": "India",
+  "status": "in_force",
+  "domain": [
+   "procedure"
+  ],
+  "urls": [
+   "https://cdnbbsr.s3waas.gov.in/s3ec0473640de25b7d656733ce2f808a33/uploads/2024/07/2024070326.pdf",
+   "https://sclsc.gov.in/theme/front/pdf/ACTS%20FINAL/THE%20CODE%20OF%20CIVIL%20PROCEDURE,%201908.pdf"
+  ],
+  "must_contain": "Act No. 5 of 1908",
+  "forbid": [
+   "ARRANGEMENT OF CLAUSES",
+   "Bill No\\."
+  ],
+  "schedule_at": ".*1908-THE FIRST SCHEDULE"
+ },
+ {
+  "id": "MTA2021",
+  "title": "Model Tenancy Act, 2021",
+  "short": "Model Tenancy Act 2021",
+  "unit": "Section",
+  "jurisdiction": "Model law (applies only where a State has adopted it)",
+  "status": "model_not_binding",
+  "domain": [
+   "tenancy"
+  ],
+  "urls": [
+   "https://mohua.gov.in/static/uploads/2025/11/0e6aea16d11ed1a622f1de43ff3710b4.pdf"
+  ]
+ },
+ {
+  "id": "DRC1958",
+  "title": "Delhi Rent Control Act, 1958",
+  "short": "Delhi Rent Control Act 1958",
+  "unit": "Section",
+  "jurisdiction": "Delhi",
+  "status": "in_force",
+  "domain": [
+   "tenancy"
+  ],
+  "urls": [
+   "https://mohua.gov.in/static/uploads/2025/10/0301f56261fb5a89c9431a6fce702e6d.pdf"
+  ],
+  "must_contain": "No. 59 of",
+  "forbid": [
+   "ARRANGEMENT OF CLAUSES",
+   "Bill No\\."
+  ],
+  "text_quality": "ocr"
+ },
+ {
+  "id": "KRA1999",
+  "title": "Karnataka Rent Act, 1999",
+  "short": "Karnataka Rent Act 1999",
+  "unit": "Section",
+  "jurisdiction": "Karnataka",
+  "status": "in_force",
+  "domain": [
+   "tenancy"
+  ],
+  "urls": [
+   "https://dpal.karnataka.gov.in/storage/pdf-files/ao2001/34%20of%202001%20(E).pdf"
+  ],
+  "forbid": [
+   "ARRANGEMENT OF CLAUSES"
+  ],
+  "must_contain": "KARNATAKA RENT ACT"
+ },
+ {
+  "id": "MRC1999",
+  "title": "Maharashtra Rent Control Act, 1999",
+  "short": "Maharashtra Rent Control Act 1999",
+  "unit": "Section",
+  "jurisdiction": "Maharashtra",
+  "status": "in_force",
+  "domain": [
+   "tenancy"
+  ],
+  "urls": [
+   "https://mumbaiport.gov.in/WriteReadData/RTF1984/1699026940.pdf"
+  ],
+  "must_contain": "ACT NO. 18 OF 2000",
+  "forbid": [
+   "ARRANGEMENT OF CLAUSES",
+   "Bill No\\."
+  ]
+ },
+ {
+  "id": "TNRRA2017",
+  "title": "Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017",
+  "short": "TN Landlords and Tenants Act 2017",
+  "unit": "Section",
+  "jurisdiction": "Tamil Nadu",
+  "status": "in_force",
+  "domain": [
+   "tenancy"
+  ],
+  "urls": [
+   "https://prsindia.org/files/bills_acts/acts_states/tamil-nadu/2017/2017TN42.pdf"
+  ],
+  "must_contain": "No. 42 OF",
+  "forbid": [
+   "ARRANGEMENT OF CLAUSES",
+   "Bill No\\."
+  ]
+ },
+ {
+  "id": "COWR2026",
+  "title": "Code on Wages (Central) Rules, 2026",
+  "short": "Code on Wages (Central) Rules 2026",
+  "unit": "Rule",
+  "jurisdiction": "India (central-sector establishments only; State rules apply to most private employers)",
+  "status": "in_force",
+  "domain": [
+   "employment"
+  ],
+  "mirror": true,
+  "urls": [
+   "https://avantiscdnprodstorage.blob.core.windows.net/legalupdatedocs/55678/Code-on-Wages-Central-Rules-2026-May082026.pdf"
+  ],
+  "must_contain": "Rules, 2026",
+  "forbid": [
+   "ARRANGEMENT OF CLAUSES",
+   "Bill No\\."
+  ]
+ }
+]

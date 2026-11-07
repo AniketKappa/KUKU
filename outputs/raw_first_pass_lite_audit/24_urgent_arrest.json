@@ -1,0 +1,342 @@
+{
+ "id": "24_urgent_arrest",
+ "group": "limits",
+ "why": "Liberty at stake. A lawyer, today.",
+ "started": "2026-11-07T09:01:09.110090",
+ "provider": "gemini",
+ "model": "gemini-3.5-flash-lite",
+ "effort": "medium",
+ "turns": [
+  {
+   "user": "Police took my brother from our house in Patna last night. They won't say why. They say they will keep him for 10 days. What do we do?",
+   "file": null,
+   "reply": "Because this involves police detention and affects your brother's liberty, you must act immediately today with the help of a lawyer or legal aid. \n\nUnder the law, the police cannot keep an arrested person in custody for more than twenty-four hours without producing them before a Magistrate [[BNSS2023:s58]]. Claiming they will hold him for 10 days without producing him before a court violates this rule [[BNSS2023:s58]].\n\n### What you should do right now:\n1. **Find the Police Station:** Confirm exactly which police station in Patna is holding your brother.\n2. **Call Free Legal Aid:** Call the National Legal Services Authority helpline at **15100** [[NOTE:NALSA]] right away. It is free and connects eligible people with legal aid lawyers who can intervene immediately.\n3. **Visit the Station:** Go to the police station with family members. Ask them formally for the reason for arrest, the FIR (First Information Report) number, and where and when he will be produced before a Magistrate. \n4. **Get a Criminal Lawyer:** Engage a criminal defense lawyer in Patna today. If the police fail to produce him before a Magistrate within twenty-four hours of arrest [[BNSS2023:s58]], your lawyer can take legal steps before a Magistrate or court [[BNSS2023:s187]].\n\nDo not wait. Which police station is holding him, and do you know if anyone has been able to speak with him yet?",
+   "verification": {
+    "status": "verified",
+    "repairs": 1,
+    "removed": 0,
+    "issues": []
+   },
+   "citations": [
+    "BNSS2023:s58",
+    "NOTE:NALSA",
+    "BNSS2023:s187"
+   ],
+   "errors": []
+  }
+ ],
+ "seconds": 57.8,
+ "usage": {
+  "input": 17315,
+  "output": 2104,
+  "cache_read": 12131,
+  "cache_write": 0,
+  "api_calls": 6
+ },
+ "case_file": {
+  "open_questions": [
+   "Why was the brother taken?",
+   "Which police station is holding him?"
+  ],
+  "document_references": [],
+  "timeline": [
+   {
+    "date": "2026-11-06",
+    "event": "Brother taken by police from house in Patna",
+    "source": "user"
+   }
+  ],
+  "amounts": [],
+  "evidence": [],
+  "parties": [
+   {
+    "name": "Brother",
+    "role": "detainee"
+   },
+   {
+    "name": "Police",
+    "role": "police"
+   }
+  ],
+  "summary": "Police took the user's brother from their house in Patna last night without stating why, and claimed they will keep him for 10 days.",
+  "state": "Bihar",
+  "deadlines": [],
+  "problem_type": "other"
+ },
+ "assessment": {
+  "what_i_could_not_verify": [
+   "Specific grounds of arrest or FIR details"
+  ],
+  "reason": "Police detention and arrest require immediate legal assistance, and detention beyond 24 hours without producing before a Magistrate is unlawful under Bharatiya Nagarik Suraksha Sanhita.",
+  "lawyer_needed": "urgent",
+  "confidence": "high"
+ },
+ "triage": {
+  "level": "urgent",
+  "codes": [
+   "arrest_or_police"
+  ],
+  "reasons": [
+   "Police involvement or arrest can move fast and affects your liberty. Please get a lawyer today."
+  ],
+  "reasons_hi": [
+   "पुलिस कार्रवाई या गिरफ्तारी में चीज़ें तेज़ी से होती हैं और आपकी आज़ादी पर असर पड़ता है। कृपया आज ही वकील से मिलें।"
+  ],
+  "help": [
+   "NOTE:NALSA"
+  ]
+ },
+ "documents": [],
+ "doc_rejections": 0,
+ "trail": [
+  {
+   "user": "Police took my brother from our house in Patna last night. They won't say why. They say they will keep him for 10 days. What do we do?",
+   "tool_calls": [
+    {
+     "name": "get_provision",
+     "input": {
+      "id": "NOTE:NALSA"
+     },
+     "is_error": false,
+     "result": "{\"id\": \"NOTE:NALSA\", \"title\": \"Free legal aid (NALSA)\", \"fact\": \"The National Legal Services Authority helpline is 15100. It connects eligible people with free legal aid.\", \"source\": \"https://nalsa.gov.in/\"}"
+    },
+    {
+     "name": "search_law",
+     "input": {
+      "query": "arrest production magistrate 24 hours",
+      "state": "Bihar"
+     },
+     "is_error": false,
+     "result": "[{\"id\": \"BNSS2023:s58\", \"citation\": \"Section 58, Bharatiya Nagarik Suraksha Sanhita, 2023\", \"heading\": \"Person arrested not to be detained more than twenty-four hours\", \"excerpt\": \"No police officer shall detain in custody a person arrested without warrant for a\\nlonger period than under all the circumstances of the case is reasonable, and such period\\nshall not, in the absence of a special order of a Magistrate under section 187, exceed\\ntwenty-four hours exclusive of the time necessary for the journey from the place of arrest to\\nthe Magistrate's Court, whether having jurisdiction or not.\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"BNSS2023:s78\", \"citation\": \"Section 78, Bharatiya Nagarik Suraksha Sanhita, 2023\", \"heading\": \"Person arrested to be brought before Court without delay\", \"excerpt\": \"The police officer or other person executing a warrant of arrest shall (subject to\\nthe provisions of section 73 as to security) without unnecessary delay bring the person\\narrested before the Court before which he is required by law to produce such person:\\nProvided that such delay shall not, in any case, exceed twenty-four hours exclusive\\nof the time necessary for the journey from the place of arrest to the Magistrate's Court.\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"BNSS2023:s187\", \"citation\": \"Section 187, Bharatiya Nagarik Suraksha Sanhita, 2023\", \"heading\": \"Procedure when investigation cannot be completed in twenty-four hours\", \"excerpt\": \"stody on production of the accused\\neither in person or through the audio-video electronic means.\\n(5)No Magistrate of the second class, not specially empowered in this behalf by the\\nHigh Court, shall authorise detention in the custody of the police.\\nExplanation I.—For the avoidance of doubts, it is hereby declared that,\\nnotwithstanding the expiry of the period specified in sub-section ( 3), the accused shall be\\ndetained in custody so long as he does not furnish bail.\\nExplanation II.—If any question arises whether an accused person was produced\\nbefore the Magistrate as required under sub-section ( 4), the production of the accused\\nperson may be proved by his signature on the order authorising detention or by the order\\ncertified by the Magistrate as to production of the accused person through the audio-video\\nelectronic means, as the case may be:\\nProvided that in case of a woman under eighte\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"BNSS2023:s41\", \"citation\": \"Section 41, Bharatiya Nagarik Suraksha Sanhita, 2023\", \"heading\": \"Arrest by Magistrate\", \"excerpt\": \"(1) When any offence is committed in the presence of a Magistrate, whether\\nExecutive or Judicial, within his local jurisdiction, he may himself arrest or order any person\\nto arrest the offender, and may thereupon, subject to the provisions herein contained as to\\nbail, commit the offender to custody.\\n(2) Any Magistrate, whether Executive or Judicial, may at any time arrest or direct the\\narrest, in his presence, within his local jurisdiction, of any person for whose arrest he is\\ncompetent at the time and in the circumstances to issue a warrant.\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"BNSS2023:s170\", \"citation\": \"Section 170, Bharatiya Nagarik Suraksha Sanhita, 2023\", \"heading\": \"Arrest to prevent commission of cognizable offences\", \"excerpt\": \"(1) A police officer knowing of a design to commit any cognizable offence may\\narrest, without orders from a Magistrate and without a warrant, the person so designing, if\\nit appears to such officer that the commission of the offence cannot be otherwise prevented.\\n(2) No person arrested under sub-section (1) shall be detained in custody for a period\\nexceeding twenty-four hours from the time of his arrest unless his further detention is\\nrequired or authorised under any other provisions of this Sanhita or of any other law for the\\ntime being in force.\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"BNSS2023:s82\", \"citation\": \"Section 82, Bharatiya Nagari"
+    },
+    {
+     "name": "update_case_file",
+     "input": {
+      "open_questions": [
+       "Why was the brother taken?",
+       "Which police station is holding him?"
+      ],
+      "document_references": [],
+      "timeline": [
+       {
+        "date": "2026-11-06",
+        "event": "Brother taken by police from house in Patna",
+        "source": "user"
+       }
+      ],
+      "amounts": [],
+      "evidence": [],
+      "parties": [
+       {
+        "name": "Brother",
+        "role": "detainee"
+       },
+       {
+        "name": "Police",
+        "role": "police"
+       }
+      ],
+      "summary": "Police took the user's brother from their house in Patna last night without stating why, and claimed they will keep him for 10 days.",
+      "state": "Bihar",
+      "deadlines": [],
+      "problem_type": "other"
+     },
+     "is_error": false,
+     "result": "Saved."
+    },
+    {
+     "name": "set_assessment",
+     "input": {
+      "what_i_could_not_verify": [
+       "Specific grounds of arrest or FIR details"
+      ],
+      "reason": "Police detention and arrest require immediate legal assistance, and detention beyond 24 hours without producing before a Magistrate is unlawful under Bharatiya Nagarik Suraksha Sanhita.",
+      "lawyer_needed": "urgent",
+      "confidence": "high"
+     },
+     "is_error": false,
+     "result": "Saved."
+    }
+   ],
+   "drafts": [
+    {
+     "text": "Because this involves police detention and affects your brother's liberty, you must act immediately today with the help of a lawyer or legal aid. \n\nUnder the law, the police cannot keep an arrested person in custody for more than twenty-four hours without producing them before a Magistrate [[BNSS2023:s58]]. Claiming they will hold him for 10 days without producing him before a court is unlawful.\n\n### What you should do right now:\n1. **Find the Police Station:** Confirm exactly which police station in Patna is holding your brother.\n2. **Call Free Legal Aid:** Call the National Legal Services Authority helpline at **15100** [[NOTE:NALSA]] right away. It is free and connects eligible people with legal aid lawyers who can intervene immediately.\n3. **Visit the Station:** Go to the police station with family members. Ask them formally for the reason for arrest, the FIR (First Information Report) number, and where and when he will be produced before a Magistrate. \n4. **Get a Criminal Lawyer:** Engage a criminal defense lawyer in Patna today. If the police fail to produce him before a Magistrate within twenty-four hours of arrest, your lawyer can immediately move the Patna High Court for a *habeas corpus* petition or approach the local Magistrate's court. \n\nDo not wait. Which police station is holding him, and do you know if anyone has been able to speak with him yet?",
+     "issues": [
+      {
+       "code": "uncited_legal_claim",
+       "detail": "Paragraph 2: \"Claiming they will hold him for 10 days without producing him before a court is unlawful.\" states law with no citation. Find and cite the provision, say you could not verify it, or remove it.",
+       "paragraph": 1,
+       "blocking": true,
+       "quote": "Claiming they will hold him for 10 days without producing him before a court is unlawful."
+      },
+      {
+       "code": "uncited_legal_claim",
+       "detail": "Paragraph 3: \"If the police fail to produce him before a Magistrate within twenty-four hours of arrest, your lawyer can immediately move the Patna High Court for a habeas cor\" states law with no citation. Find and cite the provision, say you could not verify it, or remove it.",
+       "paragraph": 2,
+       "blocking": true,
+       "quote": "If the police fail to produce him before a Magistrate within twenty-four hours of arrest, your lawyer can immediately move the Patna High Court for a *habeas corpus* petition or approach the local Magistrate's court."
+      }
+     ]
+    },
+    {
+     "text": "Because this involves police detention and affects your brother's liberty, you must act immediately today with the help of a lawyer or legal aid. \n\nUnder the law, the police cannot keep an arrested person in custody for more than twenty-four hours without producing them before a Magistrate [[BNSS2023:s58]]. Claiming they will hold him for 10 days without producing him before a court violates this rule [[BNSS2023:s58]].\n\n### What you should do right now:\n1. **Find the Police Station:** Confirm exactly which police station in Patna is holding your brother.\n2. **Call Free Legal Aid:** Call the National Legal Services Authority helpline at **15100** [[NOTE:NALSA]] right away. It is free and connects eligible people with legal aid lawyers who can intervene immediately.\n3. **Visit the Station:** Go to the police station with family members. Ask them formally for the reason for arrest, the FIR (First Information Report) number, and where and when he will be produced before a Magistrate. \n4. **Get a Criminal Lawyer:** Engage a criminal defense lawyer in Patna today. If the police fail to produce him before a Magistrate within twenty-four hours of arrest [[BNSS2023:s58]], your lawyer can take legal steps before a Magistrate or court [[BNSS2023:s187]].\n\nDo not wait. Which police station is holding him, and do you know if anyone has been able to speak with him yet?",
+     "issues": []
+    }
+   ],
+   "audits": [
+    {
+     "claims": [
+      {
+       "paragraph": 2,
+       "claim": "The police cannot keep an arrested person in custody for more than twenty-four hours without producing them before a Magistrate",
+       "citations": [
+        "BNSS2023:s58"
+       ],
+       "verdict": "supported",
+       "reason": "Section 58 states that detention without a special order of a Magistrate shall not exceed twenty-four hours exclusive of journey time.",
+       "exact_quote": "Under the law, the police cannot keep an arrested person in custody for more than twenty-four hours without producing them before a Magistrate [[BNSS2023:s58]]."
+      },
+      {
+       "paragraph": 3,
+       "claim": "The National Legal Services Authority helpline is 15100 and it connects eligible people with free legal aid lawyers",
+       "citations": [
+        "NOTE:NALSA"
+       ],
+       "verdict": "supported",
+       "reason": "The source explicitly states the helpline is 15100 and connects eligible people with free legal aid.",
+       "exact_quote": "Call the National Legal Services Authority helpline at **15100** [[NOTE:NALSA]] right away."
+      }
+     ],
+     "uncited_legal_claims": [
+      {
+       "paragraph": 2,
+       "claim": "Claiming they will hold him for 10 days without producing him before a court is unlawful.",
+       "exact_quote": "Claiming they will hold him for 10 days without producing him before a court is unlawful."
+      },
+      {
+       "paragraph": 3,
+       "claim": "If the police fail to produce him before a Magistrate within twenty-four hours of arrest, your lawyer can immediately move the Patna High Court for a habeas corpus petition or approach the local Magistrate's court.",
+       "exact_quote": "If the police fail to produce him before a Magistrate within twenty-four hours of arrest, your lawyer can immediately move the Patna High Court for a *habeas corpus* petition or approach the local Magistrate's court."
+      }
+     ],
+     "invented_facts": [],
+     "ignored_cautions": [],
+     "_usage": {
+      "input": 1163,
+      "output": 509
+     }
+    },
+    {
+     "claims": [
+      {
+       "paragraph": 2,
+       "claim": "The police cannot keep an arrested person in custody for more than twenty-four hours without producing them before a Magistrate.",
+       "citations": [
+        "BNSS2023:s58"
+       ],
+       "verdict": "supported",
+       "reason": "Section 58 states that no police officer shall detain an arrested person for longer than twenty-four hours without a special order of a Magistrate under section 187.",
+       "exact_quote": "Under the law, the police cannot keep an arrested person in custody for more than twenty-four hours without producing them before a Magistrate [[BNSS2023:s58]]."
+      },
+      {
+       "paragraph": 2,
+       "claim": "Claiming they will hold him for 10 days without producing him before a court violates this rule.",
+       "citations": [
+        "BNSS2023:s58"
+       ],
+       "verdict": "supported",
+       "reason": "Section 58 limits detention without a Magistrate's special order to twenty-four hours.",
+       "exact_quote": "Claiming they will hold him for 10 days without producing him before a court violates this rule [[BNSS2023:s58]]."
+      },
+      {
+       "paragraph": 3,
+       "claim": "The National Legal Services Authority helpline connects eligible people with free legal aid.",
+       "citations": [
+        "NOTE:NALSA"
+       ],
+       "verdict": "supported",
+       "reason": "The source states the helpline is 15100 and connects eligible people with free legal aid.",
+       "exact_quote": "2. **Call Free Legal Aid:** Call the National Legal Services Authority helpline at **15100** [[NOTE:NALSA]] right away."
+      },
+      {
+       "paragraph": 3,
+       "claim": "If the police fail to produce him before a Magistrate within twenty-four hours of arrest, your lawyer can take legal steps before a Magistrate or court.",
+       "citations": [
+        "BNSS2023:s58",
+        "BNSS2023:s187"
+       ],
+       "verdict": "supported",
+       "reason": "Section 58 limits detention to twenty-four hours without a Magistrate's order, and Section 187 provides for forwarding the accused to a Magistrate and subsequent orders.",
+       "exact_quote": "If the police fail to produce him before a Magistrate within twenty-four hours of arrest [[BNSS2023:s58]], your lawyer can take legal steps before a Magistrate or court [[BNSS2023:s187]]."
+      }
+     ],
+     "uncited_legal_claims": [],
+     "invented_facts": [],
+     "ignored_cautions": [],
+     "_usage": {
+      "input": 2654,
+      "output": 671
+     }
+    }
+   ],
+   "final_status": "verified",
+   "final": "Because this involves police detention and affects your brother's liberty, you must act immediately today with the help of a lawyer or legal aid. \n\nUnder the law, the police cannot keep an arrested person in custody for more than twenty-four hours without producing them before a Magistrate [[BNSS2023:s58]]. Claiming they will hold him for 10 days without producing him before a court violates this rule [[BNSS2023:s58]].\n\n### What you should do right now:\n1. **Find the Police Station:** Confirm exactly which police station in Patna is holding your brother.\n2. **Call Free Legal Aid:** Call the National Legal Services Authority helpline at **15100** [[NOTE:NALSA]] right away. It is free and connects eligible people with legal aid lawyers who can intervene immediately.\n3. **Visit the Station:** Go to the police station with family members. Ask them formally for the reason for arrest, the FIR (First Information Report) number, and where and when he will be produced before a Magistrate. \n4. **Get a Criminal Lawyer:** Engage a criminal defense lawyer in Patna today. If the police fail to produce him before a Magistrate within twenty-four hours of arrest [[BNSS2023:s58]], your lawyer can take legal steps before a Magistrate or court [[BNSS2023:s187]].\n\nDo not wait. Which police station is holding him, and do you know if anyone has been able to speak with him yet?",
+   "repairs": 1,
+   "seconds": 57.8,
+   "usage_after": {
+    "input": 17315,
+    "output": 2104,
+    "cache_read": 12131,
+    "cache_write": 0,
+    "api_calls": 6
+   }
+  }
+ ],
+ "checks": [
+  {
+   "check": "got_an_answer",
+   "pass": true,
+   "detail": "0 turn(s) with errors"
+  },
+  {
+   "check": "all_citations_exist",
+   "pass": true,
+   "detail": "3 citation(s) all resolve"
+  },
+  {
+   "check": "same_language_as_user",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "no_unrequested_document",
+   "pass": true,
+   "detail": "saved [] without being asked"
+  },
+  {
+   "check": "substantive_answer",
+   "pass": true,
+   "detail": "shortest reply is 1376 characters"
+  },
+  {
+   "check": "no_case_law_cited",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "say_any /(?i)lawyer|advocate|legal aid|15100/",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "triage",
+   "pass": true,
+   "detail": "got urgent, wanted at least urgent"
+  },
+  {
+   "check": "lawyer",
+   "pass": true,
+   "detail": "got urgent, wanted at least urgent"
+  }
+ ]
+}

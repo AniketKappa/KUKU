@@ -1,0 +1,9 @@
+.venv/
+.env
+data/
+__pycache__/
+*.pyc
+.pytest_cache/
+.claude/
+.DS_Store
+outputs/raw/*.crash.txt

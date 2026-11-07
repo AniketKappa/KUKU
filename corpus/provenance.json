@@ -1,0 +1,145 @@
+{
+ "BNS2023": {
+  "bytes": 871650,
+  "mirror": false,
+  "retrieved": "2026-11-07",
+  "sha256": "140d170461774b5ce59794a2c5424dc9041decbe42ef8227a43ba59e4b5f2f70",
+  "url": "https://aphc.gov.in/docs/6_20241130053907.pdf"
+ },
+ "BNSS2023": {
+  "bytes": 2047353,
+  "mirror": false,
+  "retrieved": "2026-11-07",
+  "sha256": "98ca546471909cd664d396ea70d19779bf75fafa7dadca8dd897b52523246857",
+  "url": "https://upprosecution.up.gov.in/assets/admin/news/202402161448274875Bhartiya%20Nagrik%20Suraksha%20Sanhita%202023%20Gazette%20(1).pdf"
+ },
+ "BSA2023": {
+  "bytes": 4519265,
+  "mirror": false,
+  "retrieved": "2026-11-07",
+  "sha256": "b2dae331d5cc94b937a39a0ebc2d7be5d357408133a7202856d31faac40df962",
+  "url": "https://cdtihyd.gov.in/static/download/LatestLaws/amended_criminal_laws.pdf"
+ },
+ "COW2019": {
+  "bytes": 237003,
+  "retrieved": "2026-11-06",
+  "sha256": "0d17b967a528da2d6b827655ba9a701dc15d78b4d4f58b9bbc21d6789a680c85",
+  "url": "https://www.labour.gov.in/static/uploads/2025/06/c328da14bbb15fc4ad571dc33e7a4ab3.pdf"
+ },
+ "COWR2026": {
+  "bytes": 1003035,
+  "mirror": true,
+  "retrieved": "2026-11-07",
+  "sha256": "ddab8430d993409964df3b64091c1ed4b60248c10de2011b3a1363a0b9040b0c",
+  "url": "https://avantiscdnprodstorage.blob.core.windows.net/legalupdatedocs/55678/Code-on-Wages-Central-Rules-2026-May082026.pdf"
+ },
+ "CPA2019": {
+  "bytes": 1236998,
+  "retrieved": "2026-11-06",
+  "sha256": "0ae7f82ab5b77d50087cd4cd2dd2dbc12755c0bdb31371fdefd042b020d50756",
+  "url": "https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf"
+ },
+ "CPC1908": {
+  "bytes": 1428616,
+  "mirror": false,
+  "retrieved": "2026-11-07",
+  "sha256": "89e6b5de4570e2fa743190ae503f1628a5f3c521558037d944c21ce0fed33f2b",
+  "url": "https://cdnbbsr.s3waas.gov.in/s3ec0473640de25b7d656733ce2f808a33/uploads/2024/07/2024070326.pdf"
+ },
+ "CPCOMM2020": {
+  "bytes": 1650463,
+  "retrieved": "2026-11-06",
+  "sha256": "65b360f6a62bb219ad35742adc48ee669ecda1dd3e28de7cd05f309f9f6f39da",
+  "url": "https://consumeraffairs.gov.in/public/upload/files/Consumer%20Commission%20Rules%20&%20General%20Rules_1732703661.pdf"
+ },
+ "CPECOM2020": {
+  "bytes": 1281359,
+  "retrieved": "2026-11-06",
+  "sha256": "3012b37f6f6dba2d29523abf10f43fbb3a503768e578ef0fa02e4b9e4593bd0c",
+  "url": "https://consumeraffairs.gov.in/public/upload/files/E%20commerce%20rules_1732703966.pdf"
+ },
+ "CPJUR2021": {
+  "bytes": 1182260,
+  "retrieved": "2026-11-06",
+  "sha256": "dd22dbfa7ac8bc0ef968765d6cd521ad7a29742afb071b9a919c164f83b765b7",
+  "url": "https://consumeraffairs.gov.in/public/upload/files/232278_1732705181.pdf"
+ },
+ "DRC1958": {
+  "bytes": 1699413,
+  "retrieved": "2026-11-06",
+  "sha256": "d7e346eaa75f1b108828509fef80c136a60793c33e74be75a76e7fb7c15436fa",
+  "url": "https://mohua.gov.in/static/uploads/2025/10/0301f56261fb5a89c9431a6fce702e6d.pdf"
+ },
+ "ICA1872": {
+  "bytes": 568075,
+  "retrieved": "2026-11-06",
+  "sha256": "d756d45a58c4cd8440e70a0189ea1fda9d7c5dfcdd6ef31a5f2ecd9cb209c59d",
+  "url": "https://www.indiacode.nic.in/bitstream/123456789/2187/2/A187209.pdf"
+ },
+ "IRC2020": {
+  "bytes": 454780,
+  "mirror": false,
+  "retrieved": "2026-11-07",
+  "sha256": "43cadbd9ed08dd00dfba43571253eaf63d655f9fc411df5b9a1059de8d40ce09",
+  "url": "https://www.labour.gov.in/static/uploads/2025/07/682a44b5426bff2c1f4943ee1b2fd566.pdf"
+ },
+ "KRA1999": {
+  "bytes": 239278,
+  "mirror": false,
+  "retrieved": "2026-11-07",
+  "sha256": "b13c323b9cadba875637811efbfbde115988f155205d9cbd52deeea5c5e5e75b",
+  "url": "https://dpal.karnataka.gov.in/storage/pdf-files/ao2001/34%20of%202001%20(E).pdf"
+ },
+ "LIM1963": {
+  "bytes": 568776,
+  "retrieved": "2026-11-06",
+  "sha256": "8c54246c5c981e8914b8c282022ae641474bb89c040d5e9a56cd1250beabf1db",
+  "url": "https://sclsc.gov.in/theme/front/pdf/ACTS%20FINAL/THE%20INDIAN%20LIMITATION%20ACT.pdf"
+ },
+ "LSA1987": {
+  "bytes": 160490,
+  "retrieved": "2026-11-06",
+  "sha256": "3aae5d5c9f8c2ad100c0553c351af559e35fb36c3fc68a921fd1e64dd4a9318f",
+  "url": "https://cdnbbsr.s3waas.gov.in/s32e45f93088c7db59767efef516b306aa/uploads/2025/04/202504081796627129.pdf"
+ },
+ "MRC1999": {
+  "bytes": 121210,
+  "mirror": false,
+  "retrieved": "2026-11-07",
+  "sha256": "ace09bee5bb74c03acd455ba63896ad437651aee8075830d7baf6eeafdbb211e",
+  "url": "https://mumbaiport.gov.in/WriteReadData/RTF1984/1699026940.pdf"
+ },
+ "MTA2021": {
+  "bytes": 1001485,
+  "retrieved": "2026-11-06",
+  "sha256": "e83830bf8826328bb6f421a83b8def8b793d4bc8ab2603932ab179544036982c",
+  "url": "https://mohua.gov.in/static/uploads/2025/11/0e6aea16d11ed1a622f1de43ff3710b4.pdf"
+ },
+ "NIA1881": {
+  "bytes": 397176,
+  "mirror": true,
+  "retrieved": "2026-11-07",
+  "sha256": "fcdc5f55f34d1f30f95267337c8e5c4339fdd0d5e326facf35aa552febfb8357",
+  "url": "https://www.indiacode.nic.in/indiacode/bitstream/123456789/2189/1/a1881-26.pdf"
+ },
+ "SSC2020": {
+  "bytes": 616749,
+  "mirror": false,
+  "retrieved": "2026-11-07",
+  "sha256": "975235e57b8b8c3f4a09f6c9f0dbb2bfc663c15faf3715108ea33113ef565be7",
+  "url": "https://www.labour.gov.in/static/uploads/2025/07/b0620548445580767b5c0d18c95c26f7.pdf"
+ },
+ "TNRRA2017": {
+  "bytes": 626453,
+  "retrieved": "2026-11-06",
+  "sha256": "09a11942f56720463ac19b4c007bc806531601840e632b8e7c8904e86ccc1a91",
+  "url": "https://prsindia.org/files/bills_acts/acts_states/tamil-nadu/2017/2017TN42.pdf"
+ },
+ "TPA1882": {
+  "bytes": 565764,
+  "mirror": true,
+  "retrieved": "2026-11-07",
+  "sha256": "5223fdf06a0aa3ed14ca62cb2b6b923d42e14a159d7f2c8b8f96cbe1800a7a3a",
+  "url": "https://www.indiacode.nic.in/indiacode/bitstream/123456789/2338/1/A1882-04.pdf"
+ }
+}

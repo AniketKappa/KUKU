@@ -1,0 +1,349 @@
+{
+ "id": "17_reply_to_notice_draft",
+ "group": "notice",
+ "why": "Drafting a reply to a notice.",
+ "started": "2026-11-07T10:54:04.004733",
+ "provider": "gemini",
+ "model": "gemini-3.1-flash-lite",
+ "effort": "medium",
+ "turns": [
+  {
+   "user": "I run a small shop in Jaipur. A supplier's lawyer sent me a notice on 20 October 2026 demanding Rs 1,20,000 for goods. I already paid Rs 70,000 of that by NEFT and the rest of the goods were never delivered. Please draft a reply.",
+   "file": null,
+   "reply": "It is stressful to receive a legal notice, but you have a strong starting point because you have already paid part of the amount and have the record to prove it.\n\nI have drafted a formal reply for you. This letter informs the supplier's lawyer that you have already paid Rs 70,000 and that you do not owe the rest because those goods were never delivered. \n\n### How to proceed:\n1. **Fill in the details:** Download the draft and fill in all the bracketed information, such as your payment date and transaction reference ID.\n2. **Attach proof:** Make sure you attach a copy of your NEFT transaction receipt. If you have any other proof that the goods were not delivered (like messages, emails, or delivery notes where you noted shortages), keep those safe as well.\n3. **Send it:** You should send this letter by Registered Post or Speed Post to the lawyer's address provided in the notice. This gives you a tracking receipt, which is your proof that you responded.\n\n### A few questions to help you further:\n* Do you have the transaction ID or the bank statement showing the Rs 70,000 payment? \n* Do you have any written record (like WhatsApp messages or emails) where you previously informed the supplier that the goods were not delivered? \n\nThis reply clarifies the facts, which is often enough to stop further unnecessary legal action. If they continue to press the claim after this, or if you feel overwhelmed, you may want to consult a local lawyer. You can find out about free legal aid by calling the National Legal Services Authority helpline at 15100, which connects eligible people with free legal assistance [[NOTE:NALSA]].",
+   "verification": {
+    "status": "verified",
+    "repairs": 1,
+    "removed": 0,
+    "issues": []
+   },
+   "citations": [
+    "NOTE:NALSA"
+   ],
+   "errors": []
+  }
+ ],
+ "seconds": 16.9,
+ "usage": {
+  "input": 17968,
+  "output": 1735,
+  "cache_read": 16151,
+  "cache_write": 0,
+  "api_calls": 7
+ },
+ "case_file": {
+  "open_questions": [
+   "Do you have the NEFT transaction receipt/reference number?",
+   "Do you have any proof, like WhatsApp messages, emails, or delivery receipts, confirming the goods were not delivered?"
+  ],
+  "timeline": [
+   {
+    "date": "2026-10-20",
+    "event": "Legal notice received from supplier's lawyer",
+    "source": "user"
+   }
+  ],
+  "evidence": [
+   {
+    "status": "have",
+    "item": "NEFT payment proof (Rs 70,000)",
+    "why_it_matters": "Proves partial payment of the debt."
+   },
+   {
+    "item": "Proof of non-delivery for remaining goods",
+    "why_it_matters": "Crucial to contest the remaining balance.",
+    "status": "unclear"
+   }
+  ],
+  "summary": "The user received a legal notice demanding Rs 1,20,000 for goods. The user claims they have already paid Rs 70,000 via NEFT and that the remaining goods were never delivered.",
+  "amounts": [
+   {
+    "label": "Amount demanded in notice",
+    "amount_inr": "120000"
+   },
+   {
+    "label": "Amount already paid by NEFT",
+    "amount_inr": "70000"
+   }
+  ],
+  "problem_type": "other",
+  "deadlines": [
+   {
+    "date": "2026-11-20",
+    "what": "Likely deadline for response (approx 30 days)",
+    "basis": "notice_received"
+   }
+  ],
+  "state": "Rajasthan",
+  "document_references": [
+   "Legal notice dated 20 October 2026"
+  ],
+  "parties": [
+   {
+    "role": "Opposing Party",
+    "name": "Supplier (Sender of Notice)"
+   },
+   {
+    "name": "Shop Owner (User)",
+    "role": "Client"
+   }
+  ]
+ },
+ "assessment": {
+  "confidence": "high",
+  "lawyer_needed": "none",
+  "reason": "The reply to a legal notice is a common first step to clarify the facts and stop further action, which you can do yourself.",
+  "what_i_could_not_verify": [
+   "The specific terms of your contract with the supplier."
+  ]
+ },
+ "triage": {
+  "level": "none",
+  "codes": [],
+  "reasons": [],
+  "reasons_hi": [],
+  "help": []
+ },
+ "documents": [
+  {
+   "id": "doc1",
+   "type": "reply_to_notice",
+   "title": "Reply to Legal Notice",
+   "body": "[SENDER NAME]\n[SENDER ADDRESS]\n[DATE]\n\nTo,\n[LAWYER'S NAME],\n[LAWYER'S ADDRESS]\n\nSubject: Reply to your legal notice dated 20 October 2026 regarding [SUPPLIER NAME/COMPANY NAME]\n\nDear Sir/Madam,\n\nI am in receipt of your notice dated 20 October 2026 demanding a sum of Rs 1,20,000. \n\nI would like to clarify that your demand is incorrect. Out of the total amount, I have already paid Rs 70,000 via NEFT on [DATE OF PAYMENT] (Transaction Reference: [TRANSACTION ID]). \n\nRegarding the remaining balance, I state that the goods corresponding to this amount were never delivered to my shop. As the delivery was not completed, I am not liable for the payment of those goods.\n\nI request you to update your records and withdraw the demand made in your notice. I have attached proof of the payment made.\n\nYours faithfully,\n\n[YOUR NAME]\n[YOUR PHONE NUMBER]\n[YOUR EMAIL]",
+   "fill_in": [
+    "SENDER NAME",
+    "SENDER ADDRESS",
+    "DATE",
+    "LAWYER'S NAME",
+    "LAWYER'S ADDRESS",
+    "SUPPLIER NAME/COMPANY NAME",
+    "DATE OF PAYMENT",
+    "TRANSACTION ID",
+    "YOUR NAME",
+    "YOUR PHONE NUMBER",
+    "YOUR EMAIL"
+   ],
+   "citations": [],
+   "audit": "passed"
+  }
+ ],
+ "doc_rejections": 0,
+ "trail": [
+  {
+   "user": "I run a small shop in Jaipur. A supplier's lawyer sent me a notice on 20 October 2026 demanding Rs 1,20,000 for goods. I already paid Rs 70,000 of that by NEFT and the rest of the goods were never delivered. Please draft a reply.",
+   "tool_calls": [
+    {
+     "name": "update_case_file",
+     "input": {
+      "open_questions": [
+       "Do you have the NEFT transaction receipt/reference number?",
+       "Do you have any proof, like WhatsApp messages, emails, or delivery receipts, confirming the goods were not delivered?"
+      ],
+      "timeline": [
+       {
+        "date": "2026-10-20",
+        "event": "Legal notice received from supplier's lawyer",
+        "source": "user"
+       }
+      ],
+      "evidence": [
+       {
+        "status": "have",
+        "item": "NEFT payment proof (Rs 70,000)",
+        "why_it_matters": "Proves partial payment of the debt."
+       },
+       {
+        "item": "Proof of non-delivery for remaining goods",
+        "why_it_matters": "Crucial to contest the remaining balance.",
+        "status": "unclear"
+       }
+      ],
+      "summary": "The user received a legal notice demanding Rs 1,20,000 for goods. The user claims they have already paid Rs 70,000 via NEFT and that the remaining goods were never delivered.",
+      "amounts": [
+       {
+        "label": "Amount demanded in notice",
+        "amount_inr": "120000"
+       },
+       {
+        "label": "Amount already paid by NEFT",
+        "amount_inr": "70000"
+       }
+      ],
+      "problem_type": "other",
+      "deadlines": [
+       {
+        "date": "2026-11-20",
+        "what": "Likely deadline for response (approx 30 days)",
+        "basis": "notice_received"
+       }
+      ],
+      "state": "Rajasthan",
+      "document_references": [
+       "Legal notice dated 20 October 2026"
+      ],
+      "parties": [
+       {
+        "role": "Opposing Party",
+        "name": "Supplier (Sender of Notice)"
+       },
+       {
+        "name": "Shop Owner (User)",
+        "role": "Client"
+       }
+      ]
+     },
+     "is_error": false,
+     "result": "Saved."
+    },
+    {
+     "name": "set_assessment",
+     "input": {
+      "confidence": "high",
+      "lawyer_needed": "none",
+      "reason": "The reply to a legal notice is a common first step to clarify the facts and stop further action, which you can do yourself.",
+      "what_i_could_not_verify": [
+       "The specific terms of your contract with the supplier."
+      ]
+     },
+     "is_error": false,
+     "result": "Saved."
+    },
+    {
+     "name": "save_document",
+     "input": {
+      "title": "Reply to Legal Notice",
+      "body": "[SENDER NAME]\n[SENDER ADDRESS]\n[DATE]\n\nTo,\n[LAWYER'S NAME],\n[LAWYER'S ADDRESS]\n\nSubject: Reply to your legal notice dated 20 October 2026 regarding [SUPPLIER NAME/COMPANY NAME]\n\nDear Sir/Madam,\n\nI am in receipt of your notice dated 20 October 2026 demanding a sum of Rs 1,20,000. \n\nI would like to clarify that your demand is incorrect. Out of the total amount, I have already paid Rs 70,000 via NEFT on [DATE OF PAYMENT] (Transaction Reference: [TRANSACTION ID]). \n\nRegarding the remaining balance, I state that the goods corresponding to this amount were never delivered to my shop. As the delivery was not completed, I am not liable for the payment of those goods.\n\nI request you to update your records and withdraw the demand made in your notice. I have attached proof of the payment made.\n\nYours faithfully,\n\n[YOUR NAME]\n[YOUR PHONE NUMBER]\n[YOUR EMAIL]",
+      "doc_type": "reply_to_notice",
+      "fill_in": [
+       "SENDER NAME",
+       "SENDER ADDRESS",
+       "DATE",
+       "LAWYER'S NAME",
+       "LAWYER'S ADDRESS",
+       "SUPPLIER NAME/COMPANY NAME",
+       "DATE OF PAYMENT",
+       "TRANSACTION ID",
+       "YOUR NAME",
+       "YOUR PHONE NUMBER",
+       "YOUR EMAIL"
+      ]
+     },
+     "is_error": false,
+     "result": "Saved as doc1. Tell the user it is ready, explain it in their language, and list what they must fill in."
+    },
+    {
+     "name": "get_provision",
+     "input": {
+      "id": "NOTE:NALSA"
+     },
+     "is_error": false,
+     "result": "{\"id\": \"NOTE:NALSA\", \"title\": \"Free legal aid (NALSA)\", \"fact\": \"The National Legal Services Authority helpline is 15100. It connects eligible people with free legal aid.\", \"source\": \"https://nalsa.gov.in/\"}"
+    }
+   ],
+   "drafts": [
+    {
+     "text": "It is stressful to receive a legal notice, but you have a strong starting point because you have already paid part of the amount and have the record to prove it.\n\nI have drafted a formal reply for you. This letter informs the supplier's lawyer that you have already paid Rs 70,000 and that you do not owe the rest because those goods were never delivered. \n\n### How to proceed:\n1. **Fill in the details:** Download the draft and fill in all the bracketed information, such as your payment date and transaction reference ID.\n2. **Attach proof:** Make sure you attach a copy of your NEFT transaction receipt. If you have any other proof that the goods were not delivered (like messages, emails, or delivery notes where you noted shortages), keep those safe as well.\n3. **Send it:** You should send this letter by Registered Post or Speed Post to the lawyer's address provided in the notice. This gives you a tracking receipt, which is your proof that you responded.\n\n### A few questions to help you further:\n* Do you have the transaction ID or the bank statement showing the Rs 70,000 payment? \n* Do you have any written record (like WhatsApp messages or emails) where you previously informed the supplier that the goods were not delivered? \n\nThis reply clarifies the facts, which is often enough to stop further unnecessary legal action. If they continue to press the claim after this, or if you feel overwhelmed, you may want to consult a local lawyer. You can find out about free legal aid by looking up your local District Legal Services Authority (DLSA) [[NOTE:NALSA]].",
+     "issues": [
+      {
+       "code": "citation_not_read",
+       "detail": "[[NOTE:NALSA]] was never retrieved in this conversation. Call get_provision on it and re-check your claim against the text.",
+       "paragraph": null,
+       "blocking": true,
+       "quote": null
+      }
+     ]
+    },
+    {
+     "text": "It is stressful to receive a legal notice, but you have a strong starting point because you have already paid part of the amount and have the record to prove it.\n\nI have drafted a formal reply for you. This letter informs the supplier's lawyer that you have already paid Rs 70,000 and that you do not owe the rest because those goods were never delivered. \n\n### How to proceed:\n1. **Fill in the details:** Download the draft and fill in all the bracketed information, such as your payment date and transaction reference ID.\n2. **Attach proof:** Make sure you attach a copy of your NEFT transaction receipt. If you have any other proof that the goods were not delivered (like messages, emails, or delivery notes where you noted shortages), keep those safe as well.\n3. **Send it:** You should send this letter by Registered Post or Speed Post to the lawyer's address provided in the notice. This gives you a tracking receipt, which is your proof that you responded.\n\n### A few questions to help you further:\n* Do you have the transaction ID or the bank statement showing the Rs 70,000 payment? \n* Do you have any written record (like WhatsApp messages or emails) where you previously informed the supplier that the goods were not delivered? \n\nThis reply clarifies the facts, which is often enough to stop further unnecessary legal action. If they continue to press the claim after this, or if you feel overwhelmed, you may want to consult a local lawyer. You can find out about free legal aid by calling the National Legal Services Authority helpline at 15100, which connects eligible people with free legal assistance [[NOTE:NALSA]].",
+     "issues": []
+    }
+   ],
+   "audits": [
+    {
+     "claims": [],
+     "uncited_legal_claims": [],
+     "invented_facts": [],
+     "ignored_cautions": [],
+     "_usage": {
+      "input": 983,
+      "output": 38
+     }
+    },
+    {
+     "claims": [
+      {
+       "paragraph": 5,
+       "claim": "You can find out about free legal aid by calling the National Legal Services Authority helpline at 15100, which connects eligible people with free legal assistance.",
+       "citations": [
+        "NOTE:NALSA"
+       ],
+       "verdict": "supported",
+       "reason": "The draft accurately reflects the information provided in the source text.",
+       "exact_quote": "You can find out about free legal aid by calling the National Legal Services Authority helpline at 15100, which connects eligible people with free legal assistance [[NOTE:NALSA]]."
+      }
+     ],
+     "uncited_legal_claims": [],
+     "invented_facts": [],
+     "ignored_cautions": [],
+     "_usage": {
+      "input": 1118,
+      "output": 186
+     }
+    }
+   ],
+   "final_status": "verified",
+   "final": "It is stressful to receive a legal notice, but you have a strong starting point because you have already paid part of the amount and have the record to prove it.\n\nI have drafted a formal reply for you. This letter informs the supplier's lawyer that you have already paid Rs 70,000 and that you do not owe the rest because those goods were never delivered. \n\n### How to proceed:\n1. **Fill in the details:** Download the draft and fill in all the bracketed information, such as your payment date and transaction reference ID.\n2. **Attach proof:** Make sure you attach a copy of your NEFT transaction receipt. If you have any other proof that the goods were not delivered (like messages, emails, or delivery notes where you noted shortages), keep those safe as well.\n3. **Send it:** You should send this letter by Registered Post or Speed Post to the lawyer's address provided in the notice. This gives you a tracking receipt, which is your proof that you responded.\n\n### A few questions to help you further:\n* Do you have the transaction ID or the bank statement showing the Rs 70,000 payment? \n* Do you have any written record (like WhatsApp messages or emails) where you previously informed the supplier that the goods were not delivered? \n\nThis reply clarifies the facts, which is often enough to stop further unnecessary legal action. If they continue to press the claim after this, or if you feel overwhelmed, you may want to consult a local lawyer. You can find out about free legal aid by calling the National Legal Services Authority helpline at 15100, which connects eligible people with free legal assistance [[NOTE:NALSA]].",
+   "repairs": 1,
+   "seconds": 16.9,
+   "usage_after": {
+    "input": 17968,
+    "output": 1735,
+    "cache_read": 16151,
+    "cache_write": 0,
+    "api_calls": 7
+   }
+  }
+ ],
+ "checks": [
+  {
+   "check": "got_an_answer",
+   "pass": true,
+   "detail": "0 turn(s) with errors"
+  },
+  {
+   "check": "all_citations_exist",
+   "pass": true,
+   "detail": "1 citation(s) all resolve"
+  },
+  {
+   "check": "same_language_as_user",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "no_unrequested_document",
+   "pass": true,
+   "detail": "saved ['reply_to_notice'] without being asked"
+  },
+  {
+   "check": "substantive_answer",
+   "pass": true,
+   "detail": "shortest reply is 1632 characters"
+  },
+  {
+   "check": "no_case_law_cited",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "say_none /67B|Section 999|Housing Recovery Act|AIR/",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "document",
+   "pass": true,
+   "detail": "saved ['reply_to_notice']"
+  }
+ ]
+}

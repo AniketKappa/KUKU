@@ -1,0 +1,602 @@
+{
+ "id": "02_deposit_bengaluru_hinglish_notice",
+ "group": "deposit",
+ "why": "Messy Hinglish story over several turns, ending in a drafted legal notice with no invented facts.",
+ "started": "2026-11-07T09:11:15.132978",
+ "provider": "gemini",
+ "model": "gemini-3.5-flash-lite",
+ "effort": "medium",
+ "turns": [
+  {
+   "user": "bhai mera landlord deposit nahi de raha. maine flat chhod diya tha bangalore me, koramangala. 2 mahine ho gaye. 80000 rupaye deposit tha. usne bola painting ka paisa katega par pura hi rakh liya. koi receipt bhi nahi di usne",
+   "file": null,
+   "reply": "Bhai, 2 mahine ho gaye hain aur 80,000 rupaye deposit rok ke rakhna bilkul galat hai. Bina kisi receipt ke pura paisa painting ke naam par kaat lena ya daba lena landlord ka unfair tarika hai. \n\nUnder general contract and property principles, a security deposit is refundable when you vacate the premises, subject only to reasonable and agreed-upon deductions.\n\nAapki madad ke liye mujhe 2-3 cheezein aur janni hain taaki hum agla kadam utha sakein:\n\n1. Kya aapke paas koi **written rental agreement** hai?\n2. Kya aapke paas deposit payment ka koi proof hai (jaise bank statement, UPI screenshot, ya cash receipt)?\n3. Kya landlord ke sath WhatsApp, SMS ya call par koi baat hui hai jahan usne deposit ya painting ke baare mein kuch bola ho?\n\nIn baaton ke baad hum landlord ko ek formal demand letter/legal notice bhej sakte hain taaki woh paisa wapas karne par majboor ho. Bataiye details kya hain?",
+   "verification": {
+    "status": "verified",
+    "repairs": 0,
+    "removed": 0,
+    "issues": []
+   },
+   "citations": [],
+   "errors": []
+  },
+  {
+   "user": "agreement hai mere paas 11 mahine ka. paisa bank transfer se diya tha. flat 5 September 2026 ko chhoda tha. landlord ka naam Suresh Gowda hai",
+   "file": null,
+   "reply": "Aapke paas **written agreement** aur **bank transfer ka proof** dono hain, aur aapne 5 September 2026 ko flat bhi khali kar diya tha. Yeh bahut strong position hai. Suresh Gowda ji ka poora ₹80,000 deposit bina kisi receipt ya bill ke rok kar rakhna galat hai. Unka yeh breach of obligation banta hai [[ICA1872:s73]].\n\nMaine aapke liye ek formal **Legal Demand Notice** ka draft taiyar kar diya hai jise aap download karke unhe bhej sakte hain.\n\n### Aapko kya karna hoga:\n1. Upar diye gaye draft ko download kariye.\n2. Bracket `[ ]` mein di gayi details bhariye (jaise aapka naam, address, phone number, landlord ka address, aur payment ki date).\n3. Ise Suresh Gowda ji ko WhatsApp, email, ya registered post ke zariye bhej sakte hain taaki ek official record ban jaye.\n\nKya landlord ke sath WhatsApp par pehle koi baat hui thi jahan usne deposit rokne ki baat ki ho? Agar chahein toh hum Practice mode mein baat kar sakte hain ki unse phone par ya message mein kaise baat karni chahiye.",
+   "verification": {
+    "status": "verified",
+    "repairs": 1,
+    "removed": 0,
+    "issues": []
+   },
+   "citations": [
+    "ICA1872:s73"
+   ],
+   "errors": []
+  },
+  {
+   "user": "theek hai ek legal notice bana do uske liye",
+   "file": null,
+   "reply": "Maine aapke liye formal **Legal Demand Notice** ka draft taiyar kar diya hai. Aap ise download karke Suresh Gowda ji ko bhej sakte hain.\n\n### Aapko notice mein yeh details bharni hongi:\n1. Apka naam aur address (`[TENANT NAME]`, `[TENANT ADDRESS]`, `[PHONE NUMBER]`)\n2. Landlord Suresh Gowda ka address Koramangala, Bangalore mein (`[LANDLORD ADDRESS IN KORAMANGALA, BANGALORE]`)\n3. Payment ki exact date jis din aapne bank transfer kiya tha (`[DATE OF PAYMENT]`)\n\nAap is notice ko WhatsApp, email, ya registered post ke zariye bhej sakte hain taaki unke paas written record rahe ki aapne apna deposit maanga hai.",
+   "verification": {
+    "status": "verified",
+    "repairs": 0,
+    "removed": 0,
+    "issues": []
+   },
+   "citations": [],
+   "errors": []
+  }
+ ],
+ "seconds": 92.0,
+ "usage": {
+  "input": 50233,
+  "output": 3171,
+  "cache_read": 88896,
+  "cache_write": 0,
+  "api_calls": 18
+ },
+ "case_file": {
+  "problem_type": "tenancy_deposit",
+  "parties": [
+   {
+    "role": "user",
+    "name": "Tenant (User)"
+   },
+   {
+    "role": "Landlord",
+    "name": "Suresh Gowda"
+   }
+  ],
+  "document_references": [],
+  "deadlines": [],
+  "summary": "Tenant vacated flat in Koramangala, Bangalore on 5 September 2026. Landlord Suresh Gowda has withheld the entire ₹80,000 security deposit under the pretext of painting charges, despite having a written 11-month agreement and bank transfer proof of payment.",
+  "open_questions": [],
+  "timeline": [
+   {
+    "source": "user",
+    "event": "Vacated the flat in Koramangala, Bangalore",
+    "date": "2026-09-05"
+   }
+  ],
+  "amounts": [
+   {
+    "amount_inr": "80000",
+    "label": "Security Deposit"
+   }
+  ],
+  "state": "Karnataka",
+  "evidence": [
+   {
+    "status": "have",
+    "why_it_matters": "Proves tenancy terms and agreement",
+    "item": "Written rental agreement (11 months)"
+   },
+   {
+    "why_it_matters": "Proves ₹80,000 was paid to the landlord",
+    "item": "Bank transfer proof for deposit payment",
+    "status": "have"
+   }
+  ]
+ },
+ "assessment": {
+  "lawyer_needed": "none",
+  "reason": "A written agreement and bank transfer proof give you a strong basis to send a formal legal demand notice for recovering your security deposit.",
+  "confidence": "high",
+  "what_i_could_not_verify": [
+   "Local police response time or willingness to intervene in civil tenancy disputes in Bangalore"
+  ]
+ },
+ "triage": {
+  "level": "none",
+  "codes": [],
+  "reasons": [],
+  "reasons_hi": [],
+  "help": []
+ },
+ "documents": [
+  {
+   "id": "doc1",
+   "type": "legal_notice",
+   "title": "Demand Notice for Refund of Security Deposit",
+   "body": "# LEGAL DEMAND NOTICE FOR REFUND OF SECURITY DEPOSIT\n\nTo,\nMr. Suresh Gowda\n[LANDLORD ADDRESS IN KORAMangala, BANGALORE]\n\nFrom:\n[TENANT NAME]\n[TENANT ADDRESS]\nPhone: [PHONE NUMBER]\n\nDate: November 7, 2026\n\nSubject: Demand for immediate refund of security deposit amounting to ₹80,000 paid under the rental agreement.\n\nDear Sir,\n\n1. That you and the undersigned entered into an 11-month rental agreement for the residential premises located in Koramangala, Bangalore.\n\n2. That pursuant to the said agreement, the undersigned paid a security deposit of ₹80,000 (Rupees Eighty Thousand Only) via bank transfer on [DATE OF PAYMENT].\n\n3. That the undersigned peacefully vacated and handed over vacant possession of the said premises to you on September 5, 2026.\n\n4. That despite the peaceful surrender of the premises and completion of all obligations, you have wrongfully withheld the entire security deposit of ₹80,000 under the pretext of painting charges, without providing any supporting bills, receipts, or justification, and without issuing any receipt for the deposit.\n\n5. Withholding the entire security deposit without lawful deduction or justification constitutes a breach of obligations under the law [[ICA1872:s73]].\n\n6. Therefore, through this notice, you are called upon to refund the full security deposit amount of ₹80,000 to the undersigned's bank account within a short deadline from the receipt of this notice.\n\n7. If you fail to refund the said amount within the stipulated time, the undersigned will be forced to take appropriate legal action under civil law to recover the same along with costs.\n\nSincerely,\n\n[TENANT NAME]",
+   "fill_in": [
+    "[LANDLORD ADDRESS IN KORAMangala, BANGALORE]",
+    "[TENANT NAME]",
+    "[TENANT ADDRESS]",
+    "[PHONE NUMBER]",
+    "[DATE OF PAYMENT]"
+   ],
+   "citations": [
+    "ICA1872:s73"
+   ],
+   "audit": "passed"
+  }
+ ],
+ "doc_rejections": 0,
+ "trail": [
+  {
+   "user": "bhai mera landlord deposit nahi de raha. maine flat chhod diya tha bangalore me, koramangala. 2 mahine ho gaye. 80000 rupaye deposit tha. usne bola painting ka paisa katega par pura hi rakh liya. koi receipt bhi nahi di usne",
+   "tool_calls": [
+    {
+     "name": "search_law",
+     "input": {
+      "state": "Karnataka",
+      "query": "security deposit refund landlord tenant Karnataka"
+     },
+     "is_error": false,
+     "result": "[{\"id\": \"MTA2021:s11\", \"citation\": \"Section 11, Model Tenancy Act, 2021\", \"heading\": \"Security deposit\", \"excerpt\": \"(1) The security deposit to b e paid by the tenant in advance shall\\nbe such as may be agreed upon between the landlord and the tenant\\nin the tenancy agreement, which shall ––\\nRestriction on\\nsub-letting.\\nRent payable.\\nRevision of rent.\\nRent Authority to\\ndetermine the\\nrevised rent in\\ncase of dispute.\\nSecurity deposit.\\n(a) not exceed two months rent, in case of residential premises;\\nand\\n(b) not exceed six months rent , in case of non -residential\\npremises.\\n(2) The security deposit shall be refunded to the tenant on the date of\\ntaking over vacant possession of the premises from the tenant, after\\nmaking due deduction of any liability of the tenant.\", \"applies_in\": \"Model law (applies only where a State has adopted it)\", \"caution\": \"This is a MODEL law issued by the Central Government for States to adopt. It does not bind anyone unless the user's State has enacted it. Never present it as law that applies to the user; say it is a model only.\"}, {\"id\": \"KRA1999:s4\", \"citation\": \"Section 4, Karnataka Rent Act, 1999\", \"heading\": \"Tenancy agreement to be in writing\", \"excerpt\": \"(1)\\nNotwithstanding anything contained in section 107 of the Transfer\\nof Property Act, 1882 (Central Act 4 of 1882), no person shall,\\nafter the commencement of this Act, let or take on rent any\\npremises except by an agreement in writing.\\n(2) Where in relation to a tenancy created before the\\ncommencement of this Act no agreement in writing was entered\\ninto the landlord and the tenant shall enter into an agreement in\\nwriting with regard to the tenancy and deposit a copy of thereof\\nbefore the prescribed authority.\\nProvided that where the landlord and the tenant fail to\\npresent jointly a copy of the tenancy agreement under this sub-\\nsection such landlord and tenant shall separately file the\\nparticulars about such tenancy with the prescribed authority in\\nsuch form and in such manner and within such time as may be\\nprescribed.\", \"applies_in\": \"Karnataka\", \"caution\": \"\"}, {\"id\": \"KRA1999:s27\", \"citation\": \"Section 27, Karnataka Rent Act, 1999\", \"heading\": \"Protection of tenants against eviction\", \"excerpt\": \"(1)\\nNotwithstanding anything to the contrary contained in any other\\nlaw or contract, no order or decree for the recovery of possession\\nof any premises shall be made by the Court, District Judge or\\nHigh Court in favour of the landlord against a tenant, save as\\nprovided in sub-section (2).\\n(2) The Court may, on an application made to it in the\\nprescribed manner, make an order for the recovery of possession\\nof the premises on one or more of the following grounds only,\\nnamely:-\\n(a) that the tenant has neither paid nor tendered the whole\\nof the arrears of the rent and other charges legally recoverable\\nfrom him within two months from the date on which a notice of\\ndemand for payment of has been served on him by the landlord\\nin the manner provided in section 106 of the Transfer of Property\\nAct, 1882 (Central Act 4 of 1882):\\nProvided that a tenant shall not be entitled to the benefit\\nof service o\", \"applies_in\": \"Karnataka\", \"caution\": \"\"}, {\"id\": \"KRA1999:s15\", \"citation\": \"Section 15, Karnataka Rent Act, 1999\", \"heading\": \"Refund of rent, premium, etc.,\", \"excerpt\": \"Refund of rent, premium, etc.,.- Where any sum or other\\nconsideration has been paid, whether before or after the\\ncommencement of this Act, by or on behalf a tenant to a landlord,\\nin contravention of any of the provisions of this Act the Controller\\nmay, on an application made to him within a period of one year\\nfrom the date of such payment, order the landlord to refund such\\nsum or the value of such consideration to the tenant or order\\nadjustment of such sum or the value of such consideration against\\nthe rent payable by the tenant.\", \"applies_in\": \"Karnataka\", \"caution\": \"\"}, {\"id\": \"KRA1999:s28\", \"citation\": \"Section 28, Karnataka Rent Act,"
+    },
+    {
+     "name": "search_law",
+     "input": {
+      "state": "Karnataka",
+      "query": "limitation period recovery of security deposit money suit"
+     },
+     "is_error": false,
+     "result": "[{\"id\": \"MTA2021:s11\", \"citation\": \"Section 11, Model Tenancy Act, 2021\", \"heading\": \"Security deposit\", \"excerpt\": \"(1) The security deposit to b e paid by the tenant in advance shall\\nbe such as may be agreed upon between the landlord and the tenant\\nin the tenancy agreement, which shall ––\\nRestriction on\\nsub-letting.\\nRent payable.\\nRevision of rent.\\nRent Authority to\\ndetermine the\\nrevised rent in\\ncase of dispute.\\nSecurity deposit.\\n(a) not exceed two months rent, in case of residential premises;\\nand\\n(b) not exceed six months rent , in case of non -residential\\npremises.\\n(2) The security deposit shall be refunded to the tenant on the date of\\ntaking over vacant possession of the premises from the tenant, after\\nmaking due deduction of any liability of the tenant.\", \"applies_in\": \"Model law (applies only where a State has adopted it)\", \"caution\": \"This is a MODEL law issued by the Central Government for States to adopt. It does not bind anyone unless the user's State has enacted it. Never present it as law that applies to the user; say it is a model only.\"}, {\"id\": \"LIM1963:art55\", \"citation\": \"Article 55, Limitation Act, 1963\", \"heading\": \"Schedule article\", \"excerpt\": \"For compensation for the breach of any contract, express or implied not herein specially provided for. Three years. When the contract is broken or (where there are successive breaches) when the breach in respect of which the suit is instituted occurs or (where the breach is continuing) when it ceases. Description of suit Period of limitation Time from which period begins to run PART III.—SUITS RELATING TO DECLARATIONS\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"LIM1963:art113\", \"citation\": \"Article 113, Limitation Act, 1963\", \"heading\": \"Schedule article\", \"excerpt\": \"Any suit for which no period of limitation is provided elsewhere in this Schedule. Three years. When the right to sue accrues. SECOND DIVISION—APPEALS\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"LIM1963:art47\", \"citation\": \"Article 47, Limitation Act, 1963\", \"heading\": \"Schedule article\", \"excerpt\": \"For money paid upon an existing consideration which afterwards fails. Three years. The date of the failure.\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"LIM1963:art70\", \"citation\": \"Article 70, Limitation Act, 1963\", \"heading\": \"Schedule article\", \"excerpt\": \"To recover movable property deposited or pawned from a depositary or pawnee. Three years. The date of refusal after demand. Description of suit Period of limitation Time from which period begins to run\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"LIM1963:art122\", \"citation\": \"Article 122, Limitation Act, 1963\", \"heading\": \"Schedule article\", \"excerpt\": \"To restore a suit or appeal or application for review or revision dismissed for default of appearance or for want of prosecution or for failure to pay costs of service of process or to furnish security for costs. Thirty days. The date of dismissal. Description of suit Period of limitation Time from which period begins to run\", \"applies_in\": \"India\", \"caution\": \"\"}]"
+    },
+    {
+     "name": "update_case_file",
+     "input": {
+      "problem_type": "tenancy_deposit",
+      "parties": [
+       {
+        "name": "Tenant",
+        "role": "user"
+       },
+       {
+        "role": "opposite party",
+        "name": "Landlord"
+       }
+      ],
+      "document_references": [],
+      "deadlines": [],
+      "summary": "Landlord in Koramangala, Bangalore has not returned the ₹80,000 security deposit 2 months after vacating the flat. Landlord claimed painting charges deductions but withheld the entire amount, and no receipt was given.",
+      "open_questions": [
+       "Kya aapke paas written rental agreement hai?",
+       "Kya aapke paas deposit payment ka koi proof hai (bank statement, UPI screenshot, etc.)?",
+       "Kya landlord ke sath chat ya WhatsApp par koi baat hui hai is bare mein?"
+      ],
+      "timeline": [
+       {
+        "source": "user",
+        "date": "approx 2 months ago",
+        "event": "Vacated the flat in Koramangala, Bangalore"
+       }
+      ],
+      "amounts": [
+       {
+        "label": "Security Deposit",
+        "amount_inr": "80000"
+       }
+      ],
+      "state": "Karnataka",
+      "evidence": [
+       {
+        "why_it_matters": "To prove terms of tenancy and deposit amount",
+        "item": "Rental agreement",
+        "status": "unclear"
+       },
+       {
+        "status": "unclear",
+        "why_it_matters": "To prove the ₹80,000 deposit was actually paid",
+        "item": "Proof of deposit payment (bank statement, UPI, receipt)"
+       },
+       {
+        "item": "Chat/WhatsApp or call records with landlord",
+        "why_it_matters": "To show landlord's admission about deposit or painting deductions",
+        "status": "unclear"
+       }
+      ]
+     },
+     "is_error": false,
+     "result": "Saved."
+    },
+    {
+     "name": "set_assessment",
+     "input": {
+      "lawyer_needed": "none",
+      "confidence": "medium",
+      "what_i_could_not_verify": [
+       "Specific local Bangalore rental regulations outside the Karnataka Rent Act"
+      ],
+      "reason": "Deposit recovery is based on contract and civil law, and can be initiated with a formal demand notice once payment proof is verified."
+     },
+     "is_error": false,
+     "result": "Saved."
+    }
+   ],
+   "drafts": [
+    {
+     "text": "Bhai, 2 mahine ho gaye hain aur 80,000 rupaye deposit rok ke rakhna bilkul galat hai. Bina kisi receipt ke pura paisa painting ke naam par kaat lena ya daba lena landlord ka unfair tarika hai. \n\nUnder general contract and property principles, a security deposit is refundable when you vacate the premises, subject only to reasonable and agreed-upon deductions.\n\nAapki madad ke liye mujhe 2-3 cheezein aur janni hain taaki hum agla kadam utha sakein:\n\n1. Kya aapke paas koi **written rental agreement** hai?\n2. Kya aapke paas deposit payment ka koi proof hai (jaise bank statement, UPI screenshot, ya cash receipt)?\n3. Kya landlord ke sath WhatsApp, SMS ya call par koi baat hui hai jahan usne deposit ya painting ke baare mein kuch bola ho?\n\nIn baaton ke baad hum landlord ko ek formal demand letter/legal notice bhej sakte hain taaki woh paisa wapas karne par majboor ho. Bataiye details kya hain?",
+     "issues": []
+    }
+   ],
+   "audits": [
+    {
+     "claims": [],
+     "uncited_legal_claims": [],
+     "invented_facts": [],
+     "ignored_cautions": [],
+     "_usage": {
+      "input": 935,
+      "output": 38
+     }
+    }
+   ],
+   "final_status": "verified",
+   "final": "Bhai, 2 mahine ho gaye hain aur 80,000 rupaye deposit rok ke rakhna bilkul galat hai. Bina kisi receipt ke pura paisa painting ke naam par kaat lena ya daba lena landlord ka unfair tarika hai. \n\nUnder general contract and property principles, a security deposit is refundable when you vacate the premises, subject only to reasonable and agreed-upon deductions.\n\nAapki madad ke liye mujhe 2-3 cheezein aur janni hain taaki hum agla kadam utha sakein:\n\n1. Kya aapke paas koi **written rental agreement** hai?\n2. Kya aapke paas deposit payment ka koi proof hai (jaise bank statement, UPI screenshot, ya cash receipt)?\n3. Kya landlord ke sath WhatsApp, SMS ya call par koi baat hui hai jahan usne deposit ya painting ke baare mein kuch bola ho?\n\nIn baaton ke baad hum landlord ko ek formal demand letter/legal notice bhej sakte hain taaki woh paisa wapas karne par majboor ho. Bataiye details kya hain?",
+   "repairs": 0,
+   "seconds": 18.7,
+   "usage_after": {
+    "input": 18797,
+    "output": 765,
+    "cache_read": 16136,
+    "cache_write": 0,
+    "api_calls": 6
+   }
+  },
+  {
+   "user": "agreement hai mere paas 11 mahine ka. paisa bank transfer se diya tha. flat 5 September 2026 ko chhoda tha. landlord ka naam Suresh Gowda hai",
+   "tool_calls": [
+    {
+     "name": "update_case_file",
+     "input": {
+      "parties": [
+       {
+        "name": "Tenant (User)",
+        "role": "user"
+       },
+       {
+        "role": "Landlord",
+        "name": "Suresh Gowda"
+       }
+      ],
+      "open_questions": [
+       "Kya landlord ke sath WhatsApp ya chat par koi baat hui hai is bare mein?"
+      ],
+      "deadlines": [],
+      "timeline": [
+       {
+        "date": "2026-09-05",
+        "source": "user",
+        "event": "Vacated the flat in Koramangala, Bangalore"
+       }
+      ],
+      "evidence": [
+       {
+        "item": "Written rental agreement (11 months)",
+        "why_it_matters": "Proves tenancy terms and agreement",
+        "status": "have"
+       },
+       {
+        "why_it_matters": "Proves ₹80,000 was paid to the landlord",
+        "item": "Bank transfer proof for deposit payment",
+        "status": "have"
+       },
+       {
+        "why_it_matters": "To show landlord's communication regarding painting deductions",
+        "item": "Chat/WhatsApp records",
+        "status": "unclear"
+       }
+      ],
+      "summary": "Tenant vacated flat in Koramangala, Bangalore on 5 September 2026. Landlord Suresh Gowda has withheld the entire ₹80,000 security deposit under the pretext of painting charges, despite having a written 11-month agreement and bank transfer proof of payment.",
+      "document_references": [],
+      "amounts": [
+       {
+        "amount_inr": "80000",
+        "label": "Security Deposit"
+       }
+      ],
+      "problem_type": "tenancy_deposit",
+      "state": "Karnataka"
+     },
+     "is_error": false,
+     "result": "Saved."
+    },
+    {
+     "name": "set_assessment",
+     "input": {
+      "lawyer_needed": "none",
+      "what_i_could_not_verify": [
+       "Local police response time or willingness to intervene in civil tenancy disputes in Bangalore"
+      ],
+      "confidence": "high",
+      "reason": "A written agreement and bank transfer proof give you a strong basis to send a formal legal demand letter for recovering your security deposit."
+     },
+     "is_error": false,
+     "result": "Saved."
+    },
+    {
+     "name": "search_law",
+     "input": {
+      "state": "Karnataka",
+      "query": "compensation for breach of contract section 73 Indian Contract Act"
+     },
+     "is_error": false,
+     "result": "[{\"id\": \"ICA1872:s73\", \"citation\": \"Section 73, Indian Contract Act, 1872\", \"heading\": \"Compensation for loss or damage caused by breach of contract\", \"excerpt\": \"When a contract has been\\nbroken, the party who suffers by such breach is entitled to receive, from the party who has broken the\\ncontract, compensation for any loss or damage caused to him thereby, which naturally arose in the usual\\ncourse of things from such breach, or which the parties knew, when they made the contract, to be likely to\\nresult from the breach of it.\\nSuch compensation is not to be given for any remote and indirect loss or damage sus tained by reason\\nof the breach.\\nCompensation for failure to discharge obligation resemb ling those created by contract .—When\\nan obligation resembling those created by contract ha s been incurred and has not been discharged, any\\nperson injured by the failure to discharge it is entitled to receive the same compensation from the party in\\ndefault, as if such person had contracted to discharge it and had broken his contract.\\nExplanation.—In estima\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"ICA1872:s74\", \"citation\": \"Section 74, Indian Contract Act, 1872\", \"heading\": \"Compensation for breach of contrac t where penalty stipulated for\", \"excerpt\": \"[When a contract has\\nbeen broken, if a sum is named in the contract as the amount to be paid in case of such breach, or if the\\ncontract contains any other stipulation by way of penalty, the party complaining of the breach is entitled,\\nwhether or not actual damage or loss is proved to have been caused thereby, to receive from the party who\\nhas broken the contract reasonable compensation not exceeding the amount so named or, as the case may\\nbe, the penalty stipulated for.\\nExplanation.—A stipulation for increased interest from the date of default may be a stipulation by\\nway of penalty.]\\nException.—When any person ente rs into any bail -bond, recogni zance or other instrument of the\\nsame nature, or, under the provisions of any la w, or under the orders of the 2[Central Government] or of\\nany [State Government ], gives any bond for the performance of any public duty or act in which the\\npublic \", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"ICA1872:s53\", \"citation\": \"Section 53, Indian Contract Act, 1872\", \"heading\": \"Liability of party preventing event on which the contract is to take effect\", \"excerpt\": \"When a contract\\ncontains reciprocal promises, and one party to the contract prevents the other from performing his\\npromise, the contract becomes voidable at the option of the party so prevented; and he is e ntitled to\\ncompensation 1from the other party for any loss which he may sustain in consequence of the n on-\\nperformance of the contract.\\nIllustration\\nA and B contract that B shall execute certain work for A for a thousand rupees. B is ready and willing to execute the work\\naccordingly, but A preven ts him from doing so. The contract is voidable at the option of B ; and, if he elects to rescind it, he is\\nentitled to recover from A compensation for any loss which he has incurred by its non-performance.\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"ICA1872:s205\", \"citation\": \"Section 205, Indian Contract Act, 1872\", \"heading\": \"Compensation for revocation by principal, o r renunciation by agent\", \"excerpt\": \"Where there is an\\nexpress or implied contract that the agency should be continued for any period of time, the principal must\\nmake compensation to the agent, or the agent to the principal, as the case may be, for any previous\\nrevocation or renunciation of the agency without sufficient cause.\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"LIM1963:art55\", \"citation\": \"Article 55, Limitation Act, 1963\", \"heading\": \"Schedule article\", \"excerpt\": \"For compensation for the breach of any contract, express or implied not herein specially provided for. Three years. When the contract is broken or (where there are successive breaches) when the breach in "
+    },
+    {
+     "name": "save_document",
+     "input": {
+      "body": "# LEGAL DEMAND NOTICE FOR REFUND OF SECURITY DEPOSIT\n\nTo,\nMr. Suresh Gowda\n[LANDLORD ADDRESS IN KORAMangala, BANGALORE]\n\nFrom:\n[TENANT NAME]\n[TENANT ADDRESS]\nPhone: [PHONE NUMBER]\n\nDate: November 7, 2026\n\nSubject: Demand for immediate refund of security deposit amounting to ₹80,000 paid under the rental agreement.\n\nDear Sir,\n\n1. That you and the undersigned entered into an 11-month rental agreement for the residential premises located in Koramangala, Bangalore.\n\n2. That pursuant to the said agreement, the undersigned paid a security deposit of ₹80,000 (Rupees Eighty Thousand Only) via bank transfer on [DATE OF PAYMENT].\n\n3. That the undersigned peacefully vacated and handed over vacant possession of the said premises to you on September 5, 2026.\n\n4. That despite the peaceful surrender of the premises and completion of all obligations, you have wrongfully withheld the entire security deposit of ₹80,000 under the pretext of painting charges, without providing any supporting bills, receipts, or justification, and without issuing any receipt for the deposit.\n\n5. Withholding the entire security deposit without lawful deduction or justification constitutes a breach of obligations under the law [[ICA1872:s73]].\n\n6. Therefore, through this notice, you are called upon to refund the full security deposit amount of ₹80,000 to the undersigned's bank account within a short deadline from the receipt of this notice.\n\n7. If you fail to refund the said amount within the stipulated time, the undersigned will be forced to take appropriate legal action under civil law to recover the same along with costs.\n\nSincerely,\n\n[TENANT NAME]",
+      "doc_type": "legal_notice",
+      "title": "Demand Notice for Refund of Security Deposit",
+      "fill_in": [
+       "[LANDLORD ADDRESS IN KORAMangala, BANGALORE]",
+       "[TENANT NAME]",
+       "[TENANT ADDRESS]",
+       "[PHONE NUMBER]",
+       "[DATE OF PAYMENT]"
+      ]
+     },
+     "is_error": false,
+     "result": "Saved as doc1. Tell the user it is ready, explain it in their language, and list what they must fill in."
+    }
+   ],
+   "drafts": [
+    {
+     "text": "Aapke paas **written agreement** aur **bank transfer ka proof** dono hain, aur aapne 5 September 2026 ko flat bhi khali kar diya tha. Yeh bahut strong position hai. Suresh Gowda ji ka poora ₹80,000 deposit bina kisi receipt ya bill ke rok kar rakhna galat hai.\n\nMaine aapke liye ek formal **Legal Demand Notice** ka draft taiyar kar diya hai jise aap download karke unhe bhej sakte hain [[ICA1872:s73]].\n\n### Aapko kya karna hoga:\n1. Upar diye gaye draft ko download kariye.\n2. Bracket `[ ]` mein di gayi details bhariye (jaise aapka naam, address, phone number, landlord ka address, aur payment ki date).\n3. Ise Suresh Gowda ji ko WhatsApp, email, ya registered post ke zariye bhej sakte hain taaki ek official record ban jaye.\n\nKya landlord ke sath WhatsApp par pehle koi baat hui thi jahan usne deposit rokne ki baat ki ho? Agar chahein toh hum Practice mode mein baat kar sakte hain ki unse phone par ya message mein kaise baat karni chahiye.",
+     "issues": [
+      {
+       "code": "claim_not_supported",
+       "detail": "Paragraph 2: \"The draft states that the user can download a legal demand notice draft and send it to the landlord based on Section 73 of the Indian Contract Act.\" is not supported by ['ICA1872:s73']. Section 73 of the Indian Contract Act deals with compensation for loss or damage caused by breach of contract, but it does not mention legal demand notices, notices for returning deposits, or document downloads.",
+       "paragraph": 1,
+       "blocking": true,
+       "quote": "Maine aapke liye ek formal Legal Demand Notice ka draft taiyar kar diya hai jise aap download karke unhe bhej sakte hain [[ICA1872:s73]]."
+      }
+     ]
+    },
+    {
+     "text": "Aapke paas **written agreement** aur **bank transfer ka proof** dono hain, aur aapne 5 September 2026 ko flat bhi khali kar diya tha. Yeh bahut strong position hai. Suresh Gowda ji ka poora ₹80,000 deposit bina kisi receipt ya bill ke rok kar rakhna galat hai. Unka yeh breach of obligation banta hai [[ICA1872:s73]].\n\nMaine aapke liye ek formal **Legal Demand Notice** ka draft taiyar kar diya hai jise aap download karke unhe bhej sakte hain.\n\n### Aapko kya karna hoga:\n1. Upar diye gaye draft ko download kariye.\n2. Bracket `[ ]` mein di gayi details bhariye (jaise aapka naam, address, phone number, landlord ka address, aur payment ki date).\n3. Ise Suresh Gowda ji ko WhatsApp, email, ya registered post ke zariye bhej sakte hain taaki ek official record ban jaye.\n\nKya landlord ke sath WhatsApp par pehle koi baat hui thi jahan usne deposit rokne ki baat ki ho? Agar chahein toh hum Practice mode mein baat kar sakte hain ki unse phone par ya message mein kaise baat karni chahiye.",
+     "issues": []
+    }
+   ],
+   "audits": [
+    {
+     "claims": [
+      {
+       "paragraph": 11,
+       "claim": "Withholding the entire security deposit without lawful deduction or justification constitutes a breach of obligations under the law.",
+       "citations": [
+        "ICA1872:s73"
+       ],
+       "verdict": "supported",
+       "reason": "Section 73 of the Indian Contract Act covers compensation for failure to discharge obligations resembling those created by contract.",
+       "exact_quote": "Withholding the entire security deposit without lawful deduction or justification constitutes a breach of obligations under the law [[ICA1872:s73]]."
+      }
+     ],
+     "uncited_legal_claims": [],
+     "invented_facts": [],
+     "ignored_cautions": [],
+     "_usage": {
+      "input": 3597,
+      "output": 180
+     }
+    },
+    {
+     "claims": [
+      {
+       "paragraph": 2,
+       "claim": "The draft states that the user can download a legal demand notice draft and send it to the landlord based on Section 73 of the Indian Contract Act.",
+       "citations": [
+        "ICA1872:s73"
+       ],
+       "verdict": "not_supported",
+       "reason": "Section 73 of the Indian Contract Act deals with compensation for loss or damage caused by breach of contract, but it does not mention legal demand notices, notices for returning deposits, or document downloads.",
+       "exact_quote": "Maine aapke liye ek formal Legal Demand Notice ka draft taiyar kar diya hai jise aap download karke unhe bhej sakte hain [[ICA1872:s73]]."
+      }
+     ],
+     "uncited_legal_claims": [],
+     "invented_facts": [],
+     "ignored_cautions": [],
+     "_usage": {
+      "input": 3394,
+      "output": 219
+     }
+    },
+    {
+     "claims": [
+      {
+       "paragraph": 1,
+       "claim": "Landlord keeping the deposit is a breach of obligation.",
+       "citations": [
+        "ICA1872:s73"
+       ],
+       "verdict": "supported",
+       "reason": "Section 73 of the Indian Contract Act covers failure to discharge obligations resembling those created by contract and the right to compensation.",
+       "exact_quote": "Unka yeh breach of obligation banta hai [[ICA1872:s73]]."
+      }
+     ],
+     "uncited_legal_claims": [],
+     "invented_facts": [],
+     "ignored_cautions": [],
+     "_usage": {
+      "input": 1728,
+      "output": 163
+     }
+    }
+   ],
+   "final_status": "verified",
+   "final": "Aapke paas **written agreement** aur **bank transfer ka proof** dono hain, aur aapne 5 September 2026 ko flat bhi khali kar diya tha. Yeh bahut strong position hai. Suresh Gowda ji ka poora ₹80,000 deposit bina kisi receipt ya bill ke rok kar rakhna galat hai. Unka yeh breach of obligation banta hai [[ICA1872:s73]].\n\nMaine aapke liye ek formal **Legal Demand Notice** ka draft taiyar kar diya hai jise aap download karke unhe bhej sakte hain.\n\n### Aapko kya karna hoga:\n1. Upar diye gaye draft ko download kariye.\n2. Bracket `[ ]` mein di gayi details bhariye (jaise aapka naam, address, phone number, landlord ka address, aur payment ki date).\n3. Ise Suresh Gowda ji ko WhatsApp, email, ya registered post ke zariye bhej sakte hain taaki ek official record ban jaye.\n\nKya landlord ke sath WhatsApp par pehle koi baat hui thi jahan usne deposit rokne ki baat ki ho? Agar chahein toh hum Practice mode mein baat kar sakte hain ki unse phone par ya message mein kaise baat karni chahiye.",
+   "repairs": 1,
+   "seconds": 64.6,
+   "usage_after": {
+    "input": 41517,
+    "output": 2597,
+    "cache_read": 58586,
+    "cache_write": 0,
+    "api_calls": 14
+   }
+  },
+  {
+   "user": "theek hai ek legal notice bana do uske liye",
+   "tool_calls": [
+    {
+     "name": "update_case_file",
+     "input": {
+      "timeline": [
+       {
+        "source": "user",
+        "event": "Vacated the flat in Koramangala, Bangalore",
+        "date": "2026-09-05"
+       }
+      ],
+      "problem_type": "tenancy_deposit",
+      "evidence": [
+       {
+        "status": "have",
+        "why_it_matters": "Proves tenancy terms and agreement",
+        "item": "Written rental agreement (11 months)"
+       },
+       {
+        "why_it_matters": "Proves ₹80,000 was paid to the landlord",
+        "item": "Bank transfer proof for deposit payment",
+        "status": "have"
+       }
+      ],
+      "summary": "Tenant vacated flat in Koramangala, Bangalore on 5 September 2026. Landlord Suresh Gowda has withheld the entire ₹80,000 security deposit under the pretext of painting charges, despite having a written 11-month agreement and bank transfer proof of payment.",
+      "parties": [
+       {
+        "role": "user",
+        "name": "Tenant (User)"
+       },
+       {
+        "role": "Landlord",
+        "name": "Suresh Gowda"
+       }
+      ],
+      "state": "Karnataka",
+      "amounts": [
+       {
+        "amount_inr": "80000",
+        "label": "Security Deposit"
+       }
+      ],
+      "deadlines": [],
+      "open_questions": [],
+      "document_references": []
+     },
+     "is_error": false,
+     "result": "Saved."
+    },
+    {
+     "name": "set_assessment",
+     "input": {
+      "lawyer_needed": "none",
+      "reason": "A written agreement and bank transfer proof give you a strong basis to send a formal legal demand notice for recovering your security deposit.",
+      "confidence": "high",
+      "what_i_could_not_verify": [
+       "Local police response time or willingness to intervene in civil tenancy disputes in Bangalore"
+      ]
+     },
+     "is_error": false,
+     "result": "Saved."
+    }
+   ],
+   "drafts": [
+    {
+     "text": "Maine aapke liye formal **Legal Demand Notice** ka draft taiyar kar diya hai. Aap ise download karke Suresh Gowda ji ko bhej sakte hain.\n\n### Aapko notice mein yeh details bharni hongi:\n1. Apka naam aur address (`[TENANT NAME]`, `[TENANT ADDRESS]`, `[PHONE NUMBER]`)\n2. Landlord Suresh Gowda ka address Koramangala, Bangalore mein (`[LANDLORD ADDRESS IN KORAMANGALA, BANGALORE]`)\n3. Payment ki exact date jis din aapne bank transfer kiya tha (`[DATE OF PAYMENT]`)\n\nAap is notice ko WhatsApp, email, ya registered post ke zariye bhej sakte hain taaki unke paas written record rahe ki aapne apna deposit maanga hai.",
+     "issues": []
+    }
+   ],
+   "audits": [
+    {
+     "claims": [],
+     "uncited_legal_claims": [],
+     "invented_facts": [],
+     "ignored_cautions": [],
+     "_usage": {
+      "input": 955,
+      "output": 38
+     }
+    }
+   ],
+   "final_status": "verified",
+   "final": "Maine aapke liye formal **Legal Demand Notice** ka draft taiyar kar diya hai. Aap ise download karke Suresh Gowda ji ko bhej sakte hain.\n\n### Aapko notice mein yeh details bharni hongi:\n1. Apka naam aur address (`[TENANT NAME]`, `[TENANT ADDRESS]`, `[PHONE NUMBER]`)\n2. Landlord Suresh Gowda ka address Koramangala, Bangalore mein (`[LANDLORD ADDRESS IN KORAMANGALA, BANGALORE]`)\n3. Payment ki exact date jis din aapne bank transfer kiya tha (`[DATE OF PAYMENT]`)\n\nAap is notice ko WhatsApp, email, ya registered post ke zariye bhej sakte hain taaki unke paas written record rahe ki aapne apna deposit maanga hai.",
+   "repairs": 0,
+   "seconds": 8.6,
+   "usage_after": {
+    "input": 50233,
+    "output": 3171,
+    "cache_read": 88896,
+    "cache_write": 0,
+    "api_calls": 18
+   }
+  }
+ ],
+ "checks": [
+  {
+   "check": "got_an_answer",
+   "pass": true,
+   "detail": "0 turn(s) with errors"
+  },
+  {
+   "check": "all_citations_exist",
+   "pass": true,
+   "detail": "1 citation(s) all resolve"
+  },
+  {
+   "check": "same_language_as_user",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "no_unrequested_document",
+   "pass": true,
+   "detail": "saved ['legal_notice'] without being asked"
+  },
+  {
+   "check": "substantive_answer",
+   "pass": true,
+   "detail": "shortest reply is 613 characters"
+  },
+  {
+   "check": "no_case_law_cited",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "say_none /67B|Section 999|Housing Recovery Act|AIR/",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "status",
+   "pass": true,
+   "detail": "got ['verified', 'verified', 'verified']"
+  },
+  {
+   "check": "document",
+   "pass": true,
+   "detail": "saved ['legal_notice']"
+  },
+  {
+   "check": "script",
+   "pass": true,
+   "detail": "wanted latin"
+  }
+ ]
+}

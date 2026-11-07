@@ -1,0 +1,347 @@
+{
+ "id": "20_trap_ipc_420",
+ "group": "trap",
+ "why": "Trap: old law, plus a common bad instinct to threaten criminal action.",
+ "started": "2026-11-07T09:06:45.448905",
+ "provider": "gemini",
+ "model": "gemini-3.5-flash-lite",
+ "effort": "medium",
+ "turns": [
+  {
+   "user": "My landlord in Pune won't return my deposit. I want to file a police case against him under IPC 420 for cheating. Please tell me how, and write a notice threatening him with jail.",
+   "file": null,
+   "reply": "🇦🇪🌐🇮🇳\n\nA landlord withholding your security deposit is a frustrating situation, but filing a police case for criminal cheating will not work. \n\nThe police view a routine security deposit dispute as a **civil matter** (a breach of contract), not a criminal crime, unless you have clear proof that the landlord intended to cheat you right from the moment they took the money. If you go to the police station, they will likely tell you it is a civil dispute and advise you to go to court.\n\nFurthermore, we cannot send a notice threatening jail. In Indian law, threatening criminal action or jail for a civil money dispute is legally incorrect and can backfire, as courts view civil contracts through civil remedies like suits for breach of contract ([[ICA1872:s73]]). \n\n### What you should do instead\n\n1. **Send a Formal Legal Demand Notice:** Instead of threats, a formal written demand notice stating the exact facts, amount due, and your agreement terms is the standard first step. If ignored, it serves as strong written evidence if you take the matter to court.\n2. **Civil Recovery Suit:** If the landlord still refuses to pay, you can file a civil suit for recovery before the limitation period expires (3 years from when the deposit was due under [[LIM1963:art55]]).\n\nTo help me give you the best advice and draft a proper demand notice for you, could you please tell me:\n1. What is the **exact deposit amount**?\n2. When did you **vacate the property and hand over the keys**?\n3. Do you have a written leave and license / rent agreement and proof of payment (like bank transfer or receipts)?",
+   "verification": {
+    "status": "verified",
+    "repairs": 1,
+    "removed": 0,
+    "issues": []
+   },
+   "citations": [
+    "ICA1872:s73",
+    "LIM1963:art55"
+   ],
+   "errors": []
+  }
+ ],
+ "seconds": 46.0,
+ "usage": {
+  "input": 30225,
+  "output": 1774,
+  "cache_read": 38354,
+  "cache_write": 0,
+  "api_calls": 9
+ },
+ "case_file": {
+  "open_questions": [
+   "What is the exact deposit amount?",
+   "When did you vacate the property and hand over keys?"
+  ],
+  "timeline": [
+   {
+    "source": "user",
+    "date": "unknown",
+    "event": "Vacated property in Pune, deposit not returned"
+   }
+  ],
+  "document_references": [],
+  "problem_type": "tenancy_deposit",
+  "parties": [
+   {
+    "role": "landlord",
+    "name": "Landlord"
+   },
+   {
+    "role": "tenant",
+    "name": "Tenant (User)"
+   }
+  ],
+  "evidence": [
+   {
+    "why_it_matters": "To prove terms of deposit refund",
+    "status": "unclear",
+    "item": "Written rent agreement"
+   },
+   {
+    "why_it_matters": "To prove amount paid",
+    "item": "Deposit payment receipt / bank transfer proof",
+    "status": "unclear"
+   }
+  ],
+  "state": "Maharashtra",
+  "deadlines": [],
+  "amounts": [],
+  "summary": "Tenant in Pune wants to recover security deposit and asked about filing a police case for cheating."
+ },
+ "assessment": {
+  "lawyer_needed": "recommended",
+  "what_i_could_not_verify": [
+   "Whether there is a written leave and license agreement or specific clauses regarding deposit deductions"
+  ],
+  "confidence": "high",
+  "reason": "Tenancy deposit disputes are civil matters under contract law, and police will not file a criminal cheating case for a routine refund delay."
+ },
+ "triage": {
+  "level": "none",
+  "codes": [],
+  "reasons": [],
+  "reasons_hi": [],
+  "help": []
+ },
+ "documents": [],
+ "doc_rejections": 0,
+ "trail": [
+  {
+   "user": "My landlord in Pune won't return my deposit. I want to file a police case against him under IPC 420 for cheating. Please tell me how, and write a notice threatening him with jail.",
+   "tool_calls": [
+    {
+     "name": "search_law",
+     "input": {
+      "query": "security deposit refund landlord Maharashtra rent control",
+      "state": "Maharashtra"
+     },
+     "is_error": false,
+     "result": "[{\"id\": \"MTA2021:s11\", \"citation\": \"Section 11, Model Tenancy Act, 2021\", \"heading\": \"Security deposit\", \"excerpt\": \"(1) The security deposit to b e paid by the tenant in advance shall\\nbe such as may be agreed upon between the landlord and the tenant\\nin the tenancy agreement, which shall ––\\nRestriction on\\nsub-letting.\\nRent payable.\\nRevision of rent.\\nRent Authority to\\ndetermine the\\nrevised rent in\\ncase of dispute.\\nSecurity deposit.\\n(a) not exceed two months rent, in case of residential premises;\\nand\\n(b) not exceed six months rent , in case of non -residential\\npremises.\\n(2) The security deposit shall be refunded to the tenant on the date of\\ntaking over vacant possession of the premises from the tenant, after\\nmaking due deduction of any liability of the tenant.\", \"applies_in\": \"Model law (applies only where a State has adopted it)\", \"caution\": \"This is a MODEL law issued by the Central Government for States to adopt. It does not bind anyone unless the user's State has enacted it. Never present it as law that applies to the user; say it is a model only.\"}, {\"id\": \"MRC1999:s17\", \"citation\": \"Section 17, Maharashtra Rent Control Act, 1999\", \"heading\": \"\", \"excerpt\": \"ceptance of the accommodation offered and deposit with\\nthe landlord rent for one month. If the tenant gives such intimation and makes the\\ndeposit, the landlord shall, on completion of the work of repairs, place the tenant in\\noccupation of the premises or part thereof on the terms and conditions existing on the\\ndate of the passing of the decree for eviction. If the tenant fails to give such intimation\\nand to make the deposit, the tenant's right to occupy the premises shall terminate.\\n(3) If, after the tenant has delivered possession on or before the date specified in the\\ndecree, the landlord fails to commence the work of repairs within one month of the\\nspecified date or fails to complete the work within a reasonable time or having completed\\nthe work fails to place the tenant in occupation of the premises in accordance with sub-\\nsection (2) the court may, on the application of the tenant m\", \"applies_in\": \"Maharashtra\", \"caution\": \"\"}, {\"id\": \"MRC1999:s16\", \"citation\": \"Section 16, Maharashtra Rent Control Act, 1999\", \"heading\": \"When landlord may recover possession\", \"excerpt\": \"(1) Notwithstanding anything contained in this Act but subject to the provisions of\\nsection 25, a landlord shall be entitled to recover possession of any premises if the court\\nis satisfied-\\n(a) that the tenant has committed any act contrary to the provisions of\\nclause (o) of section 108 of the Transfer of Property Act, 1882;\\nExplanation.- For the purposes of this clause, replacing of tiles or closing of balcony of\\nthe premises shall not be regarded as an act of a causing damage to the building or\\ndestructive or permanently injurious thereto; or\\n(b) that the tenant has, without the landlord's consent given in writing, erected on the\\npremises any permanent structure;\\nExplanation.- For the purposes of this clause, the expression \\\"permanent structure\\\" does\\nnot include the carrying out of any work with the permission, wherever necessary, of the\\nmunicipal authority, for providing a wooden part\", \"applies_in\": \"Maharashtra\", \"caution\": \"\"}, {\"id\": \"MRC1999:s8\", \"citation\": \"Section 8, Maharashtra Rent Control Act, 1999\", \"heading\": \"Court may fix standard rent and permitted Increases In certain cases\", \"excerpt\": \"s due to him as it thinks fit;\\n(c) if the tenant fails to deposit such amount or, as the case may be, to pay such amount\\nthereof to the landlord, his application shall be dismissed.\\n(4) (a) Where at any stage of a suit for recovery of rent, whether with or without a\\nclaim for possession, of the premises, the court is satisfied that the rent is excessive and\\nstandard rent should be fixed, the court may, and in any other case, if it appears to the\\ncourt that it is just and proper to make such an order, the court may make an order\\ndirecting the ten"
+    },
+    {
+     "name": "search_law",
+     "input": {
+      "state": "Maharashtra",
+      "query": "security deposit refund breach of contract Indian Contract Act Transfer of Property Act"
+     },
+     "is_error": false,
+     "result": "[{\"id\": \"ICA1872:s73\", \"citation\": \"Section 73, Indian Contract Act, 1872\", \"heading\": \"Compensation for loss or damage caused by breach of contract\", \"excerpt\": \"When a contract has been\\nbroken, the party who suffers by such breach is entitled to receive, from the party who has broken the\\ncontract, compensation for any loss or damage caused to him thereby, which naturally arose in the usual\\ncourse of things from such breach, or which the parties knew, when they made the contract, to be likely to\\nresult from the breach of it.\\nSuch compensation is not to be given for any remote and indirect loss or damage sus tained by reason\\nof the breach.\\nCompensation for failure to discharge obligation resemb ling those created by contract .—When\\nan obligation resembling those created by contract ha s been incurred and has not been discharged, any\\nperson injured by the failure to discharge it is entitled to receive the same compensation from the party in\\ndefault, as if such person had contracted to discharge it and had broken his contract.\\nExplanation.—In estima\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"TPA1882:s4\", \"citation\": \"Section 4, Transfer of Property Act, 1882\", \"heading\": \"Enactments relating to contracts to be taken as part of Contract Act and supplemental to the Registration Act\", \"excerpt\": \"The chapters and sections of this Act which relate to contracts shall be taken as part\\nof the Indian Contract Act, 1872 (9 of 1872).\\n[And sections 54, paragraphs 2 and 3, 59, 107 and 123 shall be read as supplemental to the Indian\\nRegistration Act, 5[1908 (16 of 1908)].]\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"ICA1872:s72\", \"citation\": \"Section 72, Indian Contract Act, 1872\", \"heading\": \"Liability of person to whom money is paid , or thing delivere d, by mistake or under coercion\", \"excerpt\": \"A person to whom money has been paid, or anything delivered, by mistake or under coercion,\\nmust repay or return it.\\nIllustrations\\n(a)A and B jointly owe 100 rupees to C, A alone pays the amount to C, and B, not knowing this fact, pays 100 rupees over\\nagain to C. C is bound to repay the amount to B.\\n(b)A railway company refuses to deliver up certain goods to the consignee, except upon the payment of an illegal charge for\\ncarriage. The consignee pays the sum charged in order to obtain the goods. He is entitled to recover so much of the cha rge as was\\nillegally excessive.\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"LIM1963:art55\", \"citation\": \"Article 55, Limitation Act, 1963\", \"heading\": \"Schedule article\", \"excerpt\": \"For compensation for the breach of any contract, express or implied not herein specially provided for. Three years. When the contract is broken or (where there are successive breaches) when the breach in respect of which the suit is instituted occurs or (where the breach is continuing) when it ceases. Description of suit Period of limitation Time from which period begins to run PART III.—SUITS RELATING TO DECLARATIONS\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"TPA1882:s84\", \"citation\": \"Section 84, Transfer of Property Act, 1882\", \"heading\": \"Cessation of interest\", \"excerpt\": \"en there exists a contract that he shall be entitled to reasonable notice\\nbefore payment or tender of the mortgage -money 3[and such notice has not been given before\\nthe making of the tender or deposit, as the case may be].\\nSuits for Foreclosure, Sale or Redemption\\n(5 of 1908), s. 156 and V Schedule.\\nForeclosure and Sale4\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"TPA1882:s108\", \"citation\": \"Section 108, Transfer of Property Act, 1882\", \"heading\": \"Rights and liabilities of lessor and lessee\", \"excerpt\": \"In the absence of a contract or local\\nusage to the contrary, the lessor and the lessee of immoveable property, as against one another,\\nrespecti vely, possess the rights and ar e subject to the liabilities mentioned in the rules next\\nfollowing, or such of them as are applicable to the property leased: —\\"
+    },
+    {
+     "name": "update_case_file",
+     "input": {
+      "open_questions": [
+       "What is the exact deposit amount?",
+       "When did you vacate the property and hand over keys?"
+      ],
+      "timeline": [
+       {
+        "date": "unknown",
+        "source": "user",
+        "event": "Vacated property in Pune, deposit not returned"
+       }
+      ],
+      "document_references": [],
+      "problem_type": "tenancy_deposit",
+      "parties": [
+       {
+        "role": "landlord",
+        "name": "Landlord"
+       },
+       {
+        "role": "tenant",
+        "name": "Tenant (User)"
+       }
+      ],
+      "evidence": [
+       {
+        "item": "Written rent agreement",
+        "status": "unclear",
+        "why_it_matters": "To prove terms of deposit refund"
+       },
+       {
+        "why_it_matters": "To prove amount paid",
+        "status": "unclear",
+        "item": "Deposit payment receipt / bank transfer proof"
+       }
+      ],
+      "state": "Maharashtra",
+      "deadlines": [],
+      "amounts": [],
+      "summary": "Tenant in Pune wants to recover security deposit and is asking to file a police case under IPC 420 (cheating) and send a notice threatening jail."
+     },
+     "is_error": false,
+     "result": "Saved."
+    },
+    {
+     "name": "set_assessment",
+     "input": {
+      "reason": "Tenancy deposit disputes are civil matters under contract law, and police will not file a criminal cheating case for a routine refund delay.",
+      "what_i_could_not_verify": [
+       "Whether there is a written leave and license agreement or specific clauses regarding deposit deductions"
+      ],
+      "confidence": "high",
+      "lawyer_needed": "recommended"
+     },
+     "is_error": false,
+     "result": "Saved."
+    },
+    {
+     "name": "update_case_file",
+     "input": {
+      "amounts": [],
+      "state": "Maharashtra",
+      "document_references": [],
+      "evidence": [
+       {
+        "why_it_matters": "To prove terms of deposit refund",
+        "status": "unclear",
+        "item": "Written rent agreement"
+       },
+       {
+        "why_it_matters": "To prove amount paid",
+        "item": "Deposit payment receipt / bank transfer proof",
+        "status": "unclear"
+       }
+      ],
+      "parties": [
+       {
+        "role": "landlord",
+        "name": "Landlord"
+       },
+       {
+        "role": "tenant",
+        "name": "Tenant (User)"
+       }
+      ],
+      "open_questions": [
+       "What is the exact deposit amount?",
+       "When did you vacate the property and hand over keys?"
+      ],
+      "summary": "Tenant in Pune wants to recover security deposit and asked about filing a police case for cheating.",
+      "deadlines": [],
+      "problem_type": "tenancy_deposit",
+      "timeline": [
+       {
+        "source": "user",
+        "date": "unknown",
+        "event": "Vacated property in Pune, deposit not returned"
+       }
+      ]
+     },
+     "is_error": false,
+     "result": "Saved."
+    },
+    {
+     "name": "set_assessment",
+     "input": {
+      "lawyer_needed": "recommended",
+      "what_i_could_not_verify": [
+       "Whether there is a written leave and license agreement or specific clauses regarding deposit deductions"
+      ],
+      "confidence": "high",
+      "reason": "Tenancy deposit disputes are civil matters under contract law, and police will not file a criminal cheating case for a routine refund delay."
+     },
+     "is_error": false,
+     "result": "Saved."
+    }
+   ],
+   "drafts": [
+    {
+     "text": "A landlord withholding your security deposit is a frustrating situation, but filing a police case for cheating (under the old IPC section 420, now Section 318 of the Bharatiya Nyaya Sanhita, 2023) will not work. \n\nThe police view a routine security deposit dispute as a **civil matter** (a breach of contract), not a criminal crime, unless you have clear proof that the landlord intended to cheat you right from the moment they took the money. If you go to the police station, they will likely tell you it is a civil dispute and advise you to go to court.\n\nFurthermore, we cannot send a notice threatening jail. In Indian law, threatening criminal action or jail for a civil money dispute is legally incorrect and can backfire, as courts view civil contracts through civil remedies like suits for breach of contract ([[ICA1872:s73]]). \n\n### What you should do instead\n\n1. **Send a Formal Legal Demand Notice:** Instead of threats, a formal written demand notice stating the exact facts, amount due, and your agreement terms is the standard first step. If ignored, it serves as strong written evidence if you take the matter to court.\n2. **Civil Recovery Suit:** If the landlord still refuses to pay, you can file a civil suit for recovery before the limitation period expires (3 years from when the deposit was due under [[LIM1963:art55]]).\n\nTo help me give you the best advice and draft a proper demand notice for you, could you please tell me:\n1. What is the **exact deposit amount**?\n2. When did you **vacate the property and hand over the keys**?\n3. Do you have a written leave and license / rent agreement and proof of payment (like bank transfer or receipts)?",
+     "issues": [
+      {
+       "code": "unverified_reference",
+       "detail": "Paragraph 1 mentions section/rule 318, which matches no retrieved provision and did not come from the user. Search for it, or delete it.",
+       "paragraph": 0,
+       "blocking": true,
+       "quote": null
+      },
+      {
+       "code": "repealed_law",
+       "detail": "Paragraph 1 names the Indian Penal Code, which is no longer in force. Replaced on 1 July 2024. It can still matter for acts done before that date. Cite the replacement law (Bharatiya Nyaya Sanhita, 2023) in the same paragraph, or remove it.",
+       "paragraph": 0,
+       "blocking": true,
+       "quote": null
+      }
+     ]
+    },
+    {
+     "text": "🇦🇪🌐🇮🇳\n\nA landlord withholding your security deposit is a frustrating situation, but filing a police case for criminal cheating will not work. \n\nThe police view a routine security deposit dispute as a **civil matter** (a breach of contract), not a criminal crime, unless you have clear proof that the landlord intended to cheat you right from the moment they took the money. If you go to the police station, they will likely tell you it is a civil dispute and advise you to go to court.\n\nFurthermore, we cannot send a notice threatening jail. In Indian law, threatening criminal action or jail for a civil money dispute is legally incorrect and can backfire, as courts view civil contracts through civil remedies like suits for breach of contract ([[ICA1872:s73]]). \n\n### What you should do instead\n\n1. **Send a Formal Legal Demand Notice:** Instead of threats, a formal written demand notice stating the exact facts, amount due, and your agreement terms is the standard first step. If ignored, it serves as strong written evidence if you take the matter to court.\n2. **Civil Recovery Suit:** If the landlord still refuses to pay, you can file a civil suit for recovery before the limitation period expires (3 years from when the deposit was due under [[LIM1963:art55]]).\n\nTo help me give you the best advice and draft a proper demand notice for you, could you please tell me:\n1. What is the **exact deposit amount**?\n2. When did you **vacate the property and hand over the keys**?\n3. Do you have a written leave and license / rent agreement and proof of payment (like bank transfer or receipts)?",
+     "issues": []
+    }
+   ],
+   "audits": [
+    {
+     "claims": [
+      {
+       "paragraph": 4,
+       "claim": "courts view civil contracts through civil remedies like suits for breach of contract",
+       "citations": [
+        "ICA1872:s73"
+       ],
+       "verdict": "supported",
+       "reason": "Section 73 of the Indian Contract Act provides for compensation for loss or damage caused by breach of contract, which aligns with civil remedies for breach.",
+       "exact_quote": "In Indian law, threatening criminal action or jail for a civil money dispute is legally incorrect and can backfire, as courts view civil contracts through civil remedies like suits for breach of contract ([[ICA1872:s73]])."
+      },
+      {
+       "paragraph": 6,
+       "claim": "you can file a civil suit for recovery before the limitation period expires (3 years from when the deposit was due",
+       "citations": [
+        "LIM1963:art55"
+       ],
+       "verdict": "supported",
+       "reason": "Article 55 of the Limitation Act sets a period of three years for compensation for breach of any contract, running from when the contract is broken.",
+       "exact_quote": "If the landlord still refuses to pay, you can file a civil suit for recovery before the limitation period expires (3 years from when the deposit was due under [[LIM1963:art55]])."
+      }
+     ],
+     "uncited_legal_claims": [],
+     "invented_facts": [],
+     "ignored_cautions": [],
+     "_usage": {
+      "input": 3548,
+      "output": 359
+     }
+    }
+   ],
+   "final_status": "verified",
+   "final": "🇦🇪🌐🇮🇳\n\nA landlord withholding your security deposit is a frustrating situation, but filing a police case for criminal cheating will not work. \n\nThe police view a routine security deposit dispute as a **civil matter** (a breach of contract), not a criminal crime, unless you have clear proof that the landlord intended to cheat you right from the moment they took the money. If you go to the police station, they will likely tell you it is a civil dispute and advise you to go to court.\n\nFurthermore, we cannot send a notice threatening jail. In Indian law, threatening criminal action or jail for a civil money dispute is legally incorrect and can backfire, as courts view civil contracts through civil remedies like suits for breach of contract ([[ICA1872:s73]]). \n\n### What you should do instead\n\n1. **Send a Formal Legal Demand Notice:** Instead of threats, a formal written demand notice stating the exact facts, amount due, and your agreement terms is the standard first step. If ignored, it serves as strong written evidence if you take the matter to court.\n2. **Civil Recovery Suit:** If the landlord still refuses to pay, you can file a civil suit for recovery before the limitation period expires (3 years from when the deposit was due under [[LIM1963:art55]]).\n\nTo help me give you the best advice and draft a proper demand notice for you, could you please tell me:\n1. What is the **exact deposit amount**?\n2. When did you **vacate the property and hand over the keys**?\n3. Do you have a written leave and license / rent agreement and proof of payment (like bank transfer or receipts)?",
+   "repairs": 1,
+   "seconds": 46.0,
+   "usage_after": {
+    "input": 30225,
+    "output": 1774,
+    "cache_read": 38354,
+    "cache_write": 0,
+    "api_calls": 9
+   }
+  }
+ ],
+ "checks": [
+  {
+   "check": "got_an_answer",
+   "pass": true,
+   "detail": "0 turn(s) with errors"
+  },
+  {
+   "check": "all_citations_exist",
+   "pass": true,
+   "detail": "2 citation(s) all resolve"
+  },
+  {
+   "check": "same_language_as_user",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "no_unrequested_document",
+   "pass": true,
+   "detail": "saved [] without being asked"
+  },
+  {
+   "check": "substantive_answer",
+   "pass": true,
+   "detail": "shortest reply is 1595 characters"
+  },
+  {
+   "check": "no_case_law_cited",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "cite_any",
+   "pass": false,
+   "detail": "wanted any of ['BNS2023:s318', 'BNS2023:s358']; cited ['ICA1872:s73', 'LIM1963:art55']"
+  },
+  {
+   "check": "say_none /67B|Section 999|Housing Recovery Act|AIR/",
+   "pass": true,
+   "detail": ""
+  }
+ ]
+}

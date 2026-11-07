@@ -1,0 +1,696 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Haqdaar: legal help you can check</title>
+<style>
+:root {
+  --paper: #faf7f1; --card: #ffffff; --ink: #1d2823; --muted: #5d6a63; --line: #e3ded3;
+  --accent: #0f5c4a; --accent-ink: #ffffff; --accent-soft: #e4f0ec;
+  --amber: #8a5a00; --amber-soft: #fbf1da; --red: #a4231c; --red-soft: #fbe6e3;
+  --you: #e9efe9; --shadow: 0 1px 2px rgba(29,40,35,.06), 0 6px 20px rgba(29,40,35,.05);
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", "Noto Sans Devanagari", "Noto Sans Tamil", "Noto Sans Bengali", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --paper: #141a17; --card: #1c2420; --ink: #e8ece9; --muted: #a0aca5; --line: #303a35;
+    --accent: #5cc4a8; --accent-ink: #0c1512; --accent-soft: #1d3029;
+    --amber: #e7bd6b; --amber-soft: #33291a; --red: #f29a92; --red-soft: #3a1f1c; --you: #25302b; --shadow: none; }
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body { background: var(--paper); color: var(--ink); font: 16px/1.55 var(--sans); display: flex; flex-direction: column; }
+button, select, textarea, input { font: inherit; color: inherit; }
+button { cursor: pointer; }
+button:focus-visible, select:focus-visible, textarea:focus-visible, input:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+header { display: flex; align-items: center; gap: 12px; padding: 10px 18px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+.brand { font: 600 22px/1 var(--serif); letter-spacing: .2px; }
+.tagline { color: var(--muted); font-size: 13.5px; }
+header .right { margin-left: auto; display: flex; align-items: center; gap: 8px; }
+select { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 6px 8px; }
+
+.notice { padding: 10px 18px; font-size: 14.5px; border-bottom: 1px solid var(--line); background: var(--amber-soft); color: var(--amber); }
+.notice code { font-size: 13px; }
+#triage { display: none; padding: 12px 18px; background: var(--amber-soft); color: var(--amber); border-bottom: 1px solid var(--line); }
+#triage.emergency { background: var(--red-soft); color: var(--red); }
+#triage strong { display: block; margin-bottom: 2px; }
+#triage a { color: inherit; font-weight: 700; }
+#triage ul { margin: 4px 0 0; padding-left: 18px; }
+#triage { max-height: 38vh; overflow-y: auto; flex: none; }
+
+main { flex: 1; display: grid; grid-template-columns: minmax(0, 1fr) 370px; min-height: 0; }
+#chatPane { display: flex; flex-direction: column; min-height: 0; border-right: 1px solid var(--line); }
+#messages { flex: 1; overflow-y: auto; padding: 22px 18px; }
+.column { max-width: 720px; margin: 0 auto; }
+
+.welcome h1 { font: 500 29px/1.25 var(--serif); margin: 8px 0 8px; }
+.welcome p { color: var(--muted); margin: 0 0 16px; }
+.starters { display: grid; grid-template-columns: repeat(auto-fit, minmax(235px, 1fr)); gap: 10px; }
+.starter { text-align: left; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; box-shadow: var(--shadow); }
+.starter:hover { border-color: var(--accent); }
+.starter b { display: block; font-weight: 600; margin-bottom: 2px; }
+.starter span { color: var(--muted); font-size: 14px; }
+
+.msg { margin: 0 0 18px; }
+.msg.you { display: flex; justify-content: flex-end; }
+.msg.you .bubble { background: var(--you); border-radius: 14px 14px 4px 14px; padding: 9px 13px; max-width: 85%; white-space: pre-wrap; overflow-wrap: anywhere; }
+.msg.ai .bubble { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 12px 16px; box-shadow: var(--shadow); overflow-wrap: anywhere; }
+.bubble p { margin: 0 0 10px; }
+.bubble p:last-child { margin-bottom: 0; }
+.bubble ul, .bubble ol { margin: 4px 0 10px; padding-left: 22px; }
+.bubble h3 { font: 600 16.5px var(--serif); margin: 12px 0 4px; }
+.cite { display: inline; border: 0; background: var(--accent-soft); color: var(--accent); border-radius: 6px; padding: 1px 6px; margin: 0 1px; font-size: 13px; font-weight: 600; white-space: normal; text-align: left; }
+.cite:hover { text-decoration: underline; }
+.meta { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-top: 8px; font-size: 13px; color: var(--muted); }
+.badge { display: inline-flex; align-items: center; gap: 5px; padding: 2px 8px; border-radius: 99px; background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+.badge.warn { background: var(--amber-soft); color: var(--amber); }
+.badge.stop { background: var(--red-soft); color: var(--red); }
+.link { background: none; border: 0; padding: 0; color: var(--muted); text-decoration: underline; font-size: 13px; }
+.progress { color: var(--muted); font-size: 14.5px; padding: 4px 2px 12px; display: flex; gap: 9px; align-items: center; }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: var(--accent); animation: pulse 1.1s ease-in-out infinite; flex: none; }
+@keyframes pulse { 0%,100% { opacity: .3; } 50% { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .dot { animation: none; } }
+
+#composer { border-top: 1px solid var(--line); padding: 10px 18px 12px; background: var(--paper); }
+#practiceBar { display: none; align-items: center; gap: 10px; flex-wrap: wrap; padding: 8px 12px; margin-bottom: 8px; border-radius: 10px; background: var(--amber-soft); color: var(--amber); font-size: 14px; }
+#practiceBar button { margin-left: auto; background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 4px 10px; color: var(--ink); }
+.attached { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 6px; }
+.chip { background: var(--card); border: 1px solid var(--line); border-radius: 99px; padding: 2px 10px; font-size: 13px; }
+.chip button { border: 0; background: none; padding: 0 0 0 6px; color: var(--muted); }
+.inputRow { display: flex; gap: 6px; align-items: flex-end; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 6px; }
+.inputRow:focus-within { border-color: var(--accent); }
+textarea { flex: 1; border: 0; background: transparent; resize: none; padding: 7px 6px; max-height: 160px; outline: none; min-width: 0; }
+.iconBtn { width: 40px; height: 40px; flex: none; border-radius: 10px; border: 0; background: transparent; display: grid; place-items: center; color: var(--muted); }
+.iconBtn:hover { background: var(--you); color: var(--ink); }
+.iconBtn.on { background: var(--red-soft); color: var(--red); }
+.iconBtn svg { width: 21px; height: 21px; }
+#send { background: var(--accent); color: var(--accent-ink); }
+#send:hover { background: var(--accent); color: var(--accent-ink); opacity: .9; }
+#send:disabled { opacity: .45; cursor: default; }
+.fine { font-size: 12.5px; color: var(--muted); margin-top: 6px; }
+
+aside { display: flex; flex-direction: column; min-height: 0; background: var(--paper); }
+.tabs { display: flex; border-bottom: 1px solid var(--line); }
+.tabs button { flex: 1; border: 0; background: none; padding: 11px 6px; color: var(--muted); border-bottom: 2px solid transparent; font-weight: 600; font-size: 14.5px; }
+.tabs button[aria-selected="true"] { color: var(--accent); border-bottom-color: var(--accent); }
+.panel { flex: 1; overflow-y: auto; padding: 14px 16px; display: none; }
+.panel.active { display: block; }
+.panel h2 { font: 600 16px var(--serif); margin: 16px 0 6px; }
+.panel h2:first-child { margin-top: 0; }
+.empty { color: var(--muted); font-size: 14.5px; }
+.tl { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--line); }
+.tl li { padding: 0 0 10px 12px; position: relative; font-size: 14.5px; }
+.tl li::before { content: ""; position: absolute; left: -6px; top: 7px; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); }
+.tl .when { font-size: 12.5px; color: var(--muted); font-weight: 600; display: block; }
+.ev { display: flex; gap: 8px; font-size: 14.5px; padding: 4px 0; }
+.ev .tag { flex: none; font-size: 11.5px; font-weight: 700; padding: 1px 7px; border-radius: 99px; height: fit-content; margin-top: 2px; }
+.tag.have { background: var(--accent-soft); color: var(--accent); }
+.tag.missing { background: var(--red-soft); color: var(--red); }
+.tag.unclear { background: var(--amber-soft); color: var(--amber); }
+.ev small { color: var(--muted); display: block; }
+.row { display: flex; justify-content: space-between; gap: 10px; font-size: 14.5px; padding: 3px 0; border-bottom: 1px dashed var(--line); }
+.dl { background: var(--amber-soft); color: var(--amber); padding: 7px 10px; border-radius: 8px; font-size: 14px; margin-bottom: 6px; }
+.docCard { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 11px 13px; margin-bottom: 10px; box-shadow: var(--shadow); }
+.docCard b { display: block; }
+.docCard .acts { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+.btn { border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 6px 11px; font-size: 14px; text-decoration: none; color: var(--ink); display: inline-block; }
+.btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.field { display: block; margin-bottom: 12px; font-size: 14.5px; }
+.field input, .field select { display: block; width: 100%; margin-top: 4px; padding: 8px 10px; background: var(--card); border: 1px solid var(--line); border-radius: 8px; }
+.src { font-size: 13.5px; padding: 6px 0; border-bottom: 1px solid var(--line); }
+.src a { color: var(--accent); }
+.src small { color: var(--muted); display: block; }
+
+dialog { border: 1px solid var(--line); border-radius: 14px; background: var(--card); color: var(--ink); max-width: 660px; width: calc(100% - 32px); padding: 0; max-height: 85vh; }
+dialog::backdrop { background: rgba(0,0,0,.45); }
+.dHead { position: sticky; top: 0; background: var(--card); padding: 14px 18px 10px; border-bottom: 1px solid var(--line); display: flex; gap: 10px; align-items: flex-start; }
+.dHead h2 { font: 600 17px/1.3 var(--serif); margin: 0; flex: 1; }
+.dHead button { border: 0; background: none; font-size: 22px; line-height: 1; color: var(--muted); padding: 0 4px; }
+.dBody { padding: 12px 18px 18px; }
+.lawtext { white-space: pre-wrap; font: 15px/1.6 var(--serif); overflow-wrap: anywhere; }
+.caution { background: var(--amber-soft); color: var(--amber); border-radius: 8px; padding: 8px 11px; font-size: 14px; margin-bottom: 10px; }
+.prov { font-size: 13px; color: var(--muted); margin-top: 12px; border-top: 1px solid var(--line); padding-top: 8px; }
+.prov a { color: var(--accent); }
+
+#mobileNav { display: none; }
+@media (max-width: 860px) {
+  main { grid-template-columns: minmax(0, 1fr); }
+  #chatPane { border-right: 0; }
+  aside { display: none; }
+  body[data-view="file"] aside { display: flex; }
+  body[data-view="file"] #chatPane { display: none; }
+  #mobileNav { display: flex; border-top: 1px solid var(--line); background: var(--card); }
+  #mobileNav button { flex: 1; border: 0; background: none; padding: 11px; font-weight: 600; color: var(--muted); }
+  #mobileNav button[aria-selected="true"] { color: var(--accent); }
+  .tagline { display: none; }
+  .welcome h1 { font-size: 24px; }
+  #messages { padding: 16px; }
+  #composer { padding: 8px 16px 10px; }
+  header { padding: 8px 16px; }
+  .notice, #triage { padding-left: 16px; padding-right: 16px; }
+}
+</style>
+</head>
+<body data-view="chat">
+<header>
+  <div class="brand">Haqdaar</div>
+  <div class="tagline" id="tagline">Legal help for everyday problems. Every law it cites, you can check.</div>
+  <div class="right">
+    <label for="lang" class="tagline" style="display:none">Language</label>
+    <select id="lang" aria-label="Language"></select>
+  </div>
+</header>
+<div id="keyNotice" class="notice" style="display:none"></div>
+<div id="triage" role="alert"></div>
+<main>
+  <section id="chatPane" aria-label="Conversation">
+    <div id="messages" aria-live="polite"><div class="column" id="thread"></div></div>
+    <div id="composer"><div class="column">
+      <div id="practiceBar"><span id="practiceLabel"></span><button id="endPractice" type="button"></button></div>
+      <div class="attached" id="attached"></div>
+      <div class="inputRow">
+        <input type="file" id="file" accept="application/pdf,image/jpeg,image/png,image/webp,text/plain" hidden>
+        <button class="iconBtn" id="attach" type="button" title="Add a photo or PDF" aria-label="Add a photo or PDF">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11.5 12.2 19.3a5 5 0 0 1-7-7l8.1-8.1a3.3 3.3 0 0 1 4.7 4.7l-8.1 8.1a1.7 1.7 0 0 1-2.4-2.4l7.4-7.4"/></svg>
+        </button>
+        <textarea id="input" rows="1" aria-label="Your message"></textarea>
+        <button class="iconBtn" id="mic" type="button" title="Speak" aria-label="Speak">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
+        </button>
+        <button class="iconBtn" id="send" type="button" title="Send" aria-label="Send">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+      <div class="fine" id="fine"></div>
+    </div></div>
+  </section>
+  <aside aria-label="Your case">
+    <div class="tabs" role="tablist">
+      <button role="tab" data-tab="case" aria-selected="true" id="tabCase"></button>
+      <button role="tab" data-tab="docs" aria-selected="false" id="tabDocs"></button>
+      <button role="tab" data-tab="practice" aria-selected="false" id="tabPractice"></button>
+      <button role="tab" data-tab="library" aria-selected="false" id="tabLibrary"></button>
+    </div>
+    <div class="panel active" id="panel-case"></div>
+    <div class="panel" id="panel-docs"></div>
+    <div class="panel" id="panel-practice"></div>
+    <div class="panel" id="panel-library"></div>
+  </aside>
+</main>
+<nav id="mobileNav">
+  <button data-view="chat" aria-selected="true" id="navChat"></button>
+  <button data-view="file" aria-selected="false" id="navFile"></button>
+</nav>
+<dialog id="dialog"><div class="dHead"><h2 id="dTitle"></h2><button id="dClose" type="button" aria-label="Close">×</button></div><div class="dBody" id="dBody"></div></dialog>
+
+<script>
+const LANGS = [
+  ["en-IN", "English"], ["hi-IN", "हिन्दी"], ["hi-EN", "Hinglish"], ["bn-IN", "বাংলা"], ["ta-IN", "தமிழ்"], ["te-IN", "తెలుగు"],
+  ["mr-IN", "मराठी"], ["gu-IN", "ગુજરાતી"], ["kn-IN", "ಕನ್ನಡ"], ["ml-IN", "മലയാളം"], ["pa-IN", "ਪੰਜਾਬੀ"], ["ur-IN", "اردو"],
+];
+const EN = {
+  tagline: "Legal help for everyday problems. Every law it cites, you can check.",
+  welcome: "Tell me what happened, in your own words.",
+  welcomeSub: "A deposit, a refund, unpaid salary, a notice you don't understand. Type or speak in your language. It doesn't need to be neat. I'll help you sort it out.",
+  placeholder: "Tell me what happened…",
+  fine: "AI, not a lawyer. It gives information from the law text and tells you when you need a real lawyer. Don't rely on it alone for a court case.",
+  s: [["Landlord kept my deposit", "I left my flat 3 months ago and the landlord won't return my ₹40,000 deposit."],
+      ["A refund never came", "I returned a phone I bought online a month ago. The refund still hasn't come and support ignores me."],
+      ["My salary stopped", "My company hasn't paid my salary for 3 months. They keep saying next month."],
+      ["I got a notice I don't understand", "I got a legal notice and I don't understand it. I'll upload it. What does it mean and what should I do?"]],
+  case: "Case file", docs: "Documents", practice: "Practice", library: "Library", chat: "Chat", file: "My case",
+  caseEmpty: "As you talk, your story gets organised here: what happened and when, what proof you have, and what's still missing.",
+  docsEmpty: "When you're ready, ask for a legal notice, a complaint or a reply. Drafts appear here to download.",
+  stands: "Where you stand", tl: "What happened", money: "Money involved", ev: "Your proof", dl: "Deadlines", open: "Still need to know", refs: "Laws named in your document", couldnt: "What I couldn't verify",
+  conf: {high: "Law is clear on this", medium: "Law partly settles this", low: "Law I can verify doesn't settle this"},
+  lawyer: {none: "A lawyer isn't essential yet", recommended: "A lawyer is a good idea", urgent: "See a lawyer now", emergency: "Get help now"},
+  have: "have", missing: "missing", unclear: "unclear",
+  v: {verified: "Citations and claims checked", verified_with_removals: "Some parts removed: could not verify", citations_checked_only: "Citations checked; deeper check unavailable", blocked: "Could not verify", refused: "Could not answer"},
+  details: "what was checked", listen: "Listen", stop: "Stop", erase: "Erase my case", erased: "Your case was erased from this computer.",
+  source: "Government source", sourceCopy: "Non-government copy of the source", page: "page", retrieved: "retrieved",
+  prIntro: "Rehearse the hard conversation. I'll play the other side and push back, then coach you afterwards. This is a simulation, not legal advice.",
+  prRole: "Who should I play?", prRoleDefault: "landlord", prStyle: "How should they behave?",
+  polite: "Polite, but keeps delaying", tough: "Rude: “go to court then”", bluffing: "Bluffs with wrong claims about the law",
+  prStart: "Start practice", prNeed: "Tell me about your problem first, so I can play the other side properly.",
+  prBar: "Practice with your {role}. This is a simulation.", prEnd: "End and get feedback", prSay: "Say what you would say to them…",
+  micNo: "Voice input isn't available in this browser. Chrome or Edge work best.", micDenied: "Microphone access was blocked. Allow it in your browser, or type instead.", micOn: "Listening… tap again to stop",
+  err: "Something went wrong. Please try again.", tooBig: "That file is too large. Please use one under 10 MB.", typeBad: "Please use a PDF, a photo or a text file.",
+  fillIn: "Before you send, fill in or check:", dlWord: "Download Word", view: "View", copied: "Copied", copy: "Copy text",
+  libIntro: "These are the only laws I can rely on. Each is stored from a source file, with its address and date, and every citation opens the exact text. Anything else, including court judgments, I tell you I can't verify.",
+  provisions: "provisions", noKey: "The AI isn't connected yet. Add DEEPSEEK_API_KEY, GEMINI_API_KEY, XAI_API_KEY or ANTHROPIC_API_KEY to the .env file and restart the server. You can still browse the library.",
+  scripted: "SCRIPTED DEMO: the replies here are pre-written to show the screens. The real AI isn't being used.",
+  whyTitle: "How this answer was checked", whyBody: "Every citation was matched to the law library. Each time limit and amount was traced to the cited law or to what you said. Then a separate check compared each claim with the exact text cited.",
+  whyFix: "My first draft had problems, so it was rejected and rewritten {n} time(s) before you saw it.",
+  whyRemoved: "Parts I couldn't verify were removed, and I've told you where.", whyAudit: "The deeper claim check couldn't run for this answer, so only the citations and numbers were checked. Take extra care.",
+  safety: "Please read this first", hide: "Hide", show: "Show",
+};
+const HI = {...EN,
+  tagline: "रोज़मर्रा की कानूनी समस्याओं में मदद। हर कानून जिसका हवाला दिया जाता है, आप खुद देख सकते हैं।",
+  welcome: "बताइए क्या हुआ, अपने शब्दों में।",
+  welcomeSub: "जमा राशि, रिफंड, रुकी हुई सैलरी, समझ न आने वाला नोटिस। अपनी भाषा में लिखें या बोलें। ठीक से लिखना ज़रूरी नहीं। हम मिलकर समझ लेंगे।",
+  placeholder: "बताइए क्या हुआ…",
+  fine: "यह AI है, वकील नहीं। यह कानून के मूल पाठ से जानकारी देता है और बताता है कि वकील की ज़रूरत कब है। अदालती मामले में सिर्फ़ इस पर निर्भर न रहें।",
+  s: [["मकान मालिक ने डिपॉजिट नहीं लौटाया", "मैंने 3 महीने पहले मकान खाली किया और मकान मालिक मेरा 40,000 रुपये का डिपॉजिट वापस नहीं कर रहा।"],
+      ["रिफंड नहीं आया", "मैंने एक महीने पहले ऑनलाइन खरीदा फोन लौटाया। रिफंड अब तक नहीं आया और सपोर्ट जवाब नहीं देता।"],
+      ["सैलरी रुक गई", "मेरी कंपनी ने 3 महीने से सैलरी नहीं दी। हर बार कहते हैं अगले महीने।"],
+      ["नोटिस समझ नहीं आ रहा", "मुझे एक कानूनी नोटिस मिला है और मुझे समझ नहीं आ रहा। मैं अपलोड करता हूं। इसका क्या मतलब है और मुझे क्या करना चाहिए?"]],
+  case: "केस फ़ाइल", docs: "दस्तावेज़", practice: "अभ्यास", library: "कानून", chat: "बातचीत", file: "मेरा केस",
+  caseEmpty: "जैसे-जैसे आप बताएंगे, आपकी बात यहां व्यवस्थित होती जाएगी: क्या हुआ, कब हुआ, आपके पास क्या सबूत है और क्या बाकी है।",
+  docsEmpty: "जब तैयार हों, कानूनी नोटिस, शिकायत या जवाब मांगें। ड्राफ़्ट यहां डाउनलोड के लिए मिलेंगे।",
+  stands: "आपकी स्थिति", tl: "क्या हुआ", money: "रकम", ev: "आपके सबूत", dl: "समय सीमा", open: "अभी जानना बाकी है", refs: "आपके दस्तावेज़ में लिखे कानून", couldnt: "जो मैं सत्यापित नहीं कर सका",
+  conf: {high: "कानून इस पर स्पष्ट है", medium: "कानून आंशिक रूप से स्पष्ट है", low: "जो कानून मैं देख सकता हूं, वह इसे तय नहीं करता"},
+  lawyer: {none: "अभी वकील ज़रूरी नहीं", recommended: "वकील से बात करना अच्छा रहेगा", urgent: "तुरंत वकील से मिलें", emergency: "तुरंत मदद लें"},
+  have: "है", missing: "नहीं है", unclear: "पता नहीं",
+  v: {verified: "हवाले और दावे जांचे गए", verified_with_removals: "कुछ हिस्से हटाए गए: पुष्टि नहीं हो सकी", citations_checked_only: "हवाले जांचे गए; गहरी जांच उपलब्ध नहीं", blocked: "पुष्टि नहीं हो सकी", refused: "उत्तर नहीं दे सका"},
+  details: "क्या जांचा गया", listen: "सुनें", stop: "रोकें", erase: "मेरा केस मिटाएं", erased: "आपका केस इस कंप्यूटर से मिटा दिया गया।",
+  source: "सरकारी स्रोत", sourceCopy: "स्रोत की गैर-सरकारी प्रति", page: "पृष्ठ", retrieved: "प्राप्त",
+  prIntro: "मुश्किल बातचीत का अभ्यास करें। मैं दूसरे पक्ष की भूमिका निभाऊंगा, फिर आपको सुझाव दूंगा। यह एक अभ्यास है, कानूनी सलाह नहीं।",
+  prRole: "मैं किसकी भूमिका निभाऊं?", prRoleDefault: "मकान मालिक", prStyle: "उनका व्यवहार कैसा हो?",
+  polite: "विनम्र, पर टालते रहते हैं", tough: "रूखे: “कोर्ट चले जाओ”", bluffing: "कानून के बारे में गलत दावे करते हैं",
+  prStart: "अभ्यास शुरू करें", prNeed: "पहले अपनी समस्या बताइए, ताकि मैं दूसरे पक्ष की भूमिका ठीक से निभा सकूं।",
+  prBar: "आपके {role} के साथ अभ्यास। यह सिर्फ़ अभ्यास है।", prEnd: "खत्म करें और सुझाव पाएं", prSay: "आप उनसे क्या कहेंगे…",
+  micNo: "इस ब्राउज़र में आवाज़ से लिखना उपलब्ध नहीं है। Chrome या Edge बेहतर हैं।", micDenied: "माइक्रोफ़ोन की अनुमति नहीं मिली। ब्राउज़र में अनुमति दें या टाइप करें।", micOn: "सुन रहा हूं… रोकने के लिए फिर दबाएं",
+  err: "कुछ गड़बड़ हुई। कृपया फिर कोशिश करें।", tooBig: "फ़ाइल बहुत बड़ी है। 10 MB से छोटी फ़ाइल दें।", typeBad: "कृपया PDF, फ़ोटो या टेक्स्ट फ़ाइल दें।",
+  fillIn: "भेजने से पहले भरें या जांचें:", dlWord: "Word डाउनलोड करें", view: "देखें", copied: "कॉपी हुआ", copy: "टेक्स्ट कॉपी करें",
+  libIntro: "मैं सिर्फ़ इन्हीं कानूनों पर भरोसा कर सकता हूं। हर कानून एक स्रोत फ़ाइल से लिया गया है, उसके पते और तारीख के साथ, और हर हवाला सटीक पाठ खोलता है। इसके बाहर की बातें, अदालती फैसलों समेत, मैं बता देता हूं कि सत्यापित नहीं कर सकता।",
+  provisions: "प्रावधान",
+  whyTitle: "इस उत्तर की जांच कैसे हुई", whyBody: "हर हवाले का मिलान कानूनों की लाइब्रेरी से किया गया। हर समय सीमा और रकम को उद्धृत कानून या आपकी बताई बात से जोड़ा गया। फिर एक अलग जांच में हर दावे की तुलना सटीक पाठ से की गई।",
+  whyFix: "मेरे पहले मसौदे में गलतियां थीं, इसलिए आपके देखने से पहले उसे {n} बार दोबारा लिखा गया।",
+  whyRemoved: "जिन हिस्सों की पुष्टि नहीं हो सकी, वे हटा दिए गए।", whyAudit: "इस उत्तर के लिए दावों की गहरी जांच नहीं हो सकी, सिर्फ़ हवाले और संख्याएं जांची गईं। अतिरिक्त सावधानी बरतें।",
+  safety: "कृपया पहले यह पढ़ें", hide: "छिपाएं", show: "दिखाएं",
+};
+
+const $ = id => document.getElementById(id);
+const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+const state = { session: null, busy: false, files: [], caseFile: {}, assessment: null, documents: [], practice: null, api: false, scripted: false, lang: "en-IN" };
+const T = () => state.lang.startsWith("hi") ? HI : EN;
+const store = { get(k) { try { return localStorage.getItem(k); } catch { return null; } }, set(k, v) { try { localStorage.setItem(k, v); } catch {} }, del(k) { try { localStorage.removeItem(k); } catch {} } };
+
+function applyLanguage() {
+  const t = T();
+  $("tagline").textContent = t.tagline;
+  $("input").placeholder = state.practice ? t.prSay : t.placeholder;
+  $("fine").textContent = t.fine;
+  $("tabCase").textContent = t.case; $("tabDocs").textContent = t.docs; $("tabPractice").textContent = t.practice; $("tabLibrary").textContent = t.library;
+  $("navChat").textContent = t.chat; $("navFile").textContent = t.file;
+  $("endPractice").textContent = t.prEnd;
+  document.documentElement.lang = state.lang.split("-")[0];
+  document.documentElement.dir = state.lang.startsWith("ur") ? "rtl" : "ltr";
+  if (!$("thread").querySelector(".msg")) renderWelcome();
+  renderCase(); renderDocs(); renderPractice(); renderLibrary(); renderNotice();
+}
+
+function renderNotice() {
+  const n = $("keyNotice");
+  if (state.scripted) { n.textContent = T().scripted; n.style.display = "block"; }
+  else if (!state.api) { n.textContent = T().noKey; n.style.display = "block"; }
+  else n.style.display = "none";
+}
+
+function renderWelcome() {
+  const t = T(), box = $("thread");
+  box.replaceChildren();
+  const w = el("div", "welcome");
+  w.append(el("h1", null, t.welcome), el("p", null, t.welcomeSub));
+  const grid = el("div", "starters");
+  t.s.forEach(([title, text]) => {
+    const b = el("button", "starter"); b.type = "button";
+    b.append(el("b", null, title), el("span", null, text));
+    b.onclick = () => { $("input").value = text; autoGrow(); $("input").focus(); };
+    grid.append(b);
+  });
+  w.append(grid); box.append(w);
+}
+
+/* Model text is never inserted as HTML. It is parsed into DOM nodes, so a hostile document can't inject markup. */
+function inline(parent, text, citations) {
+  const parts = text.split(/(\[\[[A-Za-z0-9]+:[A-Za-z0-9_]+\]\]|\*\*[^*]+\*\*)/g);
+  for (const part of parts) {
+    if (!part) continue;
+    const c = part.match(/^\[\[(.+)\]\]$/);
+    const b = part.match(/^\*\*(.+)\*\*$/);
+    if (c) {
+      const rec = citations.find(r => r.id === c[1]);
+      const btn = el("button", "cite", rec ? (rec.short || rec.label) : c[1]);
+      btn.type = "button"; btn.onclick = () => openCitation(c[1]);
+      parent.append(btn);
+    } else if (b) parent.append(el("strong", null, b[1]));
+    else parent.append(document.createTextNode(part));
+  }
+}
+function renderRich(container, text, citations = []) {
+  for (const block of text.split(/\n\s*\n/)) {
+    const lines = block.split("\n").filter(l => l.trim());
+    const isItem = l => /^\s*([-*•]|\d+[.)])\s+/.test(l);
+    /* A block can mix a lead-in line with a list, so group consecutive lines by kind. */
+    for (let i = 0; i < lines.length;) {
+      if (isItem(lines[i])) {
+        const list = el(/^\s*\d/.test(lines[i]) ? "ol" : "ul");
+        while (i < lines.length && isItem(lines[i])) {
+          const li = el("li"); inline(li, lines[i].replace(/^\s*([-*•]|\d+[.)])\s+/, ""), citations); list.append(li); i++;
+        }
+        container.append(list);
+      } else if (/^#{1,4}\s/.test(lines[i])) {
+        const h = el("h3"); inline(h, lines[i].replace(/^#+\s*/, ""), citations); container.append(h); i++;
+      } else {
+        const p = el("p"); let first = true;
+        while (i < lines.length && !isItem(lines[i]) && !/^#{1,4}\s/.test(lines[i])) {
+          if (!first) p.append(el("br"));
+          inline(p, lines[i], citations); first = false; i++;
+        }
+        container.append(p);
+      }
+    }
+  }
+}
+
+function addYou(text, fileNames = []) {
+  const welcome = $("thread").querySelector(".welcome"); if (welcome) welcome.remove();
+  const m = el("div", "msg you"), b = el("div", "bubble", text);
+  if (fileNames.length) b.append(el("div", "fine", "📎 " + fileNames.join(", ")));
+  m.append(b); $("thread").append(m); scrollDown();
+}
+function addAI(text, citations = [], verification = null, labelOpponent = false) {
+  const m = el("div", "msg ai"), b = el("div", "bubble");
+  renderRich(b, text, citations); m.append(b);
+  const meta = el("div", "meta");
+  if (verification) {
+    const t = T(), s = verification.status;
+    const cls = s === "verified" ? "badge" : s === "blocked" || s === "refused" ? "badge stop" : "badge warn";
+    meta.append(el("span", cls, (s === "verified" ? "✓ " : "") + (t.v[s] || s)));
+    const why = el("button", "link", t.details); why.type = "button"; why.onclick = () => explainCheck(verification, citations); meta.append(why);
+  }
+  if (labelOpponent) meta.append(el("span", "badge warn", T().practice));
+  if ("speechSynthesis" in window) {
+    const say = el("button", "link", T().listen); say.type = "button";
+    say.onclick = () => speak(text, say); meta.append(say);
+  }
+  m.append(meta); $("thread").append(m); scrollDown();
+}
+function scrollDown() { const m = $("messages"); m.scrollTop = m.scrollHeight; }
+
+function speak(text, button) {
+  const synth = window.speechSynthesis, t = T();
+  if (synth.speaking) { synth.cancel(); button.textContent = t.listen; return; }
+  const clean = text.replace(/\[\[[^\]]+\]\]/g, "").replace(/[*#]/g, "");
+  const u = new SpeechSynthesisUtterance(clean);
+  u.lang = state.lang === "hi-EN" ? "hi-IN" : state.lang;
+  const voice = synth.getVoices().find(v => v.lang === u.lang) || synth.getVoices().find(v => v.lang.startsWith(u.lang.split("-")[0]));
+  if (voice) u.voice = voice;
+  u.onend = () => { button.textContent = t.listen; };
+  button.textContent = t.stop; synth.speak(u);
+}
+
+function showDialog(title, build) {
+  $("dTitle").textContent = title; const body = $("dBody"); body.replaceChildren(); build(body); $("dialog").showModal();
+}
+async function openCitation(id) {
+  const t = T();
+  try {
+    const r = await fetch("/api/citation/" + encodeURIComponent(id));
+    if (!r.ok) throw 0;
+    const rec = await r.json();
+    showDialog(rec.label, body => {
+      if (rec.caution) body.append(el("div", "caution", rec.caution));
+      if (rec.heading) { const h = el("p"); h.append(el("strong", null, rec.heading)); body.append(h); }
+      body.append(el("div", "lawtext", rec.text));
+      const p = el("div", "prov");
+      const a = el("a", null, rec.mirror ? t.sourceCopy : t.source); a.href = rec.url; a.target = "_blank"; a.rel = "noopener noreferrer"; p.append(a);
+      p.append(document.createTextNode(`${rec.page ? ` · ${t.page} ${rec.page}` : ""}${rec.retrieved ? ` · ${t.retrieved} ${rec.retrieved}` : ""}`));
+      body.append(p);
+    });
+  } catch { showDialog(id, b => b.append(el("p", null, t.err))); }
+}
+function explainCheck(v, citations) {
+  const t = T();
+  showDialog(t.whyTitle, body => {
+    body.append(el("p", null, v.status === "citations_checked_only" ? t.whyAudit : t.whyBody));
+    if (v.repairs) body.append(el("p", null, t.whyFix.replace("{n}", v.repairs)));
+    if (v.status === "verified_with_removals") body.append(el("p", null, t.whyRemoved));
+    if (citations.length) {
+      const list = el("ul");
+      citations.forEach(c => { const li = el("li"); const b = el("button", "cite", c.label); b.type = "button"; b.onclick = () => { $("dialog").close(); openCitation(c.id); }; li.append(b); list.append(li); });
+      body.append(list);
+    }
+  });
+}
+
+function renderTriage(tr) {
+  const box = $("triage"), t = T();
+  if (!tr || tr.level === "none" || tr.level === "recommended") { box.style.display = "none"; return; }
+  box.className = tr.level === "emergency" ? "emergency" : "";
+  const hindi = state.lang.startsWith("hi");
+  const head = el("strong", null, t.safety);
+  const hide = el("button", "link", t.hide); hide.type = "button"; hide.style.color = "inherit"; hide.style.float = "right";
+  const details = el("div");
+  hide.onclick = () => { const closed = details.hidden = !details.hidden; hide.textContent = closed ? t.show : t.hide; };
+  box.replaceChildren(hide, head, details);
+  ((hindi && tr.reasons_hi && tr.reasons_hi.length) ? tr.reasons_hi : tr.reasons).forEach(r => details.append(el("div", null, r)));
+  if (tr.help_notes && tr.help_notes.length) {
+    const ul = el("ul");
+    tr.help_notes.forEach(n => {
+      const li = el("li");
+      ((hindi && n.text_hi) || n.text).split(/(\b\d{3,5}\b)/).forEach(part => {
+        if (/^\d{3,5}$/.test(part)) { const a = el("a", null, part); a.href = "tel:" + part; li.append(a); }
+        else li.append(document.createTextNode(part));
+      });
+      ul.append(li);
+    });
+    details.append(ul);
+  }
+  box.style.display = "block";
+}
+
+function renderCase() {
+  const p = $("panel-case"), t = T(), c = state.caseFile, a = state.assessment;
+  p.replaceChildren();
+  const empty = !a && !Object.keys(c).length;
+  if (empty) { p.append(el("p", "empty", t.caseEmpty)); return; }
+  if (a) {
+    p.append(el("h2", null, t.stands));
+    const cls = a.lawyer_needed === "none" ? "badge" : a.lawyer_needed === "recommended" ? "badge warn" : "badge stop";
+    const row = el("div", "meta"); row.append(el("span", cls, t.lawyer[a.lawyer_needed]), el("span", "badge warn", t.conf[a.confidence]));
+    p.append(row, el("p", null, a.reason));
+    if (a.what_i_could_not_verify && a.what_i_could_not_verify.length) {
+      p.append(el("h2", null, t.couldnt));
+      const ul = el("ul"); a.what_i_could_not_verify.forEach(x => ul.append(el("li", null, x))); p.append(ul);
+    }
+  }
+  if (c.summary) p.append(el("p", null, c.summary));
+  if (c.deadlines && c.deadlines.length) { p.append(el("h2", null, t.dl)); c.deadlines.forEach(d => p.append(el("div", "dl", `${d.date}: ${d.what}`))); }
+  if (c.timeline && c.timeline.length) {
+    p.append(el("h2", null, t.tl));
+    const ol = el("ol", "tl");
+    c.timeline.forEach(e => { const li = el("li"); li.append(el("span", "when", e.date), document.createTextNode(e.event)); ol.append(li); });
+    p.append(ol);
+  }
+  if (c.amounts && c.amounts.length) { p.append(el("h2", null, t.money)); c.amounts.forEach(x => { const r = el("div", "row"); r.append(el("span", null, x.label), el("b", null, x.amount_inr)); p.append(r); }); }
+  if (c.evidence && c.evidence.length) {
+    p.append(el("h2", null, t.ev));
+    c.evidence.forEach(e => { const r = el("div", "ev"); r.append(el("span", "tag " + e.status, t[e.status])); const d = el("div", null, e.item); d.append(el("small", null, e.why_it_matters)); r.append(d); p.append(r); });
+  }
+  if (c.open_questions && c.open_questions.length) { p.append(el("h2", null, t.open)); const ul = el("ul"); c.open_questions.forEach(q => ul.append(el("li", null, q))); p.append(ul); }
+  if (c.document_references && c.document_references.length) { p.append(el("h2", null, t.refs)); const ul = el("ul"); c.document_references.forEach(q => ul.append(el("li", null, q))); p.append(ul); }
+  if (state.session) {
+    const erase = el("button", "link", t.erase); erase.type = "button"; erase.style.marginTop = "18px"; erase.onclick = eraseCase; p.append(erase);
+  }
+}
+async function eraseCase() {
+  if (!state.session) return;
+  await fetch("/api/session/" + state.session, { method: "DELETE" }).catch(() => {});
+  store.del("session");
+  Object.assign(state, { session: null, caseFile: {}, assessment: null, documents: [], practice: null });
+  renderWelcome(); renderTriage(null); applyLanguage(); showDialog(T().erase, b => b.append(el("p", null, T().erased)));
+}
+
+function renderDocs() {
+  const p = $("panel-docs"), t = T();
+  p.replaceChildren();
+  if (!state.documents.length) { p.append(el("p", "empty", t.docsEmpty)); return; }
+  state.documents.forEach(d => {
+    const card = el("div", "docCard"); card.append(el("b", null, d.title));
+    if (d.fill_in && d.fill_in.length) { card.append(el("div", "fine", t.fillIn)); const ul = el("ul"); d.fill_in.forEach(x => ul.append(el("li", null, x))); card.append(ul); }
+    const acts = el("div", "acts");
+    const dl = el("a", "btn primary", t.dlWord); dl.href = `/api/session/${state.session}/document/${d.id}.docx`; acts.append(dl);
+    const v = el("button", "btn", t.view); v.type = "button"; v.onclick = () => showDialog(d.title, b => { const box = el("div"); renderRich(box, d.body, []); b.append(box); }); acts.append(v);
+    card.append(acts); p.append(card);
+  });
+}
+
+function renderPractice() {
+  const p = $("panel-practice"), t = T();
+  p.replaceChildren(el("p", null, t.prIntro));
+  if (!state.session) { p.append(el("p", "empty", t.prNeed)); return; }
+  const l1 = el("label", "field", t.prRole); const role = el("input"); role.value = t.prRoleDefault; l1.append(role);
+  const l2 = el("label", "field", t.prStyle); const style = el("select");
+  [["polite", t.polite], ["tough", t.tough], ["bluffing", t.bluffing]].forEach(([v, s]) => { const o = el("option", null, s); o.value = v; style.append(o); });
+  style.value = "tough"; l2.append(style);
+  const go = el("button", "btn primary", t.prStart); go.type = "button";
+  go.onclick = async () => {
+    const res = await fetch("/api/practice/start", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ session_id: state.session, role: role.value || t.prRoleDefault, style: style.value }) });
+    if (!res.ok) { addAI(t.err); return; }
+    state.practice = { role: role.value || t.prRoleDefault };
+    $("practiceLabel").textContent = t.prBar.replace("{role}", state.practice.role);
+    $("practiceBar").style.display = "flex"; $("input").placeholder = t.prSay;
+    setView("chat"); $("input").focus();
+  };
+  p.append(l1, l2, go);
+}
+
+let library = null;
+async function renderLibrary() {
+  const p = $("panel-library"), t = T();
+  p.replaceChildren(el("p", null, t.libIntro));
+  if (!library) return;
+  p.append(el("p", "fine", `${library.provisions.toLocaleString()} ${t.provisions}`));
+  library.sources.filter(s => s.provisions).forEach(s => {
+    const row = el("div", "src"); const a = el("a", null, s.title); a.href = s.url; a.target = "_blank"; a.rel = "noopener noreferrer"; row.append(a);
+    row.append(el("small", null, `${s.jurisdiction} · ${s.provisions} ${t.provisions} · ${t.retrieved} ${s.retrieved}`)); p.append(row);
+  });
+}
+
+async function readSSE(response, onEvent) {
+  const reader = response.body.getReader(), dec = new TextDecoder();
+  let buf = "";
+  for (;;) {
+    const { value, done } = await reader.read();
+    if (done) break;
+    buf += dec.decode(value, { stream: true });
+    let i;
+    while ((i = buf.indexOf("\n\n")) >= 0) {
+      const line = buf.slice(0, i); buf = buf.slice(i + 2);
+      if (line.startsWith("data: ")) onEvent(JSON.parse(line.slice(6)));
+    }
+  }
+}
+function setBusy(b) { state.busy = b; $("send").disabled = b; }
+function handleEvent(ev, progress) {
+  if (ev.type === "session") { state.session = ev.session_id; store.set("session", ev.session_id); renderPractice(); }
+  else if (ev.type === "status") progress.querySelector("span").textContent = ev.label + "…";
+  else if (ev.type === "triage") renderTriage(ev.triage);
+  else if (ev.type === "case_file") { state.caseFile = ev.case_file; renderCase(); }
+  else if (ev.type === "assessment") { state.assessment = ev.assessment; renderCase(); }
+  else if (ev.type === "document") { state.documents.push(ev.document); renderDocs(); }
+  else if (ev.type === "error") addAI(ev.message);
+  else if (ev.type === "final") {
+    addAI(ev.text, ev.citations, ev.verification);
+    state.caseFile = ev.case_file || {}; state.assessment = ev.assessment; state.documents = ev.documents || [];
+    renderCase(); renderDocs();
+  }
+}
+function showProgress() {
+  const p = el("div", "progress"); p.append(el("i", "dot"), el("span", null, "…"));
+  $("thread").append(p); scrollDown(); return p;
+}
+async function send() {
+  const text = $("input").value.trim();
+  if ((!text && !state.files.length) || state.busy) return;
+  const t = T(), files = state.files, message = text || "Please look at this document.";
+  $("input").value = ""; autoGrow(); state.files = []; renderAttached(); stopListening();
+  addYou(message, files.map(f => f.name)); setBusy(true);
+  const progress = showProgress();
+  try {
+    if (state.practice) {
+      const r = await fetch("/api/practice/say", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ session_id: state.session, message }) });
+      if (!r.ok) throw 0;
+      addAI((await r.json()).reply, [], null, true);
+    } else {
+      const r = await fetch("/api/chat", { method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ session_id: state.session, message, language: LANGS.find(l => l[0] === state.lang)[1], files }) });
+      if (!r.ok) { const e = await r.json().catch(() => ({})); addAI(e.detail || t.err); }
+      else await readSSE(r, ev => handleEvent(ev, progress));
+    }
+  } catch { addAI(t.err); }
+  progress.remove(); setBusy(false); scrollDown();
+}
+async function endPractice() {
+  if (!state.practice || state.busy) return;
+  const t = T(); setBusy(true); const progress = showProgress();
+  $("practiceBar").style.display = "none"; state.practice = null; $("input").placeholder = t.placeholder;
+  try {
+    const r = await fetch("/api/practice/debrief", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ session_id: state.session, message: "" }) });
+    if (!r.ok) throw 0;
+    await readSSE(r, ev => handleEvent(ev, progress));
+  } catch { addAI(t.err); }
+  progress.remove(); setBusy(false);
+}
+
+function autoGrow() { const i = $("input"); i.style.height = "auto"; i.style.height = Math.min(i.scrollHeight, 160) + "px"; }
+function renderAttached() {
+  const box = $("attached"); box.replaceChildren();
+  state.files.forEach((f, i) => { const c = el("span", "chip", f.name); const x = el("button", null, "×"); x.type = "button"; x.setAttribute("aria-label", "Remove " + f.name); x.onclick = () => { state.files.splice(i, 1); renderAttached(); }; c.append(x); box.append(c); });
+}
+function onFile(e) {
+  const f = e.target.files[0], t = T(); e.target.value = "";
+  if (!f) return;
+  if (f.size > 10 * 1024 * 1024) { addAI(t.tooBig); return; }
+  if (!["application/pdf", "image/jpeg", "image/png", "image/webp", "text/plain"].includes(f.type)) { addAI(t.typeBad); return; }
+  const reader = new FileReader();
+  reader.onload = () => { state.files.push({ name: f.name, media_type: f.type, data: String(reader.result).split(",")[1] }); renderAttached(); };
+  reader.readAsDataURL(f);
+}
+
+/* Voice uses the browser's own speech recognition, so no audio passes through this app's server. */
+const Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+let rec = null;
+function stopListening() { if (rec) { rec.stop(); rec = null; } $("mic").classList.remove("on"); $("mic").title = "Speak"; }
+function toggleMic() {
+  const t = T();
+  if (!Recognition) { addAI(t.micNo); return; }
+  if (rec) { stopListening(); return; }
+  rec = new Recognition();
+  rec.lang = state.lang === "hi-EN" ? "hi-IN" : state.lang; rec.continuous = true; rec.interimResults = true;
+  const base = $("input").value;
+  rec.onresult = e => { let s = ""; for (const r of e.results) s += r[0].transcript; $("input").value = (base ? base + " " : "") + s; autoGrow(); };
+  rec.onerror = e => { if (e.error === "not-allowed" || e.error === "service-not-allowed") addAI(t.micDenied); stopListening(); };
+  rec.onend = () => { if (rec) stopListening(); };
+  rec.start(); $("mic").classList.add("on"); $("mic").title = t.micOn;
+}
+
+function setView(v) {
+  document.body.dataset.view = v;
+  document.querySelectorAll("#mobileNav button").forEach(b => b.setAttribute("aria-selected", String(b.dataset.view === v)));
+}
+function setTab(name) {
+  document.querySelectorAll(".tabs button").forEach(b => b.setAttribute("aria-selected", String(b.dataset.tab === name)));
+  document.querySelectorAll(".panel").forEach(p => p.classList.toggle("active", p.id === "panel-" + name));
+}
+
+async function restoreSession() {
+  const id = store.get("session");
+  if (!id) return;
+  try {
+    const r = await fetch("/api/session/" + id);
+    if (!r.ok) { store.del("session"); return; }
+    const s = await r.json();
+    state.session = id; state.caseFile = s.case_file || {}; state.assessment = s.assessment; state.documents = s.documents || [];
+    s.turns.forEach(t => { if (t.user && t.user !== "[debrief request]") addYou(t.user); addAI(t.text, t.citations, t.verification); });
+    renderTriage(s.triage); renderCase(); renderDocs(); renderPractice();
+  } catch { /* A failed restore just starts a fresh conversation. */ }
+}
+
+function init() {
+  const sel = $("lang");
+  LANGS.forEach(([code, name]) => { const o = el("option", null, name); o.value = code; sel.append(o); });
+  const saved = store.get("lang");
+  state.lang = saved && LANGS.some(l => l[0] === saved) ? saved : "en-IN"; sel.value = state.lang;
+  sel.onchange = () => { state.lang = sel.value; store.set("lang", sel.value); applyLanguage(); };
+  $("send").onclick = send; $("attach").onclick = () => $("file").click(); $("file").onchange = onFile; $("mic").onclick = toggleMic;
+  $("endPractice").onclick = endPractice; $("dClose").onclick = () => $("dialog").close();
+  $("dialog").addEventListener("click", e => { if (e.target === $("dialog")) $("dialog").close(); });
+  $("input").addEventListener("input", autoGrow);
+  $("input").addEventListener("keydown", e => { if (e.key === "Enter" && !e.shiftKey && !e.isComposing) { e.preventDefault(); send(); } });
+  document.querySelectorAll(".tabs button").forEach(b => b.onclick = () => setTab(b.dataset.tab));
+  document.querySelectorAll("#mobileNav button").forEach(b => b.onclick = () => setView(b.dataset.view));
+  applyLanguage();
+  restoreSession();
+  fetch("/api/status").then(r => r.json()).then(s => {
+    library = s; state.api = s.api_ready; state.scripted = !!s.scripted; renderLibrary(); renderNotice();
+  }).catch(() => {});
+}
+init();
+</script>
+</body>
+</html>

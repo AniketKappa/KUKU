@@ -1,0 +1,27 @@
+{
+ "cautions": {
+  "CPA2019:s34": "The money limit printed in this section is out of date. Rule 3 of the Consumer Jurisdiction Rules 2021 sets the District Commission limit at fifty lakh rupees. Cite CPJUR2021:r3 for the limit.",
+  "CPA2019:s47": "The money limits printed in this section are out of date. Rule 4 of the Consumer Jurisdiction Rules 2021 sets the State Commission range. Cite CPJUR2021:r4 for the limits.",
+  "CPA2019:s58": "The money limits printed in this section are out of date. Rule 5 of the Consumer Jurisdiction Rules 2021 sets the National Commission limit. Cite CPJUR2021:r5 for the limit."
+ },
+ "source_cautions": {
+  "MTA2021": "This is a MODEL law issued by the Central Government for States to adopt. It does not bind anyone unless the user's State has enacted it. Never present it as law that applies to the user; say it is a model only.",
+  "COWR2026": "These Central Rules apply to central-sector establishments. Most private employers fall under the State Government's rules, which are NOT in this library. Say so when relevant.",
+  "DRC1958": "This text comes from an OCR scan and may contain small character errors. Tell the user to check the wording against the official text before relying on an exact quote. The Act's protections apply only to premises it covers (see its section 3).",
+  "COW2019": "In force since 21 November 2025. It replaced the Payment of Wages Act 1936. State wage rules, which set local claim procedure, are not in this library.",
+  "IRC2020": "In force since 21 November 2025. It replaced the Industrial Disputes Act 1947.",
+  "SSC2020": "In force since 21 November 2025. It replaced the Payment of Gratuity Act 1972 among others."
+ },
+ "repealed_laws": [
+  {"name":"Indian Penal Code","aliases":["IPC","I\\.P\\.C\\.","Indian Penal Code","भारतीय दंड संहिता","आईपीसी"],"successor":"BNS2023","proof":"BNS2023:s358","note":"Replaced on 1 July 2024. It can still matter for acts done before that date."},
+  {"name":"Code of Criminal Procedure, 1973","aliases":["CrPC","Cr\\.P\\.C\\.","Code of Criminal Procedure","सीआरपीसी","दंड प्रक्रिया संहिता"],"successor":"BNSS2023","proof":"BNSS2023:s531","note":"Replaced on 1 July 2024."},
+  {"name":"Indian Evidence Act, 1872","aliases":["Indian Evidence Act","Evidence Act,? 1872","भारतीय साक्ष्य अधिनियम, 1872"],"successor":"BSA2023","proof":"BSA2023:s170","note":"Replaced on 1 July 2024."},
+  {"name":"Payment of Wages Act, 1936","aliases":["Payment of Wages Act","वेतन भुगतान अधिनियम"],"successor":"COW2019","proof":"COW2019:s69","note":"Replaced on 21 November 2025."},
+  {"name":"Minimum Wages Act, 1948","aliases":["Minimum Wages Act","न्यूनतम वेतन अधिनियम"],"successor":"COW2019","proof":"COW2019:s69","note":"Replaced on 21 November 2025."},
+  {"name":"Payment of Bonus Act, 1965","aliases":["Payment of Bonus Act"],"successor":"COW2019","proof":"COW2019:s69","note":"Replaced on 21 November 2025."},
+  {"name":"Equal Remuneration Act, 1976","aliases":["Equal Remuneration Act"],"successor":"COW2019","proof":"COW2019:s69","note":"Replaced on 21 November 2025."},
+  {"name":"Industrial Disputes Act, 1947","aliases":["Industrial Disputes Act","औद्योगिक विवाद अधिनियम"],"successor":"IRC2020","proof":"IRC2020:s104","note":"Replaced on 21 November 2025."},
+  {"name":"Payment of Gratuity Act, 1972","aliases":["Payment of Gratuity Act","Gratuity Act"],"successor":"SSC2020","proof":"SSC2020:s164","note":"Replaced on 21 November 2025."},
+  {"name":"Consumer Protection Act, 1986","aliases":["Consumer Protection Act,? 1986"],"successor":"CPA2019","proof":"CPA2019:s107","note":"Replaced by the 2019 Act."}
+ ]
+}

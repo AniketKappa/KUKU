@@ -1,0 +1,286 @@
+{
+ "n_queries": 26,
+ "hybrid@3": {
+  "recall": 0.577,
+  "misses": [
+   {
+    "query": "owner kept my advance when I left the flat",
+    "wanted": [
+     "TNRRA2017:s11"
+    ],
+    "got": [
+     "CPC1908:o51",
+     "BNS2023:s314",
+     "BNSS2023:sch"
+    ]
+   },
+   {
+    "query": "can the house owner refuse to give back the advance money",
+    "wanted": [
+     "TNRRA2017:s11"
+    ],
+    "got": [
+     "MTA2021:s24",
+     "TNRRA2017:s24",
+     "TPA1882:s78"
+    ]
+   },
+   {
+    "query": "mera advance wapas nahi de raha owner",
+    "wanted": [
+     "TNRRA2017:s11"
+    ],
+    "got": [
+     "CPECOM2020:r7",
+     "TNRRA2017:s24",
+     "ICA1872:s159"
+    ]
+   },
+   {
+    "query": "airline cancelled flight and no money back",
+    "wanted": [
+     "CPA2019:s2",
+     "CPA2019:s35",
+     "CPA2019:s39"
+    ],
+    "got": [
+     "CPECOM2020:r7",
+     "ICA1872:s73",
+     "CPECOM2020:r6"
+    ]
+   },
+   {
+    "query": "how quickly must an online store answer my complaint",
+    "wanted": [
+     "CPECOM2020:r4",
+     "CPECOM2020:r6"
+    ],
+    "got": [
+     "CPA2019:s38",
+     "CPA2019:s69",
+     "CPCOMM2020:r12"
+    ]
+   },
+   {
+    "query": "boss is not giving my pay since January",
+    "wanted": [
+     "COW2019:s17",
+     "COW2019:s45"
+    ],
+    "got": [
+     "ICA1872:s73",
+     "COW2019:s20",
+     "NIA1881:s4"
+    ]
+   },
+   {
+    "query": "company cut money from my pay without reason",
+    "wanted": [
+     "COW2019:s18"
+    ],
+    "got": [
+     "COW2019:s55",
+     "COWR2026:r54",
+     "KRA1999:s49"
+    ]
+   },
+   {
+    "query": "what happens to an employer who does not pay staff",
+    "wanted": [
+     "COW2019:s54"
+    ],
+    "got": [
+     "IRC2020:s70",
+     "COW2019:s45",
+     "IRC2020:s69"
+    ]
+   },
+   {
+    "query": "meri naukri chali gayi aur company ne paisa nahi diya",
+    "wanted": [
+     "COW2019:s17",
+     "COW2019:s45"
+    ],
+    "got": [
+     "COW2019:s2",
+     "SSC2020:s53",
+     "COW2019:s13"
+    ]
+   },
+   {
+    "query": "can the director of a company be liable for a bad cheque",
+    "wanted": [
+     "NIA1881:s141"
+    ],
+    "got": [
+     "NIA1881:s139",
+     "NIA1881:s138",
+     "COW2019:s55"
+    ]
+   },
+   {
+    "query": "he took money and vanished, is it a crime",
+    "wanted": [
+     "BNS2023:s318",
+     "BNS2023:s316"
+    ],
+    "got": [
+     "BNS2023:s303",
+     "BNSS2023:s499",
+     "BNS2023:s314"
+    ]
+   }
+  ]
+ },
+ "hybrid@6": {
+  "recall": 0.615,
+  "misses": [
+   {
+    "query": "owner kept my advance when I left the flat",
+    "wanted": [
+     "TNRRA2017:s11"
+    ],
+    "got": [
+     "CPC1908:o51",
+     "BNS2023:s314",
+     "BNSS2023:sch",
+     "BNSS2023:s70",
+     "BSA2023:s7",
+     "BSA2023:s113"
+    ]
+   },
+   {
+    "query": "can the house owner refuse to give back the advance money",
+    "wanted": [
+     "TNRRA2017:s11"
+    ],
+    "got": [
+     "MTA2021:s24",
+     "TNRRA2017:s24",
+     "TPA1882:s78",
+     "TPA1882:s59",
+     "TPA1882:s127",
+     "ICA1872:s73"
+    ]
+   },
+   {
+    "query": "mera advance wapas nahi de raha owner",
+    "wanted": [
+     "TNRRA2017:s11"
+    ],
+    "got": [
+     "CPECOM2020:r7",
+     "TNRRA2017:s24",
+     "ICA1872:s159",
+     "LIM1963:art46",
+     "TPA1882:s79",
+     "MTA2021:s24"
+    ]
+   },
+   {
+    "query": "airline cancelled flight and no money back",
+    "wanted": [
+     "CPA2019:s2",
+     "CPA2019:s35",
+     "CPA2019:s39"
+    ],
+    "got": [
+     "CPECOM2020:r7",
+     "ICA1872:s73",
+     "CPECOM2020:r6",
+     "ICA1872:s166",
+     "BNSS2023:s471",
+     "CPECOM2020:r5"
+    ]
+   },
+   {
+    "query": "how quickly must an online store answer my complaint",
+    "wanted": [
+     "CPECOM2020:r4",
+     "CPECOM2020:r6"
+    ],
+    "got": [
+     "CPA2019:s38",
+     "CPA2019:s69",
+     "CPCOMM2020:r12",
+     "CPA2019:s35",
+     "CPA2019:s2",
+     "CPA2019:s36"
+    ]
+   },
+   {
+    "query": "boss is not giving my pay since January",
+    "wanted": [
+     "COW2019:s17",
+     "COW2019:s45"
+    ],
+    "got": [
+     "ICA1872:s73",
+     "COW2019:s20",
+     "NIA1881:s4",
+     "IRC2020:s69",
+     "BSA2023:s98",
+     "COW2019:s5"
+    ]
+   },
+   {
+    "query": "company cut money from my pay without reason",
+    "wanted": [
+     "COW2019:s18"
+    ],
+    "got": [
+     "COW2019:s55",
+     "COWR2026:r54",
+     "KRA1999:s49",
+     "IRC2020:s59",
+     "DRC1958:s45",
+     "COW2019:s43"
+    ]
+   },
+   {
+    "query": "what happens to an employer who does not pay staff",
+    "wanted": [
+     "COW2019:s54"
+    ],
+    "got": [
+     "IRC2020:s70",
+     "COW2019:s45",
+     "IRC2020:s69",
+     "COW2019:s2",
+     "IRC2020:s73",
+     "SSC2020:s74"
+    ]
+   },
+   {
+    "query": "meri naukri chali gayi aur company ne paisa nahi diya",
+    "wanted": [
+     "COW2019:s17",
+     "COW2019:s45"
+    ],
+    "got": [
+     "COW2019:s2",
+     "SSC2020:s53",
+     "COW2019:s13",
+     "COW2019:s51",
+     "COW2019:s43",
+     "COW2019:s41"
+    ]
+   },
+   {
+    "query": "he took money and vanished, is it a crime",
+    "wanted": [
+     "BNS2023:s318",
+     "BNS2023:s316"
+    ],
+    "got": [
+     "BNS2023:s303",
+     "BNSS2023:s499",
+     "BNS2023:s314",
+     "BSA2023:s6",
+     "TPA1882:s58",
+     "CPC1908:o7"
+    ]
+   }
+  ]
+ }
+}

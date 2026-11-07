@@ -1,0 +1,1058 @@
+{
+ "n_queries": 46,
+ "results": {
+  "bm25@3": {
+   "recall": 0.609,
+   "by_language": {
+    "en": [
+     27,
+     39
+    ],
+    "hinglish": [
+     0,
+     3
+    ],
+    "hi": [
+     1,
+     4
+    ]
+   },
+   "misses": [
+    {
+     "query": "mera makan malik deposit wapas nahi kar raha",
+     "wanted": [
+      "TNRRA2017:s11"
+     ],
+     "got": [
+      "MTA2021:s14",
+      "MTA2021:s15",
+      "TNRRA2017:s14"
+     ]
+    },
+    {
+     "query": "मकान मालिक सिक्योरिटी डिपॉजिट वापस नहीं कर रहा",
+     "wanted": [
+      "TNRRA2017:s11"
+     ],
+     "got": [
+      "MTA2021:s24",
+      "TNRRA2017:s24",
+      "CPC1908:o45"
+     ]
+    },
+    {
+     "query": "what is a lease",
+     "wanted": [
+      "TPA1882:s105"
+     ],
+     "got": [
+      "ICA1872:s23",
+      "TPA1882:s110",
+      "TPA1882:s64"
+     ]
+    },
+    {
+     "query": "how long do I have to file a civil suit to recover money",
+     "wanted": [
+      "LIM1963:art55",
+      "LIM1963:art113",
+      "LIM1963:s3",
+      "LIM1963:art19"
+     ],
+     "got": [
+      "LIM1963:s9",
+      "LIM1963:art70",
+      "LIM1963:s17"
+     ]
+    },
+    {
+     "query": "online shopping site refuses refund",
+     "wanted": [
+      "CPECOM2020:r4",
+      "CPECOM2020:r5",
+      "CPECOM2020:r6",
+      "CPECOM2020:r7"
+     ],
+     "got": [
+      "MTA2021:s24",
+      "TNRRA2017:s24",
+      "CPA2019:s2"
+     ]
+    },
+    {
+     "query": "where to file a consumer complaint and how",
+     "wanted": [
+      "CPA2019:s35",
+      "CPA2019:s34"
+     ],
+     "got": [
+      "CPA2019:s38",
+      "CPA2019:s2",
+      "CPECOM2020:r4"
+     ]
+    },
+    {
+     "query": "what counts as deficiency in service",
+     "wanted": [
+      "CPA2019:s2"
+     ],
+     "got": [
+      "COW2019:s26",
+      "COWR2026:r22",
+      "COWR2026:r23"
+     ]
+    },
+    {
+     "query": "employer has not paid my salary for three months",
+     "wanted": [
+      "COW2019:s17",
+      "COW2019:s45",
+      "COW2019:s18"
+     ],
+     "got": [
+      "SSC2020:s53",
+      "SSC2020:s78",
+      "COW2019:s39"
+     ]
+    },
+    {
+     "query": "by when must wages be paid",
+     "wanted": [
+      "COW2019:s17"
+     ],
+     "got": [
+      "ICA1872:s40",
+      "COW2019:s15",
+      "COWR2026:r6"
+     ]
+    },
+    {
+     "query": "where do I claim unpaid wages and time limit",
+     "wanted": [
+      "COW2019:s45"
+     ],
+     "got": [
+      "COW2019:s39",
+      "COW2019:s17",
+      "LIM1963:s3"
+     ]
+    },
+    {
+     "query": "salary nahi mila 3 mahine se company nahi de rahi",
+     "wanted": [
+      "COW2019:s17",
+      "COW2019:s45"
+     ],
+     "got": [
+      "SSC2020:s78",
+      "COWR2026:r54",
+      "COW2019:s43"
+     ]
+    },
+    {
+     "query": "तीन महीने से वेतन नहीं मिला",
+     "wanted": [
+      "COW2019:s17",
+      "COW2019:s45"
+     ],
+     "got": [
+      "COW2019:s28",
+      "CPC1908:s59",
+      "COW2019:s5"
+     ]
+    },
+    {
+     "query": "who gets free legal aid",
+     "wanted": [
+      "LSA1987:s12"
+     ],
+     "got": [
+      "LSA1987:s13",
+      "LSA1987:s7",
+      "LSA1987:s15"
+     ]
+    },
+    {
+     "query": "muft vakil kaun le sakta hai",
+     "wanted": [
+      "LSA1987:s12"
+     ],
+     "got": [
+      "CPC1908:o33",
+      "LSA1987:s2",
+      "LSA1987:s4"
+     ]
+    },
+    {
+     "query": "मुफ्त कानूनी सहायता किसे मिलेगी",
+     "wanted": [
+      "LSA1987:s12"
+     ],
+     "got": [
+      "LSA1987:s13",
+      "CPC1908:o33",
+      "LSA1987:s4"
+     ]
+    },
+    {
+     "query": "how to file an FIR police information cognizable",
+     "wanted": [
+      "BNSS2023:s173"
+     ],
+     "got": [
+      "BNSS2023:sch",
+      "BNSS2023:s168",
+      "BNSS2023:s174"
+     ]
+    },
+    {
+     "query": "is the Indian Penal Code still in force",
+     "wanted": [
+      "BNS2023:s358"
+     ],
+     "got": [
+      "ICA1872:s15",
+      "IRC2020:s17",
+      "ICA1872:s30"
+     ]
+    },
+    {
+     "query": "Karnataka tenant landlord rent",
+     "wanted": [
+      "KRA1999:s3",
+      "KRA1999:s4",
+      "KRA1999:s5",
+      "KRA1999:s27",
+      "KRA1999:s2"
+     ],
+     "got": [
+      "KRA1999:s52",
+      "KRA1999:s17",
+      "KRA1999:s16"
+     ]
+    }
+   ]
+  },
+  "bm25@6": {
+   "recall": 0.674,
+   "by_language": {
+    "en": [
+     29,
+     39
+    ],
+    "hinglish": [
+     0,
+     3
+    ],
+    "hi": [
+     2,
+     4
+    ]
+   },
+   "misses": [
+    {
+     "query": "mera makan malik deposit wapas nahi kar raha",
+     "wanted": [
+      "TNRRA2017:s11"
+     ],
+     "got": [
+      "MTA2021:s14",
+      "MTA2021:s15",
+      "TNRRA2017:s14",
+      "MTA2021:s24",
+      "MTA2021:s11",
+      "TNRRA2017:s24"
+     ]
+    },
+    {
+     "query": "मकान मालिक सिक्योरिटी डिपॉजिट वापस नहीं कर रहा",
+     "wanted": [
+      "TNRRA2017:s11"
+     ],
+     "got": [
+      "MTA2021:s24",
+      "TNRRA2017:s24",
+      "CPC1908:o45",
+      "MTA2021:s11",
+      "SSC2020:s126",
+      "MTA2021:s15"
+     ]
+    },
+    {
+     "query": "what is a lease",
+     "wanted": [
+      "TPA1882:s105"
+     ],
+     "got": [
+      "ICA1872:s23",
+      "TPA1882:s110",
+      "TPA1882:s64",
+      "TPA1882:s71",
+      "TPA1882:s111",
+      "TPA1882:s116"
+     ]
+    },
+    {
+     "query": "how long do I have to file a civil suit to recover money",
+     "wanted": [
+      "LIM1963:art55",
+      "LIM1963:art113",
+      "LIM1963:s3",
+      "LIM1963:art19"
+     ],
+     "got": [
+      "LIM1963:s9",
+      "LIM1963:art70",
+      "LIM1963:s17",
+      "CPC1908:o37",
+      "CPC1908:o51",
+      "LIM1963:art63"
+     ]
+    },
+    {
+     "query": "online shopping site refuses refund",
+     "wanted": [
+      "CPECOM2020:r4",
+      "CPECOM2020:r5",
+      "CPECOM2020:r6",
+      "CPECOM2020:r7"
+     ],
+     "got": [
+      "MTA2021:s24",
+      "TNRRA2017:s24",
+      "CPA2019:s2",
+      "KRA1999:s28",
+      "KRA1999:s15",
+      "DRC1958:s14"
+     ]
+    },
+    {
+     "query": "where to file a consumer complaint and how",
+     "wanted": [
+      "CPA2019:s35",
+      "CPA2019:s34"
+     ],
+     "got": [
+      "CPA2019:s38",
+      "CPA2019:s2",
+      "CPECOM2020:r4",
+      "CPCOMM2020:r12",
+      "CPA2019:s18",
+      "CPA2019:s24"
+     ]
+    },
+    {
+     "query": "employer has not paid my salary for three months",
+     "wanted": [
+      "COW2019:s17",
+      "COW2019:s45",
+      "COW2019:s18"
+     ],
+     "got": [
+      "SSC2020:s53",
+      "SSC2020:s78",
+      "COW2019:s39",
+      "COW2019:s43",
+      "SSC2020:s31",
+      "CPC1908:s59"
+     ]
+    },
+    {
+     "query": "by when must wages be paid",
+     "wanted": [
+      "COW2019:s17"
+     ],
+     "got": [
+      "ICA1872:s40",
+      "COW2019:s15",
+      "COWR2026:r6",
+      "SSC2020:s123",
+      "SSC2020:s53",
+      "NIA1881:s102"
+     ]
+    },
+    {
+     "query": "where do I claim unpaid wages and time limit",
+     "wanted": [
+      "COW2019:s45"
+     ],
+     "got": [
+      "COW2019:s39",
+      "COW2019:s17",
+      "LIM1963:s3",
+      "IRC2020:s38",
+      "BNSS2023:sch",
+      "LIM1963:art53"
+     ]
+    },
+    {
+     "query": "salary nahi mila 3 mahine se company nahi de rahi",
+     "wanted": [
+      "COW2019:s17",
+      "COW2019:s45"
+     ],
+     "got": [
+      "SSC2020:s78",
+      "COWR2026:r54",
+      "COW2019:s43",
+      "SSC2020:s53",
+      "COW2019:s5",
+      "SSC2020:s31"
+     ]
+    },
+    {
+     "query": "तीन महीने से वेतन नहीं मिला",
+     "wanted": [
+      "COW2019:s17",
+      "COW2019:s45"
+     ],
+     "got": [
+      "COW2019:s28",
+      "CPC1908:s59",
+      "COW2019:s5",
+      "COW2019:s27",
+      "SSC2020:s78",
+      "COW2019:s50"
+     ]
+    },
+    {
+     "query": "who gets free legal aid",
+     "wanted": [
+      "LSA1987:s12"
+     ],
+     "got": [
+      "LSA1987:s13",
+      "LSA1987:s7",
+      "LSA1987:s15",
+      "CPC1908:o33",
+      "LSA1987:s16",
+      "LSA1987:s11A"
+     ]
+    },
+    {
+     "query": "muft vakil kaun le sakta hai",
+     "wanted": [
+      "LSA1987:s12"
+     ],
+     "got": [
+      "CPC1908:o33",
+      "LSA1987:s2",
+      "LSA1987:s4",
+      "LSA1987:s11B",
+      "LSA1987:s19",
+      "LSA1987:s13"
+     ]
+    },
+    {
+     "query": "is the Indian Penal Code still in force",
+     "wanted": [
+      "BNS2023:s358"
+     ],
+     "got": [
+      "ICA1872:s15",
+      "IRC2020:s17",
+      "ICA1872:s30",
+      "CPA2019:s90",
+      "ICA1872:s23",
+      "IRC2020:s61"
+     ]
+    },
+    {
+     "query": "Karnataka tenant landlord rent",
+     "wanted": [
+      "KRA1999:s3",
+      "KRA1999:s4",
+      "KRA1999:s5",
+      "KRA1999:s27",
+      "KRA1999:s2"
+     ],
+     "got": [
+      "KRA1999:s52",
+      "KRA1999:s17",
+      "KRA1999:s16",
+      "KRA1999:s15",
+      "KRA1999:s8",
+      "KRA1999:s6"
+     ]
+    }
+   ]
+  },
+  "dense@3": {
+   "recall": 0.609,
+   "by_language": {
+    "en": [
+     24,
+     39
+    ],
+    "hinglish": [
+     1,
+     3
+    ],
+    "hi": [
+     3,
+     4
+    ]
+   },
+   "misses": [
+    {
+     "query": "notice period to end a lease of a house",
+     "wanted": [
+      "TPA1882:s106"
+     ],
+     "got": [
+      "MTA2021:s15",
+      "MTA2021:s29",
+      "DRC1958:s17"
+     ]
+    },
+    {
+     "query": "how long do I have to file a civil suit to recover money",
+     "wanted": [
+      "LIM1963:art55",
+      "LIM1963:art113",
+      "LIM1963:s3",
+      "LIM1963:art19"
+     ],
+     "got": [
+      "LIM1963:art23",
+      "LIM1963:art24",
+      "LIM1963:art71"
+     ]
+    },
+    {
+     "query": "company did not refund my money for defective product",
+     "wanted": [
+      "CPA2019:s2",
+      "CPA2019:s35",
+      "CPA2019:s39",
+      "CPECOM2020:r7",
+      "CPECOM2020:r6",
+      "CPECOM2020:r4"
+     ],
+     "got": [
+      "CPA2019:s87",
+      "CPA2019:s86",
+      "CPA2019:s82"
+     ]
+    },
+    {
+     "query": "what remedies can the consumer commission order",
+     "wanted": [
+      "CPA2019:s39"
+     ],
+     "got": [
+      "CPA2019:s81",
+      "CPCOMM2020:r12",
+      "CPA2019:s68"
+     ]
+    },
+    {
+     "query": "what counts as deficiency in service",
+     "wanted": [
+      "CPA2019:s2"
+     ],
+     "got": [
+      "SSC2020:s54",
+      "SSC2020:s36",
+      "SSC2020:s82"
+     ]
+    },
+    {
+     "query": "employer has not paid my salary for three months",
+     "wanted": [
+      "COW2019:s17",
+      "COW2019:s45",
+      "COW2019:s18"
+     ],
+     "got": [
+      "COW2019:s5",
+      "COW2019:s20",
+      "IRC2020:s69"
+     ]
+    },
+    {
+     "query": "final salary after resignation or dismissal paid within",
+     "wanted": [
+      "COW2019:s17"
+     ],
+     "got": [
+      "COW2019:s2",
+      "COWR2026:r42",
+      "COW2019:s27"
+     ]
+    },
+    {
+     "query": "where do I claim unpaid wages and time limit",
+     "wanted": [
+      "COW2019:s45"
+     ],
+     "got": [
+      "COW2019:s17",
+      "COW2019:s39",
+      "LIM1963:art7"
+     ]
+    },
+    {
+     "query": "salary nahi mila 3 mahine se company nahi de rahi",
+     "wanted": [
+      "COW2019:s17",
+      "COW2019:s45"
+     ],
+     "got": [
+      "COW2019:s5",
+      "SSC2020:s78",
+      "COW2019:s26"
+     ]
+    },
+    {
+     "query": "तीन महीने से वेतन नहीं मिला",
+     "wanted": [
+      "COW2019:s17",
+      "COW2019:s45"
+     ],
+     "got": [
+      "COW2019:s39",
+      "SSC2020:s53",
+      "COW2019:s20"
+     ]
+    },
+    {
+     "query": "retrenchment compensation worker",
+     "wanted": [
+      "IRC2020:s70",
+      "IRC2020:s67",
+      "IRC2020:s2"
+     ],
+     "got": [
+      "IRC2020:s73",
+      "IRC2020:s75",
+      "IRC2020:s72"
+     ]
+    },
+    {
+     "query": "time limit to file a complaint for dishonoured cheque",
+     "wanted": [
+      "NIA1881:s142"
+     ],
+     "got": [
+      "CPA2019:s69",
+      "LIM1963:art20",
+      "CPCOMM2020:r14"
+     ]
+    },
+    {
+     "query": "muft vakil kaun le sakta hai",
+     "wanted": [
+      "LSA1987:s12"
+     ],
+     "got": [
+      "LSA1987:s4",
+      "LSA1987:s11A",
+      "LSA1987:s24"
+     ]
+    },
+    {
+     "query": "lok adalat settlement",
+     "wanted": [
+      "LSA1987:s19",
+      "LSA1987:s20",
+      "LSA1987:s21",
+      "LSA1987:s22B",
+      "LSA1987:s22C"
+     ],
+     "got": [
+      "BNSS2023:s103",
+      "DRC1958:s30",
+      "NIA1881:s6"
+     ]
+    },
+    {
+     "query": "how to file an FIR police information cognizable",
+     "wanted": [
+      "BNSS2023:s173"
+     ],
+     "got": [
+      "BNSS2023:s169",
+      "BNSS2023:s168",
+      "BNSS2023:s193"
+     ]
+    },
+    {
+     "query": "WhatsApp messages screenshots as evidence in court",
+     "wanted": [
+      "BSA2023:s63",
+      "BSA2023:s61"
+     ],
+     "got": [
+      "BSA2023:s81",
+      "BSA2023:s85",
+      "BSA2023:s90"
+     ]
+    },
+    {
+     "query": "Karnataka tenant landlord rent",
+     "wanted": [
+      "KRA1999:s3",
+      "KRA1999:s4",
+      "KRA1999:s5",
+      "KRA1999:s27",
+      "KRA1999:s2"
+     ],
+     "got": [
+      "KRA1999:s41",
+      "KRA1999:s34",
+      "KRA1999:s12"
+     ]
+    },
+    {
+     "query": "eviction grounds Maharashtra",
+     "wanted": [
+      "MRC1999:s16"
+     ],
+     "got": [
+      "MRC1999:s45",
+      "MRC1999:s23",
+      "MRC1999:s18"
+     ]
+    }
+   ]
+  },
+  "dense@6": {
+   "recall": 0.717,
+   "by_language": {
+    "en": [
+     28,
+     39
+    ],
+    "hinglish": [
+     2,
+     3
+    ],
+    "hi": [
+     3,
+     4
+    ]
+   },
+   "misses": [
+    {
+     "query": "notice period to end a lease of a house",
+     "wanted": [
+      "TPA1882:s106"
+     ],
+     "got": [
+      "MTA2021:s15",
+      "MTA2021:s29",
+      "DRC1958:s17",
+      "MTA2021:s23",
+      "MTA2021:s21",
+      "KRA1999:s27"
+     ]
+    },
+    {
+     "query": "how long do I have to file a civil suit to recover money",
+     "wanted": [
+      "LIM1963:art55",
+      "LIM1963:art113",
+      "LIM1963:s3",
+      "LIM1963:art19"
+     ],
+     "got": [
+      "LIM1963:art23",
+      "LIM1963:art24",
+      "LIM1963:art71",
+      "LIM1963:art25",
+      "LIM1963:art26",
+      "LIM1963:art122"
+     ]
+    },
+    {
+     "query": "company did not refund my money for defective product",
+     "wanted": [
+      "CPA2019:s2",
+      "CPA2019:s35",
+      "CPA2019:s39",
+      "CPECOM2020:r7",
+      "CPECOM2020:r6",
+      "CPECOM2020:r4"
+     ],
+     "got": [
+      "CPA2019:s87",
+      "CPA2019:s86",
+      "CPA2019:s82",
+      "BNSS2023:s107",
+      "CPA2019:s85",
+      "CPA2019:s84"
+     ]
+    },
+    {
+     "query": "what remedies can the consumer commission order",
+     "wanted": [
+      "CPA2019:s39"
+     ],
+     "got": [
+      "CPA2019:s81",
+      "CPCOMM2020:r12",
+      "CPA2019:s68",
+      "CPA2019:s61",
+      "CPA2019:s20",
+      "CPA2019:s67"
+     ]
+    },
+    {
+     "query": "what counts as deficiency in service",
+     "wanted": [
+      "CPA2019:s2"
+     ],
+     "got": [
+      "SSC2020:s54",
+      "SSC2020:s36",
+      "SSC2020:s82",
+      "SSC2020:s133",
+      "SSC2020:s32",
+      "SSC2020:s2"
+     ]
+    },
+    {
+     "query": "employer has not paid my salary for three months",
+     "wanted": [
+      "COW2019:s17",
+      "COW2019:s45",
+      "COW2019:s18"
+     ],
+     "got": [
+      "COW2019:s5",
+      "COW2019:s20",
+      "IRC2020:s69",
+      "COW2019:s39",
+      "COW2019:s2",
+      "SSC2020:s53"
+     ]
+    },
+    {
+     "query": "final salary after resignation or dismissal paid within",
+     "wanted": [
+      "COW2019:s17"
+     ],
+     "got": [
+      "COW2019:s2",
+      "COWR2026:r42",
+      "COW2019:s27",
+      "COW2019:s20",
+      "IRC2020:s75",
+      "IRC2020:s67"
+     ]
+    },
+    {
+     "query": "where do I claim unpaid wages and time limit",
+     "wanted": [
+      "COW2019:s45"
+     ],
+     "got": [
+      "COW2019:s17",
+      "COW2019:s39",
+      "LIM1963:art7",
+      "COW2019:s20",
+      "IRC2020:s38",
+      "LIM1963:art18"
+     ]
+    },
+    {
+     "query": "salary nahi mila 3 mahine se company nahi de rahi",
+     "wanted": [
+      "COW2019:s17",
+      "COW2019:s45"
+     ],
+     "got": [
+      "COW2019:s5",
+      "SSC2020:s78",
+      "COW2019:s26",
+      "COWR2026:r54",
+      "COW2019:s2",
+      "COW2019:s15"
+     ]
+    },
+    {
+     "query": "तीन महीने से वेतन नहीं मिला",
+     "wanted": [
+      "COW2019:s17",
+      "COW2019:s45"
+     ],
+     "got": [
+      "COW2019:s39",
+      "SSC2020:s53",
+      "COW2019:s20",
+      "COW2019:s2",
+      "COW2019:s5",
+      "LIM1963:art7"
+     ]
+    },
+    {
+     "query": "time limit to file a complaint for dishonoured cheque",
+     "wanted": [
+      "NIA1881:s142"
+     ],
+     "got": [
+      "CPA2019:s69",
+      "LIM1963:art20",
+      "CPCOMM2020:r14",
+      "COW2019:s39",
+      "CPA2019:s38",
+      "BNSS2023:s324"
+     ]
+    },
+    {
+     "query": "lok adalat settlement",
+     "wanted": [
+      "LSA1987:s19",
+      "LSA1987:s20",
+      "LSA1987:s21",
+      "LSA1987:s22B",
+      "LSA1987:s22C"
+     ],
+     "got": [
+      "BNSS2023:s103",
+      "DRC1958:s30",
+      "NIA1881:s6",
+      "CPC1908:o5",
+      "ICA1872:s47",
+      "NIA1881:s8"
+     ]
+    },
+    {
+     "query": "eviction grounds Maharashtra",
+     "wanted": [
+      "MRC1999:s16"
+     ],
+     "got": [
+      "MRC1999:s45",
+      "MRC1999:s23",
+      "MRC1999:s18",
+      "MRC1999:s42",
+      "MRC1999:s20",
+      "MRC1999:s47"
+     ]
+    }
+   ]
+  },
+  "hybrid@3": {
+   "recall": 0.913,
+   "by_language": {
+    "en": [
+     35,
+     39
+    ],
+    "hinglish": [
+     3,
+     3
+    ],
+    "hi": [
+     4,
+     4
+    ]
+   },
+   "misses": [
+    {
+     "query": "company did not refund my money for defective product",
+     "wanted": [
+      "CPA2019:s2",
+      "CPA2019:s35",
+      "CPA2019:s39",
+      "CPECOM2020:r7",
+      "CPECOM2020:r6",
+      "CPECOM2020:r4"
+     ],
+     "got": [
+      "CPA2019:s82",
+      "CPA2019:s86",
+      "CPA2019:s87"
+     ]
+    },
+    {
+     "query": "what counts as deficiency in service",
+     "wanted": [
+      "CPA2019:s2"
+     ],
+     "got": [
+      "COW2019:s26",
+      "SSC2020:s54",
+      "CPA2019:s35"
+     ]
+    },
+    {
+     "query": "time limit to file a complaint for dishonoured cheque",
+     "wanted": [
+      "NIA1881:s142"
+     ],
+     "got": [
+      "CPA2019:s69",
+      "NIA1881:s143A",
+      "LIM1963:art55"
+     ]
+    },
+    {
+     "query": "eviction grounds Maharashtra",
+     "wanted": [
+      "MRC1999:s16"
+     ],
+     "got": [
+      "MRC1999:s45",
+      "MRC1999:s20",
+      "MRC1999:s46"
+     ]
+    }
+   ]
+  },
+  "hybrid@6": {
+   "recall": 0.957,
+   "by_language": {
+    "en": [
+     37,
+     39
+    ],
+    "hinglish": [
+     3,
+     3
+    ],
+    "hi": [
+     4,
+     4
+    ]
+   },
+   "misses": [
+    {
+     "query": "company did not refund my money for defective product",
+     "wanted": [
+      "CPA2019:s2",
+      "CPA2019:s35",
+      "CPA2019:s39",
+      "CPECOM2020:r7",
+      "CPECOM2020:r6",
+      "CPECOM2020:r4"
+     ],
+     "got": [
+      "CPA2019:s82",
+      "CPA2019:s86",
+      "CPA2019:s87",
+      "CPA2019:s83",
+      "CPA2019:s84",
+      "CPA2019:s85"
+     ]
+    },
+    {
+     "query": "what counts as deficiency in service",
+     "wanted": [
+      "CPA2019:s2"
+     ],
+     "got": [
+      "COW2019:s26",
+      "SSC2020:s54",
+      "CPA2019:s35",
+      "SSC2020:s94",
+      "SSC2020:s140",
+      "COW2019:s36"
+     ]
+    }
+   ]
+  }
+ }
+}

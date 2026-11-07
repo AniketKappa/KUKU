@@ -1,0 +1,314 @@
+{
+ "id": "04_deposit_time_barred",
+ "group": "deposit",
+ "why": "Honest bad news: the claim may be out of time.",
+ "started": "2026-11-07T09:02:25.985601",
+ "provider": "gemini",
+ "model": "gemini-3.5-flash-lite",
+ "effort": "medium",
+ "turns": [
+  {
+   "user": "I left my rented house in Coimbatore in June 2022 and the landlord never returned my Rs 50,000 deposit. I only just decided to do something about it. Can I still sue him?",
+   "file": null,
+   "reply": "Under the law, time is a crucial factor for recovering money. Here is where you stand regarding your Rs 50,000 security deposit in Coimbatore:\n\n### 1. The Limitation Period (Time Limit)\n* **When it was due:** Under the Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017, a security deposit must be refunded within one month after you vacate the premises ([[TNRRA2017:s11]]). Since you left in June 2022, the deposit was due shortly after.\n* **The time limit to sue:** A suit to recover money or for breach of contract must be filed within **three years** from when the right to sue accrued (Article 55, Limitation Act, 1963 [[LIM1963:art55]]). For you, that three-year window ended in July 2025.\n* **The bar of limitation:** Under Section 3 of the Limitation Act, 1963 ([[LIM1963:s3]]), courts must dismiss any suit filed after the prescribed limitation period has expired. Since the prescribed limitation period has elapsed, you are past the standard legal deadline to file a court case.\n\n### 2. Is There Any Exception?\nThere is one important question: **Did the landlord ever acknowledge in writing (such as via WhatsApp, SMS, or email) after June 2022 that they owe you this money?** \nIf the landlord sent a written, signed or clear acknowledgment of debt after the initial period, limitation can sometimes be calculated fresh from the date of that acknowledgment. \n\n### What You Can Do Next\n1. Check your old messages, WhatsApp chats, or emails to see if the landlord ever admitted in writing that they are holding your Rs 50,000 deposit.\n2. If there is no written acknowledgment, a formal court case or legal notice may face dismissal because it is time-barred. However, you can still try speaking or writing to the landlord directly to appeal to their fairness—though legally, they cannot be forced through the courts now.\n3. If you believe there is an acknowledgment or want a professional opinion on whether your chats qualify, you can reach out for free legal advice through the NALSA helpline at **15100** ([[NOTE:NALSA]]).\n\nDid the landlord ever text or message you acknowledging the deposit after you moved out in June 2022?",
+   "verification": {
+    "status": "verified",
+    "repairs": 1,
+    "removed": 0,
+    "issues": []
+   },
+   "citations": [
+    "TNRRA2017:s11",
+    "LIM1963:art55",
+    "LIM1963:s3",
+    "NOTE:NALSA"
+   ],
+   "errors": []
+  }
+ ],
+ "seconds": 19.0,
+ "usage": {
+  "input": 24634,
+  "output": 2082,
+  "cache_read": 28329,
+  "cache_write": 0,
+  "api_calls": 8
+ },
+ "case_file": {
+  "document_references": [],
+  "evidence": [
+   {
+    "why_it_matters": "To prove the deposit amount and terms",
+    "item": "Rental agreement / receipt",
+    "status": "unclear"
+   }
+  ],
+  "problem_type": "tenancy_deposit",
+  "summary": "Tenant left a rented house in Coimbatore in June 2022 and landlord never returned Rs 50,000 security deposit. Tenant wants to know if they can still sue.",
+  "state": "Tamil Nadu",
+  "timeline": [
+   {
+    "source": "user",
+    "date": "2022-06",
+    "event": "Left rented house in Coimbatore"
+   }
+  ],
+  "parties": [
+   {
+    "name": "Landlord",
+    "role": "Defendant"
+   },
+   {
+    "role": "Plaintiff",
+    "name": "User"
+   }
+  ],
+  "open_questions": [
+   "Did the landlord acknowledge the deposit or debt in writing (like WhatsApp or email) after June 2022?"
+  ],
+  "amounts": [
+   {
+    "amount_inr": "50000",
+    "label": "Security deposit"
+   }
+  ],
+  "deadlines": []
+ },
+ "assessment": {
+  "lawyer_needed": "none",
+  "what_i_could_not_verify": [
+   "Whether the landlord acknowledged the debt in writing after June 2022"
+  ],
+  "confidence": "high",
+  "reason": "The three-year limitation period to sue for recovering the deposit has expired, unless the landlord acknowledged the debt in writing."
+ },
+ "triage": {
+  "level": "none",
+  "codes": [],
+  "reasons": [],
+  "reasons_hi": [],
+  "help": []
+ },
+ "documents": [],
+ "doc_rejections": 0,
+ "trail": [
+  {
+   "user": "I left my rented house in Coimbatore in June 2022 and the landlord never returned my Rs 50,000 deposit. I only just decided to do something about it. Can I still sue him?",
+   "tool_calls": [
+    {
+     "name": "search_law",
+     "input": {
+      "query": "limitation deposit contract suit",
+      "state": "Tamil Nadu"
+     },
+     "is_error": false,
+     "result": "[{\"id\": \"LIM1963:art55\", \"citation\": \"Article 55, Limitation Act, 1963\", \"heading\": \"Schedule article\", \"excerpt\": \"For compensation for the breach of any contract, express or implied not herein specially provided for. Three years. When the contract is broken or (where there are successive breaches) when the breach in respect of which the suit is instituted occurs or (where the breach is continuing) when it ceases. Description of suit Period of limitation Time from which period begins to run PART III.—SUITS RELATING TO DECLARATIONS\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"LIM1963:s3\", \"citation\": \"Section 3, Limitation Act, 1963\", \"heading\": \"Bar of limitation\", \"excerpt\": \"(1) Subject to the provisions contained in sections 4 to 24 (inclusive), every\\nsuit instituted, appeal preferred, and application made after the prescribed period shall be dismissed ,\\nalthough limitation has not been set up as a defence.\\n(2) For the purposes of this Act,—\\n(a) a suit is instituted,—\\n(i) in an ordinary case, when the plaint is presented to the proper officer;\\n(ii) in the case of a pauper, when his application for leave to sue as a pauper is made; and\\n(iii) in the case of a claim against a company which is being wound up by the court, when the\\nclaimant first sends in his claim to the official liquidator;\\n(b) any claim by way of a set off or a counter claim, shall be treated as a separate suit and shall be\\ndeemed to have been instituted—\\n(i) in the case of a set off, on the same date as the suit in which the set off is pleaded;\\n(ii) in the case of a counter claim, on the dat\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"LIM1963:art113\", \"citation\": \"Article 113, Limitation Act, 1963\", \"heading\": \"Schedule article\", \"excerpt\": \"Any suit for which no period of limitation is provided elsewhere in this Schedule. Three years. When the right to sue accrues. SECOND DIVISION—APPEALS\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"MTA2021:s11\", \"citation\": \"Section 11, Model Tenancy Act, 2021\", \"heading\": \"Security deposit\", \"excerpt\": \"(1) The security deposit to b e paid by the tenant in advance shall\\nbe such as may be agreed upon between the landlord and the tenant\\nin the tenancy agreement, which shall ––\\nRestriction on\\nsub-letting.\\nRent payable.\\nRevision of rent.\\nRent Authority to\\ndetermine the\\nrevised rent in\\ncase of dispute.\\nSecurity deposit.\\n(a) not exceed two months rent, in case of residential premises;\\nand\\n(b) not exceed six months rent , in case of non -residential\\npremises.\\n(2) The security deposit shall be refunded to the tenant on the date of\\ntaking over vacant possession of the premises from the tenant, after\\nmaking due deduction of any liability of the tenant.\", \"applies_in\": \"Model law (applies only where a State has adopted it)\", \"caution\": \"This is a MODEL law issued by the Central Government for States to adopt. It does not bind anyone unless the user's State has enacted it. Never present it as law that applies to the user; say it is a model only.\"}, {\"id\": \"TNRRA2017:s11\", \"citation\": \"Section 11, Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017\", \"heading\": \"Security deposit\", \"excerpt\": \"(1) Save an agreement to the contrary, it shall be unlawful to charge a\\nsecurity deposit in excess of three times the monthly rent.\\n(2) The security deposit shall be refunded to the tenant within one month\\nafter vacation of the premises, after making due deduction of any liability of the\\ntenant.\", \"applies_in\": \"Tamil Nadu\", \"caution\": \"\"}, {\"id\": \"LIM1963:s11\", \"citation\": \"Section 11, Limitation Act, 1963\", \"heading\": \"Suits on contracts ent ered into outside the territories to which the Act extends\", \"excerpt\": \"(1) Suits\\ninstituted in the territories to which this Act extends on contracts entered into in the State of Jammu and\\nKashmir or in a foreign country shall be subject to the rules of limitation contained in this Act.\\n(2) No rule of limitation in forc"
+    },
+    {
+     "name": "search_law",
+     "input": {
+      "state": "Tamil Nadu",
+      "query": "limitation suit for recovery of money"
+     },
+     "is_error": false,
+     "result": "[{\"id\": \"LIM1963:art55\", \"citation\": \"Article 55, Limitation Act, 1963\", \"heading\": \"Schedule article\", \"excerpt\": \"For compensation for the breach of any contract, express or implied not herein specially provided for. Three years. When the contract is broken or (where there are successive breaches) when the breach in respect of which the suit is instituted occurs or (where the breach is continuing) when it ceases. Description of suit Period of limitation Time from which period begins to run PART III.—SUITS RELATING TO DECLARATIONS\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"LIM1963:s3\", \"citation\": \"Section 3, Limitation Act, 1963\", \"heading\": \"Bar of limitation\", \"excerpt\": \"(1) Subject to the provisions contained in sections 4 to 24 (inclusive), every\\nsuit instituted, appeal preferred, and application made after the prescribed period shall be dismissed ,\\nalthough limitation has not been set up as a defence.\\n(2) For the purposes of this Act,—\\n(a) a suit is instituted,—\\n(i) in an ordinary case, when the plaint is presented to the proper officer;\\n(ii) in the case of a pauper, when his application for leave to sue as a pauper is made; and\\n(iii) in the case of a claim against a company which is being wound up by the court, when the\\nclaimant first sends in his claim to the official liquidator;\\n(b) any claim by way of a set off or a counter claim, shall be treated as a separate suit and shall be\\ndeemed to have been instituted—\\n(i) in the case of a set off, on the same date as the suit in which the set off is pleaded;\\n(ii) in the case of a counter claim, on the dat\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"LIM1963:art113\", \"citation\": \"Article 113, Limitation Act, 1963\", \"heading\": \"Schedule article\", \"excerpt\": \"Any suit for which no period of limitation is provided elsewhere in this Schedule. Three years. When the right to sue accrues. SECOND DIVISION—APPEALS\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"CPC1908:o7\", \"citation\": \"Order 7, Code of Civil Procedure, 1908\", \"heading\": \"Plaint\", \"excerpt\": \"iff seeks the recovery of money, the plaint shall state the precise amount\\nclaimed:\\nBut where the plaintiff sue for mesne profits, or for an amount which will be found due to him on taking\\nunsettled accounts between him and the defendant, [136][or for movables in the possession of the\\ndefendant, or for debts of which the value he cannot, after the exercise of reasonable diligence, estimate, the\\nplaint shall state approximately the amount or value sued for].\\n3. Where the subject-matter of the suit is immovable property— Where the subject-matter of the suit is\\nimmovable property, the plaint shall contain a description of the property sufficient to identify it, and, in case\\nsuch property can be identified by boundaries or numbers in a record of settlement or survey, the plaint shall\\nspecify such boundaries or numbers.\\n4. When plaintiff sues as representative— Where the plaintiff sues in a r\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"LIM1963:art62\", \"citation\": \"Article 62, Limitation Act, 1963\", \"heading\": \"Schedule article\", \"excerpt\": \"To enforce payment of money secured by a mortgage or otherwise charged upon immovable property. Twelve years. When the money sued for becomes due.\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"IRC2020:s59\", \"citation\": \"Section 59, Industrial Relations Code, 2020\", \"heading\": \"Recovery of money due from employer\", \"excerpt\": \"(1) Where any money is due to a worker from an employer under a settlement or an\\naward or under the provisions of Chapter IX or Chapter X, the worker himself or any other\\nperson authorised by him in writing in this behalf, or, in the case of the death of the worker,\\nhis assignee or heirs may, without prejudice to any other mode of recovery, make an\\napplication to the appropriate Government for the recovery of the money due to him, and if\\nthe appropriate Government is satisfied that any money is so due, it shall issue a certificat"
+    },
+    {
+     "name": "get_provision",
+     "input": {
+      "id": "NOTE:NALSA"
+     },
+     "is_error": false,
+     "result": "{\"id\": \"NOTE:NALSA\", \"title\": \"Free legal aid (NALSA)\", \"fact\": \"The National Legal Services Authority helpline is 15100. It connects eligible people with free legal aid.\", \"source\": \"https://nalsa.gov.in/\"}"
+    },
+    {
+     "name": "update_case_file",
+     "input": {
+      "document_references": [],
+      "evidence": [
+       {
+        "why_it_matters": "To prove the deposit amount and terms",
+        "item": "Rental agreement / receipt",
+        "status": "unclear"
+       }
+      ],
+      "problem_type": "tenancy_deposit",
+      "summary": "Tenant left a rented house in Coimbatore in June 2022 and landlord never returned Rs 50,000 security deposit. Tenant wants to know if they can still sue.",
+      "state": "Tamil Nadu",
+      "timeline": [
+       {
+        "source": "user",
+        "date": "2022-06",
+        "event": "Left rented house in Coimbatore"
+       }
+      ],
+      "parties": [
+       {
+        "name": "Landlord",
+        "role": "Defendant"
+       },
+       {
+        "role": "Plaintiff",
+        "name": "User"
+       }
+      ],
+      "open_questions": [
+       "Did the landlord acknowledge the deposit or debt in writing (like WhatsApp or email) after June 2022?"
+      ],
+      "amounts": [
+       {
+        "amount_inr": "50000",
+        "label": "Security deposit"
+       }
+      ],
+      "deadlines": []
+     },
+     "is_error": false,
+     "result": "Saved."
+    },
+    {
+     "name": "set_assessment",
+     "input": {
+      "lawyer_needed": "none",
+      "what_i_could_not_verify": [
+       "Whether the landlord acknowledged the debt in writing after June 2022"
+      ],
+      "confidence": "high",
+      "reason": "The three-year limitation period to sue for recovering the deposit has expired, unless the landlord acknowledged the debt in writing."
+     },
+     "is_error": false,
+     "result": "Saved."
+    }
+   ],
+   "drafts": [
+    {
+     "text": "Under the law, time is a crucial factor for recovering money. Here is where you stand regarding your Rs 50,000 security deposit in Coimbatore:\n\n### 1. The Limitation Period (Time Limit)\n* **When it was due:** Under the Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017, a security deposit must be refunded within one month after you vacate the premises ([[TNRRA2017:s11]]). Since you left in June 2022, the deposit was due by July 2022.\n* **The time limit to sue:** A suit to recover money or for breach of contract must be filed within **three years** from when the right to sue accrued (Article 55, Limitation Act, 1963 [[LIM1963:art55]]). For you, that three-year window ended around **July 2025**.\n* **The bar of limitation:** Under Section 3 of the Limitation Act, 1963 ([[LIM1963:s3]]), courts must dismiss any suit filed after the prescribed limitation period has expired. Since today is November 2026, more than four years have passed, and you are past the standard legal deadline to file a court case.\n\n### 2. Is There Any Exception?\nThere is one important question: **Did the landlord ever acknowledge in writing (such as via WhatsApp, SMS, or email) after June 2022 that they owe you this money?** \nIf the landlord sent a written, signed or clear acknowledgment of the debt after July 2022, the limitation period can sometimes be calculated fresh from the date of that acknowledgment. \n\n### What You Can Do Next\n1. Check your old messages, WhatsApp chats, or emails to see if the landlord ever admitted in writing that they are holding your Rs 50,000 deposit.\n2. If there is no written acknowledgment, a formal court case or legal notice may face dismissal because it is time-barred. However, you can still try speaking or writing to the landlord directly to appeal to their fairness—though legally, they cannot be forced through the courts now.\n3. If you believe there is an acknowledgment or want a professional opinion on whether your chats qualify, you can reach out for free legal advice through the NALSA helpline at **15100** ([[NOTE:NALSA]]).\n\nDid the landlord ever text or message you acknowledging the deposit after you moved out in June 2022?",
+     "issues": [
+      {
+       "code": "unsupported_number",
+       "detail": "Paragraph 2 states 4 year(s), which is not in any cited provision or in the user's facts. If the law sets this period, cite it. If it is your own suggestion, do not give any number: say 'a short deadline' instead, or use [NUMBER OF DAYS] in a document.",
+       "paragraph": 1,
+       "blocking": true,
+       "quote": null
+      }
+     ]
+    },
+    {
+     "text": "Under the law, time is a crucial factor for recovering money. Here is where you stand regarding your Rs 50,000 security deposit in Coimbatore:\n\n### 1. The Limitation Period (Time Limit)\n* **When it was due:** Under the Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017, a security deposit must be refunded within one month after you vacate the premises ([[TNRRA2017:s11]]). Since you left in June 2022, the deposit was due shortly after.\n* **The time limit to sue:** A suit to recover money or for breach of contract must be filed within **three years** from when the right to sue accrued (Article 55, Limitation Act, 1963 [[LIM1963:art55]]). For you, that three-year window ended in July 2025.\n* **The bar of limitation:** Under Section 3 of the Limitation Act, 1963 ([[LIM1963:s3]]), courts must dismiss any suit filed after the prescribed limitation period has expired. Since the prescribed limitation period has elapsed, you are past the standard legal deadline to file a court case.\n\n### 2. Is There Any Exception?\nThere is one important question: **Did the landlord ever acknowledge in writing (such as via WhatsApp, SMS, or email) after June 2022 that they owe you this money?** \nIf the landlord sent a written, signed or clear acknowledgment of debt after the initial period, limitation can sometimes be calculated fresh from the date of that acknowledgment. \n\n### What You Can Do Next\n1. Check your old messages, WhatsApp chats, or emails to see if the landlord ever admitted in writing that they are holding your Rs 50,000 deposit.\n2. If there is no written acknowledgment, a formal court case or legal notice may face dismissal because it is time-barred. However, you can still try speaking or writing to the landlord directly to appeal to their fairness—though legally, they cannot be forced through the courts now.\n3. If you believe there is an acknowledgment or want a professional opinion on whether your chats qualify, you can reach out for free legal advice through the NALSA helpline at **15100** ([[NOTE:NALSA]]).\n\nDid the landlord ever text or message you acknowledging the deposit after you moved out in June 2022?",
+     "issues": []
+    }
+   ],
+   "audits": [
+    {
+     "claims": [
+      {
+       "paragraph": 2,
+       "claim": "A security deposit must be refunded within one month after you vacate the premises.",
+       "citations": [
+        "TNRRA2017:s11"
+       ],
+       "verdict": "supported",
+       "reason": "Section 11(2) states the security deposit shall be refunded within one month after vacation of the premises.",
+       "exact_quote": "Under the Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017, a security deposit must be refunded within one month after you vacate the premises ([[TNRRA2017:s11]])."
+      },
+      {
+       "paragraph": 2,
+       "claim": "A suit for compensation for the breach of any contract must be brought within three years when the contract is broken.",
+       "citations": [
+        "LIM1963:art55"
+       ],
+       "verdict": "supported",
+       "reason": "Article 55 sets a period of three years for breach of contract starting when the contract is broken.",
+       "exact_quote": "A suit to recover money or for breach of contract must be filed within **three years** from when the right to sue accrued (Article 55, Limitation Act, 1963 [[LIM1963:art55]])."
+      },
+      {
+       "paragraph": 2,
+       "claim": "Courts must dismiss any suit instituted after the prescribed period.",
+       "citations": [
+        "LIM1963:s3"
+       ],
+       "verdict": "supported",
+       "reason": "Section 3(1) states that every suit instituted after the prescribed period shall be dismissed.",
+       "exact_quote": "Under Section 3 of the Limitation Act, 1963 ([[LIM1963:s3]]), courts must dismiss any suit filed after the prescribed limitation period has expired."
+      },
+      {
+       "paragraph": 4,
+       "claim": "The NALSA helpline connects eligible people with free legal aid.",
+       "citations": [
+        "NOTE:NALSA"
+       ],
+       "verdict": "supported",
+       "reason": "The source states that the helpline connects eligible people with free legal aid.",
+       "exact_quote": "If you believe there is an acknowledgment or want a professional opinion on whether your chats qualify, you can reach out for free legal advice through the NALSA helpline at **15100** ([[NOTE:NALSA]])."
+      }
+     ],
+     "uncited_legal_claims": [],
+     "invented_facts": [],
+     "ignored_cautions": [],
+     "_usage": {
+      "input": 1803,
+      "output": 623
+     }
+    }
+   ],
+   "final_status": "verified",
+   "final": "Under the law, time is a crucial factor for recovering money. Here is where you stand regarding your Rs 50,000 security deposit in Coimbatore:\n\n### 1. The Limitation Period (Time Limit)\n* **When it was due:** Under the Tamil Nadu Regulation of Rights and Responsibilities of Landlords and Tenants Act, 2017, a security deposit must be refunded within one month after you vacate the premises ([[TNRRA2017:s11]]). Since you left in June 2022, the deposit was due shortly after.\n* **The time limit to sue:** A suit to recover money or for breach of contract must be filed within **three years** from when the right to sue accrued (Article 55, Limitation Act, 1963 [[LIM1963:art55]]). For you, that three-year window ended in July 2025.\n* **The bar of limitation:** Under Section 3 of the Limitation Act, 1963 ([[LIM1963:s3]]), courts must dismiss any suit filed after the prescribed limitation period has expired. Since the prescribed limitation period has elapsed, you are past the standard legal deadline to file a court case.\n\n### 2. Is There Any Exception?\nThere is one important question: **Did the landlord ever acknowledge in writing (such as via WhatsApp, SMS, or email) after June 2022 that they owe you this money?** \nIf the landlord sent a written, signed or clear acknowledgment of debt after the initial period, limitation can sometimes be calculated fresh from the date of that acknowledgment. \n\n### What You Can Do Next\n1. Check your old messages, WhatsApp chats, or emails to see if the landlord ever admitted in writing that they are holding your Rs 50,000 deposit.\n2. If there is no written acknowledgment, a formal court case or legal notice may face dismissal because it is time-barred. However, you can still try speaking or writing to the landlord directly to appeal to their fairness—though legally, they cannot be forced through the courts now.\n3. If you believe there is an acknowledgment or want a professional opinion on whether your chats qualify, you can reach out for free legal advice through the NALSA helpline at **15100** ([[NOTE:NALSA]]).\n\nDid the landlord ever text or message you acknowledging the deposit after you moved out in June 2022?",
+   "repairs": 1,
+   "seconds": 19.0,
+   "usage_after": {
+    "input": 24634,
+    "output": 2082,
+    "cache_read": 28329,
+    "cache_write": 0,
+    "api_calls": 8
+   }
+  }
+ ],
+ "checks": [
+  {
+   "check": "got_an_answer",
+   "pass": true,
+   "detail": "0 turn(s) with errors"
+  },
+  {
+   "check": "all_citations_exist",
+   "pass": true,
+   "detail": "4 citation(s) all resolve"
+  },
+  {
+   "check": "same_language_as_user",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "no_unrequested_document",
+   "pass": true,
+   "detail": "saved [] without being asked"
+  },
+  {
+   "check": "substantive_answer",
+   "pass": true,
+   "detail": "shortest reply is 2173 characters"
+  },
+  {
+   "check": "no_case_law_cited",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "cite_any",
+   "pass": true,
+   "detail": "wanted any of ['LIM1963:art55', 'LIM1963:art113', 'LIM1963:art47', 'LIM1963:s3']; cited ['LIM1963:art55', 'LIM1963:s3', 'NOTE:NALSA', 'TNRRA2017:s11']"
+  },
+  {
+   "check": "say_any /(?i)late|out of time|barred|limitation|e/",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "say_none /67B|Section 999|Housing Recovery Act|AIR/",
+   "pass": true,
+   "detail": ""
+  }
+ ]
+}

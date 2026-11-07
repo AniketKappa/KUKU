@@ -1,0 +1,91 @@
+[
+ {
+  "id": "NOTE:NCH",
+  "title": "National Consumer Helpline",
+  "fact": "The National Consumer Helpline can be reached on 1915. It handles consumer grievances before a formal case.",
+  "source_url": "https://consumerhelpline.gov.in/",
+  "must_appear": [
+   "1915"
+  ],
+  "verified": true,
+  "checked_on": "2026-11-07",
+  "snapshot_sha256": "3baae22dc0d46aaf87ae4257555f95680a79e239e473e113e8e7cb3522307346"
+ },
+ {
+  "id": "NOTE:EJAGRITI",
+  "title": "e-Jagriti consumer portal",
+  "fact": "e-Jagriti (e-jagriti.gov.in) is the Ministry of Consumer Affairs platform for consumer commission matters. Check the portal for current filing steps.",
+  "source_url": "https://e-jagriti.gov.in/",
+  "must_appear": [
+   "Ministry of Consumer Affairs"
+  ],
+  "verified": true,
+  "checked_on": "2026-11-07",
+  "snapshot_sha256": "fae162a640591ead3bf42525f01e32a147ec819215b6bc2e8d43df7d4a521f98"
+ },
+ {
+  "id": "NOTE:NALSA",
+  "title": "Free legal aid (NALSA)",
+  "fact": "The National Legal Services Authority helpline is 15100. It connects eligible people with free legal aid.",
+  "source_url": "https://nalsa.gov.in/",
+  "must_appear": [
+   "15100"
+  ],
+  "verified": true,
+  "checked_on": "2026-11-07",
+  "snapshot_sha256": "11aea7b484df639b1a01568fbc355a4e46ac659c4b1d622dce10fc6b60996b0a",
+  "fact_hi": "राष्ट्रीय विधिक सेवा प्राधिकरण (NALSA) की हेल्पलाइन 15100 है। यह पात्र लोगों को मुफ्त कानूनी सहायता से जोड़ती है।"
+ },
+ {
+  "id": "NOTE:LABOURCODES",
+  "title": "Labour Codes commencement",
+  "fact": "The Labour Codes were implemented on 21 November 2025, per the Ministry of Labour's FAQs.",
+  "source_url": "https://www.labour.gov.in/static/uploads/2026/03/a4ccf4c6d97c4f1f36a6d83f8c64213d.pdf",
+  "must_appear": [
+   "21.11.2025",
+   "date of implementation of the Codes"
+  ],
+  "verified": true,
+  "checked_on": "2026-11-07",
+  "snapshot_sha256": "929453c4012f61eb72275ba1b0419fe8554e8dc31ba46857fdad07c728d9eb61"
+ },
+ {
+  "id": "NOTE:EMERGENCY",
+  "title": "Emergency number",
+  "fact": "112 is India's pan-India single emergency number, connecting to police, fire and health services.",
+  "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1565023",
+  "must_appear": [
+   "single number (112)"
+  ],
+  "verified": true,
+  "checked_on": "2026-11-07",
+  "snapshot_sha256": "8e695f7ba6b4103476c03c06573d599c86f48363ff55288602052eb8aad49b0b",
+  "fact_hi": "112 भारत का एकल आपातकालीन नंबर है, जो पुलिस, अग्निशमन और स्वास्थ्य सेवाओं से जोड़ता है।"
+ },
+ {
+  "id": "NOTE:WOMEN",
+  "title": "Women's helpline",
+  "fact": "181 is the Women Helpline. 1098 is the Child Helpline.",
+  "source_url": "https://wcd.gov.in/",
+  "must_appear": [
+   "Women Helpline Toll free No. - 181",
+   "Child Helpline Toll free No. - 1098"
+  ],
+  "verified": true,
+  "checked_on": "2026-11-07",
+  "snapshot_sha256": "6603139f67115e1955dd397e55582c5a8a454de5881125fe5e3ca7d776c4c700",
+  "fact_hi": "181 महिला हेल्पलाइन है। 1098 बाल हेल्पलाइन है।"
+ },
+ {
+  "id": "NOTE:CYBER",
+  "title": "Cyber fraud helpline",
+  "fact": "1930 is the national helpline for reporting cyber financial fraud.",
+  "source_url": "https://i4c.mha.gov.in/ncrp.aspx",
+  "must_appear": [
+   "1930"
+  ],
+  "verified": true,
+  "checked_on": "2026-11-07",
+  "snapshot_sha256": "a81db8a82b5b1a4de9a442592b43d3d591704e7a112b523dcb47b3f6d24e4204"
+ }
+]

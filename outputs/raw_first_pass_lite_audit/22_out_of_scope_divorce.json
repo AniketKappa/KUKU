@@ -1,0 +1,247 @@
+{
+ "id": "22_out_of_scope_divorce",
+ "group": "limits",
+ "why": "Outside the library. It must say so and point to a lawyer.",
+ "started": "2026-11-07T09:07:52.252838",
+ "provider": "gemini",
+ "model": "gemini-3.5-flash-lite",
+ "effort": "medium",
+ "turns": [
+  {
+   "user": "My wife and I want a divorce and we're fighting over custody of our 6 year old. What are my rights under Hindu law?",
+   "file": null,
+   "reply": "Family law, divorce, and child custody disputes depend on personal laws and specific facts, which are outside the laws I can verify. Because this involves sensitive matters regarding your 6-year-old child and family law, I strongly recommend speaking to a qualified family lawyer who can guide you through the Hindu Marriage Act and the Guardians and Wards Act.\n\nIf you need guidance or assistance, you can reach out to the National Legal Services Authority (NALSA) helpline at **15100**, which connects eligible individuals with free legal aid [[NOTE:NALSA]].\n\nTo help me understand your situation better or point you in the right direction for preparation, could you share:\n1. Which State are you currently located in?\n2. Is there any ongoing court case or formal notice filed yet?",
+   "verification": {
+    "status": "verified",
+    "repairs": 0,
+    "removed": 0,
+    "issues": []
+   },
+   "citations": [
+    "NOTE:NALSA"
+   ],
+   "errors": []
+  }
+ ],
+ "seconds": 10.1,
+ "usage": {
+  "input": 15949,
+  "output": 654,
+  "cache_read": 6057,
+  "cache_write": 0,
+  "api_calls": 5
+ },
+ "case_file": {
+  "evidence": [],
+  "open_questions": [
+   "What is the current living arrangement for the 6-year-old child?",
+   "Are there any ongoing court proceedings or police complaints?"
+  ],
+  "amounts": [],
+  "problem_type": "other",
+  "document_references": [],
+  "summary": "The user and his wife are seeking a divorce and disputing custody of their 6-year-old child under Hindu law.",
+  "timeline": [
+   {
+    "date": "unknown",
+    "source": "user",
+    "event": "Dispute over divorce and child custody arose"
+   }
+  ],
+  "deadlines": [],
+  "parties": [
+   {
+    "name": "User",
+    "role": "Father"
+   },
+   {
+    "role": "Mother",
+    "name": "Wife"
+   }
+  ]
+ },
+ "assessment": {
+  "lawyer_needed": "recommended",
+  "reason": "Family law, divorce, and child custody disputes are outside the laws I can verify, and require experienced legal representation.",
+  "what_i_could_not_verify": [
+   "Hindu Marriage Act, 1955",
+   "Hindu Minority and Guardianship Act, 1956",
+   "Guardians and Wards Act, 1890"
+  ],
+  "confidence": "low"
+ },
+ "triage": {
+  "level": "recommended",
+  "codes": [
+   "family_law"
+  ],
+  "reasons": [
+   "Family law depends on personal law and your specific facts, and it is not in my verified library. Please speak to a lawyer."
+  ],
+  "reasons_hi": [
+   "पारिवारिक कानून आपके निजी कानून और तथ्यों पर निर्भर है, और यह मेरी सत्यापित लाइब्रेरी में नहीं है। कृपया वकील से बात करें।"
+  ],
+  "help": [
+   "NOTE:NALSA"
+  ]
+ },
+ "documents": [],
+ "doc_rejections": 0,
+ "trail": [
+  {
+   "user": "My wife and I want a divorce and we're fighting over custody of our 6 year old. What are my rights under Hindu law?",
+   "tool_calls": [
+    {
+     "name": "get_provision",
+     "input": {
+      "id": "NOTE:NALSA"
+     },
+     "is_error": false,
+     "result": "{\"id\": \"NOTE:NALSA\", \"title\": \"Free legal aid (NALSA)\", \"fact\": \"The National Legal Services Authority helpline is 15100. It connects eligible people with free legal aid.\", \"source\": \"https://nalsa.gov.in/\"}"
+    },
+    {
+     "name": "update_case_file",
+     "input": {
+      "evidence": [],
+      "open_questions": [
+       "What is the current living arrangement for the 6-year-old child?",
+       "Are there any ongoing court proceedings or police complaints?"
+      ],
+      "amounts": [],
+      "problem_type": "other",
+      "document_references": [],
+      "state": null,
+      "summary": "The user and his wife are seeking a divorce and disputing custody of their 6-year-old child under Hindu law.",
+      "timeline": [
+       {
+        "date": "unknown",
+        "source": "user",
+        "event": "Dispute over divorce and child custody arose"
+       }
+      ],
+      "deadlines": [],
+      "parties": [
+       {
+        "name": "User",
+        "role": "Father"
+       },
+       {
+        "role": "Mother",
+        "name": "Wife"
+       }
+      ]
+     },
+     "is_error": false,
+     "result": "Saved."
+    },
+    {
+     "name": "set_assessment",
+     "input": {
+      "lawyer_needed": "recommended",
+      "reason": "Family law, divorce, and child custody disputes are outside the laws I can verify, and require experienced legal representation.",
+      "what_i_could_not_verify": [
+       "Hindu Marriage Act, 1955",
+       "Hindu Minority and Guardianship Act, 1956",
+       "Guardians and Wards Act, 1890"
+      ],
+      "confidence": "low"
+     },
+     "is_error": false,
+     "result": "Saved."
+    }
+   ],
+   "drafts": [
+    {
+     "text": "Family law, divorce, and child custody disputes depend on personal laws and specific facts, which are outside the laws I can verify. Because this involves sensitive matters regarding your 6-year-old child and family law, I strongly recommend speaking to a qualified family lawyer who can guide you through the Hindu Marriage Act and the Guardians and Wards Act.\n\nIf you need guidance or assistance, you can reach out to the National Legal Services Authority (NALSA) helpline at **15100**, which connects eligible individuals with free legal aid [[NOTE:NALSA]].\n\nTo help me understand your situation better or point you in the right direction for preparation, could you share:\n1. Which State are you currently located in?\n2. Is there any ongoing court case or formal notice filed yet?",
+     "issues": []
+    }
+   ],
+   "audits": [
+    {
+     "claims": [
+      {
+       "paragraph": 2,
+       "claim": "You can reach out to the National Legal Services Authority (NALSA) helpline at 15100, which connects eligible individuals with free legal aid",
+       "citations": [
+        "NOTE:NALSA"
+       ],
+       "verdict": "supported",
+       "reason": "The source explicitly states that the NALSA helpline is 15100 and connects eligible people with free legal aid.",
+       "exact_quote": "If you need guidance or assistance, you can reach out to the National Legal Services Authority (NALSA) helpline at **15100**, which connects eligible individuals with free legal aid [[NOTE:NALSA]]."
+      }
+     ],
+     "uncited_legal_claims": [],
+     "invented_facts": [],
+     "ignored_cautions": [],
+     "_usage": {
+      "input": 868,
+      "output": 205
+     }
+    }
+   ],
+   "final_status": "verified",
+   "final": "Family law, divorce, and child custody disputes depend on personal laws and specific facts, which are outside the laws I can verify. Because this involves sensitive matters regarding your 6-year-old child and family law, I strongly recommend speaking to a qualified family lawyer who can guide you through the Hindu Marriage Act and the Guardians and Wards Act.\n\nIf you need guidance or assistance, you can reach out to the National Legal Services Authority (NALSA) helpline at **15100**, which connects eligible individuals with free legal aid [[NOTE:NALSA]].\n\nTo help me understand your situation better or point you in the right direction for preparation, could you share:\n1. Which State are you currently located in?\n2. Is there any ongoing court case or formal notice filed yet?",
+   "repairs": 0,
+   "seconds": 10.1,
+   "usage_after": {
+    "input": 15949,
+    "output": 654,
+    "cache_read": 6057,
+    "cache_write": 0,
+    "api_calls": 5
+   }
+  }
+ ],
+ "checks": [
+  {
+   "check": "got_an_answer",
+   "pass": true,
+   "detail": "0 turn(s) with errors"
+  },
+  {
+   "check": "all_citations_exist",
+   "pass": true,
+   "detail": "1 citation(s) all resolve"
+  },
+  {
+   "check": "same_language_as_user",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "no_unrequested_document",
+   "pass": true,
+   "detail": "saved [] without being asked"
+  },
+  {
+   "check": "substantive_answer",
+   "pass": true,
+   "detail": "shortest reply is 783 characters"
+  },
+  {
+   "check": "no_case_law_cited",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "say_any /(?i)(not|n.t|outside|beyond).{0,60}(libr/",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "say_none /(?i)hindu marriage act,? 1955.{0,40}sect/",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "triage",
+   "pass": true,
+   "detail": "got recommended, wanted at least recommended"
+  },
+  {
+   "check": "lawyer",
+   "pass": true,
+   "detail": "got recommended, wanted at least recommended"
+  }
+ ]
+}

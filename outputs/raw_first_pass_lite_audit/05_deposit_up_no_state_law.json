@@ -1,0 +1,356 @@
+{
+ "id": "05_deposit_up_no_state_law",
+ "group": "deposit",
+ "why": "State law not in library. Must say so and not pass off the Model Act as binding.",
+ "started": "2026-11-07T09:12:47.130441",
+ "provider": "gemini",
+ "model": "gemini-3.5-flash-lite",
+ "effort": "medium",
+ "turns": [
+  {
+   "user": "I rent a flat in Lucknow, Uttar Pradesh. Moved out last month and my landlord won't give back my Rs 30,000 deposit. What does the UP law say about how fast he must return it?",
+   "file": null,
+   "reply": "Uttar Pradesh ki specific rent or tenancy laws hamari verified library mein nahi hain, isliye main aapko UP-specific local timeline confirm nahi kar sakta. Lekin agar agreement ke mutabiq security deposit wapas nahi milta, toh yeh contract ka breach maana ja sakta hai, jiske liye [[ICA1872:s73]] ke tahat compensation ya recovery ki baat hoti hai. Agar landlord paisa nahi deta, toh aapke paas [[LIM1963:art55]] ke tahat 3 saal ka samay hota hai contract breach ke taur par civil court mein case file karne ka.\n\nPehle kuch steps lena behtar hota hai court jane se pehle:\n1. Landlord ko ek formal written demand (notice) bhejein jisme 30,000 rupaye wapas mangne ki baat ho.\n2. Apne rent agreement, deposit payment ki receipt, aur keys handover karne ka koi saboot (jaise WhatsApp chat ya photo) sambhal kar rakhein.\n\nKya aapke paas koi written rent agreement tha? Aur kya aapne keys handover karte waqt koi written acknowledgement liya tha? \n\nAgar aap chahein, toh main aapke liye ek formal demand letter ka draft taiyar kar sakta hoon jise aap landlord ko bhej sakte hain.",
+   "verification": {
+    "status": "verified",
+    "repairs": 2,
+    "removed": 0,
+    "issues": []
+   },
+   "citations": [
+    "ICA1872:s73",
+    "LIM1963:art55"
+   ],
+   "errors": []
+  }
+ ],
+ "seconds": 37.3,
+ "usage": {
+  "input": 42350,
+  "output": 2072,
+  "cache_read": 26307,
+  "cache_write": 0,
+  "api_calls": 10
+ },
+ "case_file": {
+  "problem_type": "tenancy_deposit",
+  "amounts": [
+   {
+    "label": "Security Deposit",
+    "amount_inr": "30000"
+   }
+  ],
+  "parties": [
+   {
+    "role": "Opposing Party",
+    "name": "Landlord"
+   },
+   {
+    "role": "Tenant",
+    "name": "User"
+   }
+  ],
+  "evidence": [
+   {
+    "status": "unclear",
+    "why_it_matters": "Shows terms of deposit return and tenancy conditions",
+    "item": "Lease agreement / Rent agreement"
+   },
+   {
+    "status": "unclear",
+    "why_it_matters": "Proves payment of Rs 30,000",
+    "item": "Receipt for deposit payment"
+   },
+   {
+    "item": "Proof of vacating / handover of keys",
+    "status": "unclear",
+    "why_it_matters": "Shows date of vacating premises last month"
+   }
+  ],
+  "timeline": [
+   {
+    "date": "2026-10",
+    "source": "user",
+    "event": "Moved out of the flat in Lucknow"
+   }
+  ],
+  "state": "Uttar Pradesh",
+  "document_references": [],
+  "summary": "Tenant moved out last month from a flat in Lucknow, Uttar Pradesh, and the landlord has not returned the Rs 30,000 security deposit.",
+  "open_questions": [
+   "Was there a written rental agreement?",
+   "Did you give written notice before moving out?"
+  ],
+  "deadlines": []
+ },
+ "assessment": {
+  "confidence": "medium",
+  "lawyer_needed": "recommended",
+  "what_i_could_not_verify": [
+   "Specific timelines or rules for security deposit return under Uttar Pradesh state rent legislation (as UP tenancy legislation is outside our verified library)"
+  ],
+  "reason": "Uttar Pradesh specific tenancy laws are outside our verified database, but a security deposit is recoverable under general contract principles within 3 years under Article 55 of the Limitation Act, 1963."
+ },
+ "triage": {
+  "level": "none",
+  "codes": [],
+  "reasons": [],
+  "reasons_hi": [],
+  "help": []
+ },
+ "documents": [],
+ "doc_rejections": 0,
+ "trail": [
+  {
+   "user": "I rent a flat in Lucknow, Uttar Pradesh. Moved out last month and my landlord won't give back my Rs 30,000 deposit. What does the UP law say about how fast he must return it?",
+   "tool_calls": [
+    {
+     "name": "search_law",
+     "input": {
+      "query": "security deposit rent Uttar Pradesh Lucknow",
+      "state": "Uttar Pradesh"
+     },
+     "is_error": false,
+     "result": "[{\"id\": \"MTA2021:s11\", \"citation\": \"Section 11, Model Tenancy Act, 2021\", \"heading\": \"Security deposit\", \"excerpt\": \"(1) The security deposit to b e paid by the tenant in advance shall\\nbe such as may be agreed upon between the landlord and the tenant\\nin the tenancy agreement, which shall ––\\nRestriction on\\nsub-letting.\\nRent payable.\\nRevision of rent.\\nRent Authority to\\ndetermine the\\nrevised rent in\\ncase of dispute.\\nSecurity deposit.\\n(a) not exceed two months rent, in case of residential premises;\\nand\\n(b) not exceed six months rent , in case of non -residential\\npremises.\\n(2) The security deposit shall be refunded to the tenant on the date of\\ntaking over vacant possession of the premises from the tenant, after\\nmaking due deduction of any liability of the tenant.\", \"applies_in\": \"Model law (applies only where a State has adopted it)\", \"caution\": \"This is a MODEL law issued by the Central Government for States to adopt. It does not bind anyone unless the user's State has enacted it. Never present it as law that applies to the user; say it is a model only.\"}, {\"id\": \"CPC1908:o15\", \"citation\": \"Order 15, Code of Civil Procedure, 1908\", \"heading\": \"Disposal Of The Suit At The First Hearing\", \"excerpt\": \"Where the summons has been issued for the final disposal of the suit and\\neither party fails without sufficient cause to produce the evidence on which he relies, the Court may at once\\npronounce judgment, or any, if it thinks fit, after framing and recording issues, adjourn the suit for production\\nof such evidence as may be necessary for its decision upon such issues.\\nSTATE AMENDMENTS\\nUttar Pradesh.— In its application to the State of Uttar Pradesh add the following rule 5 after rule 4.\\n\\\"5. Striking off defence for failure to deposit admitted rent, etc.— (1) In any suit by a lessor for the eviction of\\na lessee after the determination of his lease and for the recovery from him of rent or compensation for use\\nand occupation, the defendant shall, at or before the first hearing of the suit, deposit the entire amount\\nadmitted by him to be due together with interest thereon at the rate of nine p\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"CPC1908:o27\", \"citation\": \"Order 27, Code of Civil Procedure, 1908\", \"heading\": \"Suits By Or Against The Government Or Public Officersrin Their\", \"excerpt\": \"nor his property to attachment, otherwise than in\\nexecution of a decree.\\nSTATE AMENDMENTS\\nUttar Pradesh.— After rule 9 as inserted by Allahabad High Court insert the following:—\\n\\\"10. Suits by or against statutory authority.— (1) Any authority or Corporation, constituted by or under any\\nlaw, may, from time to time, appoint a Standing Counsel, to be called Corporation pleader of that authority in\\nany district and give information of such appointment to the District Judge and to Registrar of the High Court\\nat Allahabad or at Lucknow Bench, as the case may be.\\n(2) The Corporation pleader so appointed shall be the agent in that district of the appointing authority or\\nCorporation for purposes of receiving processes against it but shall not act or plead without filing a\\nvakalatnama or memorandum of appearance.\\\"\\n[U.P. Act 57 of 1976 amended by Notification dated 10.2.1981].\\n8A . No security to b\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"CPC1908:o16\", \"citation\": \"Order 16, Code of Civil Procedure, 1908\", \"heading\": \"Summoning And Attendance Of Witnesses\", \"excerpt\": \" pay into Court such sum as is sufficient to defray the expenses of his\\ndetention for such further period, and, in default of such deposit being made, may order such sum to be\\nlevied by attachment and sale of the movable property of such party; or the Court may discharge the person\\nsummoned without requiring him to give evidence, or may other order such levy and discharge such person\\nas aforesaid.\\nSTATE AMENDMENTS\\nUttar Pradesh.— In its application to the State of Uttar Pradesh, in Order XVI, rule 4, add the following\\nproviso:—\\n\\\"Provided "
+    },
+    {
+     "name": "get_provision",
+     "input": {
+      "id": "LIM1963:art55"
+     },
+     "is_error": false,
+     "result": "{\"id\": \"LIM1963:art55\", \"citation\": \"Article 55, Limitation Act, 1963\", \"applies_in\": \"India\", \"caution\": \"\", \"heading\": \"Schedule article\", \"text\": \"For compensation for the breach of any contract, express or implied not herein specially provided for. Three years. When the contract is broken or (where there are successive breaches) when the breach in respect of which the suit is instituted occurs or (where the breach is continuing) when it ceases. Description of suit Period of limitation Time from which period begins to run PART III.—SUITS RELATING TO DECLARATIONS\"}"
+    },
+    {
+     "name": "update_case_file",
+     "input": {
+      "problem_type": "tenancy_deposit",
+      "amounts": [
+       {
+        "label": "Security Deposit",
+        "amount_inr": "30000"
+       }
+      ],
+      "parties": [
+       {
+        "role": "Opposing Party",
+        "name": "Landlord"
+       },
+       {
+        "role": "Tenant",
+        "name": "User"
+       }
+      ],
+      "evidence": [
+       {
+        "status": "unclear",
+        "why_it_matters": "Shows terms of deposit return and tenancy conditions",
+        "item": "Lease agreement / Rent agreement"
+       },
+       {
+        "status": "unclear",
+        "why_it_matters": "Proves payment of Rs 30,000",
+        "item": "Receipt for deposit payment"
+       },
+       {
+        "item": "Proof of vacating / handover of keys",
+        "status": "unclear",
+        "why_it_matters": "Shows date of vacating premises last month"
+       }
+      ],
+      "timeline": [
+       {
+        "date": "2026-10",
+        "source": "user",
+        "event": "Moved out of the flat in Lucknow"
+       }
+      ],
+      "state": "Uttar Pradesh",
+      "document_references": [],
+      "summary": "Tenant moved out last month from a flat in Lucknow, Uttar Pradesh, and the landlord has not returned the Rs 30,000 security deposit.",
+      "open_questions": [
+       "Was there a written rental agreement?",
+       "Did you give written notice before moving out?"
+      ],
+      "deadlines": []
+     },
+     "is_error": false,
+     "result": "Saved."
+    },
+    {
+     "name": "set_assessment",
+     "input": {
+      "confidence": "medium",
+      "lawyer_needed": "recommended",
+      "what_i_could_not_verify": [
+       "Specific timelines or rules for security deposit return under Uttar Pradesh state rent legislation (as UP tenancy legislation is outside our verified library)"
+      ],
+      "reason": "Uttar Pradesh specific tenancy laws are outside our verified database, but a security deposit is recoverable under general contract principles within 3 years under Article 55 of the Limitation Act, 1963."
+     },
+     "is_error": false,
+     "result": "Saved."
+    },
+    {
+     "name": "get_provision",
+     "input": {
+      "id": "ICA1872:s73"
+     },
+     "is_error": false,
+     "result": "{\"id\": \"ICA1872:s73\", \"citation\": \"Section 73, Indian Contract Act, 1872\", \"applies_in\": \"India\", \"caution\": \"\", \"heading\": \"Compensation for loss or damage caused by breach of contract\", \"text\": \"When a contract has been\\nbroken, the party who suffers by such breach is entitled to receive, from the party who has broken the\\ncontract, compensation for any loss or damage caused to him thereby, which naturally arose in the usual\\ncourse of things from such breach, or which the parties knew, when they made the contract, to be likely to\\nresult from the breach of it.\\nSuch compensation is not to be given for any remote and indirect loss or damage sus tained by reason\\nof the breach.\\nCompensation for failure to discharge obligation resemb ling those created by contract .—When\\nan obligation resembling those created by contract ha s been incurred and has not been discharged, any\\nperson injured by the failure to discharge it is entitled to receive the same compensation from the party in\\ndefault, as if such person had contracted to discharge it and had broken his contract.\\nExplanation.—In estimating the loss or damage arising from a breach of contract, the means which\\nexisted of remedying the inconvenience caused by the non-performance of the contract must be taken into\\naccount.\\n1. As to suits by minors under s. 70 in Presidency Small Cause Courts, see the Presidency Small Cause Courts Act, 1882\\n(15 of 1882), s. 32.\\nIllustrations\\n(a)A contracts to sell and deliver 50 maunds of saltpetre to B, at a certain price to be paid on delivery. A breaks his promise.\\nB is entitled to receive from A, by way of compensation, the sum, if any, by which the contract price falls short of the pric e for\\nwhich B might have obtained 50 maunds of saltpetre of like quality at the time when the saltpetre ought to have been delivered.\\n(b)A hires B’s ship to go to Bombay, and there take on board, on the first of January , a cargo, which A is to provide, and to\\nbring it to Calcutta, the freight to be paid when earned. B ’s ship does not go to Bombay, but A has opportunities of procuring\\nsuitable conveyance for the cargo upon terms as advantageous as those on which he had chartered the ship. A avails himself of\\nthose opportunities, but is put to trouble and expense in doing so. A is entitled to receive compensation from B in respe ct of such\\ntrouble and expense.\\n(c)A contracts to buy of B, at a stated price, 50 maunds of rice, no time being fixed for delivery. A afterwards informs B that\\nhe will not ac cept the rice if tendered to him. B is entitled to receive from A, by way of compensation, the amount, if any, by\\nwhich the contract price exceeds that which B can obtain for the rice at the time when A informs B that he will not accept it.\\n(d) A contracts to buy B ’s ship for 60,000 rupees, but breaks his promise. A must pay to B, by way of compensation, the\\nexcess, if any, of the contract price over the price which B can obtain for the ship at the time of the breach of promise.\\n(e) A, the owner of a boat, contracts with B to take a cargo of jute to Mirzapur, for sale at that place, starting on a specified\\nday. The boat, owing to some avoidable cause, does not start at the time appointed, whereby the arrival of the cargo at Mirza pur\\nis delayed beyond the time when it would have arrived if the boat had sailed according to the contract. After that date, and before\\nthe arrival of the cargo, the price of jute falls. The measure of the compensation payable to B by A is the difference betwee n the\\nprice which B coul d have obtained for the cargo at Mirzapur at the time when it would have arrived if forwarded in due course,\\nand its market price at the time when it actually arrived.\\n(f) A contracts to repair B ’s house in a certain manner, and receives payment in advance . A repairs the house, but not\\naccording to contract. B is entitled to recover from A the cost of making the repairs conform to the contract.\\n(g) A contracts to let his s"
+    }
+   ],
+   "drafts": [
+    {
+     "text": "Uttar Pradesh ki specific rent or tenancy laws hamari verified library mein nahi hain, isliye main aapko UP-specific local timeline confirm nahi kar sakta. Lekin general contract law ke tahat [[ICA1872:s73]], security deposit aapka paisa hai jo tenancy khatam hone par aur flat khali karke dena landlord ki zimmedari hoti hai. Agar landlord paisa nahi deta, toh aapke paas [[LIM1963:art55]] ke tahat 3 saal ka samay hota hai contract breach ke taur par civil court mein case file karne ka.\n\nPehle kuch steps lena behtar hota hai court jane se pehle:\n1. Landlord ko ek formal written demand (notice) bhejein jisme 30,000 rupaye wapas mangne ki baat ho.\n2. Apne rent agreement, deposit payment ki receipt, aur keys handover karne ka koi saboot (jaise WhatsApp chat ya photo) sambhal kar rakhein.\n\nKya aapke paas koi written rent agreement tha? Aur kya aapne keys handover karte waqt koi written acknowledgement liya tha? \n\nAgar aap chahein, toh main aapke liye ek formal demand letter ka draft taiyar kar sakta hoon jise aap landlord ko bhej sakte hain.",
+     "issues": [
+      {
+       "code": "citation_not_read",
+       "detail": "[[ICA1872:s73]] was never retrieved in this conversation. Call get_provision on it and re-check your claim against the text.",
+       "paragraph": null,
+       "blocking": true,
+       "quote": null
+      }
+     ]
+    },
+    {
+     "text": "Uttar Pradesh ki specific rent or tenancy laws hamari verified library mein nahi hain, isliye main aapko UP-specific local timeline confirm nahi kar sakta. Lekin general contract law ke tahat [[ICA1872:s73]], security deposit aapka paisa hai jo tenancy khatam hone par aur flat khali karke dena landlord ki zimmedari hoti hai. Agar landlord paisa nahi deta, toh aapke paas [[LIM1963:art55]] ke tahat 3 saal ka samay hota hai contract breach ke taur par civil court mein case file karne ka.\n\nPehle kuch steps lena behtar hota hai court jane se pehle:\n1. Landlord ko ek formal written demand (notice) bhejein jisme 30,000 rupaye wapas mangne ki baat ho.\n2. Apne rent agreement, deposit payment ki receipt, aur keys handover karne ka koi saboot (jaise WhatsApp chat ya photo) sambhal kar rakhein.\n\nKya aapke paas koi written rent agreement tha? Aur kya aapne keys handover karte waqt koi written acknowledgement liya tha? \n\nAgar aap chahein, toh main aapke liye ek formal demand letter ka draft taiyar kar sakta hoon jise aap landlord ko bhej sakte hain.",
+     "issues": [
+      {
+       "code": "claim_not_supported",
+       "detail": "Paragraph 1: \"Under general contract law, returning the security deposit when tenancy ends and the flat is vacated is the landlord's responsibility.\" is not supported by ['ICA1872:s73']. Section 73 of the Indian Contract Act deals with compensation for loss or damage caused by breach of contract, but does not explicitly state that returning a security deposit upon vacating is the landlord's responsibility.",
+       "paragraph": 0,
+       "blocking": true,
+       "quote": "Lekin general contract law ke tahat [[ICA1872:s73]], security deposit aapka paisa hai jo tenancy khatam hone par aur flat khali karke dena landlord ki zimmedari hoti hai."
+      }
+     ]
+    },
+    {
+     "text": "Uttar Pradesh ki specific rent or tenancy laws hamari verified library mein nahi hain, isliye main aapko UP-specific local timeline confirm nahi kar sakta. Lekin agar agreement ke mutabiq security deposit wapas nahi milta, toh yeh contract ka breach maana ja sakta hai, jiske liye [[ICA1872:s73]] ke tahat compensation ya recovery ki baat hoti hai. Agar landlord paisa nahi deta, toh aapke paas [[LIM1963:art55]] ke tahat 3 saal ka samay hota hai contract breach ke taur par civil court mein case file karne ka.\n\nPehle kuch steps lena behtar hota hai court jane se pehle:\n1. Landlord ko ek formal written demand (notice) bhejein jisme 30,000 rupaye wapas mangne ki baat ho.\n2. Apne rent agreement, deposit payment ki receipt, aur keys handover karne ka koi saboot (jaise WhatsApp chat ya photo) sambhal kar rakhein.\n\nKya aapke paas koi written rent agreement tha? Aur kya aapne keys handover karte waqt koi written acknowledgement liya tha? \n\nAgar aap chahein, toh main aapke liye ek formal demand letter ka draft taiyar kar sakta hoon jise aap landlord ko bhej sakte hain.",
+     "issues": []
+    }
+   ],
+   "audits": [
+    {
+     "claims": [
+      {
+       "paragraph": 1,
+       "claim": "Under general contract law, returning the security deposit when tenancy ends and the flat is vacated is the landlord's responsibility.",
+       "citations": [
+        "ICA1872:s73"
+       ],
+       "verdict": "not_supported",
+       "reason": "Section 73 of the Indian Contract Act deals with compensation for loss or damage caused by breach of contract, but does not explicitly state that returning a security deposit upon vacating is the landlord's responsibility.",
+       "exact_quote": "Lekin general contract law ke tahat [[ICA1872:s73]], security deposit aapka paisa hai jo tenancy khatam hone par aur flat khali karke dena landlord ki zimmedari hoti hai."
+      },
+      {
+       "paragraph": 1,
+       "claim": "Under the Limitation Act, you have a period of 3 years to file a case in a civil court for breach of contract.",
+       "citations": [
+        "LIM1963:art55"
+       ],
+       "verdict": "supported",
+       "reason": "Article 55 of the Limitation Act, 1963 provides a limitation period of three years for compensation for breach of contract, starting when the contract is broken.",
+       "exact_quote": "Agar landlord paisa nahi deta, toh aapke paas [[LIM1963:art55]] ke tahat 3 saal ka samay hota hai contract breach ke taur par civil court mein case file karne ka."
+      }
+     ],
+     "uncited_legal_claims": [],
+     "invented_facts": [],
+     "ignored_cautions": [],
+     "_usage": {
+      "input": 3453,
+      "output": 395
+     }
+    },
+    {
+     "claims": [
+      {
+       "paragraph": 1,
+       "claim": "Section 73 of the Indian Contract Act provides for compensation or recovery when a contract is breached by not returning a security deposit.",
+       "citations": [
+        "ICA1872:s73"
+       ],
+       "verdict": "supported",
+       "reason": "Section 73 provides for compensation for loss or damage caused by breach of contract.",
+       "exact_quote": "Lekin agar agreement ke mutabiq security deposit wapas nahi milta, toh yeh contract ka breach maana ja sakta hai, jiske liye [[ICA1872:s73]] ke tahat compensation ya recovery ki baat hoti hai."
+      },
+      {
+       "paragraph": 1,
+       "claim": "Under Article 55 of the Limitation Act, you have a period of 3 years to file a case in civil court for breach of contract.",
+       "citations": [
+        "LIM1963:art55"
+       ],
+       "verdict": "supported",
+       "reason": "Article 55 sets a three-year limitation period for compensation for breach of contract starting when the contract is broken.",
+       "exact_quote": "Agar landlord paisa nahi deta, toh aapke paas [[LIM1963:art55]] ke tahat 3 saal ka samay hota hai contract breach ke taur par civil court mein case file karne ka."
+      }
+     ],
+     "uncited_legal_claims": [],
+     "invented_facts": [],
+     "ignored_cautions": [],
+     "_usage": {
+      "input": 3458,
+      "output": 368
+     }
+    }
+   ],
+   "final_status": "verified",
+   "final": "Uttar Pradesh ki specific rent or tenancy laws hamari verified library mein nahi hain, isliye main aapko UP-specific local timeline confirm nahi kar sakta. Lekin agar agreement ke mutabiq security deposit wapas nahi milta, toh yeh contract ka breach maana ja sakta hai, jiske liye [[ICA1872:s73]] ke tahat compensation ya recovery ki baat hoti hai. Agar landlord paisa nahi deta, toh aapke paas [[LIM1963:art55]] ke tahat 3 saal ka samay hota hai contract breach ke taur par civil court mein case file karne ka.\n\nPehle kuch steps lena behtar hota hai court jane se pehle:\n1. Landlord ko ek formal written demand (notice) bhejein jisme 30,000 rupaye wapas mangne ki baat ho.\n2. Apne rent agreement, deposit payment ki receipt, aur keys handover karne ka koi saboot (jaise WhatsApp chat ya photo) sambhal kar rakhein.\n\nKya aapke paas koi written rent agreement tha? Aur kya aapne keys handover karte waqt koi written acknowledgement liya tha? \n\nAgar aap chahein, toh main aapke liye ek formal demand letter ka draft taiyar kar sakta hoon jise aap landlord ko bhej sakte hain.",
+   "repairs": 2,
+   "seconds": 37.3,
+   "usage_after": {
+    "input": 42350,
+    "output": 2072,
+    "cache_read": 26307,
+    "cache_write": 0,
+    "api_calls": 10
+   }
+  }
+ ],
+ "checks": [
+  {
+   "check": "got_an_answer",
+   "pass": true,
+   "detail": "0 turn(s) with errors"
+  },
+  {
+   "check": "all_citations_exist",
+   "pass": true,
+   "detail": "2 citation(s) all resolve"
+  },
+  {
+   "check": "same_language_as_user",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "no_unrequested_document",
+   "pass": true,
+   "detail": "saved [] without being asked"
+  },
+  {
+   "check": "substantive_answer",
+   "pass": true,
+   "detail": "shortest reply is 1073 characters"
+  },
+  {
+   "check": "no_case_law_cited",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "cite_none",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "say_any /(?i)(could ?n.t|can ?not|not|n.t).{0,50}/",
+   "pass": false,
+   "detail": ""
+  },
+  {
+   "check": "say_none /67B|Section 999|Housing Recovery Act|AIR/",
+   "pass": true,
+   "detail": ""
+  }
+ ]
+}
