@@ -1,0 +1,367 @@
+{
+ "id": "07_refund_hindi_ecommerce",
+ "group": "consumer",
+ "why": "E-commerce refund in Devanagari.",
+ "started": "2026-11-09T11:26:04.529117",
+ "provider": "gemini",
+ "model": "gemini-3.5-flash-lite",
+ "audit_model": "gemini-3-flash-preview",
+ "effort": "medium",
+ "audit_effort": "medium",
+ "turns": [
+  {
+   "user": "मैंने अगस्त 2026 में एक ऑनलाइन वेबसाइट से 15,000 रुपये का फोन खरीदा। फोन खराब निकला तो वापस भेज दिया। दो महीने हो गए, रिफंड नहीं आया और कस्टमर केयर जवाब नहीं देता। मैं लखनऊ में रहता हूं। क्या करूं?",
+   "file": null,
+   "reply": "नमस्ते! लखनऊ में ऑनलाइन खरीदे गए फोन का दो महीने से रिफंड न मिलना और कस्टमर केयर का जवाब न देना बहुत परेशान करने वाला है। \n\nई-कॉमर्स नियमों के अनुसार, मार्केटप्लेस पर सामान बेचने वाले विक्रेता को खराब सामान वापस लेने और भुगतान किए गए पैसे वापस करने से मना करने की अनुमति नहीं है [[CPECOM2020:r6]]।\n\nआपके पास इसके लिए दो बहुत अच्छे और आसान रास्ते हैं:\n\n1. **राष्ट्रीय उपभोक्ता हेल्पलाइन (National Consumer Helpline):** आप सीधे **1915** पर कॉल कर अपनी शिकायत दर्ज करा सकते हैं [[NOTE:NCH]]। कंपनियों को अक्सर इस हेल्पलाइन से शिकायत जाने पर तुरंत रिफंड करना पड़ता है।\n2. **उपभोक्ता आयोग (Consumer Commission):** यदि वहाँ बात न बने, तो आप जिला उपभोक्ता विवाद निवारण आयोग में शिकायत दर्ज कराकर रिफंड के साथ-साथ हर्जाने की मांग भी कर सकते हैं [[CPA2019:s39]]।\n\nक्या आपके पास **ऑर्डर का इनवॉइस (बिल)** और फोन वापस करने का **कूरियर या पिकअप प्रूफ** है? \n\nयदि आप चाहें, तो मैं कंपनी को भेजने के लिए एक औपचारिक शिकायत पत्र का ड्राफ्ट तैयार कर सकता हूँ। क्या आप चाहेंगे कि मैं वह ड्राफ्ट बनाऊँ?",
+   "verification": {
+    "status": "verified",
+    "repairs": 1,
+    "removed": 0,
+    "issues": []
+   },
+   "citations": [
+    "CPECOM2020:r6",
+    "NOTE:NCH",
+    "CPA2019:s39"
+   ],
+   "errors": []
+  }
+ ],
+ "seconds": 69.6,
+ "usage": {
+  "input": 28583,
+  "output": 2108,
+  "cache_read": 26297,
+  "cache_write": 0,
+  "api_calls": 9
+ },
+ "case_file": {
+  "summary": "User bought a phone online in August 2026 for 15,000 rupees, found it defective, and returned it. No refund received after two months and customer care is unresponsive.",
+  "deadlines": [],
+  "evidence": [
+   {
+    "status": "unclear",
+    "item": "Order confirmation / invoice",
+    "why_it_matters": "Shows purchase details and seller name"
+   },
+   {
+    "why_it_matters": "Proves you returned the defective phone to them",
+    "status": "unclear",
+    "item": "Return pickup receipt / tracking proof"
+   }
+  ],
+  "state": "Uttar Pradesh",
+  "open_questions": [
+   "Do you have the order confirmation, invoice, and proof that the phone was picked up or returned?"
+  ],
+  "problem_type": "consumer_refund",
+  "parties": [
+   {
+    "name": "User",
+    "role": "Consumer"
+   },
+   {
+    "role": "Opposite Party",
+    "name": "E-commerce website / Seller"
+   }
+  ],
+  "document_references": [],
+  "timeline": [
+   {
+    "event": "Purchased and returned defective phone online",
+    "date": "2026-08",
+    "source": "user"
+   }
+  ],
+  "amounts": [
+   {
+    "amount_inr": "15000",
+    "label": "Phone refund amount"
+   }
+  ]
+ },
+ "assessment": {
+  "lawyer_needed": "none",
+  "what_i_could_not_verify": [
+   "Specific grievance officer contact details of the website"
+  ],
+  "confidence": "high",
+  "reason": "ऑनलाइन सामान खराब निकलने पर रिफंड न मिलने पर राष्ट्रीय उपभोक्ता हेल्पलाइन या जिला आयोग का रास्ता उपलब्ध है।"
+ },
+ "triage": {
+  "level": "none",
+  "codes": [],
+  "reasons": [],
+  "reasons_hi": [],
+  "help": []
+ },
+ "documents": [],
+ "doc_rejections": 0,
+ "trail": [
+  {
+   "user": "मैंने अगस्त 2026 में एक ऑनलाइन वेबसाइट से 15,000 रुपये का फोन खरीदा। फोन खराब निकला तो वापस भेज दिया। दो महीने हो गए, रिफंड नहीं आया और कस्टमर केयर जवाब नहीं देता। मैं लखनऊ में रहता हूं। क्या करूं?",
+   "tool_calls": [
+    {
+     "name": "search_law",
+     "input": {
+      "query": "e-commerce return refund defective goods",
+      "state": "Uttar Pradesh"
+     },
+     "is_error": false,
+     "result": "[{\"id\": \"CPECOM2020:r6\", \"citation\": \"Rule 6, Consumer Protection (E-Commerce) Rules, 2020\", \"heading\": \"Duties of sellers on marketplace\", \"excerpt\": \"(1) No seller offering goods or service s through a marketplace e -commerce\\nentity shall adopt any unfair trade practice whether in the course of the offer on the e -commerce entity’s platform or\\notherwise.\\n(2) No such seller shall falsely represent itself as a consumer and post reviews about goods or services or\\nmisrepresent the quality or the features of any goods or services.\\n(3) No seller offering goods or services through a marketplace e -commerce entity shall refuse to take back goods,\\nor withdraw or discontinue services purchased or agreed to be purc hased, or refuse to refund consideration, if\\npaid, if such goods or services are defective, deficient or spurious, or if the goods or services are not of the\\ncharacteristics or features as advertised or as agreed to, or if such goods or services are delive red late from the\\nstated delivery schedule:\\nProvided that in the case of late d\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"CPECOM2020:r7\", \"citation\": \"Rule 7, Consumer Protection (E-Commerce) Rules, 2020\", \"heading\": \"Duties and liabilities of inventory e-commerce entities\", \"excerpt\": \"(1) Every inventory e -commerce entity shall provide the following information in a clear and accessible\\nmanner, displayed prominently to its users:\\n(a) accurate information related to return, refund, excha nge, warranty and guarantee, delivery and\\nshipment, cost of return shipping, mode of payments, grievance redressal mechanism, and any\\nother similar information which may be required by consumers to make informed decisions;\\n(b) all mandatory notices and information required by applicable laws;\\n(c) information on available payment methods, the security of those payment methods, the procedure\\nto cancel regular payments under those methods, any fees or charges payable by users, charge\\nback options, if any, and the contact information of the relevant payment service provider;\\n(d) all contractual information required to be disclosed by law;\\n(e) total price in single figure of any good or se\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"CPECOM2020:r5\", \"citation\": \"Rule 5, Consumer Protection (E-Commerce) Rules, 2020\", \"heading\": \"Liabilities of marketplace e -commerce entities\", \"excerpt\": \"(1) A marketplace e-commerce entity which seeks to avail the\\nexemption from liability under sub -section (1) of section 79 of the Information Technology Act, 2000 (21 of 2000)\\nshall comply with sub -sections (2) and (3) of that section, including the provisions of the Information Technology\\n(Intermediary Guidelines) Rules, 2011.\\n(2) Every marketplace e -commerce entity sh all require sellers through an undertaking to ensure that descriptions,\\nimages, and other content pertaining to goods or services on their platform is accurate and corresponds directly\\nwith the appearance, nature, quality, purpose and other general features of such good or service.\\n(3) Every marketplace e -commerce entity shall provide the following information in a clear and accessible manner,\\ndisplayed prominently to its users at the appropriate place on its platform:\\n(a) details about the sellers offering goods and s\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"CPECOM2020:r4\", \"citation\": \"Rule 4, Consumer Protection (E-Commerce) Rules, 2020\", \"heading\": \"Duties of e-commerce entities\", \"excerpt\": \"(1) An e-commerce entity shall:\\n(a) be a company incorporated under the Companies Act, 1956 (1 of 1956) or the Companies Act, 2013 (18\\nof 2013) or a foreign company covered under clause (42) of section 2 of the Companies Act, 2013 (18\\nof 2013) or an office, branch or agency outside India owned or controlled by a person resident in India\\nas provided in sub -clause (iii) of clause (v) of section 2 of the Foreign Exchange Management Act,\\n1999 (42 of 1999); and\\n(a) appoint a nodal person of contact"
+    },
+    {
+     "name": "get_provision",
+     "input": {
+      "id": "NOTE:NCH"
+     },
+     "is_error": false,
+     "result": "{\"id\": \"NOTE:NCH\", \"title\": \"National Consumer Helpline\", \"fact\": \"The National Consumer Helpline can be reached on 1915. It handles consumer grievances before a formal case.\", \"source\": \"https://consumerhelpline.gov.in/\"}"
+    },
+    {
+     "name": "update_case_file",
+     "input": {
+      "summary": "User bought a phone online in August 2026 for 15,000 rupees, found it defective, and returned it. No refund received after two months and customer care is unresponsive.",
+      "deadlines": [],
+      "evidence": [
+       {
+        "status": "unclear",
+        "item": "Order confirmation / invoice",
+        "why_it_matters": "Shows purchase details and seller name"
+       },
+       {
+        "why_it_matters": "Proves you returned the defective phone to them",
+        "status": "unclear",
+        "item": "Return pickup receipt / tracking proof"
+       }
+      ],
+      "state": "Uttar Pradesh",
+      "open_questions": [
+       "Do you have the order confirmation, invoice, and proof that the phone was picked up or returned?"
+      ],
+      "problem_type": "consumer_refund",
+      "parties": [
+       {
+        "name": "User",
+        "role": "Consumer"
+       },
+       {
+        "role": "Opposite Party",
+        "name": "E-commerce website / Seller"
+       }
+      ],
+      "document_references": [],
+      "timeline": [
+       {
+        "event": "Purchased and returned defective phone online",
+        "date": "2026-08",
+        "source": "user"
+       }
+      ],
+      "amounts": [
+       {
+        "amount_inr": "15000",
+        "label": "Phone refund amount"
+       }
+      ]
+     },
+     "is_error": false,
+     "result": "Saved."
+    },
+    {
+     "name": "set_assessment",
+     "input": {
+      "reason": "ऑनलाइन सामान खराब निकलने पर रिफंड न मिलने पर उपभोक्ता संरक्षण नियमों के तहत राष्ट्रीय उपभोक्ता हेल्पलाइन या जिला आयोग का रास्ता उपलब्ध है।",
+      "what_i_could_not_verify": [
+       "Specific grievance officer contact details of the website"
+      ],
+      "confidence": "high",
+      "lawyer_needed": "none"
+     },
+     "is_error": false,
+     "result": "Saved."
+    },
+    {
+     "name": "set_assessment",
+     "input": {
+      "lawyer_needed": "none",
+      "what_i_could_not_verify": [
+       "Specific grievance officer contact details of the website"
+      ],
+      "confidence": "high",
+      "reason": "ऑनलाइन सामान खराब निकलने पर रिफंड न मिलने पर राष्ट्रीय उपभोक्ता हेल्पलाइन या जिला आयोग का रास्ता उपलब्ध है।"
+     },
+     "is_error": false,
+     "result": "Saved."
+    }
+   ],
+   "drafts": [
+    {
+     "text": "नमस्ते! लखनऊ में ऑनलाइन खरीदे गए फोन का दो महीने से रिफंड न मिलना और कस्टमर केयर का जवाब न देना बहुत परेशान करने वाला है। \n\nउपभोक्ता नियमों के तहत, यदि कोई ऑनलाइन सामान खराब निकलता है और आप उसे वापस कर देते हैं, तो विक्रेता या ई-कॉमर्स प्लेटफॉर्म को रिफंड देना अनिवार्य है [[CPECOM2020:r6]]। खराब सामान के लिए रिफंड रोकने की अनुमति नहीं है।\n\nआपके पास इसके लिए दो बहुत अच्छे और आसान रास्ते हैं:\n\n1. **राष्ट्रीय उपभोक्ता हेल्पलाइन (National Consumer Helpline):** आप बिना किसी वकील के सीधे **1915** पर कॉल कर सकते हैं या उनकी वेबसाइट (consumerhelpline.gov.in) पर अपनी शिकायत दर्ज करा सकते हैं [[NOTE:NCH]]। कंपनियों को अक्सर इस हेल्पलाइन से शिकायत जाने पर तुरंत रिफंड करना पड़ता है।\n2. **उपभोक्ता आयोग (Consumer Commission):** यदि वहां बात न बने, तो आप जिला उपभोक्ता विवाद निवारण आयोग में शिकायत दर्ज कराकर रिफंड के साथ-साथ हर्जाने की मांग भी कर सकते हैं [[CPA2019:s39]]।\n\nक्या आपके पास **ऑर्डर का इनवॉइस (बिल)** और फोन वापस करने का **कूरियर या पिकअप प्रूफ** है? \n\nयदि आप चाहें, तो मैं कंपनी को भेजने के लिए एक औपचारिक **कानूनी नोटिस या शिकायत पत्र (Legal Notice / Complaint Letter)** का ड्राफ्ट तैयार कर सकता हूँ। क्या आप चाहेंगे कि मैं वह ड्राफ्ट बनाऊँ?",
+     "issues": [
+      {
+       "code": "claim_overstated",
+       "detail": "Paragraph 2: \"Under consumer rules, if an online item is defective and you return it, the seller or e-commerce platform is mandatory required to provide a refund.\" goes beyond ['CPECOM2020:r6']. Rule 6 of the Consumer Protection (E-Commerce) Rules, 2020, outlines the duties of 'sellers' on a marketplace, including the obligation to refund for defective goods. However, the cited rule does not explicitly extend this legal duty to the 'e-commerce platform' itself.",
+       "paragraph": 1,
+       "blocking": true,
+       "quote": "उपभोक्ता नियमों के तहत, यदि कोई ऑनलाइन सामान खराब निकलता है और आप उसे वापस कर देते हैं, तो विक्रेता या ई-कॉमर्स प्लेटफॉर्म को रिफंड देना अनिवार्य है [[CPECOM2020:r6]]।"
+      },
+      {
+       "code": "claim_overstated",
+       "detail": "Paragraph 4: \"You can call 1915 or register a complaint on their website (consumerhelpline.gov.in) without a lawyer.\" goes beyond ['NOTE:NCH']. The source confirms the use of the 1915 helpline for consumer grievances, but it does not mention the website address 'consumerhelpline.gov.in' or state that complaints can be filed 'without a lawyer'.",
+       "paragraph": 3,
+       "blocking": true,
+       "quote": "आप बिना किसी वकील के सीधे 1915 पर कॉल कर सकते हैं या उनकी वेबसाइट (consumerhelpline.gov.in) पर अपनी शिकायत दर्ज करा सकते हैं [[NOTE:NCH]]।"
+      }
+     ]
+    },
+    {
+     "text": "नमस्ते! लखनऊ में ऑनलाइन खरीदे गए फोन का दो महीने से रिफंड न मिलना और कस्टमर केयर का जवाब न देना बहुत परेशान करने वाला है। \n\nई-कॉमर्स नियमों के अनुसार, मार्केटप्लेस पर सामान बेचने वाले विक्रेता को खराब सामान वापस लेने और भुगतान किए गए पैसे वापस करने से मना करने की अनुमति नहीं है [[CPECOM2020:r6]]।\n\nआपके पास इसके लिए दो बहुत अच्छे और आसान रास्ते हैं:\n\n1. **राष्ट्रीय उपभोक्ता हेल्पलाइन (National Consumer Helpline):** आप सीधे **1915** पर कॉल कर अपनी शिकायत दर्ज करा सकते हैं [[NOTE:NCH]]। कंपनियों को अक्सर इस हेल्पलाइन से शिकायत जाने पर तुरंत रिफंड करना पड़ता है।\n2. **उपभोक्ता आयोग (Consumer Commission):** यदि वहाँ बात न बने, तो आप जिला उपभोक्ता विवाद निवारण आयोग में शिकायत दर्ज कराकर रिफंड के साथ-साथ हर्जाने की मांग भी कर सकते हैं [[CPA2019:s39]]।\n\nक्या आपके पास **ऑर्डर का इनवॉइस (बिल)** और फोन वापस करने का **कूरियर या पिकअप प्रूफ** है? \n\nयदि आप चाहें, तो मैं कंपनी को भेजने के लिए एक औपचारिक शिकायत पत्र का ड्राफ्ट तैयार कर सकता हूँ। क्या आप चाहेंगे कि मैं वह ड्राफ्ट बनाऊँ?",
+     "issues": []
+    }
+   ],
+   "audits": [
+    {
+     "claims": [
+      {
+       "paragraph": 2,
+       "claim": "Under consumer rules, if an online item is defective and you return it, the seller or e-commerce platform is mandatory required to provide a refund.",
+       "citations": [
+        "CPECOM2020:r6"
+       ],
+       "verdict": "partly_supported",
+       "reason": "Rule 6 of the Consumer Protection (E-Commerce) Rules, 2020, outlines the duties of 'sellers' on a marketplace, including the obligation to refund for defective goods. However, the cited rule does not explicitly extend this legal duty to the 'e-commerce platform' itself.",
+       "exact_quote": "उपभोक्ता नियमों के तहत, यदि कोई ऑनलाइन सामान खराब निकलता है और आप उसे वापस कर देते हैं, तो विक्रेता या ई-कॉमर्स प्लेटफॉर्म को रिफंड देना अनिवार्य है [[CPECOM2020:r6]]।"
+      },
+      {
+       "paragraph": 4,
+       "claim": "You can call 1915 or register a complaint on their website (consumerhelpline.gov.in) without a lawyer.",
+       "citations": [
+        "NOTE:NCH"
+       ],
+       "verdict": "partly_supported",
+       "reason": "The source confirms the use of the 1915 helpline for consumer grievances, but it does not mention the website address 'consumerhelpline.gov.in' or state that complaints can be filed 'without a lawyer'.",
+       "exact_quote": "आप बिना किसी वकील के सीधे 1915 पर कॉल कर सकते हैं या उनकी वेबसाइट (consumerhelpline.gov.in) पर अपनी शिकायत दर्ज करा सकते हैं [[NOTE:NCH]]।"
+      },
+      {
+       "paragraph": 4,
+       "claim": "If the helpline does not work, you can file a complaint in the District Consumer Disputes Redressal Commission and demand a refund along with compensation.",
+       "citations": [
+        "CPA2019:s39"
+       ],
+       "verdict": "supported",
+       "reason": "Section 39(1)(c) and (d) of the CPA 2019 empower the District Commission to order the return of the price and payment of compensation for loss or injury.",
+       "exact_quote": "यदि वहां बात न बने, तो आप जिला उपभोक्ता विवाद निवारण आयोग में शिकायत दर्ज कराकर रिफंड के साथ-साथ हर्जाने की मांग भी कर सकते हैं [[CPA2019:s39]]।"
+      }
+     ],
+     "uncited_legal_claims": [],
+     "invented_facts": [],
+     "ignored_cautions": [],
+     "_usage": {
+      "input": 2574,
+      "output": 614
+     }
+    },
+    {
+     "claims": [
+      {
+       "paragraph": 2,
+       "claim": "Sellers on an e-commerce marketplace are prohibited from refusing to take back defective goods or refusing a refund for them.",
+       "citations": [
+        "CPECOM2020:r6"
+       ],
+       "verdict": "supported",
+       "reason": "Rule 6(3) of the Consumer Protection (E-Commerce) Rules, 2020, states that no seller on a marketplace shall refuse to take back goods or refuse to refund consideration if the goods are defective.",
+       "exact_quote": "ई-कॉमर्स नियमों के अनुसार, मार्केटप्लेस पर सामान बेचने वाले विक्रेता को खराब सामान वापस लेने और भुगतान किए गए पैसे वापस करने से मना करने की अनुमति नहीं है [[CPECOM2020:r6]]।"
+      },
+      {
+       "paragraph": 4,
+       "claim": "You can register a consumer complaint by calling the National Consumer Helpline at 1915.",
+       "citations": [
+        "NOTE:NCH"
+       ],
+       "verdict": "supported",
+       "reason": "The source note confirms that the National Consumer Helpline can be reached at 1915 to handle grievances before a formal case is filed.",
+       "exact_quote": "आप सीधे **1915** पर कॉल कर अपनी शिकायत दर्ज करा सकते हैं [[NOTE:NCH]]।"
+      },
+      {
+       "paragraph": 4,
+       "claim": "If the helpline does not work, a complaint can be filed with the District Commission to demand a refund and compensation.",
+       "citations": [
+        "CPA2019:s39"
+       ],
+       "verdict": "supported",
+       "reason": "Section 39(1) of the Consumer Protection Act, 2019, provides that the District Commission can order the return of the price paid (refund) and compensation for loss or injury.",
+       "exact_quote": "उपभोक्ता आयोग (Consumer Commission): यदि वहाँ बात न बने, तो आप जिला उपभोक्ता विवाद निवारण आयोग में शिकायत दर्ज कराकर रिफंड के साथ-साथ हर्जाने की मांग भी कर सकते हैं [[CPA2019:s39]]।"
+      }
+     ],
+     "uncited_legal_claims": [],
+     "invented_facts": [],
+     "ignored_cautions": [],
+     "_usage": {
+      "input": 2527,
+      "output": 425
+     }
+    }
+   ],
+   "final_status": "verified",
+   "final": "नमस्ते! लखनऊ में ऑनलाइन खरीदे गए फोन का दो महीने से रिफंड न मिलना और कस्टमर केयर का जवाब न देना बहुत परेशान करने वाला है। \n\nई-कॉमर्स नियमों के अनुसार, मार्केटप्लेस पर सामान बेचने वाले विक्रेता को खराब सामान वापस लेने और भुगतान किए गए पैसे वापस करने से मना करने की अनुमति नहीं है [[CPECOM2020:r6]]।\n\nआपके पास इसके लिए दो बहुत अच्छे और आसान रास्ते हैं:\n\n1. **राष्ट्रीय उपभोक्ता हेल्पलाइन (National Consumer Helpline):** आप सीधे **1915** पर कॉल कर अपनी शिकायत दर्ज करा सकते हैं [[NOTE:NCH]]। कंपनियों को अक्सर इस हेल्पलाइन से शिकायत जाने पर तुरंत रिफंड करना पड़ता है।\n2. **उपभोक्ता आयोग (Consumer Commission):** यदि वहाँ बात न बने, तो आप जिला उपभोक्ता विवाद निवारण आयोग में शिकायत दर्ज कराकर रिफंड के साथ-साथ हर्जाने की मांग भी कर सकते हैं [[CPA2019:s39]]।\n\nक्या आपके पास **ऑर्डर का इनवॉइस (बिल)** और फोन वापस करने का **कूरियर या पिकअप प्रूफ** है? \n\nयदि आप चाहें, तो मैं कंपनी को भेजने के लिए एक औपचारिक शिकायत पत्र का ड्राफ्ट तैयार कर सकता हूँ। क्या आप चाहेंगे कि मैं वह ड्राफ्ट बनाऊँ?",
+   "repairs": 1,
+   "seconds": 69.6,
+   "usage_after": {
+    "input": 28583,
+    "output": 2108,
+    "cache_read": 26297,
+    "cache_write": 0,
+    "api_calls": 9
+   }
+  }
+ ],
+ "checks": [
+  {
+   "check": "got_an_answer",
+   "pass": true,
+   "detail": "0 turn(s) with errors"
+  },
+  {
+   "check": "all_citations_exist",
+   "pass": true,
+   "detail": "3 citation(s) all resolve"
+  },
+  {
+   "check": "same_language_as_user",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "no_unrequested_document",
+   "pass": true,
+   "detail": "saved [] without being asked"
+  },
+  {
+   "check": "substantive_answer",
+   "pass": true,
+   "detail": "shortest reply is 983 characters"
+  },
+  {
+   "check": "no_case_law_cited",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "cite_any",
+   "pass": true,
+   "detail": "wanted any of ['CPA2019:s35', 'CPA2019:s2', 'CPECOM2020:r4', 'CPECOM2020:r5', 'CPECOM2020:r6', 'CPECOM2020:r7', 'CPA2019:s34', 'CPJUR2021:r3']; cited ['CPA2019:s39', 'CPECOM2020:r6', 'NOTE:NCH']"
+  },
+  {
+   "check": "say_none /67B|Section 999|Housing Recovery Act|AIR/",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "script",
+   "pass": true,
+   "detail": "wanted devanagari"
+  }
+ ]
+}

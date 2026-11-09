@@ -1,0 +1,287 @@
+{
+ "id": "13_resigned_final_dues",
+ "group": "salary",
+ "why": "A specific rule: final pay after leaving, plus gratuity.",
+ "started": "2026-11-09T11:27:14.130528",
+ "provider": "gemini",
+ "model": "gemini-3.5-flash-lite",
+ "audit_model": "gemini-3-flash-preview",
+ "effort": "medium",
+ "audit_effort": "medium",
+ "turns": [
+  {
+   "user": "I resigned from a private company in Hyderabad on 30 September 2026 after 6 years. They still haven't paid my last month's salary or any gratuity. How long do they have?",
+   "file": null,
+   "reply": "Under the law, your company was required to pay your final wages within **two working days** of your resignation [[COW2019:s17]]. Since your last working day was 30 September 2026, that deadline has already passed. \n\nFurthermore, because you completed 6 years of continuous service, you are legally entitled to receive gratuity [[SSC2020:s53]]. \n\nTo help me guide you on the next steps and draft a formal demand letter to your employer:\n1. Do you have a relieving letter or written confirmation of your resignation?\n2. Have they given you any written reason for delaying your full and final settlement?",
+   "verification": {
+    "status": "verified",
+    "repairs": 0,
+    "removed": 0,
+    "issues": []
+   },
+   "citations": [
+    "COW2019:s17",
+    "SSC2020:s53"
+   ],
+   "errors": []
+  }
+ ],
+ "seconds": 20.7,
+ "usage": {
+  "input": 16983,
+  "output": 982,
+  "cache_read": 16223,
+  "cache_write": 0,
+  "api_calls": 5
+ },
+ "case_file": {
+  "amounts": [
+   {
+    "label": "Last month salary",
+    "amount_inr": "unknown"
+   },
+   {
+    "amount_inr": "unknown",
+    "label": "Gratuity"
+   }
+  ],
+  "evidence": [
+   {
+    "status": "unclear",
+    "why_it_matters": "Proves date of resignation and last working day",
+    "item": "Resignation acceptance / Relieving letter"
+   },
+   {
+    "why_it_matters": "Proves employment duration and last month unpaid",
+    "status": "unclear",
+    "item": "Salary slips / Bank statements"
+   }
+  ],
+  "summary": "User resigned from a private company in Hyderabad on 30 September 2026 after 6 years of service and has not received their last month's salary or gratuity.",
+  "state": "Telangana",
+  "document_references": [],
+  "deadlines": [
+   {
+    "what": "Deadline to pay final wages after resignation on 30 September 2026",
+    "date": "2026-10-02",
+    "basis": "COW2019:s17"
+   }
+  ],
+  "open_questions": [
+   "What was the exact amount of the last month's salary?",
+   "Have you received any communication from the employer regarding FNF (Full and Final settlement)?"
+  ],
+  "parties": [
+   {
+    "name": "Employer (Private Company)",
+    "role": "Employer"
+   },
+   {
+    "role": "Employee",
+    "name": "User"
+   }
+  ],
+  "problem_type": "unpaid_salary"
+ },
+ "assessment": {
+  "lawyer_needed": "none",
+  "reason": "The legal timelines and entitlements for final wages and gratuity are clear under the labour codes, and a formal demand can be sent before escalating.",
+  "confidence": "high",
+  "what_i_could_not_verify": [
+   "State-specific rules or procedures under Telangana labour authorities for filing wage and gratuity claims"
+  ]
+ },
+ "triage": {
+  "level": "none",
+  "codes": [],
+  "reasons": [],
+  "reasons_hi": [],
+  "help": []
+ },
+ "documents": [],
+ "doc_rejections": 0,
+ "trail": [
+  {
+   "user": "I resigned from a private company in Hyderabad on 30 September 2026 after 6 years. They still haven't paid my last month's salary or any gratuity. How long do they have?",
+   "tool_calls": [
+    {
+     "name": "search_law",
+     "input": {
+      "query": "time limit for payment of wages code on wages",
+      "state": "Telangana"
+     },
+     "is_error": false,
+     "result": "[{\"id\": \"COW2019:s17\", \"citation\": \"Section 17, Code on Wages, 2019\", \"heading\": \"Time limit for payment of wages\", \"excerpt\": \"(1) The employer shall pay or cause to be paid wages to the employees, engaged\\non—\\n(i) daily basis, at the end of the shift;\\n(ii) weekly basis, on the last working day of the week, that is to say, before the\\nweekly holiday;\\n(iii) fortnightly basis, before the end of the second day after the end of the\\nfortnight;\\n(iv) monthly basis, before the expiry of the seventh day of the succeeding\\nmonth.\\n(2) Where an employee has been—\\n(i) removed or dismissed from service; or\\n(ii) retrenched or has resigned from service, or became unemployed due to\\nclosure of the establishment,\\nthe wages payable to him shall be paid within two working days of his removal, dismissal,\\nretrenchment or, as the case may be, his resignation.\\n(3) Notwithstanding anything contained in sub-section ( 1) or sub-section ( 2), the\\nappropriate Government may, provide any other time limit for payment of wages where it\\nconsiders r\", \"applies_in\": \"India\", \"caution\": \"In force since 21 November 2025. It replaced the Payment of Wages Act 1936. State wage rules, which set local claim procedure, are not in this library.\"}, {\"id\": \"COW2019:s18\", \"citation\": \"Section 18, Code on Wages, 2019\", \"heading\": \"Deductions which may be made from wages\", \"excerpt\": \"(1) Notwithstanding anything contained in any other law for the time being in\\nforce, there shall be no deductions from the wages of the employee, except those as are\\nauthorised under this Code.\\nExplanation.––For the purposes of this sub-section,—\\n(a) any payment made by an employee to the employer or his agent shall be\\ndeemed to be a deduction from his wages;\\n(b) any loss of wages to an employee, for a good and sufficient cause, resulting\\nfrom—\\n(i) the withholding of increment or promotion, including the stoppage of\\nan increment; or\\n(ii) the reduction to a lower post or time-scale; or\\n(iii) the suspension,\\nshall not be deemed to be a deduction from wages in a case where the provisions made\\nby the employer for such purposes are satisfying the requirements specified in the\\nnotification issued by the appropriate Government in this behalf.\\n(2) Deductions from the wages of an employee shall b\", \"applies_in\": \"India\", \"caution\": \"In force since 21 November 2025. It replaced the Payment of Wages Act 1936. State wage rules, which set local claim procedure, are not in this library.\"}, {\"id\": \"COW2019:s39\", \"citation\": \"Section 39, Code on Wages, 2019\", \"heading\": \"Time limit for payment of bonus\", \"excerpt\": \" respect of such dispute:\\nProvided that if, there is a dispute for payment at the higher rate, the employer shall\\npay eight and one-third per cent. of the wages earned by the employee as per the provisions\\nof this Code within a period of eight months from the close of the accounting year.\", \"applies_in\": \"India\", \"caution\": \"In force since 21 November 2025. It replaced the Payment of Wages Act 1936. State wage rules, which set local claim procedure, are not in this library.\"}, {\"id\": \"COW2019:s45\", \"citation\": \"Section 45, Code on Wages, 2019\", \"heading\": \"Claims under Code and procedure thereof\", \"excerpt\": \"( 1) The appropriate Government may, by notification, appoint one or more\\nauthorities, not below the rank of a Gazetted Officer, to hear and determine the claims which\\narises under the provisions of this Code.\\n(2) The authority appointed under sub-section ( 1), while deciding the claim under\\nthat sub-section, may order, having regard to the circumstances under which the claim\\narises, the payment of compensation in addition to the claim determined, which may extend\\nto ten times of the claim determined and endeavour shall be made by the authority to decide\\nthe claim within a period of three months.\\n(3) If an employer fails to pay the claim determined and compensation ordered to be\\npaid under sub-section (2), the authority shall issue a certificate of reco"
+    },
+    {
+     "name": "search_law",
+     "input": {
+      "query": "gratuity time limit code on social security",
+      "state": "Telangana"
+     },
+     "is_error": false,
+     "result": "[{\"id\": \"SSC2020:s53\", \"citation\": \"Section 53, Code on Social Security, 2020\", \"heading\": \"Payment of gratuity\", \"excerpt\": \"(1) Gratuity shall be payable to an employee on the termination of his employment\\nafter he has rendered continuous service for not less than five years,—\\n(a) on his superannuation; or\\n(b) on his retirement or resignation; or\\n(c) on his death or disablement due to accident or disease; or\\n(d) on termination of his contract period under fixed term employment; or\\n(e) on happening of any such event as may be notified by the Central Government:\\nProvided that in case of working journalist as defined in clause (f) of section 2 of the\\nWorking Journalists and Other Newspaper Employees (Condition of Service) and\\nMiscellaneous Provisions Act, 1955, the expression \\\"five years\\\" occurring in this\\nsub-section shall be deemed to be three years:\\nProvided further that the completion of continuous service of five years shall not be\\nnecessary where the termination of the employment of any employee is due to \", \"applies_in\": \"India\", \"caution\": \"In force since 21 November 2025. It replaced the Payment of Gratuity Act 1972 among others.\"}, {\"id\": \"SSC2020:s56\", \"citation\": \"Section 56, Code on Social Security, 2020\", \"heading\": \"Determination of amount of gratuity\", \"excerpt\": \"this section shall be a judicial proceeding within the meaning of\\nsection 193, section 228 and for the purpose of section 196 of the Indian Penal Code.\\n(8) Any person aggrieved by an order under sub-section ( 5) may, within sixty days\\nfrom the date of the receipt of the order, prefer an appeal to the appropriate Government or\\nsuch other authority as may be specified by the appropriate Government in this behalf:\\nProvided that the appropriate Government or the appellate authority, as the case may\\nbe, may, if it is satisfied that the appellant was prevented by sufficient cause from preferring\\nthe appeal within the said period of sixty days, extend the said period by a further period of\\nsixty days:\\nProvided further that no appeal by an employer shall be admitted unless at the time\\nof preferring the appeal, the appellant either produces a certificate of the competent authority\\nto the effect t\", \"applies_in\": \"India\", \"caution\": \"In force since 21 November 2025. It replaced the Payment of Gratuity Act 1972 among others.\"}, {\"id\": \"COW2019:s17\", \"citation\": \"Section 17, Code on Wages, 2019\", \"heading\": \"Time limit for payment of wages\", \"excerpt\": \"(1) The employer shall pay or cause to be paid wages to the employees, engaged\\non—\\n(i) daily basis, at the end of the shift;\\n(ii) weekly basis, on the last working day of the week, that is to say, before the\\nweekly holiday;\\n(iii) fortnightly basis, before the end of the second day after the end of the\\nfortnight;\\n(iv) monthly basis, before the expiry of the seventh day of the succeeding\\nmonth.\\n(2) Where an employee has been—\\n(i) removed or dismissed from service; or\\n(ii) retrenched or has resigned from service, or became unemployed due to\\nclosure of the establishment,\\nthe wages payable to him shall be paid within two working days of his removal, dismissal,\\nretrenchment or, as the case may be, his resignation.\\n(3) Notwithstanding anything contained in sub-section ( 1) or sub-section ( 2), the\\nappropriate Government may, provide any other time limit for payment of wages where it\\nconsiders r\", \"applies_in\": \"India\", \"caution\": \"In force since 21 November 2025. It replaced the Payment of Wages Act 1936. State wage rules, which set local claim procedure, are not in this library.\"}, {\"id\": \"SSC2020:s154\", \"citation\": \"Section 154, Code on Social Security, 2020\", \"heading\": \"Power of appropriate Government to make rules\", \"excerpt\": \"the manner of commencement of proceedings before the Employees'\\nInsurance Court, fees and procedure thereof under sub-section ( 1) of section 51;\\n(d) bank or other financial institution in which the gratuity shall be invested for\\nthe benefit of mino"
+    },
+    {
+     "name": "update_case_file",
+     "input": {
+      "amounts": [
+       {
+        "label": "Last month salary",
+        "amount_inr": "unknown"
+       },
+       {
+        "amount_inr": "unknown",
+        "label": "Gratuity"
+       }
+      ],
+      "evidence": [
+       {
+        "status": "unclear",
+        "why_it_matters": "Proves date of resignation and last working day",
+        "item": "Resignation acceptance / Relieving letter"
+       },
+       {
+        "why_it_matters": "Proves employment duration and last month unpaid",
+        "status": "unclear",
+        "item": "Salary slips / Bank statements"
+       }
+      ],
+      "summary": "User resigned from a private company in Hyderabad on 30 September 2026 after 6 years of service and has not received their last month's salary or gratuity.",
+      "state": "Telangana",
+      "document_references": [],
+      "deadlines": [
+       {
+        "what": "Deadline to pay final wages after resignation on 30 September 2026",
+        "date": "2026-10-02",
+        "basis": "COW2019:s17"
+       }
+      ],
+      "open_questions": [
+       "What was the exact amount of the last month's salary?",
+       "Have you received any communication from the employer regarding FNF (Full and Final settlement)?"
+      ],
+      "parties": [
+       {
+        "name": "Employer (Private Company)",
+        "role": "Employer"
+       },
+       {
+        "role": "Employee",
+        "name": "User"
+       }
+      ],
+      "problem_type": "unpaid_salary"
+     },
+     "is_error": false,
+     "result": "Saved."
+    },
+    {
+     "name": "set_assessment",
+     "input": {
+      "lawyer_needed": "none",
+      "reason": "The legal timelines and entitlements for final wages and gratuity are clear under the labour codes, and a formal demand can be sent before escalating.",
+      "confidence": "high",
+      "what_i_could_not_verify": [
+       "State-specific rules or procedures under Telangana labour authorities for filing wage and gratuity claims"
+      ]
+     },
+     "is_error": false,
+     "result": "Saved."
+    }
+   ],
+   "drafts": [
+    {
+     "text": "Under the law, your company was required to pay your final wages within **two working days** of your resignation [[COW2019:s17]]. Since your last working day was 30 September 2026, that deadline has already passed. \n\nFurthermore, because you completed 6 years of continuous service, you are legally entitled to receive gratuity [[SSC2020:s53]]. \n\nTo help me guide you on the next steps and draft a formal demand letter to your employer:\n1. Do you have a relieving letter or written confirmation of your resignation?\n2. Have they given you any written reason for delaying your full and final settlement?",
+     "issues": []
+    }
+   ],
+   "audits": [
+    {
+     "claims": [
+      {
+       "paragraph": 1,
+       "claim": "The employer is required to pay final wages within two working days of an employee's resignation.",
+       "citations": [
+        "COW2019:s17"
+       ],
+       "verdict": "supported",
+       "reason": "Section 17(2)(ii) of the Code on Wages, 2019, explicitly states that when an employee resigns, the wages payable to them shall be paid within two working days of their resignation.",
+       "exact_quote": "Under the law, your company was required to pay your final wages within **two working days** of your resignation [[COW2019:s17]]."
+      },
+      {
+       "paragraph": 2,
+       "claim": "An employee who has completed 6 years of continuous service is legally entitled to receive gratuity upon resignation.",
+       "citations": [
+        "SSC2020:s53"
+       ],
+       "verdict": "supported",
+       "reason": "Section 53(1)(b) of the Code on Social Security, 2020, states that gratuity is payable to an employee on resignation after they have rendered continuous service for not less than five years.",
+       "exact_quote": "Furthermore, because you completed 6 years of continuous service, you are legally entitled to receive gratuity [[SSC2020:s53]]."
+      }
+     ],
+     "uncited_legal_claims": [],
+     "invented_facts": [],
+     "ignored_cautions": [],
+     "_usage": {
+      "input": 2284,
+      "output": 371
+     }
+    }
+   ],
+   "final_status": "verified",
+   "final": "Under the law, your company was required to pay your final wages within **two working days** of your resignation [[COW2019:s17]]. Since your last working day was 30 September 2026, that deadline has already passed. \n\nFurthermore, because you completed 6 years of continuous service, you are legally entitled to receive gratuity [[SSC2020:s53]]. \n\nTo help me guide you on the next steps and draft a formal demand letter to your employer:\n1. Do you have a relieving letter or written confirmation of your resignation?\n2. Have they given you any written reason for delaying your full and final settlement?",
+   "repairs": 0,
+   "seconds": 20.7,
+   "usage_after": {
+    "input": 16983,
+    "output": 982,
+    "cache_read": 16223,
+    "cache_write": 0,
+    "api_calls": 5
+   }
+  }
+ ],
+ "checks": [
+  {
+   "check": "got_an_answer",
+   "pass": true,
+   "detail": "0 turn(s) with errors"
+  },
+  {
+   "check": "all_citations_exist",
+   "pass": true,
+   "detail": "2 citation(s) all resolve"
+  },
+  {
+   "check": "same_language_as_user",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "no_unrequested_document",
+   "pass": true,
+   "detail": "saved [] without being asked"
+  },
+  {
+   "check": "substantive_answer",
+   "pass": true,
+   "detail": "shortest reply is 602 characters"
+  },
+  {
+   "check": "no_case_law_cited",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "cite_any",
+   "pass": true,
+   "detail": "wanted any of ['COW2019:s17']; cited ['COW2019:s17', 'SSC2020:s53']"
+  },
+  {
+   "check": "say_none /67B|Section 999|Housing Recovery Act|AIR/",
+   "pass": true,
+   "detail": ""
+  }
+ ]
+}

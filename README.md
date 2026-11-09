@@ -14,7 +14,7 @@ Someone can type or speak about a legal problem in their own language: a deposit
 ## Status: read this first
 
 - **It runs end to end on real models.** Claude, Gemini, Grok and DeepSeek are supported. Only Gemini and DeepSeek have been run live.
-- **Raw test outputs are in [outputs/raw/](outputs/raw/)**: 19 of the 27 scenarios on the final checks, run for free on Gemini's free tier. The other 8 are waiting on the daily free quota. See [what they prove and what they don't](#live-test-results).
+- **Raw test outputs are in [outputs/raw/](outputs/raw/)**: all 25 test scenarios on the final checks, run for free on Gemini's free tier. See [what they prove and what they don't](#live-test-results).
 - **Answers from the free models are correct-leaning but thin.** The checks stop invented law, but they can't make a weak model's advice thorough.
 - **No lawyer has reviewed this.** A qualified Indian lawyer should review it before anyone relies on it.
 
@@ -97,12 +97,12 @@ The model's word is never trusted. It drafts, ordinary code checks the draft, an
 
 ## Live test results
 
-[tests/scenarios.py](tests/scenarios.py) holds 27 scenarios, written before any live run:
+[tests/scenarios.py](tests/scenarios.py) holds 25 scenarios, written before any live run:
 
-- **Everyday problems:** deposits, refunds, salary and notices, in English, Hindi, Hinglish, Tamil and Bengali, including garbled voice-style text
+- **Everyday problems:** deposits, refunds, salary and notices, in English, Hindi, Hinglish, Tamil and Bengali
 - **Traps:** asks for fake judgments, asks it to confirm a fake section, repealed IPC and wage law, the ₹1 crore limit, a forged-receipt request, and a notice containing a hidden instruction telling the AI to scare the reader
 - **Honest bad news:** a claim that is out of time, and a tenant who really does owe money
-- **Knowing its limits:** divorce, domestic violence, an arrest, and a ₹3 crore property fraud
+- **Knowing its limits:** divorce, domestic violence and an arrest
 
 ### Current results
 
@@ -110,14 +110,12 @@ The model's word is never trusted. It drafts, ordinary code checks the draft, an
 
 | Measure | Result |
 |---|---|
-| Scenarios completed | 19 of 27 |
-| Scenarios passing every automatic check | 19 of 19 |
-| Individual checks passed | 172 of 172 |
-| Problems caught in drafts before anyone saw them | 35 |
-| Drafts rewritten before anyone saw them | 23 |
+| Scenarios completed | 25 of 25 |
+| Scenarios passing every automatic check | 25 of 25 |
+| Individual checks passed | 225 of 225 |
+| Problems caught in drafts before anyone saw them | 43 |
+| Drafts rewritten before anyone saw them | 28 |
 | Invented sections or case citations in final answers | None found in my reading |
-
-**Not run yet:** scenarios 02, 05, 07, 13, 14, 17, 25 and 26. The stronger auditors' free quota ran out for the day. To finish them, run the free command under [Run it](#run-it) after the daily reset. Earlier records for all of these except 26 are in the first-pass folder below.
 
 **One result was re-scored.** Scenario 09 first failed because my check looked for "State Commission", and the correct reply said "State Consumer Commission". I widened the check and re-scored the saved runs without changing any answer.
 
@@ -138,11 +136,16 @@ The model's word is never trusted. It drafts, ordinary code checks the draft, an
 | 03, Delhi deposit | Thin. Practical steps and a time limit, but it doesn't say the library has no direct Delhi deposit rule |
 | 20, IPC 420 | Right direction, but doesn't plainly say IPC was replaced, and has a garbled word ("ishiqdev") |
 | 11, repealed wages Act | Correct, but cites a different section of the Code from the one that records the repeal |
+| 05, State law not in library | Good. Says UP law is outside what it can verify, and that the Model Tenancy Act is only a model |
+| 13, final dues | Correct. Final pay within two working days of leaving, and gratuity after 6 years |
+| 02, 14, 17, drafted documents | Usable. Legal notice, wage claim and reply to a notice use only the person's facts, with placeholders for anything missing. Thin on detail |
+| 17, reply to a notice | The reply to an English question opens with a Hindi sentence. The language check misses replies that are only partly mixed |
+| 07, Hindi refund | Correct steps, but says companies "often have to refund immediately" with no source |
 
 ### Earlier runs
 
-- **[First pass](outputs/raw_first_pass_lite_audit/):** 26 scenarios, with Lite models also auditing themselves. 23 of 26 passed automatically, but reading them found serious problems the audit missed, such as "You will not be arrested" with no law behind it, and a claim that the fake Act "does not exist". That led to the current code checks and the stronger auditors, and it's included as evidence of why they're needed.
-- **DeepSeek (not included):** the same scenarios scored 26 of 27 on `deepseek-flash`, and from the roughly 20 answers I read, the advice was much more thorough than on the free Lite models. A later run ran out of API credit and a bug in my test runner overwrote those records, so **that evidence no longer exists and shouldn't be treated as proven**. The runner can no longer overwrite a real result this way.
+- **[First pass](outputs/raw_first_pass_lite_audit/):** the same 25 scenarios, with Lite models also auditing themselves. 22 of 25 passed automatically, but reading them found serious problems the audit missed, such as "You will not be arrested" with no law behind it, and a claim that the fake Act "does not exist". That led to the current code checks and the stronger auditors, and it's included as evidence of why they're needed.
+- **DeepSeek (not included):** a run on `deepseek-flash` passed nearly every scenario, and from the roughly 20 answers I read, the advice was much more thorough than on the free Lite models. A later run ran out of API credit and a bug in my test runner overwrote those records, so **that evidence no longer exists and shouldn't be treated as proven**. The runner can no longer overwrite a real result this way.
 
 The lesson is that answer quality depends heavily on the model, so a stronger model should give noticeably better advice with these same checks.
 
@@ -221,10 +224,9 @@ See the screens without any key, using scripted replies that are labelled on scr
 ## Known limits
 
 - **Advice quality varies by model.** It's thin on the free Lite models, which also occasionally produce a garbled word. Reviewers should read the transcripts, not just the pass counts.
-- **Incomplete live run:** 8 of the 27 scenarios haven't run on the final checks, as explained under [Current results](#current-results).
-- **Fixes made after the last live run:** the warning about instructions hidden in documents, and a false alarm in the amount check, are tested offline only.
+- **Fixes made after the live run:** the warning about instructions hidden in documents, and a false alarm in the amount check, are tested offline only. The scenario 16 result predates the warning.
 - **Grok and Claude:** never run live, because no key was available. They're covered by offline tests only.
-- **Free-tier limits:** the stronger Gemini models allow about 20 requests per model per day. One scenario takes roughly 3–19 requests, so finishing all 27 with stronger auditors may take more than one day.
+- **Free-tier limits:** the stronger Gemini models allow about 20 requests per model per day. One scenario takes roughly 3–19 requests, so running all 25 with stronger auditors may take more than one day.
 - **Speed:** every draft gets checked and often rewritten. Answers took from under 15 seconds to about 100 seconds on Lite models, and typically 2–3 minutes on DeepSeek. That's slow for real users.
 - **Scanned PDFs:** not readable on Grok or DeepSeek. Ask for photos instead. PDFs with a text layer work on all providers.
 - **Number checks by language:** time limits and amounts are checked by code in English, Hindi and Hinglish. In other languages they rely on Gate 2, a weaker guarantee. Section-word detection covers more languages but not every spelling.

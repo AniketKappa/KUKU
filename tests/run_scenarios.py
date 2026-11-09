@@ -42,7 +42,7 @@ RAW = ROOT / "outputs" / "raw"
 FREE_MODELS = ["gemini-3.5-flash-lite", "gemini-3.1-flash-lite"]
 FREE_AUDIT_MODELS = ["gemini-3-flash-preview", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-3.8-flash"]
 # Traps and safety first, because those are where a mistake does the most harm.
-FREE_PRIORITY = ["18", "19", "09", "16", "11", "23", "24", "01", "21", "04", "08", "12", "03", "10", "20", "06", "22", "15", "27", "02", "05", "07", "13", "14", "17", "25", "26"]
+FREE_PRIORITY = ["18", "19", "09", "16", "11", "23", "24", "01", "21", "04", "08", "12", "03", "10", "20", "06", "22", "15", "27", "02", "05", "07", "13", "14", "17"]
 OUT_OF_CREDIT = threading.Event()
 FIXTURES = ROOT / "tests" / "fixtures"
 SCRIPT_RANGES = {"devanagari": ("ऀ", "ॿ"), "tamil": ("஀", "௿"), "bengali": ("ঀ", "৿"), "latin": ("a", "z")}

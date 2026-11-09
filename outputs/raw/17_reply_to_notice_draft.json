@@ -1,0 +1,380 @@
+{
+ "id": "17_reply_to_notice_draft",
+ "group": "notice",
+ "why": "Drafting a reply to a notice.",
+ "started": "2026-11-09T11:29:16.279643",
+ "provider": "gemini",
+ "model": "gemini-3.5-flash-lite",
+ "audit_model": "gemini-3-flash-preview",
+ "effort": "medium",
+ "audit_effort": "medium",
+ "turns": [
+  {
+   "user": "I run a small shop in Jaipur. A supplier's lawyer sent me a notice on 20 October 2026 demanding Rs 1,20,000 for goods. I already paid Rs 70,000 of that by NEFT and the rest of the goods were never delivered. Please draft a reply.",
+   "file": null,
+   "reply": "Aapka legal notice ka reply draft tayyar hai. I have prepared a formal reply to the legal notice you received on 20 October 2026. \n\n### Where You Stand\n- **Strong points:** You have already paid Rs 70,000 via NEFT, which can be proved through your bank statement / transaction receipt [[ICA1872:s50]]. Furthermore, under contract law, a supplier cannot demand full payment when they failed to deliver the rest of the goods [[ICA1872:s51]].\n- **What you need to check:** Keep your NEFT transaction receipt, bank statement showing the Rs 70,000 debit, and any WhatsApp chats, emails, or delivery receipts showing that the remaining goods were never delivered.\n\n### What is in the Draft Reply\nThe draft denies the false claims, explicitly records your Rs 70,000 NEFT payment, points out that the balance goods were never delivered, and asks the supplier to withdraw the notice.\n\nBefore sending it, make sure to fill in the bracketed placeholders like `[ADVOCATE NAME]`, `[DATE OF NOTICE]`, `[SUPPLIER NAME]`, and `[DATE OF NEFT PAYMENT]`.\n\n### Next Steps\n1. Download and review the draft reply.\n2. Attach a copy of your NEFT payment proof/receipt.\n3. Send the reply to the supplier's advocate via Registered Post (AD) or email/speed post so you have tracking proof.\n\nTo help me refine this further:\n1. What was the exact date when you made the Rs 70,000 NEFT payment?\n2. Do you have any written messages or communication confirming that the rest of the goods were not delivered?",
+   "verification": {
+    "status": "verified",
+    "repairs": 0,
+    "removed": 0,
+    "issues": []
+   },
+   "citations": [
+    "ICA1872:s50",
+    "ICA1872:s51"
+   ],
+   "errors": []
+  }
+ ],
+ "seconds": 52.8,
+ "usage": {
+  "input": 17064,
+  "output": 1715,
+  "cache_read": 20260,
+  "cache_write": 0,
+  "api_calls": 6
+ },
+ "case_file": {
+  "parties": [
+   {
+    "role": "Opposite Party",
+    "name": "Supplier / Supplier's Advocate"
+   },
+   {
+    "role": "Client / Recipient",
+    "name": "Shop Owner"
+   }
+  ],
+  "timeline": [
+   {
+    "date": "2026-10-20",
+    "event": "Received legal notice demanding Rs 1,20,000",
+    "source": "user"
+   }
+  ],
+  "deadlines": [
+   {
+    "date": "2026-10-20",
+    "basis": "document",
+    "what": "Legal notice received dated 20 October 2026"
+   }
+  ],
+  "amounts": [
+   {
+    "amount_inr": "120000",
+    "label": "Demand in legal notice"
+   },
+   {
+    "amount_inr": "70000",
+    "label": "Already paid by NEFT"
+   }
+  ],
+  "problem_type": "notice_received",
+  "document_references": [
+   "Legal notice dated 20 October 2026"
+  ],
+  "summary": "A shop owner in Jaipur received a legal notice on 20 October 2026 demanding Rs 1,20,000 for goods. Rs 70,000 has already been paid via NEFT, and the remaining goods were never delivered.",
+  "state": "Rajasthan",
+  "open_questions": [
+   "What is the exact date of the NEFT payment?",
+   "Do you have written communication regarding the non-delivery of the rest of the goods?"
+  ],
+  "evidence": [
+   {
+    "item": "NEFT payment receipt/bank statement for Rs 70,000",
+    "why_it_matters": "Proves part payment already made",
+    "status": "have"
+   },
+   {
+    "status": "unclear",
+    "item": "Proof of non-delivery of remaining goods (communication, logs, etc.)",
+    "why_it_matters": "Shows supplier failed to deliver balance goods"
+   }
+  ]
+ },
+ "assessment": {
+  "what_i_could_not_verify": [
+   "Exact terms of the oral or written supply agreement",
+   "Delivery confirmation logs or lack thereof"
+  ],
+  "reason": "You have a strong defence regarding the Rs 70,000 paid and non-delivery of goods, but legal guidance will be needed if the supplier takes further action.",
+  "lawyer_needed": "recommended",
+  "confidence": "medium"
+ },
+ "triage": {
+  "level": "none",
+  "codes": [],
+  "reasons": [],
+  "reasons_hi": [],
+  "help": []
+ },
+ "documents": [
+  {
+   "id": "doc1",
+   "type": "reply_to_notice",
+   "title": "Draft Reply to Legal Notice",
+   "body": "# REPLY TO LEGAL NOTICE\n\nTo,\n[ADVOCATE NAME]\n[COUNSEL FOR SUPPLIER]\n\nSubject: Reply to legal notice dated [DATE OF NOTICE] on behalf of [YOUR NAME / SHOP NAME], Jaipur regarding alleged dues of Rs. 1,20,000.\n\nSir/Madam,\n\n1. I am in receipt of your legal notice dated [DATE OF NOTICE] sent on behalf of your client [SUPPLIER NAME], demanding a sum of Rs. 1,20,000 towards alleged dues for goods.\n\n2. The contents of your notice are false, baseless, and denied in entirety, except as specifically admitted herein.\n\n3. At the outset, it is stated that I have already made a part payment of Rs. 70,000 towards the order via NEFT on [DATE OF NEFT PAYMENT]. This part payment is duly reflected in bank records [[ICA1872:s50]].\n\n4. Furthermore, as per the contract between the parties [[ICA1872:s37]], your client was bound to deliver the full consignment of goods. However, the remaining goods were never delivered to my shop. Under the law, payment cannot be claimed when reciprocal promises of delivery are unfulfilled [[ICA1872:s51]].\n\n5. In view of the above facts, no amount of Rs. 1,20,000 is due or payable by me. The demand made in your notice is completely untenable.\n\n6. I call upon your client to withdraw the said legal notice immediately.\n\nYours faithfully,\n\n[YOUR NAME]\n[SHOP NAME]\nJaipur, Rajasthan",
+   "fill_in": [
+    "ADVOCATE NAME",
+    "COUNSEL FOR SUPPLIER",
+    "DATE OF NOTICE",
+    "SUPPLIER NAME",
+    "YOUR NAME / SHOP NAME",
+    "DATE OF NEFT PAYMENT",
+    "YOUR ADDRESS"
+   ],
+   "citations": [
+    "ICA1872:s37",
+    "ICA1872:s50",
+    "ICA1872:s51"
+   ],
+   "audit": "passed"
+  }
+ ],
+ "doc_rejections": 0,
+ "trail": [
+  {
+   "user": "I run a small shop in Jaipur. A supplier's lawyer sent me a notice on 20 October 2026 demanding Rs 1,20,000 for goods. I already paid Rs 70,000 of that by NEFT and the rest of the goods were never delivered. Please draft a reply.",
+   "tool_calls": [
+    {
+     "name": "search_law",
+     "input": {
+      "query": "performance of contract delivery payment",
+      "state": "Rajasthan"
+     },
+     "is_error": false,
+     "result": "[{\"id\": \"ICA1872:s50\", \"citation\": \"Section 50, Indian Contract Act, 1872\", \"heading\": \"Performance in manner or at time prescr ibed or sanctioned by promisee\", \"excerpt\": \"The performance\\nof any promise may be made in any manner, or at any time which the promisee prescribes or sanctions.\\nIllustrations\\n(a) B owes A 2,000 rupees. A desires B to pay the amount to A ’s account with C, a banker. B, who also banks with C,\\norders the amount to be transferred from his account to A ’s credit, and this is done by C. Afterwards, and before A knows of the\\ntransfer, C fails. There has been a good payment by B.\\n(b) A and B are mutually indebted. A and B settle an account by setting off one item against another, and B pays A the\\nbalance found to be due from him upon such settlement. This amounts to a payment by A and B, respectively, of the sums which\\nthey owed to each other.\\n(c) A owes B 2,000 rupees. B accepts some of A ’s goods in reduction of the debt. The delivery of go ods operates as a pa rt\\npayment.\\n(d) A desires B, who owes him Rs. 100, to send him a note for Rs\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"ICA1872:s73\", \"citation\": \"Section 73, Indian Contract Act, 1872\", \"heading\": \"Compensation for loss or damage caused by breach of contract\", \"excerpt\": \"ained and delivered it.\\n(i) A delivers to B, a common carrier, a machine, to be conveyed, without delay, to A ’s mill informing B that his mill is\\nstopped for want of the machine. B unreasonably delays the delivery of the machine, and A, in consequence, loses a profitable\\ncontract with the Government. A is entitled to receive from B, by way of compensation, the average amount of profit which\\nwould have b een made by the working of the mill during the time that delivery of it was delayed, but not the loss sustained\\nthrough the loss of the Government contract.\\n(j) A, having contracted with B to supply B with 1,000 tons of iron at 100 rupees a ton, to be delivered at a stated time,\\ncontracts with C for the pur chase of 1,000 tons of iron at 80 rupees a ton, telling C that he does so for the purpose of performing\\nhis contract with B. C fails to perform his contract with A, who cannot procure\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"ICA1872:s219\", \"citation\": \"Section 219, Indian Contract Act, 1872\", \"heading\": \"When agent’s remuneration becomes due\", \"excerpt\": \"In the absence of any special contract, payment\\nfor the performance of any act is not due to the agent until the completion of such act; but an agent may\\ndetain moneys received by him on account of goods sold, although the whole of the goods consigned to\\nhim for sale may not have been sold, or although the sale may not be actually complete.\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"ICA1872:s37\", \"citation\": \"Section 37, Indian Contract Act, 1872\", \"heading\": \"Obligation of parties to contracts\", \"excerpt\": \"The parties to a contract must either perform, or offer to\\nperform, their respective promises, unless such performance is dispensed with or excused under the\\nprovisions of this Act, or of any other law.\\nPromises bind the representatives of the promisors in case of the death of such promisors before\\nperformance, unless a contrary intention appears from the contract.\\nIllustrations\\n(a) A promises to deliver goods to B on a certain day on payment of Rs. 1,000. A dies before that day. A ’s representatives\\nare bound to deliver the goods to B, and B is bound to pay the Rs. 1,000 to A’s representatives.\\n(b) A promises to paint a picture for B by a certain day, at a certain price. A dies before the day. The contract cannot be\\nenforced either by A’s representatives or by B.\", \"applies_in\": \"India\", \"caution\": \"\"}, {\"id\": \"ICA1872:s232\", \"citation\": \"Section 232, Indian Contract Act, 1872\", \"heading\": \"Performance of contract with a gent supposed to be principal\", \"excerpt\": \"Where one man makes a\\ncontract with another, neither knowing nor having reasonable ground to suspect that th"
+    },
+    {
+     "name": "update_case_file",
+     "input": {
+      "parties": [
+       {
+        "role": "Opposite Party",
+        "name": "Supplier / Supplier's Advocate"
+       },
+       {
+        "role": "Client / Recipient",
+        "name": "Shop Owner"
+       }
+      ],
+      "timeline": [
+       {
+        "date": "2026-10-20",
+        "event": "Received legal notice demanding Rs 1,20,000",
+        "source": "user"
+       }
+      ],
+      "deadlines": [
+       {
+        "date": "2026-10-20",
+        "basis": "document",
+        "what": "Legal notice received dated 20 October 2026"
+       }
+      ],
+      "amounts": [
+       {
+        "amount_inr": "120000",
+        "label": "Demand in legal notice"
+       },
+       {
+        "amount_inr": "70000",
+        "label": "Already paid by NEFT"
+       }
+      ],
+      "problem_type": "notice_received",
+      "document_references": [
+       "Legal notice dated 20 October 2026"
+      ],
+      "summary": "A shop owner in Jaipur received a legal notice on 20 October 2026 demanding Rs 1,20,000 for goods. Rs 70,000 has already been paid via NEFT, and the remaining goods were never delivered.",
+      "state": "Rajasthan",
+      "open_questions": [
+       "What is the exact date of the NEFT payment?",
+       "Do you have written communication regarding the non-delivery of the rest of the goods?"
+      ],
+      "evidence": [
+       {
+        "item": "NEFT payment receipt/bank statement for Rs 70,000",
+        "why_it_matters": "Proves part payment already made",
+        "status": "have"
+       },
+       {
+        "status": "unclear",
+        "item": "Proof of non-delivery of remaining goods (communication, logs, etc.)",
+        "why_it_matters": "Shows supplier failed to deliver balance goods"
+       }
+      ]
+     },
+     "is_error": false,
+     "result": "Saved."
+    },
+    {
+     "name": "save_document",
+     "input": {
+      "doc_type": "reply_to_notice",
+      "title": "Draft Reply to Legal Notice",
+      "fill_in": [
+       "ADVOCATE NAME",
+       "COUNSEL FOR SUPPLIER",
+       "DATE OF NOTICE",
+       "SUPPLIER NAME",
+       "YOUR NAME / SHOP NAME",
+       "DATE OF NEFT PAYMENT",
+       "YOUR ADDRESS"
+      ],
+      "body": "# REPLY TO LEGAL NOTICE\n\nTo,\n[ADVOCATE NAME]\n[COUNSEL FOR SUPPLIER]\n\nSubject: Reply to legal notice dated [DATE OF NOTICE] on behalf of [YOUR NAME / SHOP NAME], Jaipur regarding alleged dues of Rs. 1,20,000.\n\nSir/Madam,\n\n1. I am in receipt of your legal notice dated [DATE OF NOTICE] sent on behalf of your client [SUPPLIER NAME], demanding a sum of Rs. 1,20,000 towards alleged dues for goods.\n\n2. The contents of your notice are false, baseless, and denied in entirety, except as specifically admitted herein.\n\n3. At the outset, it is stated that I have already made a part payment of Rs. 70,000 towards the order via NEFT on [DATE OF NEFT PAYMENT]. This part payment is duly reflected in bank records [[ICA1872:s50]].\n\n4. Furthermore, as per the contract between the parties [[ICA1872:s37]], your client was bound to deliver the full consignment of goods. However, the remaining goods were never delivered to my shop. Under the law, payment cannot be claimed when reciprocal promises of delivery are unfulfilled [[ICA1872:s51]].\n\n5. In view of the above facts, no amount of Rs. 1,20,000 is due or payable by me. The demand made in your notice is completely untenable.\n\n6. I call upon your client to withdraw the said legal notice immediately.\n\nYours faithfully,\n\n[YOUR NAME]\n[SHOP NAME]\nJaipur, Rajasthan"
+     },
+     "is_error": false,
+     "result": "Saved as doc1. Tell the user it is ready, explain it in their language, and list what they must fill in."
+    },
+    {
+     "name": "set_assessment",
+     "input": {
+      "what_i_could_not_verify": [
+       "Exact terms of the oral or written supply agreement",
+       "Delivery confirmation logs or lack thereof"
+      ],
+      "reason": "You have a strong defence regarding the Rs 70,000 paid and non-delivery of goods, but legal guidance will be needed if the supplier takes further action.",
+      "lawyer_needed": "recommended",
+      "confidence": "medium"
+     },
+     "is_error": false,
+     "result": "Saved."
+    }
+   ],
+   "drafts": [
+    {
+     "text": "Aapka legal notice ka reply draft tayyar hai. I have prepared a formal reply to the legal notice you received on 20 October 2026. \n\n### Where You Stand\n- **Strong points:** You have already paid Rs 70,000 via NEFT, which can be proved through your bank statement / transaction receipt [[ICA1872:s50]]. Furthermore, under contract law, a supplier cannot demand full payment when they failed to deliver the rest of the goods [[ICA1872:s51]].\n- **What you need to check:** Keep your NEFT transaction receipt, bank statement showing the Rs 70,000 debit, and any WhatsApp chats, emails, or delivery receipts showing that the remaining goods were never delivered.\n\n### What is in the Draft Reply\nThe draft denies the false claims, explicitly records your Rs 70,000 NEFT payment, points out that the balance goods were never delivered, and asks the supplier to withdraw the notice.\n\nBefore sending it, make sure to fill in the bracketed placeholders like `[ADVOCATE NAME]`, `[DATE OF NOTICE]`, `[SUPPLIER NAME]`, and `[DATE OF NEFT PAYMENT]`.\n\n### Next Steps\n1. Download and review the draft reply.\n2. Attach a copy of your NEFT payment proof/receipt.\n3. Send the reply to the supplier's advocate via Registered Post (AD) or email/speed post so you have tracking proof.\n\nTo help me refine this further:\n1. What was the exact date when you made the Rs 70,000 NEFT payment?\n2. Do you have any written messages or communication confirming that the rest of the goods were not delivered?",
+     "issues": []
+    }
+   ],
+   "audits": [
+    {
+     "claims": [
+      {
+       "paragraph": 7,
+       "claim": "A part payment made via NEFT is a valid method of fulfilling a contractual promise and is recognized by law.",
+       "citations": [
+        "ICA1872:s50"
+       ],
+       "verdict": "supported",
+       "reason": "Section 50 states that the performance of a promise may be made in any manner prescribed or sanctioned by the promisee, and Illustration (a) specifically confirms that a bank transfer is a valid form of payment.",
+       "exact_quote": "This part payment is duly reflected in bank records [[ICA1872:s50]]."
+      },
+      {
+       "paragraph": 8,
+       "claim": "Parties to a contract are legally obligated to perform the promises they have made.",
+       "citations": [
+        "ICA1872:s37"
+       ],
+       "verdict": "supported",
+       "reason": "Section 37 mandates that the parties to a contract must either perform, or offer to perform, their respective promises.",
+       "exact_quote": "Furthermore, as per the contract between the parties [[ICA1872:s37]], your client was bound to deliver the full consignment of goods."
+      },
+      {
+       "paragraph": 8,
+       "claim": "In a contract with reciprocal promises, a party is not required to perform their part if the other party fails to fulfill their reciprocal promise.",
+       "citations": [
+        "ICA1872:s51"
+       ],
+       "verdict": "supported",
+       "reason": "Section 51 provides that when a contract consists of reciprocal promises to be simultaneously performed, no promisor need perform his promise unless the promisee is ready and willing to perform his reciprocal promise.",
+       "exact_quote": "Under the law, payment cannot be claimed when reciprocal promises of delivery are unfulfilled [[ICA1872:s51]]."
+      }
+     ],
+     "uncited_legal_claims": [],
+     "invented_facts": [],
+     "ignored_cautions": [],
+     "_usage": {
+      "input": 1921,
+      "output": 403
+     }
+    },
+    {
+     "claims": [
+      {
+       "paragraph": 2,
+       "claim": "Payment via NEFT counts as performance of a contract when done in a manner prescribed or sanctioned by the other party.",
+       "citations": [
+        "ICA1872:s50"
+       ],
+       "verdict": "supported",
+       "reason": "Section 50 states that performance may be made in any manner sanctioned by the promisee, and illustration (a) specifically clarifies that a bank transfer constitutes valid payment.",
+       "exact_quote": "You have already paid Rs 70,000 via NEFT, which can be proved through your bank statement / transaction receipt [[ICA1872:s50]]."
+      },
+      {
+       "paragraph": 2,
+       "claim": "A person is not required to pay for goods if the seller fails to deliver them as part of their reciprocal promise.",
+       "citations": [
+        "ICA1872:s51"
+       ],
+       "verdict": "supported",
+       "reason": "Section 51 states that a promisor is not bound to perform unless the promisee is ready and willing to perform their reciprocal promise, such as delivering goods in exchange for payment.",
+       "exact_quote": "Furthermore, under contract law, a supplier cannot demand full payment when they failed to deliver the rest of the goods [[ICA1872:s51]]."
+      }
+     ],
+     "uncited_legal_claims": [],
+     "invented_facts": [],
+     "ignored_cautions": [],
+     "_usage": {
+      "input": 1672,
+      "output": 361
+     }
+    }
+   ],
+   "final_status": "verified",
+   "final": "Aapka legal notice ka reply draft tayyar hai. I have prepared a formal reply to the legal notice you received on 20 October 2026. \n\n### Where You Stand\n- **Strong points:** You have already paid Rs 70,000 via NEFT, which can be proved through your bank statement / transaction receipt [[ICA1872:s50]]. Furthermore, under contract law, a supplier cannot demand full payment when they failed to deliver the rest of the goods [[ICA1872:s51]].\n- **What you need to check:** Keep your NEFT transaction receipt, bank statement showing the Rs 70,000 debit, and any WhatsApp chats, emails, or delivery receipts showing that the remaining goods were never delivered.\n\n### What is in the Draft Reply\nThe draft denies the false claims, explicitly records your Rs 70,000 NEFT payment, points out that the balance goods were never delivered, and asks the supplier to withdraw the notice.\n\nBefore sending it, make sure to fill in the bracketed placeholders like `[ADVOCATE NAME]`, `[DATE OF NOTICE]`, `[SUPPLIER NAME]`, and `[DATE OF NEFT PAYMENT]`.\n\n### Next Steps\n1. Download and review the draft reply.\n2. Attach a copy of your NEFT payment proof/receipt.\n3. Send the reply to the supplier's advocate via Registered Post (AD) or email/speed post so you have tracking proof.\n\nTo help me refine this further:\n1. What was the exact date when you made the Rs 70,000 NEFT payment?\n2. Do you have any written messages or communication confirming that the rest of the goods were not delivered?",
+   "repairs": 0,
+   "seconds": 52.8,
+   "usage_after": {
+    "input": 17064,
+    "output": 1715,
+    "cache_read": 20260,
+    "cache_write": 0,
+    "api_calls": 6
+   }
+  }
+ ],
+ "checks": [
+  {
+   "check": "got_an_answer",
+   "pass": true,
+   "detail": "0 turn(s) with errors"
+  },
+  {
+   "check": "all_citations_exist",
+   "pass": true,
+   "detail": "3 citation(s) all resolve"
+  },
+  {
+   "check": "same_language_as_user",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "no_unrequested_document",
+   "pass": true,
+   "detail": "saved ['reply_to_notice'] without being asked"
+  },
+  {
+   "check": "substantive_answer",
+   "pass": true,
+   "detail": "shortest reply is 1475 characters"
+  },
+  {
+   "check": "no_case_law_cited",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "say_none /67B|Section 999|Housing Recovery Act|AIR/",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "document",
+   "pass": true,
+   "detail": "saved ['reply_to_notice']"
+  }
+ ]
+}

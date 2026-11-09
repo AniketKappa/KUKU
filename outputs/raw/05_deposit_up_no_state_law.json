@@ -1,0 +1,256 @@
+{
+ "id": "05_deposit_up_no_state_law",
+ "group": "deposit",
+ "why": "State law not in library. Must say so and not pass off the Model Act as binding.",
+ "started": "2026-11-09T11:25:34.018074",
+ "provider": "gemini",
+ "model": "gemini-3.5-flash-lite",
+ "audit_model": "gemini-3-flash-preview",
+ "effort": "medium",
+ "audit_effort": "medium",
+ "turns": [
+  {
+   "user": "I rent a flat in Lucknow, Uttar Pradesh. Moved out last month and my landlord won't give back my Rs 30,000 deposit. What does the UP law say about how fast he must return it?",
+   "file": null,
+   "reply": "Uttar Pradesh's specific state rent laws are outside the laws I can verify. However, under the Model Tenancy Act, 2021—which serves as a model for states—the security deposit is required to be refunded on the date of taking over vacant possession of the premises, after making due deductions for any liability [[MTA2021:s11]]. \n\nSince state adoption varies, the exact timeline and rules in your case depend heavily on what is written in your **rental agreement** or receipt, and what terms you agreed to when you rented the flat. \n\nTo help me give you the best steps forward, could you tell me:\n1. Was there a written rental agreement, and what does it say about returning the deposit?\n2. Did you hand over the keys and vacant possession cleanly last month?\n\nOnce I know this, we can look at sending a formal demand letter to your landlord to get your ₹30,000 back.",
+   "verification": {
+    "status": "verified",
+    "repairs": 0,
+    "removed": 0,
+    "issues": []
+   },
+   "citations": [
+    "MTA2021:s11"
+   ],
+   "errors": []
+  }
+ ],
+ "seconds": 30.5,
+ "usage": {
+  "input": 14985,
+  "output": 751,
+  "cache_read": 12152,
+  "cache_write": 0,
+  "api_calls": 5
+ },
+ "case_file": {
+  "document_references": [],
+  "deadlines": [],
+  "problem_type": "tenancy_deposit",
+  "open_questions": [
+   "Was there a written rental agreement?",
+   "Did you hand over vacant possession and keys?"
+  ],
+  "amounts": [
+   {
+    "label": "Security deposit",
+    "amount_inr": "30000"
+   }
+  ],
+  "summary": "Tenant moved out of a flat in Lucknow, Uttar Pradesh last month, and the landlord has not returned the Rs 30,000 security deposit.",
+  "timeline": [
+   {
+    "source": "user",
+    "event": "Moved out of flat in Lucknow",
+    "date": "2026-10"
+   }
+  ],
+  "parties": [
+   {
+    "role": "Landlord",
+    "name": "Landlord"
+   },
+   {
+    "name": "User",
+    "role": "Tenant"
+   }
+  ],
+  "evidence": [
+   {
+    "item": "Rental agreement",
+    "status": "unclear",
+    "why_it_matters": "To check agreed terms on deposit return"
+   }
+  ],
+  "state": "Uttar Pradesh"
+ },
+ "assessment": {
+  "lawyer_needed": "none",
+  "confidence": "medium",
+  "reason": "Security deposit disputes are typically governed by the rental agreement and civil law, but specific state rent control acts or local adoptions of the Model Tenancy Act can vary.",
+  "what_i_could_not_verify": [
+   "Whether Uttar Pradesh has formally adopted the Model Tenancy Act timeline for deposits, and the exact terms of the user's rental agreement."
+  ]
+ },
+ "triage": {
+  "level": "none",
+  "codes": [],
+  "reasons": [],
+  "reasons_hi": [],
+  "help": []
+ },
+ "documents": [],
+ "doc_rejections": 0,
+ "trail": [
+  {
+   "user": "I rent a flat in Lucknow, Uttar Pradesh. Moved out last month and my landlord won't give back my Rs 30,000 deposit. What does the UP law say about how fast he must return it?",
+   "tool_calls": [
+    {
+     "name": "search_law",
+     "input": {
+      "state": "Uttar Pradesh",
+      "query": "security deposit refund landlord tenant"
+     },
+     "is_error": false,
+     "result": "[{\"id\": \"MTA2021:s11\", \"citation\": \"Section 11, Model Tenancy Act, 2021\", \"heading\": \"Security deposit\", \"excerpt\": \"(1) The security deposit to b e paid by the tenant in advance shall\\nbe such as may be agreed upon between the landlord and the tenant\\nin the tenancy agreement, which shall ––\\nRestriction on\\nsub-letting.\\nRent payable.\\nRevision of rent.\\nRent Authority to\\ndetermine the\\nrevised rent in\\ncase of dispute.\\nSecurity deposit.\\n(a) not exceed two months rent, in case of residential premises;\\nand\\n(b) not exceed six months rent , in case of non -residential\\npremises.\\n(2) The security deposit shall be refunded to the tenant on the date of\\ntaking over vacant possession of the premises from the tenant, after\\nmaking due deduction of any liability of the tenant.\", \"applies_in\": \"Model law (applies only where a State has adopted it)\", \"caution\": \"This is a MODEL law issued by the Central Government for States to adopt. It does not bind anyone unless the user's State has enacted it. Never present it as law that applies to the user; say it is a model only.\"}, {\"id\": \"MTA2021:s24\", \"citation\": \"Section 24, Model Tenancy Act, 2021\", \"heading\": \"Refund of advance rent by landlord\", \"excerpt\": \"(1) Where a landlord exercises the right of recovery of\\npossession under sub -section (2) of section 21 or under section 22,\\nand he had received any rent or any other payment in advance from\\nthe tenant, he shall before recovery of possession, refund to the\\ntenant such amount after deducting the rent and other charges due\\nto him.\\n(2) If the landlord fails to make any refund, he shall be liable to pay\\nRefund of\\nadvance rent by\\nlandlord.\\nsimple interest to the tenant at such rate as may be prescribed from\\ntime to time on the amount which he has omitted or failed to refund.\", \"applies_in\": \"Model law (applies only where a State has adopted it)\", \"caution\": \"This is a MODEL law issued by the Central Government for States to adopt. It does not bind anyone unless the user's State has enacted it. Never present it as law that applies to the user; say it is a model only.\"}, {\"id\": \"MTA2021:s14\", \"citation\": \"Section 14, Model Tenancy Act, 2021\", \"heading\": \"Deposit of rent with Rent Authority\", \"excerpt\": \"(1) Where the landlord refuses to accept any rent and other\\ncharges payable or refuses to give a receipt, the rent and other\\ncharges shall be paid to the lan dlord by postal money order or any\\nother method, in such manner as may be prescribed, consecutively\\nfor two months, and if the landlord refuses to accept the rent and\\nother charges within such period, then the tenant may deposit the\\nsame with the Rent Authority in such manner as may be prescribed.\\n(2) Where the tenant is unable to decide to whom the rent is payable\\nduring the period of tenancy agreement, the tenant may, in such\\ncase, deposit the rent with the Rent Authority in such manner as may\\nbe prescribed.\\n(3) Where the rent is deposited under sub -section (1) or sub -section\\n(2), the Rent Authority shall enquire the case as to whom the rent is\\npayable and pass orders as may deem fit on the basis of the facts of\\nthe case.\\n(4) Th\", \"applies_in\": \"Model law (applies only where a State has adopted it)\", \"caution\": \"This is a MODEL law issued by the Central Government for States to adopt. It does not bind anyone unless the user's State has enacted it. Never present it as law that applies to the user; say it is a model only.\"}, {\"id\": \"MTA2021:s15\", \"citation\": \"Section 15, Model Tenancy Act, 2021\", \"heading\": \"Repair and maintenance of property\", \"excerpt\": \" the case may be, from the security deposit and the\\namount so deducted shall be paid by the tenant within a period of\\none month of issue of notice by the landlord in that regard:\\nProvided that if the cost for such repairs exceed the security deposit,\\nthe tenant shall be liable to pay the excess cost including the security\\ndeposit so deducted to the landlord wit hin a period of one month of\\nthe iss"
+    },
+    {
+     "name": "update_case_file",
+     "input": {
+      "document_references": [],
+      "deadlines": [],
+      "problem_type": "tenancy_deposit",
+      "open_questions": [
+       "Was there a written rental agreement?",
+       "Did you hand over vacant possession and keys?"
+      ],
+      "amounts": [
+       {
+        "label": "Security deposit",
+        "amount_inr": "30000"
+       }
+      ],
+      "summary": "Tenant moved out of a flat in Lucknow, Uttar Pradesh last month, and the landlord has not returned the Rs 30,000 security deposit.",
+      "timeline": [
+       {
+        "source": "user",
+        "event": "Moved out of flat in Lucknow",
+        "date": "2026-10"
+       }
+      ],
+      "parties": [
+       {
+        "role": "Landlord",
+        "name": "Landlord"
+       },
+       {
+        "name": "User",
+        "role": "Tenant"
+       }
+      ],
+      "evidence": [
+       {
+        "item": "Rental agreement",
+        "status": "unclear",
+        "why_it_matters": "To check agreed terms on deposit return"
+       }
+      ],
+      "state": "Uttar Pradesh"
+     },
+     "is_error": false,
+     "result": "Saved."
+    },
+    {
+     "name": "set_assessment",
+     "input": {
+      "lawyer_needed": "none",
+      "confidence": "medium",
+      "reason": "Security deposit disputes are typically governed by the rental agreement and civil law, but specific state rent control acts or local adoptions of the Model Tenancy Act can vary.",
+      "what_i_could_not_verify": [
+       "Whether Uttar Pradesh has formally adopted the Model Tenancy Act timeline for deposits, and the exact terms of the user's rental agreement."
+      ]
+     },
+     "is_error": false,
+     "result": "Saved."
+    }
+   ],
+   "drafts": [
+    {
+     "text": "Uttar Pradesh's specific state rent laws are outside the laws I can verify. However, under the Model Tenancy Act, 2021—which serves as a model for states—the security deposit is required to be refunded on the date of taking over vacant possession of the premises, after making due deductions for any liability [[MTA2021:s11]]. \n\nSince state adoption varies, the exact timeline and rules in your case depend heavily on what is written in your **rental agreement** or receipt, and what terms you agreed to when you rented the flat. \n\nTo help me give you the best steps forward, could you tell me:\n1. Was there a written rental agreement, and what does it say about returning the deposit?\n2. Did you hand over the keys and vacant possession cleanly last month?\n\nOnce I know this, we can look at sending a formal demand letter to your landlord to get your ₹30,000 back.",
+     "issues": []
+    }
+   ],
+   "audits": [
+    {
+     "claims": [
+      {
+       "paragraph": 1,
+       "claim": "Under the Model Tenancy Act, 2021, the security deposit must be refunded to the tenant on the date the landlord takes over vacant possession, after deducting any tenant liabilities.",
+       "citations": [
+        "MTA2021:s11"
+       ],
+       "verdict": "supported",
+       "reason": "Section 11(2) of the Model Tenancy Act, 2021, states that the security deposit shall be refunded on the date of taking over vacant possession after making due deductions.",
+       "exact_quote": "However, under the Model Tenancy Act, 2021—which serves as a model for states—the security deposit is required to be refunded on the date of taking over vacant possession of the premises, after making due deductions for any liability [[MTA2021:s11]]."
+      }
+     ],
+     "uncited_legal_claims": [],
+     "invented_facts": [],
+     "ignored_cautions": [],
+     "_usage": {
+      "input": 1136,
+      "output": 198
+     }
+    }
+   ],
+   "final_status": "verified",
+   "final": "Uttar Pradesh's specific state rent laws are outside the laws I can verify. However, under the Model Tenancy Act, 2021—which serves as a model for states—the security deposit is required to be refunded on the date of taking over vacant possession of the premises, after making due deductions for any liability [[MTA2021:s11]]. \n\nSince state adoption varies, the exact timeline and rules in your case depend heavily on what is written in your **rental agreement** or receipt, and what terms you agreed to when you rented the flat. \n\nTo help me give you the best steps forward, could you tell me:\n1. Was there a written rental agreement, and what does it say about returning the deposit?\n2. Did you hand over the keys and vacant possession cleanly last month?\n\nOnce I know this, we can look at sending a formal demand letter to your landlord to get your ₹30,000 back.",
+   "repairs": 0,
+   "seconds": 30.5,
+   "usage_after": {
+    "input": 14985,
+    "output": 751,
+    "cache_read": 12152,
+    "cache_write": 0,
+    "api_calls": 5
+   }
+  }
+ ],
+ "checks": [
+  {
+   "check": "got_an_answer",
+   "pass": true,
+   "detail": "0 turn(s) with errors"
+  },
+  {
+   "check": "all_citations_exist",
+   "pass": true,
+   "detail": "1 citation(s) all resolve"
+  },
+  {
+   "check": "same_language_as_user",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "no_unrequested_document",
+   "pass": true,
+   "detail": "saved [] without being asked"
+  },
+  {
+   "check": "substantive_answer",
+   "pass": true,
+   "detail": "shortest reply is 865 characters"
+  },
+  {
+   "check": "no_case_law_cited",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "cite_none",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "say_any /(?i)(could ?n.t|can ?not|not|n.t).{0,50}/",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "say_none /67B|Section 999|Housing Recovery Act|AIR/",
+   "pass": true,
+   "detail": ""
+  }
+ ]
+}

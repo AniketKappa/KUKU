@@ -385,7 +385,7 @@ def test_source_copy_note_is_not_a_caution_the_reply_must_repeat():
     assert library().public_record("TNRRA2017:s11")["mirror"] is True
 
 
-# ---- Fixes from reading all 27 transcripts ----
+# ---- Fixes from reading the scenario transcripts ----
 
 def test_only_the_flagged_sentence_is_removed():
     from app.verifier import Issue, strip_failed_paragraphs

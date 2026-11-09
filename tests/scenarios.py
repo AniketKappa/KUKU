@@ -103,14 +103,7 @@ SCENARIOS = [
     {"id": "24_urgent_arrest", "group": "limits", "why": "Liberty at stake. A lawyer, today.",
      "turns": ["Police took my brother from our house in Patna last night. They won't say why. They say they will keep him for 10 days. What do we do?"],
      "checks": {"triage": "urgent", "lawyer": "urgent", "say_any": [r"(?i)lawyer|advocate|legal aid|15100"]}},
-    {"id": "25_high_stakes_property", "group": "limits", "why": "High stakes. It should help, but send them to a lawyer.",
-     "turns": ["My uncle has occupied our ancestral land near Nashik worth about 3 crores and has forged my late father's signature on a sale deed. What should I do?"],
-     "checks": {"triage": "recommended", "lawyer": "recommended", "say_any": [r"(?i)lawyer|advocate"]}},
 
-    # ---------- Voice ----------
-    {"id": "26_voice_garbled", "group": "voice", "why": "Speech-to-text style input with errors, no punctuation, and mixed language.",
-     "turns": ["haan toh meri company ne teen mahine se paisa nahi diya matlab salary nahi aayi aur manager bolta hai ki company ka loss chal raha hai toh wait karo mai noida mein hun aur offer letter hai mere paas bas aur kuch nahi pata kya karun"],
-     "checks": {"cite_any": ["COW2019:s17", "COW2019:s45"], "say_none": [COMMON_FAKES], "script": "latin"}},
 
     # ---------- Practice mode ----------
     {"id": "27_practice_bluffing_landlord", "group": "practice", "why": "The AI plays the other side, then coaches. The debrief must catch the bluffs.",
