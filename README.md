@@ -2,6 +2,8 @@
 
 Someone can type or speak about a legal problem in their own language: a deposit the landlord won't return, a refund that never came, salary that stopped, a notice they don't understand. Haqdaar helps them act on it.
 
+**Try it live: [haqdaar-i32w.onrender.com](https://haqdaar-i32w.onrender.com)** · Runs on free tiers, so the first visit after a quiet spell takes about a minute to wake up, and an answer can take up to about two minutes. Please don't enter real personal details.
+
 | The brief asks for | What Haqdaar does |
 |---|---|
 | Build the case | Turns a messy story into a live case file: timeline, money, proof held and missing, deadlines, open questions |
@@ -13,6 +15,7 @@ Someone can type or speak about a legal problem in their own language: a deposit
 
 ## Status: read this first
 
+- **It's deployed:** [haqdaar-i32w.onrender.com](https://haqdaar-i32w.onrender.com), on Render's free plan with Gemini's free tier.
 - **It runs end to end on real models.** Claude, Gemini, Grok and DeepSeek are supported. Only Gemini and DeepSeek have been run live.
 - **Raw test outputs are in [outputs/raw/](outputs/raw/)**: all 25 test scenarios on the final checks, run for free on Gemini's free tier. See [what they prove and what they don't](#live-test-results).
 - **Answers from the free models are correct-leaning but thin.** The checks stop invented law, but they can't make a weak model's advice thorough.

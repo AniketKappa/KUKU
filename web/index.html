@@ -306,6 +306,8 @@ function applyLanguage() {
 
 function renderNotice() {
   const n = $("keyNotice");
+  // Until the server answers, say nothing, so a slow start never claims the AI is missing.
+  if (!state.statusKnown) { n.style.display = "none"; return; }
   if (state.scripted) { n.textContent = T().scripted; n.style.display = "block"; }
   else if (state.api && state.demo) { n.textContent = T().demo; n.style.display = "block"; }
   else if (!state.api) { n.textContent = T().noKey; n.style.display = "block"; }
@@ -690,7 +692,7 @@ function init() {
   applyLanguage();
   restoreSession();
   fetch("/api/status").then(r => r.json()).then(s => {
-    library = s; state.api = s.api_ready; state.scripted = !!s.scripted; state.demo = !!s.public_demo; renderLibrary(); renderNotice();
+    library = s; state.api = s.api_ready; state.scripted = !!s.scripted; state.demo = !!s.public_demo; state.statusKnown = true; renderLibrary(); renderNotice();
   }).catch(() => {});
 }
 init();

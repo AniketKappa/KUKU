@@ -5,6 +5,7 @@ from the evidence. Run: .venv/bin/python submission/build_solution_doc.py
 """
 import glob
 import json
+import re
 import pathlib
 import statistics
 
@@ -22,6 +23,7 @@ from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer, Table, Tabl
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "submission" / "solution.pdf"
 REPO = "https://github.com/AniketKappa/KUKU"
+LIVE = "https://haqdaar-i32w.onrender.com"
 
 FONT_DIR = pathlib.Path("/System/Library/Fonts/Supplemental")
 if (FONT_DIR / "Arial.ttf").exists():
@@ -53,6 +55,17 @@ def check_example() -> None:
         assert quote in text, f"example quote no longer matches the record: {quote}"
 
 
+def count_tests() -> str:
+    """Count the offline tests rather than typing a number that goes stale."""
+    import subprocess
+    out = subprocess.run([str(ROOT / ".venv" / "bin" / "pytest"), "-q", "tests/"], cwd=ROOT, capture_output=True, text=True).stdout
+    passed = re.search(r"(\d+) passed", out)
+    failed = re.search(r"(\d+) failed", out)
+    if not passed or failed:
+        raise SystemExit("Tests are failing, so the doc won't claim they pass:\n" + out[-800:])
+    return passed.group(1)
+
+
 def facts() -> dict:
     """Everything quoted in the doc, measured from saved files."""
     records = [json.loads(p.read_text()) for p in sorted((ROOT / "outputs" / "raw").glob("*.json"))]
@@ -80,7 +93,7 @@ def facts() -> dict:
         "cost_flash": (per_turn_in * 0.75 + per_turn_out * 3.75) / 1e6,
         "heldout": heldout["hybrid@6"]["recall"], "tuned": tuned["results"]["hybrid@6"]["recall"],
         "provisions": provisions, "sources": sources,
-        "tests": "219",
+        "tests": count_tests(),
     }
 
 
@@ -116,7 +129,7 @@ def build() -> None:
     w = A4[0] - 3.2 * cm
     story = [
         p("Haqdaar: an AI legal helper whose every legal claim can be checked", h1),
-        p(f"Problem 2, Build an AI Lawyer &nbsp;·&nbsp; Prototype and raw outputs: <link href='{REPO}' color='#0f5c4a'>{REPO}</link>", sub),
+        p(f"Problem 2, Build an AI Lawyer &nbsp;·&nbsp; Live demo: <link href='{LIVE}' color='#0f5c4a'>{LIVE}</link> &nbsp;·&nbsp; Code and raw outputs: <link href='{REPO}' color='#0f5c4a'>{REPO}</link>", sub),
 
         p("1. Why this problem, and how I scoped it", h2),
         p("Most people in India never get help with everyday legal problems because a lawyer feels expensive and the process confusing. "
@@ -167,6 +180,7 @@ def build() -> None:
         p(f"Measured on the live runs: an answer takes about {f['calls']:.0f} model calls and {f['tokens_in'] / 1000:.0f}k input tokens, mostly law text and checking, "
           f"and a median of {f['median_s']:.0f} seconds (worst {f['max_s']:.0f} seconds). At paid list prices with no caching discount, that's about "
           f"<b>US${f['cost_lite']:.3f} per answer on Gemini Flash-Lite</b> (US${f['cost_flash']:.3f} on Gemini 3.6 Flash), or roughly US${f['cost_lite'] * 1e6 / 1000:,.0f}k per million answers. "
+          f"The live demo runs on Render's free plan in about 250 MB, with semantic search off to fit (held-out search 58% instead of {f['heldout'] * 100:.0f}%). "
           "At volume the main levers are prompt caching of the fixed instructions and library text, auditing only answers that make legal claims, and a cheaper writer with a stronger auditor, as these runs used. "
           "Scaling to more problems and States is mainly data work, not model work: add the State's rent and wage rules to the library, annotate amendments, and the same gates apply. "
           "At real volume I would add a scheduled re-fetch with the golden tests to catch amendments, a lawyer-reviewed annotation process, and monitoring of gate rejection rates by topic as an early warning."),
@@ -193,7 +207,8 @@ def build() -> None:
         ]),
         p("Links", h2),
         *bullets([
-            f"Prototype, with run steps that use a free Gemini key: <link href='{REPO}' color='#0f5c4a'>{REPO}</link>",
+            f"Live demo: <link href='{LIVE}' color='#0f5c4a'>{LIVE}</link>. It runs on free tiers, so the first visit after a quiet spell takes about a minute to wake up, and an answer can take up to about two minutes. Please don't enter real personal details.",
+            f"Code, with run steps that use a free Gemini key: <link href='{REPO}' color='#0f5c4a'>{REPO}</link>",
             f"Raw outputs, with one complete record per test case including every rejected draft: <link href='{REPO}/tree/main/outputs/raw' color='#0f5c4a'>{REPO}/tree/main/outputs/raw</link>",
             f"Test cases: <link href='{REPO}/blob/main/tests/scenarios.py' color='#0f5c4a'>tests/scenarios.py</link> &nbsp;·&nbsp; full limits list: README",
         ]),

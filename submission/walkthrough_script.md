@@ -4,6 +4,8 @@ Record your screen with your own voice, for example with Loom, or with QuickTime
 
 ## Before you record
 
+The simplest option is the live demo at https://haqdaar-i32w.onrender.com. Open it a minute before recording, because the free plan sleeps when idle, and ask one practice question so it's warmed up. Answers there can take up to about two minutes, so you can pause the recording while one is being written. To record against your own machine instead:
+
 1. Start the app with your Gemini key in `.env`:
    ```bash
    .venv/bin/python -m uvicorn app.server:app --port 8000
