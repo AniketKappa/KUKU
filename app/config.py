@@ -60,6 +60,13 @@ MAX_TOKENS = int(os.getenv("LAWYER_MAX_TOKENS", "16000"))
 MAX_TOOL_ROUNDS = int(os.getenv("LAWYER_MAX_TOOL_ROUNDS", "12"))
 MAX_REPAIRS = int(os.getenv("LAWYER_MAX_REPAIRS", "3"))
 RATE_LIMIT_RETRIES = int(os.getenv("LAWYER_RATE_LIMIT_RETRIES", "3"))
+# Tried in order if the audit model fails, for example when its free quota runs out.
+AUDIT_FALLBACKS = [m.strip() for m in os.getenv("LAWYER_AUDIT_FALLBACKS", "").split(",") if m.strip()]
+# Off saves about 300 MB of memory, at some cost to search quality. Render's free tier needs it off.
+SEMANTIC_SEARCH = os.getenv("LAWYER_SEMANTIC_SEARCH", "on").lower() not in ("off", "0", "false", "no")
+# A public demo shows a warning banner and limits how many questions each visitor can ask.
+PUBLIC_DEMO = os.getenv("LAWYER_PUBLIC_DEMO", "").lower() in ("1", "true", "yes", "on")
+QUESTIONS_PER_HOUR = int(os.getenv("LAWYER_QUESTIONS_PER_HOUR", "15" if PUBLIC_DEMO else "0"))
 # Claude only: re-runs a request on another model if a safety classifier declines it.
 FALLBACK_BETA = "server-side-fallback-2026-07-01"
 # Free tiers have low rate limits, so run scenarios one at a time unless told otherwise.

@@ -241,6 +241,7 @@ const EN = {
   libIntro: "These are the only laws I can rely on. Each is stored from a source file, with its address and date, and every citation opens the exact text. Anything else, including court judgments, I tell you I can't verify.",
   provisions: "provisions", noKey: "The AI isn't connected yet. Add DEEPSEEK_API_KEY, GEMINI_API_KEY, XAI_API_KEY or ANTHROPIC_API_KEY to the .env file and restart the server. You can still browse the library.",
   scripted: "SCRIPTED DEMO: the replies here are pre-written to show the screens. The real AI isn't being used.",
+  demo: "Public demo: please don't enter real names, addresses or case details. It runs on a free AI tier whose provider may use what you type to improve its products, and answers can take a minute.",
   whyTitle: "How this answer was checked", whyBody: "Every citation was matched to the law library. Each time limit and amount was traced to the cited law or to what you said. Then a separate check compared each claim with the exact text cited.",
   whyFix: "My first draft had problems, so it was rejected and rewritten {n} time(s) before you saw it.",
   whyRemoved: "Parts I couldn't verify were removed, and I've told you where.", whyAudit: "The deeper claim check couldn't run for this answer, so only the citations and numbers were checked. Take extra care.",
@@ -279,12 +280,13 @@ const HI = {...EN,
   whyTitle: "इस उत्तर की जांच कैसे हुई", whyBody: "हर हवाले का मिलान कानूनों की लाइब्रेरी से किया गया। हर समय सीमा और रकम को उद्धृत कानून या आपकी बताई बात से जोड़ा गया। फिर एक अलग जांच में हर दावे की तुलना सटीक पाठ से की गई।",
   whyFix: "मेरे पहले मसौदे में गलतियां थीं, इसलिए आपके देखने से पहले उसे {n} बार दोबारा लिखा गया।",
   whyRemoved: "जिन हिस्सों की पुष्टि नहीं हो सकी, वे हटा दिए गए।", whyAudit: "इस उत्तर के लिए दावों की गहरी जांच नहीं हो सकी, सिर्फ़ हवाले और संख्याएं जांची गईं। अतिरिक्त सावधानी बरतें।",
+  demo: "सार्वजनिक डेमो: कृपया असली नाम, पते या केस की जानकारी न डालें। यह एक मुफ्त AI सेवा पर चलता है, जिसका प्रदाता आपकी लिखी बात का उपयोग अपने उत्पाद सुधारने में कर सकता है, और उत्तर में एक मिनट लग सकता है।",
   safety: "कृपया पहले यह पढ़ें", hide: "छिपाएं", show: "दिखाएं",
 };
 
 const $ = id => document.getElementById(id);
 const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
-const state = { session: null, busy: false, files: [], caseFile: {}, assessment: null, documents: [], practice: null, api: false, scripted: false, lang: "en-IN" };
+const state = { session: null, busy: false, files: [], caseFile: {}, assessment: null, documents: [], practice: null, api: false, scripted: false, demo: false, lang: "en-IN" };
 const T = () => state.lang.startsWith("hi") ? HI : EN;
 const store = { get(k) { try { return localStorage.getItem(k); } catch { return null; } }, set(k, v) { try { localStorage.setItem(k, v); } catch {} }, del(k) { try { localStorage.removeItem(k); } catch {} } };
 
@@ -305,6 +307,7 @@ function applyLanguage() {
 function renderNotice() {
   const n = $("keyNotice");
   if (state.scripted) { n.textContent = T().scripted; n.style.display = "block"; }
+  else if (state.api && state.demo) { n.textContent = T().demo; n.style.display = "block"; }
   else if (!state.api) { n.textContent = T().noKey; n.style.display = "block"; }
   else n.style.display = "none";
 }
@@ -687,7 +690,7 @@ function init() {
   applyLanguage();
   restoreSession();
   fetch("/api/status").then(r => r.json()).then(s => {
-    library = s; state.api = s.api_ready; state.scripted = !!s.scripted; renderLibrary(); renderNotice();
+    library = s; state.api = s.api_ready; state.scripted = !!s.scripted; state.demo = !!s.public_demo; renderLibrary(); renderNotice();
   }).catch(() => {});
 }
 init();

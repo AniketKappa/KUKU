@@ -1,0 +1,28 @@
+# One-click deploy on Render's free tier. Render asks for GEMINI_API_KEY when you deploy.
+services:
+  - type: web
+    name: haqdaar
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.server:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/status
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: LLM_PROVIDER
+        value: gemini
+      # Lite writes (largest free quota). A stronger model audits, then falls back when its quota runs out.
+      - key: LAWYER_MODEL
+        value: gemini-3.5-flash-lite
+      - key: LAWYER_AUDIT_MODEL
+        value: gemini-3-flash-preview
+      - key: LAWYER_AUDIT_FALLBACKS
+        value: gemini-3.6-flash,gemini-3.5-flash,gemini-3.5-flash-lite
+      - key: LAWYER_AUDIT_EFFORT
+        value: medium
+      # The free plan has 512 MB. Semantic search needs about 300 MB more, so it's off here.
+      - key: LAWYER_SEMANTIC_SEARCH
+        value: "off"
+      - key: LAWYER_PUBLIC_DEMO
+        value: "1"

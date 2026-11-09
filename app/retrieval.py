@@ -104,7 +104,7 @@ class Index:
         self.bm25 = BM25Okapi([tokenize(c) for c in self.chunks])
         self.vectors = None
         self.embedder = None
-        if VEC_PATH.exists():
+        if config.SEMANTIC_SEARCH and VEC_PATH.exists():
             vectors = np.load(VEC_PATH)
             if len(vectors) == len(self.chunks):
                 self.vectors = vectors

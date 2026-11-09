@@ -1,11 +1,14 @@
 """Web server. Run with: .venv/bin/python -m uvicorn app.server:app --port 8000"""
 from __future__ import annotations
 
+import collections
 import json
 import pathlib
 import re
+import threading
+import time
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import FileResponse, Response, StreamingResponse
 from pydantic import BaseModel
 
@@ -90,7 +93,27 @@ def status():
                         "status": source["status"], "url": any_rec["url"] if any_rec else None,
                         "retrieved": any_rec["retrieved"] if any_rec else None})
     return {"api_ready": config.api_ready(), "provider": config.PROVIDER, "model": config.MODEL, "provisions": len(lib.records), "sources": sources,
-            "semantic_search": index().vectors is not None}
+            "semantic_search": index().vectors is not None, "public_demo": config.PUBLIC_DEMO}
+
+
+_recent: dict[str, collections.deque] = collections.defaultdict(collections.deque)
+_recent_lock = threading.Lock()
+
+
+def _check_rate(request: Request) -> None:
+    """A public demo runs on a free quota, so one visitor mustn't use it all up."""
+    if config.QUESTIONS_PER_HOUR <= 0:
+        return
+    forwarded = request.headers.get("x-forwarded-for", "")
+    visitor = forwarded.split(",")[0].strip() or (request.client.host if request.client else "unknown")
+    now = time.time()
+    with _recent_lock:
+        times = _recent[visitor]
+        while times and now - times[0] > 3600:
+            times.popleft()
+        if len(times) >= config.QUESTIONS_PER_HOUR:
+            raise HTTPException(429, f"This public demo allows {config.QUESTIONS_PER_HOUR} questions an hour per visitor, so the free AI quota lasts for everyone. Please try again later.")
+        times.append(now)
 
 
 @app.get("/api/citation/{pid:path}")
@@ -102,7 +125,8 @@ def citation(pid: str):
 
 
 @app.post("/api/chat")
-def chat(body: ChatIn):
+def chat(body: ChatIn, request: Request):
+    _check_rate(request)
     if not config.api_ready():
         raise HTTPException(503, "No API key. Add DEEPSEEK_API_KEY, GEMINI_API_KEY, XAI_API_KEY or ANTHROPIC_API_KEY to the .env file and restart.")
     for f in body.files:
@@ -138,7 +162,8 @@ def practice_start(body: PracticeStart):
 
 
 @app.post("/api/practice/say")
-def practice_say(body: PracticeTurn):
+def practice_say(body: PracticeTurn, request: Request):
+    _check_rate(request)
     session = _load(body.session_id)
     if not session.get("practice"):
         raise HTTPException(400, "No practice session is running")

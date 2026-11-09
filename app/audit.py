@@ -14,6 +14,7 @@ import json
 
 from . import config
 from .corpus import CITE_RE, library
+from .llm import STATUS_ERRORS
 from .verifier import Issue, split_paragraphs
 
 SCHEMA = {
@@ -114,13 +115,21 @@ def audit_answer(client, text: str, user_facts: str = "", calculations: str = ""
     prompt = (f"<user_facts>\n{user_facts[-6000:]}\n</user_facts>\n\n"
               f"<app_calculations>\n{calculations[-1500:]}\n</app_calculations>\n\n<sources>\n{_source_block(cited)}\n</sources>\n\n"
               f"<draft>\n{numbered}\n</draft>")
-    response = client.messages.create(
-        model=config.AUDIT_MODEL,
-        max_tokens=config.MAX_TOKENS,
-        system=SYSTEM,
-        output_config={"effort": config.AUDIT_EFFORT, "format": {"type": "json_schema", "schema": SCHEMA}},
-        messages=[{"role": "user", "content": prompt}],
-    )
+    # Stronger models have small free quotas, so a public demo falls back rather than skipping the audit.
+    models = [config.AUDIT_MODEL] + [m for m in config.AUDIT_FALLBACKS if m != config.AUDIT_MODEL]
+    for position, model in enumerate(models):
+        try:
+            response = client.messages.create(
+                model=model,
+                max_tokens=config.MAX_TOKENS,
+                system=SYSTEM,
+                output_config={"effort": config.AUDIT_EFFORT, "format": {"type": "json_schema", "schema": SCHEMA}},
+                messages=[{"role": "user", "content": prompt}],
+            )
+            break
+        except STATUS_ERRORS:
+            if position == len(models) - 1:
+                raise
     if response.stop_reason in ("refusal", "max_tokens"):
         raise RuntimeError(f"audit could not finish: {response.stop_reason}")
     verdict = json.loads(next(b.text for b in response.content if b.type == "text"))
@@ -138,4 +147,5 @@ def audit_answer(client, text: str, user_facts: str = "", calculations: str = ""
         issues.append(Issue("ignored_caution", f"Paragraph {item['paragraph']}: {item['problem']}", item["paragraph"] - 1, quote=item.get("exact_quote")))
     usage = getattr(response, "usage", None)
     verdict["_usage"] = {"input": getattr(usage, "input_tokens", 0), "output": getattr(usage, "output_tokens", 0)}
+    verdict["_model"] = model
     return issues, verdict

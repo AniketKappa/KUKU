@@ -273,3 +273,37 @@ def test_deepseek_keeps_standard_tool_schemas_and_scanned_pdfs_get_a_clear_messa
 def test_blank_text_is_not_treated_as_an_answer():
     response = llm.from_openai_response(api_reply("    "))
     assert response.content == []
+
+
+# ---- Public deployment ----
+
+def test_audit_falls_back_to_the_next_model_when_one_is_out_of_quota(monkeypatch):
+    import httpx
+    import openai
+    from app import config
+    monkeypatch.setattr(llm.time, "sleep", lambda _: None)
+    monkeypatch.setattr(config, "AUDIT_MODEL", "strong")
+    monkeypatch.setattr(config, "AUDIT_FALLBACKS", ["backup"])
+    asked = []
+
+    def create(**kwargs):
+        asked.append(kwargs["model"])
+        if kwargs["model"] == "strong":
+            raise openai.RateLimitError("per day", response=httpx.Response(429, request=httpx.Request("POST", "http://x")), body=None)
+        return api_reply(json.dumps({"claims": [], "uncited_legal_claims": [], "invented_facts": [], "ignored_cautions": []}))
+
+    client = llm.OpenAICompatClient("gemini", sdk_client=NS(chat=NS(completions=NS(create=create))))
+    issues, verdict = audit.audit_answer(client, "Plain advice.", "facts")
+    assert asked == ["strong", "backup"] and verdict["_model"] == "backup"
+
+
+def test_public_demo_limits_questions_per_visitor(monkeypatch):
+    from fastapi.testclient import TestClient
+    from app import config, server
+    monkeypatch.setattr(config, "QUESTIONS_PER_HOUR", 2)
+    monkeypatch.setattr(config, "api_ready", lambda: False)  # Stops before any model call.
+    server._recent.clear()
+    client = TestClient(server.app)
+    codes = [client.post("/api/chat", json={"message": "hi"}, headers={"x-forwarded-for": "1.2.3.4"}).status_code for _ in range(3)]
+    other = client.post("/api/chat", json={"message": "hi"}, headers={"x-forwarded-for": "5.6.7.8"}).status_code
+    assert codes == [503, 503, 429] and other == 503

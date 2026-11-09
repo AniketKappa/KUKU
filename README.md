@@ -215,6 +215,17 @@ With a paid key, run all scenarios with:
 .venv/bin/python tests/run_scenarios.py
 ```
 
+### Deploy on Render, free
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/AniketKappa/KUKU)
+
+[render.yaml](render.yaml) sets everything up. Render asks for your `GEMINI_API_KEY` during setup. The free plan has some limits:
+
+- **It sleeps after 15 minutes idle,** and the first visit after that takes about a minute.
+- **Conversations are lost** when it sleeps or redeploys.
+- **Semantic search is off** to fit in 512 MB of memory. That lowers held-out search from 61.5% to 57.7%. Measured with the same settings, the app peaks at about 250 MB.
+- **It runs as a public demo:** visitors see a banner asking them not to enter real personal details, and each can ask 15 questions an hour so your free quota lasts.
+
 See the screens without any key, using scripted replies that are labelled on screen:
 
 ```bash
